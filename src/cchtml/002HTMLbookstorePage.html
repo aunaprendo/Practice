@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <title>Bookstore Page</title>
+</head>
+	
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+    <main>
+      <h1>XYZ Bookstore</h1>
+      <p>Browse our collection of amazing books!</p>
+
+      <div class="card-container">
+        <div class="card" id="sally-adventure-book">
+          <h2>Sally's Sci-Fi Adventure</h2>
+          <p>
+            This is an epic story of Sally and her dog Rex as they navigate
+            through other worlds.
+          </p>
+          <button class="btn">Buy Now</button>
+        </div>
+
+        <div class="card" id="dave-cooking-book">
+          <h2>Dave's Cooking Adventure</h2>
+          <p>
+            Follow Dave as he learns to cook everything from pancakes to pasta,
+            mastering one recipe at a time.
+          </p>
+          <button class="btn">Buy Now</button>
+        </div>
+      </div>
+
+      <p>Review your selections and continue to checkout.</p>
+
+      <div class="btn-container">
+        <button class="btn" id="view-cart-btn">View Cart</button>
+        <button class="btn" id="checkout-btn">Checkout</button>
+      </div>
+			
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

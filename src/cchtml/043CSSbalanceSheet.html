@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../cccss/ccStyle.css" />
+  <link rel="stylesheet" href="../cccss/balancesheet.css" />
+
+  <title>Balance Sheet</title>
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+	
+	<main>
+    <section aria-labelledby="page-title">
+      <h1 id="page-title">
+        <span class="flex">
+          <span>AcmeWidgetCorp</span>
+          <span>Balance Sheet</span>
+        </span>
+      </h1>
+
+      <!-- Visible year labels (decorative for layout only) -->
+      <div id="years" aria-hidden="true">
+        <span class="year">2019</span>
+        <span class="year">2020</span>
+        <span class="year">2021</span>
+      </div>
+
+      <div class="table-wrap">
+
+        <!-- ========================
+             ASSETS TABLE
+        ========================= -->
+        <table aria-label="Assets">
+          <caption>Assets</caption>
+          <thead>
+            <tr>
+              <!-- Empty header cell for row labels -->
+              <td aria-hidden="true"></td>
+              <th><span class="sr-only">2019</span></th>
+              <th><span class="sr-only">2020</span></th>
+              <th class="current"><span class="sr-only">2021</span></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="data">
+              <th scope="row">
+                Cash 
+                <span class="description">
+                  Cash currently available on hand.
+                </span>
+              </th>
+              <td>$25</td>
+              <td>$30</td>
+              <td class="current">$28</td>
+            </tr>
+
+            <tr class="data">
+              <th scope="row">
+                Checking 
+                <span class="description">
+                  Primary transactional bank account.
+                </span>
+              </th>
+              <td>$54</td>
+              <td>$56</td>
+              <td class="current">$53</td>
+            </tr>
+
+            <tr class="data">
+              <th scope="row">
+                Savings 
+                <span class="description">
+                  Reserved emergency funds.
+                </span>
+              </th>
+              <td>$500</td>
+              <td>$650</td>
+              <td class="current">$728</td>
+            </tr>
+
+            <tr class="total">
+              <th scope="row">
+                Total <span class="sr-only">Assets</span>
+              </th>
+              <td>$579</td>
+              <td>$736</td>
+              <td class="current">$809</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- ========================
+             LIABILITIES TABLE
+        ========================= -->
+        <table aria-label="Liabilities">
+          <caption>Liabilities</caption>
+          <thead>
+            <tr>
+              <td aria-hidden="true"></td>
+              <th><span class="sr-only">2019</span></th>
+              <th><span class="sr-only">2020</span></th>
+              <th><span class="sr-only">2021</span></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="data">
+              <th scope="row">
+                Loans 
+                <span class="description">
+                  Outstanding balance on startup loan.
+                </span>
+              </th>
+              <td>$500</td>
+              <td>$250</td>
+              <td class="current">$0</td>
+            </tr>
+
+            <tr class="data">
+              <th scope="row">
+                Expenses 
+                <span class="description">
+                  Anticipated annual expenses (e.g., payroll).
+                </span>
+              </th>
+              <td>$200</td>
+              <td>$300</td>
+              <td class="current">$400</td>
+            </tr>
+
+            <tr class="data">
+              <th scope="row">
+                Credit 
+                <span class="description">
+                  Outstanding credit card balance.
+                </span>
+              </th>
+              <td>$50</td>
+              <td>$50</td>
+              <td class="current">$75</td>
+            </tr>
+
+            <tr class="total">
+              <th scope="row">
+                Total <span class="sr-only">Liabilities</span>
+              </th>
+              <td>$750</td>
+              <td>$600</td>
+              <td class="current">$475</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- ========================
+             NET WORTH TABLE
+        ========================= -->
+        <table aria-label="Net Worth">
+          <caption>Net Worth</caption>
+          <thead>
+            <tr>
+              <td aria-hidden="true"></td>
+              <th><span class="sr-only">2019</span></th>
+              <th><span class="sr-only">2020</span></th>
+              <th><span class="sr-only">2021</span></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="total">
+              <th scope="row">
+                Total <span class="sr-only">Net Worth</span>
+              </th>
+              <td>$-171</td>
+              <td>$136</td>
+              <td class="current">$334</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

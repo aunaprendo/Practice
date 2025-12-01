@@ -1,0 +1,96 @@
+/* General Body Styling */
+.greeting-card {
+  text-align: center;
+  background-color: brown;
+  box-sizing: border-box;
+  color: #333;
+}
+
+/* Card Styling */
+.card {
+  background-color: white;
+  max-width: 400px;
+  padding: 40px;
+  margin: 75px auto 75px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px gray;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: khaki;
+  transform: scale(1.05);
+}
+
+/* Decorative Icons for H1 */
+h1::before {
+  content: "🥳 ";
+}
+
+h1::after {
+  content: " 🥳";
+}
+
+/* Card Message Styling */
+.message {
+  font-size: 1.2em;
+  color: gray;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Card Links Styling */
+.card-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card-links a {
+  text-decoration: none;
+  font-size: 1em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  background-color: midnightblue;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.card-links a:hover {
+  background-color: orangered;
+}
+
+.card-links a:active {
+  background-color: midnightblue;
+}
+
+.card-links a:focus {
+  outline: 2px solid yellow;
+  outline-offset: 2px;
+}
+
+.card-links a:visited {
+  color: crimson;
+}
+
+/* Section Styling */
+section {
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  display: none;
+}
+
+section:hover {
+  transform: skewX(10deg);
+}
+
+section:target {
+  display: block;
+}

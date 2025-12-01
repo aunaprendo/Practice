@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <title>Hotel Feedback Form</title>
+</head>
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <header>
+    <h1>Hotel Feedback Form</h1>
+    <p>Thank you for staying with us. Please provide feedback on your recent stay.</p>
+  </header>
+
+  <main>
+    <form method="POST" action="https://hotel-feedback.freecodecamp.org">
+      <!-- PERSONAL INFORMATION -->
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <div class="form-group">
+          <label for="full-name">Name <span aria-hidden="true">*</span></label>
+          <input
+            type="text"
+            id="full-name"
+            name="name"
+            placeholder="e.g., John Doe"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address <span aria-hidden="true">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            required
+            aria-required="true"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="age">Age (optional)</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            min="3"
+            max="100"
+          />
+        </div>
+      </fieldset>
+
+      <!-- FIRST TIME? -->
+      <fieldset>
+        <legend>Was this your first time at our hotel?</legend>
+
+        <div class="option">
+          <input type="radio" id="yes-option" name="hotel-stay" value="yes" />
+          <label for="yes-option">Yes</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" id="no-option" name="hotel-stay" value="no" />
+          <label for="no-option">No</label>
+        </div>
+      </fieldset>
+
+      <!-- REASONS FOR STAY -->
+      <fieldset>
+        <legend>Why did you choose to stay at our hotel? <span>(check all that apply)</span></legend>
+
+        <div class="option">
+          <input type="checkbox" id="ads" name="reason" value="ads" />
+          <label for="ads">Social Media Ads</label>
+        </div>
+
+        <div class="option">
+          <input type="checkbox" id="recommendation" name="reason" value="recommendation" />
+          <label for="recommendation">Personal Recommendation</label>
+        </div>
+
+        <div class="option">
+          <input type="checkbox" id="location" name="reason" value="location" />
+          <label for="location">Location</label>
+        </div>
+
+        <div class="option">
+          <input type="checkbox" id="reputation" name="reason" value="reputation" checked />
+          <label for="reputation">Reputation</label>
+        </div>
+
+        <div class="option">
+          <input type="checkbox" id="price" name="reason" value="price" />
+          <label for="price">Price</label>
+        </div>
+      </fieldset>
+
+      <!-- RATINGS -->
+      <fieldset>
+        <legend>Ratings</legend>
+
+        <div class="form-group">
+          <label for="service">How was the service?</label>
+          <select id="service" name="service">
+            <option value="poor">Poor</option>
+            <option value="satisfactory">Satisfactory</option>
+            <option value="good">Good</option>
+            <option value="very-good">Very Good</option>
+            <option value="excellent" selected>Excellent</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="food">How was the food?</label>
+          <select id="food" name="food">
+            <option value="poor">Poor</option>
+            <option value="satisfactory">Satisfactory</option>
+            <option value="good">Good</option>
+            <option value="very-good">Very Good</option>
+            <option value="excellent" selected>Excellent</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- COMMENTS -->
+      <div class="form-group">
+        <label for="comments">Other comments?</label>
+        <textarea
+          id="comments"
+          name="comments"
+          rows="6"
+          aria-describedby="comments-help"
+        ></textarea>
+        <p id="comments-help" class="form-hint">Feel free to share any additional feedback.</p>
+      </div>
+    </form>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../cccss/ccStyle.css" />
+    <link rel="stylesheet" href="../cccss/portfolio.css" />
+
+    <title>Personal Portfolio</title>
+  </head>
+
+  <body>
+    <!-- Main navigation (loaded via JS include) -->
+    <nav
+      data-include="./partials/navBar.html"
+      aria-label="Primary navigation"
+    ></nav>
+
+    <!-- Side menu (loaded via JS include) -->
+    <aside
+      data-include="./partials/sideMenu.html"
+      aria-label="Side menu"
+    ></aside>
+
+    <main id="main-doc">
+      <!-- Portfolio internal navigation -->
+      <nav id="portfolio-navbar" aria-label="Portfolio navigation">
+        <ul class="portfolio-nav-menu">
+          <li>
+            <a class="portfolio-nav-link" href="#project-section">
+              View Projects
+            </a>
+          </li>
+          <li>
+            <a class="portfolio-nav-link" href="#contact">
+              Contact Information
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Welcome Section -->
+      <section id="welcome-section" aria-labelledby="welcome-title">
+        <h1 id="welcome-title">Georgia Jean</h1>
+        <h2>Lifelong Learner</h2>
+      </section>
+
+      <!-- Projects Section -->
+      <section
+        id="project-section"
+        aria-labelledby="projects-title"
+        class="projects-container"
+      >
+        <h2 id="projects-title" class="visually-hidden">Projects</h2>
+
+        <div class="project-tile">
+          <h3>Squirrel Life</h3>
+          <a
+            href="https://github.com/aunaprendo/aunaprendo"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View FreeCodeCamp Projects on GitHub"
+          >
+            <p>FreeCodeCamp Projects</p>
+          </a>
+        </div>
+
+        <div class="project-tile">
+          <h3>Mario World</h3>
+          <a
+            href="https://github.com/aunaprendo/aunaprendo"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View Mario World Game App on GitHub"
+          >
+            <p>Game App</p>
+          </a>
+        </div>
+
+        <div class="project-tile">
+          <h3>Aun Aprendo</h3>
+          <a
+            href="https://github.com/aunaprendo/aunaprendo"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View Aun Aprendo Learning Path on GitHub"
+          >
+            <p>Learning Path</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact Info</h2>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      data-include="./partials/footer.html"
+      aria-label="Footer"
+      role="contentinfo"
+    ></footer>
+
+    <script src="../ccjs/ccScript.js"></script>
+  </body>
+</html>

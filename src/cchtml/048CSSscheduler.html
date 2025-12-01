@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <link href="../cccss/scheduler.css" rel="stylesheet" />
+  <title>Availability Table</title>
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <nav
+    data-include="./partials/navBar.html"
+    role="navigation"
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside
+    data-include="./partials/sideMenu.html"
+    role="navigation"
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+    <!-- Availability Schedule Table -->
+    <section aria-labelledby="availability-heading">
+      <h1 id="availability-heading">Weekly Availability</h1>
+      <table role="grid" aria-describedby="legend">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Monday</th>
+            <th scope="col">Tuesday</th>
+            <th scope="col">Wednesday</th>
+            <th scope="col">Thursday</th>
+            <th scope="col">Friday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><time datetime="09:00">09:00</time></th>
+            <td class="available-0" aria-label="Availability 0">xx</td>
+            <td class="available-2" aria-label="Availability 2">xx</td>
+            <td class="available-3" aria-label="Availability 3">xx</td>
+            <td class="available-1" aria-label="Availability 1">xx</td>
+            <td class="available-5" aria-label="Availability 5">xx</td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="12:00">12:00</time></th>
+            <td class="available-4" aria-label="Availability 4">xx</td>
+            <td class="available-1" aria-label="Availability 1">xx</td>
+            <td class="available-0" aria-label="Availability 0">xx</td>
+            <td class="available-3" aria-label="Availability 3">xx</td>
+            <td class="available-2" aria-label="Availability 2">xx</td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="15:00">15:00</time></th>
+            <td class="available-3" aria-label="Availability 3">xx</td>
+            <td class="available-1" aria-label="Availability 1">xx</td>
+            <td class="available-1" aria-label="Availability 1">xx</td>
+            <td class="available-2" aria-label="Availability 2">xx</td>
+            <td class="available-4" aria-label="Availability 4">xx</td>
+          </tr>
+          <tr>
+            <th scope="row"><time datetime="18:00">18:00</time></th>
+            <td class="available-4" aria-label="Availability 4">xx</td>
+            <td class="available-3" aria-label="Availability 3">xx</td>
+            <td class="available-5" aria-label="Availability 5">xx</td>
+            <td class="available-5" aria-label="Availability 5">xx</td>
+            <td class="available-1" aria-label="Availability 1">xx</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Legend -->
+      <div id="legend" role="region" aria-label="Availability Legend">
+        <span>Availability</span>
+        <div id="legend-gradient" aria-hidden="true"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer
+    data-include="./partials/footer.html"
+    role="contentinfo"
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

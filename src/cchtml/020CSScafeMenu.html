@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <link href="../cccss/cafemenu.css" rel="stylesheet" />
+  <title>Cafe Menu</title>
+</head>
+
+<body id="coffee-background">
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+	<div class="menu">
+    <header>
+      <h1>CAMPER CAFE</h1>
+      <p class="established">Est. 2020</p>
+      <hr />
+    </header>
+
+    <section aria-labelledby="coffee-heading">
+      <h2 id="coffee-heading">Coffee</h2>
+      <figure>
+        <img
+          src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg"
+          alt="Coffee cup icon" />
+        <figcaption>Delicious coffee options</figcaption>
+      </figure>
+      <article class="item">
+        <p class="flavor">French Vanilla</p><p class="price">$3.00</p>
+      </article>
+      <article class="item">
+        <p class="flavor">Caramel Macchiato</p><p class="price">$3.75</p>
+      </article>
+      <article class="item">
+        <p class="flavor">Pumpkin Spice</p><p class="price">$3.50</p>
+      </article>
+      <article class="item">
+        <p class="flavor">Hazelnut</p><p class="price">$4.00</p>
+      </article>
+      <article class="item">
+        <p class="flavor">Mocha</p><p class="price">$4.50</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="desserts-heading">
+      <h2 id="desserts-heading">Desserts</h2>
+      <figure>
+        <img
+          src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg"
+          alt="Pie icon" />
+        <figcaption>Sweet treats for dessert lovers</figcaption>
+      </figure>
+      <article class="item">
+        <p class="dessert">Donut</p><p class="price">$1.50</p>
+      </article>
+      <article class="item">
+        <p class="dessert">Cherry Pie</p><p class="price">$2.75</p>
+      </article>
+      <article class="item">
+        <p class="dessert">Cheesecake</p><p class="price">$3.00</p>
+      </article>
+      <article class="item">
+        <p class="dessert">Cinnamon Roll</p><p class="price">$2.50</p>
+      </article>
+    </section>
+	</div>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

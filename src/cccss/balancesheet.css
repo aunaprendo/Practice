@@ -1,0 +1,185 @@
+/* ============================================
+   Screen-reader–only text 
+   (WCAG-compliant visually hidden utility class)
+   ============================================ */
+span.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  width: 1px !important;
+  position: absolute !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+/* ============================================
+   Core Document Styling
+   ============================================ */
+html {
+  box-sizing: border-box;
+}
+
+body {
+  color: #0a0a23;
+}
+
+/* ============================================
+   Page Title Area
+   ============================================ */
+h1 {
+  max-width: 37.25rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+h1 .flex {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
+
+/* Smaller company name */
+h1 .flex span:first-of-type {
+  font-size: 0.7em;
+}
+
+/* Larger title text */
+h1 .flex span:last-of-type {
+  font-size: 1.2em;
+}
+
+/* ============================================
+   Layout Section Container
+   ============================================ */
+section {
+  max-width: 40rem;
+  margin: 0 auto;
+  border: 2px solid #d0d0d5;
+}
+
+/* ============================================
+   Sticky Year Labels (visual only)
+   ============================================ */
+#years {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  background: #0a0a23; /* strong contrast for accessibility */
+  color: #fff;
+  padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+  margin: 0 -2px; /* compensates border width */
+}
+
+#years span.year {
+  font-weight: bold;
+  width: 4.5rem;
+  text-align: right;
+}
+
+/* ============================================
+   Table Container
+   ============================================ */
+.table-wrap {
+  padding: 0 0.75rem 1.5rem;
+}
+
+/* ============================================
+   General Table Styling
+   ============================================ */
+table {
+  border-collapse: collapse;
+  border: 0;
+  width: 100%;
+  position: relative;
+  margin-top: 3rem;
+}
+
+/* Table captions positioned above */
+table caption {
+  color: #356eaf;
+  font-size: 1.3em;
+  font-weight: normal;
+  position: absolute;
+  top: -2.25rem;
+  left: 0.5rem;
+}
+
+/* Column widths */
+tbody td {
+  width: 100vw;
+  min-width: 4rem;
+  max-width: 4rem;
+}
+
+tbody th {
+  width: calc(100% - 12rem);
+}
+
+/* ============================================
+   Total Row Styling
+   ============================================ */
+tr.total {
+  border-bottom: 4px double #0a0a23;
+  font-weight: bold;
+}
+
+tr.total th {
+  text-align: left;
+  padding: 0.5rem 0 0.25rem 0.5rem;
+}
+
+tr.total td {
+  text-align: right;
+  padding: 0 0.25rem;
+}
+
+tr.total td:last-of-type {
+  padding-right: 0.5rem;
+}
+
+/* Hover highlight for total row */
+tr.total:hover {
+  background-color: #99c9ff; /* good contrast on hover */
+}
+
+/* Current-year column italicized */
+td.current {
+  font-style: italic;
+}
+
+/* ============================================
+   Data Rows
+   ============================================ */
+tr.data {
+  background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+
+tr.data th {
+  text-align: left;
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
+}
+
+/* Row description (subtext) */
+tr.data th .description {
+  display: block;
+  font-weight: normal;
+  font-style: italic;
+  padding: 1rem 0 0.75rem;
+  margin-right: -13.5rem; /* aligns under description */
+}
+
+tr.data td {
+  vertical-align: top;
+  padding: 0.3rem 0.25rem 0;
+  text-align: right;
+}
+
+tr.data td:last-of-type {
+  padding-right: 0.5rem;
+}

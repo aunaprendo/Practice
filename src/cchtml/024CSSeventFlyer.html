@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <link href="../cccss/festival.css" rel="stylesheet" />
+  <title>Squirrel Celebration Event Flyer</title>
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <main id="event-flyer">
+    <header>
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/labs/event.jpg"
+        alt="Colorful banner flags for the Squirrel Celebration"
+      />
+      <h1>Squirrel Celebration</h1>
+      <p><strong>When:</strong> October 5<sup>th</sup>, 2025</p>
+      <p><strong>Where:</strong> Squirrel Park, NC</p>
+    </header>
+
+    <hr />
+
+    <section class="section1" aria-labelledby="activities-title">
+      <h2 id="activities-title">Activities</h2>
+      <ul role="list">
+        <li role="listitem">Nut Hunt</li>
+        <li role="listitem">Drey Building</li>
+        <li role="listitem">Bird Feeder Obstacle Course</li>
+      </ul>
+    </section>
+
+    <section class="section2" aria-labelledby="accommodations-title">
+      <h2 id="accommodations-title">Accommodations</h2>
+      <ul role="list">
+        <li role="listitem">Tree Houses</li>
+        <li role="listitem">Cotton Beds</li>
+        <li role="listitem">Snuggly Squirrels</li>
+      </ul>
+    </section>
+
+    <section class="section3" aria-labelledby="accoutrements-title">
+      <h2 id="accoutrements-title">Accoutrements</h2>
+      <ul role="list">
+        <li role="listitem">Candied Nuts</li>
+        <li role="listitem">Roasted Nuts</li>
+        <li role="listitem">Boiled Nuts</li>
+      </ul>
+    </section>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

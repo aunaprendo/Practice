@@ -1,0 +1,64 @@
+main {
+  display: flex;               
+  justify-content: center;     
+  align-items: center;         
+  height: 100vh;              
+  margin: 0;                  
+}
+
+.space {
+  position: relative;
+  width: 100vh;
+  height: 100vh;
+  background-color: black;     
+  border-radius: 0;            
+}
+
+.earth {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: blue;
+  border-radius: 50%;          
+}
+
+/* Moon orbit container */
+.orbit {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;          
+  animation: orbit 5s linear infinite;
+}
+
+/* Orbit rotation animation */
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+
+/* Moon */
+.moon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;                      /* Start at top of orbit */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: grey;
+  border-radius: 50%;        
+}
+
+#footer {
+	margin-top: 0;
+}

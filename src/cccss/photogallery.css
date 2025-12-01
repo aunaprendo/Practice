@@ -1,0 +1,67 @@
+/* =========================================================================
+   Global Styles
+   ========================================================================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f6f7;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 32px;
+  background-color: #0a0a23;
+  color: #ffffff;
+  border-bottom: 4px solid #fdb347;
+}
+
+/* Gallery Container */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;          /* Allow images to wrap */
+  justify-content: center;  /* Center images horizontally */
+  gap: 16px;                /* Space between images */
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+/* Gallery Images */
+.gallery img {
+  width: 100%;              /* Responsive width */
+  max-width: 350px;         /* Constrain image size */
+  height: auto;             /* Maintain aspect ratio */
+  object-fit: cover;        /* Crop images to fit without distortion */
+  border-radius: 10px;
+  display: block;           /* Remove inline spacing */
+}
+
+
+/* =========================================================================
+   Responsive Breakpoints
+   ========================================================================= */
+
+/* Medium screens (tablet) */
+@media (max-width: 1024px) {
+  .gallery img {
+    max-width: 45%;  /* Two images per row */
+    height: auto;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 600px) {
+  .gallery {
+    padding: 10px 5px;
+    gap: 10px;
+  }
+  .gallery img {
+    max-width: 100%; /* One image per row */
+    height: auto;
+  }
+}

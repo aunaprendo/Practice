@@ -1,0 +1,27 @@
+/* Main email container */
+#email {
+  padding: 50px;
+  margin-top: 50px;
+  width: 500px;
+  box-sizing: border-box; 
+  background-color: gold;
+  border: 2px solid black; 
+}
+
+/* Labels for confidential/top-secret messages */
+#confidential,
+#top-secret {
+  display: inline-block;
+  padding: 5px;
+  margin-left: 10px;
+  border: 2px solid black;
+  transform: rotate(-25deg);
+  background-color: hsl(30 20% 75%);
+  font-weight: bold; 
+}
+
+/* Decorative blurred text */
+.blurred {
+  filter: blur(3px);
+  aria-hidden: true; /* Decorative content ignored by screen readers */
+}

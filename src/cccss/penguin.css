@@ -1,0 +1,312 @@
+:root {
+  --penguin-face: white;
+  --penguin-picorna: orange;
+  --penguin-skin: gray;
+}
+
+/* Full-screen gradient sky background */
+#main-content {
+  background: linear-gradient(45deg, rgb(118, 201, 255), rgb(247, 255, 222));
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ---------------------------------------------------------
+   Background scenery (decorative)
+--------------------------------------------------------- */
+.left-mountain,
+.back-mountain,
+.sun {
+  position: absolute;
+  z-index: 1;
+}
+
+/* Left mountain */
+.left-mountain {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(rgb(203, 241, 228), rgb(80, 183, 255));
+  transform: skew(0deg, 44deg);
+  margin-top: 175px;
+  z-index: 2;
+}
+
+/* Back mountain */
+.back-mountain {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(rgb(203, 241, 228), rgb(47, 170, 255));
+  transform: rotate(45deg);
+  left: 110px;
+  top: 275px;
+}
+
+/* Sun */
+.sun {
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  border-radius: 50%;
+  top: -25px;
+  right: -75px;
+}
+
+/* ---------------------------------------------------------
+   Penguin wrapper
+--------------------------------------------------------- */
+.penguin {
+  width: 300px;
+  height: 300px;
+  margin: 75px auto 0;
+  position: relative;
+  z-index: 4;
+  transition: transform 1s ease-in-out;
+}
+
+/* Scale animation on press (interactive) */
+.penguin:active {
+  transform: scale(1.5);
+  cursor: not-allowed;
+}
+
+.penguin * {
+  position: absolute;
+}
+
+/* ---------------------------------------------------------
+   Penguin head + face
+--------------------------------------------------------- */
+.penguin-head {
+  width: 50%;
+  height: 45%;
+  top: 10%;
+  left: 25%;
+  z-index: 1;
+  border-radius: 70% 70% 65% 65%;
+  background: linear-gradient(45deg, var(--penguin-skin), rgb(239, 240, 228));
+}
+
+.face {
+  width: 60%;
+  height: 70%;
+  top: 15%;
+  background-color: var(--penguin-face);
+  border-radius: 70% 70% 60% 60%;
+}
+
+.face.left {
+  left: 5%;
+}
+
+.face.right {
+  right: 5%;
+}
+
+.chin {
+  width: 90%;
+  height: 70%;
+  top: 25%;
+  left: 5%;
+  background-color: var(--penguin-face);
+  border-radius: 70% 70% 100% 100%;
+}
+
+/* ---------------------------------------------------------
+   Eyes
+--------------------------------------------------------- */
+.eye {
+  width: 15%;
+  height: 17%;
+  top: 45%;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.eye.left {
+  left: 25%;
+}
+
+.eye.right {
+  right: 25%;
+}
+
+.eye-lid {
+  width: 150%;
+  height: 100%;
+  top: 25%;
+  left: -23%;
+  border-radius: 50%;
+  background-color: var(--penguin-face);
+}
+
+/* ---------------------------------------------------------
+   Blush
+--------------------------------------------------------- */
+.blush {
+  width: 15%;
+  height: 10%;
+  top: 65%;
+  background-color: pink;
+  border-radius: 50%;
+}
+
+.blush.left {
+  left: 15%;
+}
+
+.blush.right {
+  right: 15%;
+}
+
+/* ---------------------------------------------------------
+   Beak
+--------------------------------------------------------- */
+.beak {
+  height: 10%;
+  background-color: var(--penguin-picorna);
+  border-radius: 50%;
+}
+
+.beak.top {
+  width: 20%;
+  top: 60%;
+  left: 40%;
+}
+
+.beak.bottom {
+  width: 16%;
+  top: 65%;
+  left: 42%;
+}
+
+/* ---------------------------------------------------------
+   Shirt
+--------------------------------------------------------- */
+.shirt {
+  font: bold 25px Helvetica, sans-serif;
+  color: #6a6969;
+  top: 165px;
+  left: 127.5px;
+  z-index: 1;
+}
+
+.shirt div {
+  font-weight: initial;
+  top: 22.5px;
+  left: 12px;
+}
+
+/* ---------------------------------------------------------
+   Penguin body
+--------------------------------------------------------- */
+.penguin-body {
+  width: 53%;
+  height: 45%;
+  top: 40%;
+  left: 23.5%;
+  border-radius: 80% 80% 100% 100%;
+  background: linear-gradient(
+    45deg,
+    rgb(134, 133, 133) 0%,
+    rgb(234, 231, 231) 25%,
+    white 67%
+  );
+}
+
+/* Body shading */
+.penguin-body::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 45%;
+  top: 10%;
+  left: 25%;
+  opacity: 70%;
+  border-radius: 0% 0% 100% 100%;
+  background-color: var(--penguin-skin);
+}
+
+/* ---------------------------------------------------------
+   Arms (wings)
+--------------------------------------------------------- */
+.arm {
+  width: 30%;
+  height: 60%;
+  z-index: -1;
+  border-radius: 30% 30% 30% 120%;
+  background: linear-gradient(90deg, var(--penguin-skin), rgb(209, 210, 199));
+}
+
+.arm.left {
+  top: 35%;
+  left: 5%;
+  transform-origin: top left;
+  transform: rotate(130deg) scaleX(-1);
+  animation: wave 3s linear infinite;
+}
+
+.arm.right {
+  top: 0%;
+  right: -5%;
+  transform: rotate(-45deg);
+}
+
+/* Waving movement */
+@keyframes wave {
+  10%,
+  30% {
+    transform: rotate(110deg) scaleX(-1);
+  }
+  20%,
+  40% {
+    transform: rotate(130deg) scaleX(-1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arm.left {
+    animation: none;
+  }
+}
+
+/* ---------------------------------------------------------
+   Feet
+--------------------------------------------------------- */
+.foot {
+  width: 15%;
+  height: 30%;
+  top: 85%;
+  z-index: -1;
+  border-radius: 50%;
+  background-color: var(--penguin-picorna);
+}
+
+.foot.left {
+  left: 25%;
+  transform: rotate(80deg);
+}
+
+.foot.right {
+  right: 25%;
+  transform: rotate(-80deg);
+}
+
+/* ---------------------------------------------------------
+   Ground / ice
+--------------------------------------------------------- */
+.ground {
+  width: 100vw;
+  height: calc(100vh - 300px);
+  position: absolute;
+  margin-top: -58px;
+  z-index: 3;
+  background: linear-gradient(90deg, rgb(88, 175, 236), rgb(182, 255, 255));
+}
+
+#footer {
+	margin-top: 0;
+}

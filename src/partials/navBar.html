@@ -1,0 +1,73 @@
+
+
+<nav class="navbar fixed-top navbar-expand-md bg-dark border-bottom border-body">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="./assets/logoSquirrel.svg" alt="White Squirrel Logo" height="50">
+    </a>
+    
+		<!-- Navbar toggle button -->
+		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+		
+		<!-- Top menu in navbar -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            PROJECTS
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Learning Path</a></li>
+            <li><a class="dropdown-item" href="#">freeCodeCamp Projects</a></li>
+            <li><a class="dropdown-item" href="#">Game Project</a></li>
+          </ul>
+        </li>
+				<li class="nav-item">
+          <a class="nav-link link-opacity-50-hover" href="resume.html">RESUME</a>
+        </li>
+				<li class="nav-item">
+          <a class="nav-link link-opacity-50-hover" href="contact.html">CONTACT</a>
+        </li>
+				<li class="nav-item">
+          <a class="nav-link active  text-light link-opacity-50-hover" aria-current="page" href="index.html">HOME</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar Setup -->
+<div class="offcanvas offcanvas-start" 
+     tabindex="-1" id="sidebar">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-success">
+            MENU
+        </h5>
+        <button type="button" 
+        class="btn-close text-reset" 
+                data-bs-dismiss="offcanvas" 
+                aria-label="Close">
+        </button>
+    </div>
+    <div class="offcanvas-body bg-success">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                    About Us
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">
+                    Contact Us
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

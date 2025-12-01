@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <title>Accessible Controls</title>
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+	
+  <main>
+    <h1>Audio Controls</h1>
+
+    <fieldset>
+      <legend>Audio Playback Controls</legend>
+
+      <button type="button" aria-pressed="false">
+        Play Audio
+      </button>
+
+      <div class="control-group">
+        <label id="volume-label" for="volume-range">
+          Volume
+        </label>
+
+        <small id="volume-description">
+          Adjust the sound level
+        </small>
+
+        <input
+          type="range"
+          id="volume-range"
+          min="0"
+          max="100"
+          value="50"
+          aria-describedby="volume-description" />
+      </div>
+
+      <button type="button">
+        Mute Audio
+      </button>
+    </fieldset>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

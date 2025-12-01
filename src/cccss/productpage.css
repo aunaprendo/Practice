@@ -1,0 +1,38 @@
+body{
+	text-align: center;}
+#header-img{width:20vw;
+	float: left;}
+	
+#product-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding-top: 75px;
+    padding-left: 20px;
+    background-color: var(--accent-color-bold);
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    z-index: 0;
+		font-size: 1rem;
+    line-height: 1.5;
+  }
+	
+	#product-nav a { color: #000;}	
+  #main-doc {
+    margin-left: 250px; 
+		text-align: left;
+  }
+}
+
+footer {
+  position: relative;
+  z-index: 10; /* higher than navbar (0) */
+}
+
+@media (max-width: 768px) {
+  #header {
+    margin-top: 7rem;
+    text-align: center;
+  }

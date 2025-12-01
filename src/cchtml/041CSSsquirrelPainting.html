@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../cccss/ccStyle.css" />
+    <link rel="stylesheet" href="../cccss/squirrel.css" />
+
+    <title>fCC Cat Painting</title>
+  </head>
+
+  <body>
+    <!-- Main navigation -->
+    <nav 
+      data-include="./partials/navBar.html" 
+      aria-label="Primary navigation">
+    </nav>
+
+    <!-- Side menu -->
+    <aside 
+      data-include="./partials/sideMenu.html" 
+      aria-label="Side menu">
+    </aside>
+
+    <main>
+      <!-- Figure with accessible label + visible caption for sighted users -->
+      <figure class="squirrel-scene">
+        <div
+          class="squirrel"
+          role="img"
+          aria-label="Cartoon full-body squirrel with fluffy tail and blinking eyes"
+          tabindex="0"
+        >
+          <!-- Tail sits behind the body for fluff -->
+          <div class="tail">
+            <div class="tail-fluff tail-fluff-1"></div>
+            <div class="tail-fluff tail-fluff-2"></div>
+            <div class="tail-fluff tail-fluff-3"></div>
+            <div class="tail-fluff tail-fluff-4"></div>
+            <div class="tail-core"></div>
+          </div>
+
+          <!-- Body -->
+          <div class="body">
+            <div class="belly"></div>
+
+            <!-- Arms -->
+            <div class="arm arm-left">
+              <div class="paw paw-left"></div>
+            </div>
+            <div class="arm arm-right">
+              <div class="paw paw-right"></div>
+            </div>
+
+            <!-- Head -->
+            <div class="head">
+              <div class="ear ear-left">
+                <div class="ear-inner"></div>
+              </div>
+              <div class="ear ear-right">
+                <div class="ear-inner"></div>
+              </div>
+
+              <div class="face">
+                <div class="eye eye-left">
+                  <div class="pupil"></div>
+                  <div class="shine"></div>
+                </div>
+                <div class="eye eye-right">
+                  <div class="pupil"></div>
+                  <div class="shine"></div>
+                </div>
+
+                <div class="nose"></div>
+
+                <div class="mouth">
+                  <div class="smile-left"></div>
+                  <div class="smile-right"></div>
+                </div>
+
+                <!-- Cheek fluff -->
+                <div class="cheek cheek-left"></div>
+                <div class="cheek cheek-right"></div>
+              </div>
+            </div>
+
+            <!-- Legs -->
+            <div class="leg leg-left">
+              <div class="foot foot-left"></div>
+            </div>
+            <div class="leg leg-right">
+              <div class="foot foot-right"></div>
+            </div>
+          </div>
+        </div>
+
+        <figcaption class="visually-hidden">
+          Cartoon squirrel with a large fluffy tail and animated blinking eyes.
+        </figcaption>
+      </figure>
+			
+    </main>
+
+    <!-- Footer -->
+    <footer 
+      data-include="./partials/footer.html" 
+      aria-label="Footer">
+    </footer>
+
+    <!-- Site script -->
+    <script src="../ccjs/ccScript.js"></script>
+  </body>
+</html>

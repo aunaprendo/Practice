@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../cccss/ccStyle.css" />
+  <link rel="stylesheet" href="../cccss/house.css" />
+  
+  <title>House Painting</title>
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+	
+	<main>
+		
+    <!-- House graphic container -->
+    <section id="house" aria-label="House illustration">
+      <div id="chimney"></div>
+      <div id="roof"></div>
+      <div id="window-1" aria-label="Window one"></div>
+      <div id="window-2" aria-label="Window two"></div>
+      <div id="door" aria-label="Front door"></div>
+    </section>
+  </main>
+	
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

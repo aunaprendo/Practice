@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tribute Page</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../cccss/ccStyle.css" />
+  <link rel="stylesheet" href="../cccss/tribute.css" />
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <nav
+    data-include="./partials/navBar.html"
+    role="navigation"
+    aria-label="Primary Navigation"
+  ></nav>
+
+  <!-- Side menu -->
+  <aside
+    data-include="./partials/sideMenu.html"
+    role="navigation"
+    aria-label="Side Menu"
+  ></aside>
+
+  <main id="main">
+    <h1 id="title">Sir Peanut Metz</h1>
+    <p id="tribute-info">
+      The squirrel who taught me the meaning of happiness.
+    </p>
+
+    <figure id="img-div">
+      <img
+        id="image"
+        src="https://image2url.com/images/1760830461181-55efee03-ef90-4e09-aabc-6b9cc8bf75de.jpeg"
+        alt="Peanut the flying squirrel perched on a brown duffle bag"
+      />
+      <figcaption id="img-caption">
+        Peanut the flying squirrel perched calmly on a brown duffle bag.
+      </figcaption>
+    </figure>
+
+    <section aria-labelledby="peanut-story-heading">
+      <h2 id="peanut-story-heading">Peanut’s Story</h2>
+
+      <p>
+        Peanut was no ordinary flying squirrel. With soft, cinnamon-colored fur
+        and wide, curious eyes, he soared through the tiny apartment like a leaf
+        on the wind, gliding effortlessly from curtain rods to bookshelves.
+        Found as a baby after a storm, Peanut was taken in by a quiet,
+        overworked graphic designer named Leo, who hadn’t smiled much in years.
+        What began as just another responsibility soon filled Leo’s once-silent
+        life with laughter.
+      </p>
+
+      <p>
+        As the months passed, Peanut became more than a pet; he was a spark of
+        joy woven into Leo’s daily routine. Every evening, Leo returned home to
+        find Peanut waiting by the window, chirping with excitement. Together,
+        they built obstacle courses, explored the park at night, and even
+        learned tricks—Peanut’s favorite being a glide from Leo’s shoulder to a
+        high perch above the kitchen cabinets. In Peanut’s world, there was no
+        room for stress or sadness—only curiosity and small delights.
+      </p>
+
+      <p>
+        Through Peanut’s carefree spirit, Leo rediscovered his own passions. He
+        began drawing again, not for work, but for joy—sketching their escapades
+        across countless pages. He realized that happiness wasn’t a distant
+        destination but something found in small, everyday moments. Peanut, with
+        his boundless energy and gentle trust, taught Leo to embrace lightness,
+        to leap when it felt right, and to find joy simply in being.
+      </p>
+
+      <p>
+        <a
+          id="tribute-link"
+          href="https://www.helenslittlecritters.com/southern_flying_squirrel.htm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Read more about flying squirrels
+        </a>
+      </p>
+    </section>
+		
+  </main>
+
+  <!-- Footer (included via JS) -->
+  <footer
+    data-include="./partials/footer.html"
+    role="contentinfo"
+    aria-label="Website Footer"
+  ></footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

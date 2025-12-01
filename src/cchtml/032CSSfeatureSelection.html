@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../cccss/featureselect.css" />
+  <title>Feature Selection Page</title>
+</head>
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+    <h1>Feature Selection</h1>
+
+    <div class="feature-card-container" role="group" aria-label="Squirrel feature selection">
+      <label class="feature-card">
+        <input type="checkbox" name="feature" value="tail" aria-checked="false" />
+        Bushy Tail
+      </label>
+
+      <label class="feature-card">
+        <input type="checkbox" name="feature" value="ears" aria-checked="false" />
+        Fuzzy Ears
+      </label>
+    </div>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

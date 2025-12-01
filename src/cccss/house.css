@@ -1,0 +1,57 @@
+/* Container representing the house */
+#house {
+  position: relative;
+  top: 100px;
+  width: 500px;
+  height: 400px;
+  background-color: #39877B;
+  border: 3px solid black;
+}
+
+/* Shared styles for all house parts */
+#house > div {
+  position: absolute;
+  border: 1px solid black; 
+}
+
+#roof {
+  width: 500px;
+  height: 30px;
+  top: 0;
+  background-color: black;
+  border-width: 5px;
+}
+
+#door {
+  width: 100px;
+  height: 200px;
+  bottom: 0;
+  left: 200px;
+  background-color: #15322E;
+}
+
+#chimney {
+  width: 40px;
+  height: 100px;
+  top: -100px;
+  background-color: #873945;
+  z-index: -1;
+}
+
+/* Window shared styling */
+#window-1,
+#window-2 {
+  width: 100px;
+  height: 100px;
+  bottom: 200px;
+  background-color: #829CA7;
+}
+
+/* Window positions */
+#window-1 {
+  left: 50px;
+}
+
+#window-2 {
+  left: 350px;
+}

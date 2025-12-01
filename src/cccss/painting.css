@@ -1,0 +1,64 @@
+.canvas {
+  width: 500px;
+  height: 600px;
+  background-color: #4d0f00;
+  overflow: hidden; /* Prevent overflow of child blocks */
+  filter: blur(2px);
+  margin: 0 auto;
+  box-sizing: border-box; /* Include padding/border in width/height */
+}
+
+.frame {
+  border: 50px solid black;
+  width: 500px;
+  padding: 10px; 
+  margin: 20px auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Shared styles for top and middle color blocks */
+.one, .two, .three {
+  display: block;
+  margin: 10px auto; 
+  box-sizing: border-box;
+  filter: blur(1px);
+}
+
+/* Top color block */
+.one {
+  width: 90%; 
+  max-width: 450px;
+  height: 150px;
+  background-color: #efb762;
+  box-shadow: 0 0 3px 3px #efb762;
+  border-radius: 9px;
+  transform: rotate(-0.6deg);
+  aria-hidden: true; 
+}
+
+/* Middle color block */
+.two {
+  width: 95%;
+  max-width: 475px;
+  height: 200px;
+  background-color: #8f0401;
+  box-shadow: 0 0 3px 3px #8f0401;
+  border-radius: 8px 10px;
+  transform: rotate(0.4deg);
+  aria-hidden: true;
+}
+
+/* Bottom color block */
+.three {
+  width: 90%;
+  height: 28%;
+  background-color: #b20403;
+  box-shadow: 0 0 5px 5px #b20403;
+  border-radius: 30px 25px 60px 12px;
+  margin: 10px auto;
+  filter: blur(2px);
+  aria-hidden: true;
+}

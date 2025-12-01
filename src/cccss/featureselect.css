@@ -1,0 +1,41 @@
+/* Base styles for feature card checkboxes */
+.feature-card input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  appearance: none; /* Remove default browser checkbox style */
+  border: 2px solid #f1be32;
+  border-radius: 4px;
+  background-color: white;
+  vertical-align: middle;
+  margin-right: 15px;
+  position: relative; /* Needed for ::after checkmark positioning */
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Checked state styles */
+.feature-card input[type="checkbox"]:checked {
+  background-color: purple;
+  border-color: red;
+}
+
+/* Checkmark displayed inside the checkbox when checked */
+.feature-card input[type="checkbox"]:checked::after {
+  content: "✓";
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  line-height: 20px; /* Vertically centers the checkmark */
+}
+
+/* Focus styles for accessibility (keyboard navigation) */
+.feature-card input[type="checkbox"]:focus {
+  outline: 2px solid #f1be32;
+  outline-offset: 2px;
+}
+
+/* Hover feedback for visual users */
+.feature-card input[type="checkbox"]:hover {
+  border-color: #e2a60d;
+}

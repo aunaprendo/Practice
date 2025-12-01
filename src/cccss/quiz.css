@@ -1,0 +1,173 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: #f5f6f7;
+  color: #1b1b32;
+  margin: 0;
+  line-height: 1.5;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #1b1b32;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Page title */
+h1 {
+  color: #f1be32;
+  font-size: min(5vw, 1.2em);
+  text-align: center;
+  margin: 0;
+}
+
+/* Navigation container */
+#quiz-nav {
+  width: 50%;
+  max-width: 300px;
+  height: 50px;
+}
+
+/* Navigation list layout */
+#quiz-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.quiz-items {
+  color: #dfdfe2;
+  padding: 0.2rem;
+  margin: 0 0.2rem;
+  list-style: none;
+}
+
+nav > ul > li:hover {
+  background-color: #dfdfe2;
+  color: #1b1b32;
+  cursor: pointer;
+}
+
+li > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  padding-top: 50px; 
+}
+
+section {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto 10px auto;
+}
+
+/* Section headings */
+h2 {
+  border-bottom: 4px solid #dfdfe2;
+  margin-top: 0;
+  padding-top: 60px;
+}
+
+/* Form Layout */
+.info {
+  padding: 10px 0 0 5px;
+}
+
+.formrow {
+  margin-top: 30px;
+  padding: 0 15px;
+}
+
+input,
+select,
+textarea {
+  font-size: 1rem;
+}
+
+/* Label + input alignment */
+.info label,
+.info input {
+  display: inline-block;
+}
+
+.info input {
+  width: 50%;
+  text-align: left;
+}
+
+.info label {
+  width: 10%;
+  min-width: 55px;
+  text-align: right;
+}
+
+/* Question Block */
+.question-block {
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 5px;
+  text-align: left;
+}
+
+/* Question number headings */
+h3 {
+  margin-top: 5px;
+  padding-left: 15px;
+  font-size: 1.375rem;
+}
+
+h3::before {
+  content: "Question #";
+}
+
+/* Fieldset reset for clean layout */
+.question {
+  border: none;
+  padding-bottom: 0;
+}
+
+/* Answers list styling */
+.answers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  display: block;
+  width: 40%;
+  margin: 40px auto;
+  padding: 15px;
+  font-size: 1.438rem;
+  background: #d0d0d5;
+  border: 3px solid #3b3b4f;
+}
+
+/* =========================================================================
+   SCREEN READER UTILITY CLASS
+   - Use this for text needed for assistive tech but hidden from sight
+   ========================================================================= */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

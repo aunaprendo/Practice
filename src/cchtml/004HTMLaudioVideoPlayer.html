@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <title>HTML Audio and Video Lab</title>
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+    <main>
+      <h1>Squirrel Entertainment</h1>
+
+      <section>
+        <h2>Squirrel Tube</h2>
+        <video controls width="640">
+          <source
+            src="https://cdn.freecodecamp.org/curriculum/labs/What%20is%20the%20map%20method%20and%20how%20does%20it%20work.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </section>
+
+      <section>
+        <h2>Squirrel Tune</h2>
+        <audio
+          controls
+          loop
+          src="https://cdn.freecodecamp.org/curriculum/js-music-player/we-are-going-to-make-it.mp3"
+        ></audio>
+      </section>
+			
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

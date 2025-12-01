@@ -1,0 +1,48 @@
+.form-container {
+  background-color: #20b2aa;
+  border-radius: 25px;
+  padding: 15px;
+  width: 100%;
+  max-width: 500px; 
+  margin: 75px auto 0 auto;   
+}
+
+label {
+  display: block;   /* ensures labels stack above inputs */
+  margin: 5px 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;      
+  padding: 8px;
+  margin: 5px 0 15px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 3px solid #ffeb3b; 
+  border-color: #008b8b;
+}
+
+button {
+  background-color: #cccccc;
+  color: black;
+  font-size: 1.25rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #d6eeee;
+  outline: 3px solid #ffeb3b; 
+}

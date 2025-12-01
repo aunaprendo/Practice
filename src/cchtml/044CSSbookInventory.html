@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../cccss/ccStyle.css" />
+  <link rel="stylesheet" href="../cccss/bookinventory.css" />
+
+  <title>Book Inventory</title>
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+    <h1>Book Inventory</h1>
+
+    <!-- Book Inventory Table -->
+    <table aria-label="Book inventory list">
+      <thead>
+        <tr>
+          <!-- All table headers use scope="col" for screen readers -->
+          <th scope="col">Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Category</th>
+          <th scope="col">Status</th>
+          <th scope="col">Rating</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- In Progress -->
+        <tr class="in-progress">
+          <th scope="row">Squirrels: A Wildlife Handbook (Johnson Nature Series)</th>
+          <td>Kim Long</td>
+          <td>Non-Fiction</td>
+          <td><span class="status">In Progress</span></td>
+
+          <!-- Empty rating: 0 of 3 stars -->
+          <td>
+            <span 
+              class="rate"
+              role="img"
+              aria-label="0 out of 3 stars"
+            >
+              <span></span><span></span><span></span>
+            </span>
+          </td>
+        </tr>
+
+        <!-- Read -->
+        <tr class="read">
+          <th scope="row">The Squirrels' Busy Year: A First Science Storybook</th>
+          <td>Martin Jenkins and Richard Jones</td>
+          <td>Picture Book</td>
+          <td><span class="status">Read</span></td>
+
+          <!-- 3-star rating -->
+          <td>
+            <span 
+              class="rate three"
+              role="img"
+              aria-label="3 out of 3 stars"
+            >
+              <span></span><span></span><span></span>
+            </span>
+          </td>
+        </tr>
+
+        <!-- To Read -->
+        <tr class="to-read">
+          <th scope="row">Jamel Learns About Calling Squirrels</th>
+          <td>Sue Roddy</td>
+          <td>Fiction</td>
+          <td><span class="status">To Read</span></td>
+
+          <!-- Empty rating -->
+          <td>
+            <span 
+              class="rate"
+              role="img"
+              aria-label="0 out of 3 stars"
+            >
+              <span></span><span></span><span></span>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

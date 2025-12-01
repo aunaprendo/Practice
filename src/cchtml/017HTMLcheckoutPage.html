@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <title>Checkout Page</title>
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+    <h1>Checkout</h1>
+
+    <section aria-labelledby="cart-heading">
+      <h2 id="cart-heading">Your Cart</h2>
+      <img
+        src="https://image2url.com/images/1763907924395-ad0efbf2-9b19-4aac-8450-0f922da3f4f5.jpeg"
+        alt="Colorful watercolor painting of a squirrel perched on a log." width="80%"/>
+    </section>
+
+    <section aria-labelledby="payment-heading">
+      <h2 id="payment-heading">Payment Information</h2>
+
+      <form>
+        <fieldset>
+          <legend>Card Details</legend>
+
+          <div class="form-group">
+            <label for="card-name">Name on Card:</label>
+            <input
+              id="card-name"
+              name="card-name"
+              type="text"
+              autocomplete="cc-name"
+              required />
+          </div>
+
+          <div class="form-group">
+            <label for="card-number">Card Number:</label>
+            <input
+              id="card-number"
+              name="card-number"
+              type="tel"
+              inputmode="numeric"
+              autocomplete="cc-number"
+              pattern="[0-9]{13,19}"
+              aria-describedby="card-number-note"
+              required />
+            <small id="card-number-note">Numbers only, no spaces or dashes.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="expiration">Expiration Date (MM/YY):</label>
+            <input
+              id="expiration"
+              name="expiration"
+              type="text"
+              autocomplete="cc-exp"
+              placeholder="MM/YY"
+              pattern="(0[1-9]|1[0-2])\/\d{2}"
+              aria-describedby="expiration-format" />
+            <small id="expiration-format">Format: month/year</small>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

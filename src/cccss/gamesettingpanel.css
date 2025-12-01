@@ -1,0 +1,68 @@
+/* Full page container for game settings */
+#game-panel {
+  height: 100vh;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+/* Card containing settings */
+.settings-card {
+  max-width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  text-align: left;
+  background-color: #ffffff;
+}
+
+/* Heading alignment */
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Checkbox labels */
+label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+/* Base checkbox styles */
+input[type='checkbox'] {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  appearance: none;
+  border: 2px solid #f1be32;
+  border-radius: 4px;
+  background-color: white;
+  transition: all 0.3s;
+  margin-right: 12px;
+  position: relative;
+}
+
+/* Checked state */
+input[type='checkbox']:checked {
+  background-color: #f1be32;
+  border-color: #e2a60d;
+}
+
+/* Add checkmark for checked state */
+input[type='checkbox']:checked::after {
+  content: "✓";
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  line-height: 24px;
+}
+
+/* Focus outline for accessibility */
+input[type='checkbox']:focus {
+  outline: 3px solid #f1be32;
+  outline-offset: 2px;
+}

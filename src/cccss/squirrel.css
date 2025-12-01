@@ -1,0 +1,466 @@
+/* ==========================================================================
+   CSS Squirrel — Full body with fluffy tail + blinking eyes
+   2-space indentation, accessible, prefers-reduced-motion aware
+   ========================================================================== */
+
+/* -- Theme variables (easy to tweak) -------------------------------------- */
+:root {
+  --squirrel-width: 320px; /* overall scale — change this to resize */
+  --color-fur-1: #8b5a2b; /* main fur */
+  --color-fur-2: #6a4322; /* darker accents */
+  --color-belly: #f3dcb2; /* belly/inner-ear */
+  --color-nose: #41302a;
+  --bg: #cfe7ff;
+  --eye-size: 28px;
+  --tail-fluff-count: 5;
+  --animation-speed: 3000ms;
+}
+
+/* -- Reset / base -------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  background: linear-gradient(180deg, var(--bg), #e0dff9 60%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* -- Layout -------------------------------------------------------------- */
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+/* -- Accessibility helper (off-screen visually hidden text) ------------- */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* -- Squirrel scene size + responsive scaling --------------------------- */
+.squirrel-scene {
+  width: var(--squirrel-width);
+  max-width: 95vw;
+}
+
+.squirrel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+  display: block;
+  margin: 0 auto;
+  transform-origin: center bottom;
+  /* strong outline for keyboard focus */
+  outline: none;
+}
+
+.squirrel:focus {
+  box-shadow: 0 0 0 4px rgba(107, 90, 36, 0.25);
+  border-radius: 12px;
+}
+
+/* -- Base measurements (scale everything to container width) ------------- */
+.squirrel,
+.body,
+.head,
+.tail,
+.ear,
+.cheek,
+.leg,
+.arm,
+.paw,
+.foot,
+.belly {
+  /* sizes use percentages of squirrel width where possible */
+}
+
+/* -- Tail (behind the body) --------------------------------------------- */
+.tail {
+  position: absolute;
+  right: -16%;
+  top: 6%;
+  width: 60%;
+  height: 72%;
+  display: block;
+  transform: rotate(20deg);
+  z-index: 1; /* behind body later we'll push body above */
+  filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.15));
+}
+
+/* multiple overlapping fluff layers for a voluminous tail */
+.tail-fluff {
+  position: absolute;
+  right: 0;
+  background: radial-gradient(closest-side, var(--color-fur-1), var(--color-fur-2));
+  border-radius: 50%;
+  box-shadow: inset -6px -8px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* place each fluff layer with slightly different sizes & offsets */
+.tail-fluff-1 {
+  width: 72%;
+  height: 72%;
+  top: 5%;
+  right: -6%;
+  transform: rotate(6deg);
+  opacity: 0.99;
+}
+.tail-fluff-2 {
+  width: 62%;
+  height: 62%;
+  top: 20%;
+  right: 12%;
+  transform: rotate(-6deg);
+  opacity: 0.98;
+}
+.tail-fluff-3 {
+  width: 52%;
+  height: 52%;
+  top: 38%;
+  right: 22%;
+  transform: rotate(-12deg);
+  opacity: 0.96;
+}
+.tail-fluff-4 {
+  width: 42%;
+  height: 42%;
+  top: 56%;
+  right: 34%;
+  transform: rotate(-18deg);
+  opacity: 0.94;
+}
+
+/* tail core to blend into body */
+.tail-core {
+  position: absolute;
+  right: 34%;
+  top: 46%;
+  width: 28%;
+  height: 28%;
+  background: linear-gradient(180deg, var(--color-fur-1), var(--color-fur-2));
+  border-radius: 50%;
+  box-shadow: inset -4px -6px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* -- Body --------------------------------------------------------------- */
+.body {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 30%;
+  bottom: 6%;
+  background: linear-gradient(180deg, var(--color-fur-1), var(--color-fur-2));
+  border-radius: 48% 48% 42% 42% / 52% 52% 48% 48%;
+  z-index: 3; /* above tail */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* belly patch */
+.belly {
+  position: absolute;
+  left: 22%;
+  right: 22%;
+  top: 34%;
+  bottom: 18%;
+  background: var(--color-belly);
+  border-radius: 50% / 60%;
+  box-shadow: inset 0 -6px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* -- Arms and paws ----------------------------------------------------- */
+.arm {
+  position: absolute;
+  top: 42%;
+  width: 20%;
+  height: 24%;
+  background: linear-gradient(180deg, var(--color-fur-1), var(--color-fur-2));
+  border-radius: 40% 40% 60% 60%;
+  z-index: 4;
+  transform-origin: top center;
+}
+
+/* left & right positions */
+.arm-left {
+  left: 6%;
+  transform: rotate(-8deg);
+}
+.arm-right {
+  right: 6%;
+  transform: rotate(8deg);
+}
+
+.paw {
+  position: absolute;
+  bottom: -8%;
+  left: 10%;
+  width: 80%;
+  height: 44%;
+  background: linear-gradient(180deg, #6b3f1f, #5a3217);
+  border-radius: 50% 50% 40% 40%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* -- Head --------------------------------------------------------------- */
+.head {
+  position: absolute;
+  width: 58%;
+  left: 21%;
+  top: -6%;
+  height: 46%;
+  z-index: 6;
+  transform-origin: center bottom;
+}
+
+/* ears */
+.ear {
+  position: absolute;
+  top: -14%;
+  width: 20%;
+  height: 36%;
+  background: var(--color-fur-1);
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  border-radius: 48% 48% 30% 30%;
+  box-shadow: inset -6px -6px 10px rgba(0, 0, 0, 0.08);
+}
+
+.ear-left {
+  left: 6%;
+  transform: rotate(-10deg);
+}
+
+.ear-right {
+  right: 6%;
+  transform: rotate(10deg);
+}
+
+/* inner ear */
+.ear-inner {
+  position: absolute;
+  top: 18%;
+  left: 12%;
+  right: 12%;
+  bottom: 12%;
+  background: var(--color-belly);
+  border-radius: 40% 40% 30% 30%;
+}
+
+/* face area */
+.face {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  top: 6%;
+  bottom: 6%;
+  border-radius: 48% 48% 50% 50%;
+  background: linear-gradient(180deg, var(--color-fur-1), var(--color-fur-2));
+  box-shadow: inset -6px -8px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* cheeks (fluff) */
+.cheek {
+  position: absolute;
+  top: 40%;
+  width: 20%;
+  height: 20%;
+  background: linear-gradient(180deg, var(--color-fur-1), var(--color-fur-2));
+  border-radius: 50%;
+  z-index: 5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.cheek-left {
+  left: -8%;
+  transform: rotate(-8deg);
+}
+.cheek-right {
+  right: -8%;
+  transform: rotate(8deg);
+}
+
+/* -- Eyes (with blinking animation) ----------------------------------- */
+.eye {
+  position: absolute;
+  top: 26%;
+  width: var(--eye-size);
+  height: var(--eye-size);
+  background: #000;
+  border-radius: 50%;
+  overflow: hidden;
+  transform-origin: center center;
+  z-index: 7;
+}
+
+/* positions */
+.eye-left {
+  left: 28%;
+  transform: translateX(-10%);
+}
+
+.eye-right {
+  right: 28%;
+  transform: translateX(10%);
+}
+
+/* pupil is smaller dark circle for depth (optional) */
+.pupil {
+  position: absolute;
+  left: 28%;
+  top: 18%;
+  width: 44%;
+  height: 44%;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+  z-index: 8;
+}
+
+/* shine — small white highlight */
+.shine {
+  position: absolute;
+  left: 12%;
+  top: 12%;
+  width: 36%;
+  height: 40%;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.95;
+  z-index: 9;
+}
+
+/* blinking animation — scale the eye's Y to 0 briefly */
+@keyframes blink {
+  0%,
+  5%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.06);
+  }
+}
+
+/* apply animation with a slight offset between eyes for natural effect */
+.eye-left {
+  animation: blink var(--animation-speed) infinite;
+  animation-delay: 0s;
+}
+
+.eye-right {
+  animation: blink var(--animation-speed) infinite;
+  animation-delay: calc(var(--animation-speed) / 6);
+}
+
+/* prefers-reduced-motion disables the blinking animation */
+@media (prefers-reduced-motion: reduce) {
+  .eye-left,
+  .eye-right {
+    animation: none;
+  }
+}
+
+/* -- Nose & Mouth ------------------------------------------------------ */
+.nose {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 46%;
+  width: 8%;
+  height: 7%;
+  background: var(--color-nose);
+  border-radius: 50%;
+  z-index: 9;
+  box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.mouth {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 54%;
+  width: 24%;
+  height: 18%;
+  z-index: 9;
+}
+
+/* little smiling arcs */
+.smile-left,
+.smile-right {
+  position: absolute;
+  bottom: 8%;
+  width: 40%;
+  height: 40%;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+  border-radius: 120% / 60px 60px 0 0;
+}
+
+.smile-left {
+  left: 6%;
+  transform: rotate(12deg);
+}
+
+.smile-right {
+  right: 6%;
+  transform: rotate(-12deg);
+}
+
+/* -- Legs & feet ------------------------------------------------------ */
+.leg {
+  position: absolute;
+  bottom: -2%;
+  width: 22%;
+  height: 26%;
+  background: linear-gradient(180deg, var(--color-fur-1), var(--color-fur-2));
+  border-radius: 40% 40% 30% 30%;
+  z-index: 4;
+}
+
+.leg-left {
+  left: 20%;
+  transform: rotate(6deg);
+}
+
+.leg-right {
+  right: 20%;
+  transform: rotate(-6deg);
+}
+
+.foot {
+  position: absolute;
+  bottom: -6%;
+  left: 8%;
+  width: 84%;
+  height: 40%;
+  background: linear-gradient(180deg, #6b3f1f, #5a3217);
+  border-radius: 50% 50% 40% 40%;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* -- Small responsive tweaks ------------------------------------------ */
+@media (max-width: 420px) {
+  :root {
+    --squirrel-width: 260px;
+    --eye-size: 22px;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --squirrel-width: 220px;
+    --eye-size: 18px;
+  }
+}

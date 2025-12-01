@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <title>Calculus Final Exams Table</title>
+</head>
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+    <table aria-describedby="grades-description">
+      <caption>Calculus Final Exam Grades</caption>
+
+      <p id="grades-description" class="visually-hidden">
+        This table lists student names and their final exam grades,
+        along with the class average.
+      </p>
+
+      <thead>
+        <tr>
+          <th scope="col">Last Name</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Grade</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">Davis</th>
+          <td>Alex</td>
+          <td>54</td>
+        </tr>
+        <tr>
+          <th scope="row">Doe</th>
+          <td>Samantha</td>
+          <td>92</td>
+        </tr>
+        <tr>
+          <th scope="row">Rodriguez</th>
+          <td>Marcus</td>
+          <td>88</td>
+        </tr>
+        <tr>
+          <th scope="row">Thompson</th>
+          <td>Jane</td>
+          <td>77</td>
+        </tr>
+        <tr>
+          <th scope="row">Williams</th>
+          <td>Natalie</td>
+          <td>83</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th scope="row">Average Grade</th>
+          <td colspan="2">78.8</td>
+        </tr>
+      </tfoot>
+    </table>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

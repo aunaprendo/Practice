@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Body font */
+#nutrition {
+  line-height: 1.4;
+  margin: 75px auto 0 auto;
+  padding: 0;
+}
+
+/* Nutrition label container */
+.label {
+  border: 2px solid black;
+  width: 270px;
+  margin: 20px auto;
+  padding: 0 7px;
+  background-color: #fff; 
+}
+
+/* Header styles */
+header h1 {
+  text-align: center;
+  margin: -4px 0;
+  letter-spacing: 0.15px;
+}
+
+/* Paragraphs inside label */
+section p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between; 
+}
+
+/* Divider lines */
+.divider {
+  border-bottom: 1px solid #888989;
+  margin: 2px 0;
+}
+
+/* Bold text utility */
+.bold {
+  font-weight: 800;
+}
+
+/* Divider size variants */
+.large,
+.medium {
+  background-color: black;
+  border: 0;
+}
+
+.large {
+  height: 10px;
+}
+
+.medium {
+  height: 5px;
+}
+
+/* Small text */
+.small-text {
+  font-size: 0.85rem;
+}
+
+/* Calories section */
+.calories-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.calories-info h2 {
+  margin: 0;
+}
+
+.left-container p {
+  margin: -5px -2px;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.calories-info span {
+  margin: -7px -2px;
+  font-size: 2.4em;
+  font-weight: 700;
+}
+
+/* Right-aligned elements utility */
+.right {
+  justify-content: flex-end;
+}
+
+/* Indentation utilities for sub-items */
+.indent {
+  margin-left: 1em;
+}
+
+.double-indent {
+  margin-left: 2em;
+}
+
+/* Daily values table: add dividers except for no-divider items */
+.daily-value p:not(.no-divider) {
+  border-bottom: 1px solid #888989;
+  padding-bottom: 2px; /* spacing for readability */
+}
+
+/* Note at bottom of label */
+.note {
+  font-size: 0.6rem;
+  margin: 5px 0;
+  line-height: 1.2;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-indent: -8px;
+}
+
+/* Ensure sufficient contrast for dividers and text */
+.divider,
+.large,
+.medium {
+  background-color: #000;
+}
+
+/* Focus state for screen readers and keyboard users */
+.label:focus-within {
+  outline: 2px solid #fdb347; /* highlight label when focused */
+}

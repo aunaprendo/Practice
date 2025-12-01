@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <title>Multimedia Player</title>
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+    <h1>Squirrel Entertainment</h1>
+
+    <section aria-labelledby="song-heading">
+      <h2 id="song-heading">Squirrel Party Song</h2>
+      <figure>
+        <audio
+          controls
+          aria-label="Audio track of squirrels rapping enthusiastically about nuts.">
+          <source
+            src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3"
+            type="audio/mp3" />
+          Your browser does not support the audio element.
+        </audio>
+        <figcaption>A lively squirrel rap song.</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="dance-heading">
+      <h2 id="dance-heading">Squirrel Party Dance</h2>
+      <figure>
+        <video
+          controls
+          width="600"
+          aria-label="Video of squirrels dancing at a forest party in rhythmic formation.">
+          <source
+            src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
+            type="video/mp4" />
+          <track
+            src="captions-squirrel-dance.vtt"
+            kind="captions"
+            srclang="en"
+            label="English Captions"
+            default />
+          Your browser does not support the video element.
+        </video>
+        <figcaption>Squirrels performing a synchronized dance routine.</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="transcript-heading">
+      <h2 id="transcript-heading">Transcript</h2>
+      <pre>
+Gray squirrel, gray squirrel
+Shake your bushy tail.
+Gray squirrel, gray squirrel
+Shake your bushy tail.
+Wrinkle up your little nose,
+Put a nut between your toes.
+Gray squirrel, gray squirrel
+Shake your bushy tail.
+      </pre>
+    </section>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

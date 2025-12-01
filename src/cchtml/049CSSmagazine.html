@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap"
+    rel="stylesheet"
+    />
+  <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <link href="../cccss/magazine.css" rel="stylesheet" />
+  <title>Magazine</title>
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation"
+		class="typ">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu"
+		class="typ">
+  </aside>
+
+  <main id="magazine">
+    <!-- Hero Section -->
+    <section class="heading" aria-labelledby="hero-title">
+      <header class="hero">
+        <img
+          src="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
+          alt="freeCodeCamp logo"
+          loading="lazy"
+          class="hero-img mag-img"
+        />
+        <h1 id="hero-title" class="hero-title">Our New Curriculum</h1>
+        <p class="hero-subtitle">
+          Our efforts to restructure our curriculum with a more project-based focus
+        </p>
+      </header>
+
+      <!-- Author Info -->
+      <div class="author">
+        <p class="author-name">
+          By <a href="https://freecodecamp.org" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>
+        </p>
+        <p class="publish-date">March 7, 2019</p>
+      </div>
+
+      <!-- Social Links -->
+      <div class="social-icons" aria-label="Share this article">
+        <a href="https://www.facebook.com/freecodecamp/"><i class="fab fa-facebook-f" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
+        <a href="https://twitter.com/freecodecamp/"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
+        <a href="https://instagram.com/freecodecamp"><i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a>
+        <a href="https://www.linkedin.com/school/free-code-camp/"><i class="fab fa-linkedin-in" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a>
+        <a href="https://www.youtube.com/freecodecamp"><i class="fab fa-youtube" aria-hidden="true"></i><span class="sr-only">YouTube</span></a>
+      </div>
+    </section>
+
+    <!-- Text Content Section -->
+    <section class="text">
+      <p class="first-paragraph">
+        Soon the freeCodeCamp curriculum will be 100% project-driven learning. Instead of a series of coding challenges, you'll learn through building projects step by step. Before we get into the details, let me emphasize: we are not changing the certifications. All 6 certifications will still have the same 5 required projects. We are only changing the optional coding challenges.
+      </p>
+      <p>
+        After years of pondering these two problems and how to solve them, I slipped, hit my head on the sink, and when I came to I had a revelation! A vision! A picture in my head! This is what makes time travel possible: the flux capacitor!
+      </p>
+      <p>
+        It wasn't as dramatic as Doc's revelation in Back to the Future. It just occurred to me while I was going for a run. The revelation: the entire curriculum should be a series of projects. Instead of individual coding challenges, we'll just have projects, each with their own seamless series of tests. Each test gives you just enough information to figure out how to get it to pass.
+      </p>
+      <blockquote>
+        <hr />
+        <p class="quote">
+          The entire curriculum should be a series of projects
+        </p>
+        <hr />
+      </blockquote>
+      <p>
+        No more walls of explanatory text. No more walls of tests. Just one test at a time, as you build up a working project. Over the course of passing thousands of tests, you build up projects and your own understanding of coding fundamentals. There is no transition between lessons and projects, because the lessons themselves are baked into projects. And there's plenty of repetition to help you retain everything because - hey - building projects in real life has plenty of repetition.
+      </p>
+      <p>
+        The main design challenge is taking what is currently paragraphs of explanation and instructions and packing them into a single test description text. Each project will involve dozens of tests like this. People will be coding the entire time, rather than switching back and forth from "reading mode" to "coding mode".
+      </p>
+      <p>
+        Instead of a series of coding challenges, people will be in their code editor passing one test after another, quickly building up a project. People will get into a real flow state, similar to what they experience when they build the required projects at the end of each certification. They'll get that sense of forward progress right from the beginning. And freeCodeCamp will be a much smoother experience.
+      </p>
+    </section>
+
+    <!-- History & Images Section -->
+    <section class="text text-with-images">
+      <article class="brief-history" aria-labelledby="brief-history-title">
+        <h3 id="brief-history-title" class="list-title">A Brief History</h3>
+        <p>Of the Curriculum</p>
+        <ul class="lists">
+          <li>
+            <h4 class="list-subtitle">V1 - 2014</h4>
+            <p>We launched freeCodeCamp with a simple list of 15 resources, including Harvard's CS50 and Stanford's Database Class.</p>
+          </li>
+          <li>
+            <h4 class="list-subtitle">V2 - 2015</h4>
+            <p>We added interactive algorithm challenges.</p>
+          </li>
+          <li>
+            <h4 class="list-subtitle">V3 - 2015</h4>
+            <p>We added our own HTML+CSS challenges (before relying on General Assembly's Dash course).</p>
+          </li>
+          <li>
+            <h4 class="list-subtitle">V4 - 2016</h4>
+            <p>Expanded curriculum to 3 certifications (Front End, Back End, Data Visualization). Front End had its own challenges; others used external resources.</p>
+          </li>
+          <li>
+            <h4 class="list-subtitle">V5 - 2017</h4>
+            <p>Added back end and data visualization challenges.</p>
+          </li>
+          <li>
+            <h4 class="list-subtitle">V6 - 2018</h4>
+            <p>Launched 6 new certifications to replace the old ones, marking the biggest curriculum improvement to date.</p>
+          </li>
+        </ul>
+      </article>
+
+      <aside class="image-wrapper" aria-label="Project examples and images">
+        <img
+          src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png"
+          alt="Image of the quote machine project"
+          loading="lazy"
+          class="image-1 mag-img"
+          width="600"
+          height="400"
+        />
+        <img
+          src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png"
+          alt="Image of a calculator project"
+          loading="lazy"
+          class="image-2 mag-img"
+          width="400"
+          height="400"
+        />
+        <blockquote class="image-quote">
+          <hr />
+          <p class="quote">
+            The millions of people who are learning to code through freeCodeCamp will have an even better resource to help them learn these fundamentals.
+          </p>
+          <hr />
+        </blockquote>
+        <img
+          src="https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg"
+          alt="Four people working on code"
+          loading="lazy"
+          class="image-3 mag-img"
+          width="600"
+          height="400"
+        />
+      </aside>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer"
+		class="typ-font">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

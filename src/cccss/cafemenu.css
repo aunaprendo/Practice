@@ -1,0 +1,85 @@
+/* Coffee background */
+#coffee-background {
+  background-image: url("https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.established {
+  font-style: italic;
+  text-align: center;
+}
+
+/* Paragraphs */
+p {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Menu container */
+.menu {
+  width: 80%;
+  max-width: 500px;
+  background-color: burlywood;
+  margin: 20px auto;
+  padding: 20px;
+  z-index: 100;
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Images */
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Horizontal rule */
+hr {
+  height: 2px;
+  background-color: brown;
+  border: none;
+  margin: 20px 0;
+}
+
+.bottom-line {
+  margin-top: 25px;
+}
+
+/* Menu items */
+.item p {
+  display: inline-block;
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+/* Item text alignment */
+.flavor, .dessert {
+  text-align: left;
+  width: 75%;
+  display: inline-block;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+  display: inline-block;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <title>Styled To-Do List</title>
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+    <h1>Squirrel Life</h1>
+
+    <ul class="todo-list" role="list">
+      <li role="listitem">
+        <input type="checkbox" id="task-1" />
+        <label for="task-1">Buy nuts</label>
+        <ul class="sub-item" role="list">
+          <li role="listitem">
+            <a
+              class="sub-item-link"
+              href="https://www.google.com"
+              target="_blank"
+              rel="noopener noreferrer">
+              Nuts for Us
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li role="listitem">
+        <input type="checkbox" id="task-2" />
+        <label for="task-2">Set out nuts</label>
+        <ul class="sub-item" role="list">
+          <li role="listitem">
+            <a
+              class="sub-item-link"
+              href="https://www.google.com"
+              target="_blank"
+              rel="noopener noreferrer">
+              Placing Nuts 101
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li role="listitem">
+        <input type="checkbox" id="task-3" />
+        <label for="task-3">Play with squirrels</label>
+        <ul class="sub-item" role="list">
+          <li role="listitem">
+            <a
+              class="sub-item-link"
+              href="https://www.google.com"
+              target="_blank"
+              rel="noopener noreferrer">
+              Squirrel Games
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li role="listitem">
+        <input type="checkbox" id="task-4" />
+        <label for="task-4">Make drey for squirrels</label>
+        <ul class="sub-item" role="list">
+          <li role="listitem">
+            <a
+              class="sub-item-link"
+              href="https://www.google.com"
+              target="_blank"
+              rel="noopener noreferrer">
+              Home Building for Squirrels
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

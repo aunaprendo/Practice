@@ -1,0 +1,60 @@
+/* Blog Post Card Container */
+.blog-post-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 500px;
+  text-align: center;
+  margin: 20px auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+/* Post Image */
+.post-img {
+  width: 100%;
+  border-bottom: 3px dotted gray;
+  height: auto; 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Post Content */
+.post-content {
+  padding: 25px;
+}
+
+/* Post Title */
+.post-title {
+  color: teal;
+  margin: 10px 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* Post Excerpt */
+.post-excerpt {
+  color: gray;
+  margin: 15px 0;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* Read More Link */
+.read-more {
+  color: #000080; /* navy */
+  background-color: #ffd700; /* gold */
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Read More Hover State */
+.read-more:hover,
+.read-more:focus {
+  background-color: teal;
+  color: #ffffff;
+  outline: none; /* ensures hover/focus is visually distinct if needed */
+}

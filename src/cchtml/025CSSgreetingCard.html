@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <link href="../cccss/greetingcard.css" rel="stylesheet" />
+  <title>Greeting Card</title>
+</head>
+
+<body class="greeting-card">
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+    <div class="card" id="greeting-card" role="region" aria-labelledby="card-title">
+      <h1 id="card-title">Happy Birthday!</h1>
+
+      <p class="message">
+        Wishing you all the happiness and joy on your special day!
+      </p>
+
+      <div class="card-links">
+        <a href="#send" class="send-link">Send Card</a>
+        <a href="#share" class="share-link">Share on Social Media</a>
+      </div>
+    </div>
+
+    <section id="send" role="region" aria-labelledby="send-title">
+      <h2 id="send-title">Sending your card...</h2>
+      <p>Card successfully sent to your recipient!</p>
+    </section>
+
+    <section id="share" role="region" aria-labelledby="share-title">
+      <h2 id="share-title">Sharing your card...</h2>
+      <p>Your card was shared on social media!</p>
+    </section>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

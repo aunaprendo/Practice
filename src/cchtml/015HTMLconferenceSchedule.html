@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <title>Tech Conference 2025 Schedule</title>
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+    <h1>Tech Conference 2025 Schedule</h1>
+
+    <table aria-describedby="schedule-caption">
+      <caption id="schedule-caption" aria-live="polite">
+        Schedule by Track and Time
+      </caption>
+
+      <thead>
+        <tr>
+          <th scope="col">Time</th>
+          <th scope="col">Track A</th>
+          <th scope="col">Track B</th>
+          <th scope="col">Track C</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">9:00 AM</th>
+          <td>Keynote: Tech Future</td>
+          <td>Intro to Web Dev</td>
+          <td>UX for All</td>
+        </tr>
+
+        <tr>
+          <th scope="row">10:00 AM</th>
+          <td>Accessibility Deep Dive</td>
+          <td>CSS for Beginners</td>
+          <td>Inclusive Design Principles</td>
+        </tr>
+
+        <tr>
+          <th scope="row">11:00 AM</th>
+          <td colspan="3">Break</td>
+        </tr>
+
+        <tr>
+          <th scope="row">11:30 AM</th>
+          <td>AR/VR in Education</td>
+          <td>JavaScript Fundamentals</td>
+          <td>Design Systems at Scale</td>
+        </tr>
+
+        <tr>
+          <th scope="row">12:30 PM</th>
+          <td colspan="3">Lunch Break</td>
+        </tr>
+
+        <tr>
+          <th scope="row">2:00 PM</th>
+          <td>Voice UI Workshop</td>
+          <td>Git &amp; GitHub Essentials</td>
+          <td>Color &amp; Contrast in UI</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

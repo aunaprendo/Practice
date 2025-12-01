@@ -1,0 +1,61 @@
+/* Center headings */
+h1 {
+  text-align: center;
+}
+
+/* Container for markers */
+.container {
+  background-color: #ffffff; 
+  padding: 10px 0;
+}
+
+/* Marker wrapper */
+.marker {
+  width: 200px;
+  height: 25px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Marker cap */
+.cap {
+  width: 60px;
+  height: 25px;
+  display: inline-block;
+}
+
+/* Marker sleeve */
+.sleeve {
+  width: 110px;
+  height: 25px;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: 10px double rgba(0, 0, 0, 0.75);
+}
+
+/* Red marker styling */
+.red {
+  background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+  box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+}
+
+/* Green marker styling */
+.green {
+  background: linear-gradient(#55680D, #71F53E, #116C31);
+  box-shadow: 0 0 20px 0 #3B7E20CC;
+}
+
+/* Blue marker styling */
+.blue {
+  background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
+  box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+}
+
+/* Accessibility enhancements for color indicators (for screen readers) */
+.marker::before {
+  content: attr(aria-label); /* Use aria-label to describe color */
+  position: absolute;
+  left: -9999px; /* Hide visually but readable by screen readers */
+}

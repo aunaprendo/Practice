@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <link href="../cccss/postcard.css" rel="stylesheet" />
+  <title>Blog Post Card</title>
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+    <article class="blog-post-card" aria-label="Blog Post: Squirrel Life">
+      <img
+        class="post-img"
+        src="https://cdn.freecodecamp.org/curriculum/labs/cover-photo.jpg"
+        alt="Hands typing on a computer keyboard"
+      />
+      <div class="post-content">
+        <h2 class="post-title">Squirrel Life</h2>
+        <p class="post-excerpt">
+          Being a squirrel means constantly being on the move, darting through trees
+          and foraging for food to stash away for the winter. Life is a mix of instinct,
+          agility, and keen awareness of predators and changing seasons. Every day is a
+          survival mission wrapped in bursts of curiosity and play.
+        </p>
+        <a
+          class="read-more"
+          href="https://www.google.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Read More
+        </a>
+      </div>
+    </article>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

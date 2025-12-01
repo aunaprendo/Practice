@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <link href="../cccss/playingcards.css" rel="stylesheet" />
+  <title>Playing Cards</title>
+</head>
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <!-- Main playing cards section -->
+  <main id="playing-cards" aria-label="Playing cards display">
+    
+    <!-- Card 1 -->
+    <div class="card" tabindex="0" aria-label="Card with spade symbol, left L, right R">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="left">7</div>
+          <div class="middle">♠</div>
+          <div class="right">7</div>
+        </div>
+        <div class="card-back">🌰</div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" tabindex="0" aria-label="Card with club symbol, left 5, right 5">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="left">5</div>
+          <div class="middle">♣</div>
+          <div class="right">5</div>
+        </div>
+        <div class="card-back">🌰</div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" tabindex="0" aria-label="Card with heart symbol, left 13, right 13">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="left">13</div>
+          <div class="middle">♥</div>
+          <div class="right">13</div>
+        </div>
+        <div class="card-back">🌰</div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card" tabindex="0" aria-label="Card with diamond symbol, left A, right A">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="left">A</div>
+          <div class="middle">♦</div>
+          <div class="right">A</div>
+        </div>
+        <div class="card-back">🌰</div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

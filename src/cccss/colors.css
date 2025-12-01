@@ -1,0 +1,46 @@
+/* Body styling */
+#colored-boxes {
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+/* Color box styling */
+.color-box {
+  width: 125px;
+  height: 125px;
+  display: inline-block;
+  margin: 5px;
+  border: 2px solid #000;
+  border-radius: 4px;
+}
+
+/* Individual colors */
+.color1 {
+  background-color: #882399; /* Purple */
+}
+
+.color2 {
+  background-color: #01630f; /* Dark Green */
+}
+
+.color3 {
+  background-color: #00ffff; /* Cyan */
+}
+
+.color4 {
+  background-color: hsl(1, 50%, 50%); /* Reddish tone */
+}
+
+.color5 {
+  background-color: #016199; /* Blue */
+}
+
+/* Accessibility improvements */
+.color-box:focus {
+  outline: 3px solid #ff0; /* Yellow outline for keyboard users */
+}
+
+.color-box:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <link href="../cccss/popup.css" rel="stylesheet">
+  <title>Contact Form</title>
+</head>
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+    <div class="form-container">
+      <form aria-label="Squirrel Language Contact Form">
+        <h2>Learn to Talk to Squirrels</h2>
+
+        <label for="name">
+          Full Name:
+          <input type="text" name="name" id="name" required aria-required="true" />
+        </label>
+
+        <label for="email">
+          Email:
+          <input type="email" name="email" id="email" required aria-required="true" />
+        </label>
+
+        <label for="why">
+          Tell Us Why You Want to Learn Squirrelese:
+          <textarea name="why" id="why" required aria-required="true" rows="5" cols="30" placeholder="I want to talk to squirrels..."></textarea>
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

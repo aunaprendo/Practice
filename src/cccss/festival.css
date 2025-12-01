@@ -1,0 +1,45 @@
+/* General Body Styling */
+#event-flyer {
+  padding: 50px 0;
+  margin: 0 auto 75px auto;
+  min-height: calc(100vh - 100px);
+  text-align: center;
+  width: 50vw;
+  box-sizing: border-box; 
+  line-height: 1.5;
+}
+
+/* Horizontal Rule Styling */
+hr {
+  width: 75%;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+}
+
+/* Section Container */
+section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Flex Container for Multiple Sections */
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: left;
+  flex-wrap: wrap; 
+  gap: 20px; 
+}
+
+/* Individual Section Styling */
+.section1,
+.section2,
+.section3 {
+  flex: 1;
+  padding: 20px;
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: #f9f9f9; 
+  border-radius: 8px; 
+}

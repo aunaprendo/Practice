@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <link href="../cccss/productpage.css" rel="stylesheet" />
+  <title>Product Landing Page</title>
+</head>
+
+<body>
+  <!-- Main navigation -->
+  <nav
+    data-include="./partials/navBar.html"
+    role="navigation"
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside
+    data-include="./partials/sideMenu.html"
+    role="navigation"
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+		<main id="main-doc">
+	    <!-- Header / Hero -->
+	    <header id="header">
+	      <h1>Squirrel Training</h1>
+	
+	      <img 
+	        src="https://image2url.com/images/1762371424898-a448136a-d6cd-4a33-aac0-8b84081bc856.jpeg"
+	        id="header-img"
+	        alt="Squirrel training logo"
+	        role="img"
+	      />
+	
+	      <nav id="product-nav" aria-label="Section navigation">
+	        <ul class="product-nav">
+	          <li><a class="product-nav-link" href="#LEARN">Learn</a></li>
+	          <li><a class="product-nav-link" href="#REVIEWS">Reviews</a></li>
+	          <li><a class="product-nav-link" href="#APPLY">Apply</a></li>
+	        </ul>
+	      </nav>
+	    </header>
+	
+	    <!-- LEARN Section -->
+	    <section id="LEARN" tabindex="-1" aria-labelledby="learn-heading">
+	      <h2 id="learn-heading">Learning Outcomes</h2>
+	
+	      <iframe
+	        id="video"
+	        width="560"
+	        height="315"
+	        src="https://www.youtube.com/embed/hFZFjoX2cGg?si=SCC1UaEAHpjh5Fnp"
+	        title="Training overview video"
+	        frameborder="0"
+	        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+	        allowfullscreen
+	        referrerpolicy="strict-origin-when-cross-origin">
+	      </iframe>
+	    </section>
+	
+	    <!-- REVIEWS Section -->
+	    <section id="REVIEWS" tabindex="-1" aria-labelledby="reviews-heading">
+	      <h2 id="reviews-heading">100 Five-Star Ratings</h2>
+	    </section>
+	
+	    <!-- APPLY Section -->
+	    <section id="APPLY" tabindex="-1" aria-labelledby="apply-heading">
+	      <h2 id="apply-heading">Apply for Course</h2>
+	
+	      <form
+	        id="form"
+	        method="post"
+	        action="https://www.freecodecamp.org/email-submit"
+	        aria-describedby="form-instructions">
+	
+	        <p id="form-instructions">
+	          Fill out the form below to apply for our squirrel training program.
+	        </p>
+	
+	        <!-- Name -->
+	        <div class="form-group">
+	          <label for="name">Full Name:</label>
+	          <input
+	            type="text"
+	            id="name"
+	            name="name"
+	            placeholder="Enter your full name"
+	            required
+	            aria-required="true"
+	          />
+	        </div>
+	
+	        <!-- Email -->
+	        <div class="form-group">
+	          <label for="email">Email:</label>
+	          <input
+	            type="email"
+	            id="email"
+	            name="email"
+	            placeholder="example@example.com"
+	            required
+	            aria-required="true"
+	          />
+	        </div>
+	
+	        <!-- Course -->
+	        <div class="form-group">
+	          <label for="course">Course:</label>
+	          <select id="course" name="course" required aria-required="true">
+	            <option disabled selected>Select a course</option>
+	            <option>Nut Hiding</option>
+	            <option>Nut Finding</option>
+	            <option>Drey Building</option>
+	            <option>Mushroom Jerky Making</option>
+	            <option>Obstacle Course Tactics</option>
+	          </select>
+	        </div>
+	
+	        <!-- Submit -->
+	        <button id="submit" type="submit">
+	          Submit Application
+	        </button>
+	      </form>
+		  </section>
+		</main>
+  </main>
+
+  <!-- Footer -->
+  <footer
+    data-include="./partials/footer.html"
+    role="contentinfo"
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

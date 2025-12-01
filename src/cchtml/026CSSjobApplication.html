@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <link href="../cccss/application.css" rel="stylesheet" />
+  <title>Job Application Form</title>
+</head>
+<body>
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+    <div class="container">
+      <h1 id="form-title">Squirrel Application Form</h1>
+      
+      <form aria-labelledby="form-title">
+        <!-- Name -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-required="true" /><br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@example.com" required aria-required="true" /><br><br>
+
+        <!-- Position -->
+        <label for="position">Position:</label>
+        <select id="position" name="position" required aria-required="true">
+          <option value="" disabled selected>Select a Position</option>
+          <option value="nut-hider">Nut Hider</option>
+          <option value="nut-finder">Nut Finder</option>
+          <option value="drey-builder">Drey Builder</option>
+          <option value="mushroom-jerky-maker">Mushroom Jerky Maker</option>
+          <option value="pup-rearer">Pup Rearer</option>
+        </select><br><br>
+
+        <!-- Availability -->
+        <fieldset>
+          <legend>Availability:</legend>
+          <input type="radio" id="morning" name="availability" value="Mornings" required />
+          <label for="morning">Mornings</label><br>
+
+          <input type="radio" id="afternoon" name="availability" value="Afternoons" />
+          <label for="afternoon">Afternoons</label><br>
+
+          <input type="radio" id="evening" name="availability" value="Evenings" />
+          <label for="evening">Evenings</label><br>
+        </fieldset><br>
+
+        <!-- Why -->
+        <label for="message">Why do you want to be a squirrel?</label><br>
+        <textarea id="message" name="message" placeholder="Type your reason here" rows="15" cols="55" required aria-required="true"></textarea><br><br>
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

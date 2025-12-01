@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../cccss/gamesettingpanel.css" />
+  <title>Game Settings Panel</title>
+</head>
+<body id="game-panel">
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+    <section class="settings-card" aria-labelledby="settings-title">
+      <h1 id="settings-title">Game Settings</h1>
+      <form>
+        <div class="setting">
+          <input type="checkbox" id="sound-effects" name="sound-effects" />
+          <label for="sound-effects">Sound Effects</label>
+        </div>
+        <div class="setting">
+          <input type="checkbox" id="background-music" name="background-music" />
+          <label for="background-music">Background Music</label>
+        </div>
+        <div class="setting">
+          <input type="checkbox" id="hard-mode" name="hard-mode" />
+          <label for="hard-mode">Hard Mode</label>
+        </div>
+        <div class="setting">
+          <input type="checkbox" id="haptic-feedback" name="haptic-feedback" />
+          <label for="haptic-feedback">Haptic Feedback</label>
+        </div>
+      </form>
+    </section>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

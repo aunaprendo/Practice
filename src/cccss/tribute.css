@@ -1,0 +1,17 @@
+h1,
+h2,
+#tribute-info {
+  text-align: center;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centers image horizontally */
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}

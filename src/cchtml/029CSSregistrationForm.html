@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../cccss/registration.css" />
+  <title>Registration Form</title>
+</head>
+<body id="registration">
+  <!-- Main navigation -->
+  <nav 
+    data-include="./partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+
+  <!-- Side menu -->
+  <aside 
+    data-include="./partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+
+  <main>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information.</p>
+
+    <form method="post" action="https://register-demo.freecodecamp.org" aria-label="User Registration Form">
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="first-name">
+          First Name:
+          <input id="first-name" name="first-name" type="text" required aria-required="true" />
+        </label>
+        <label for="last-name">
+          Last Name:
+          <input id="last-name" name="last-name" type="text" required aria-required="true" />
+        </label>
+        <label for="email">
+          Email:
+          <input id="email" name="email" type="email" required aria-required="true" />
+        </label>
+        <label for="new-password">
+          Create a Password:
+          <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required aria-required="true" />
+        </label>
+      </fieldset>
+
+      <!-- Account Type -->
+      <fieldset>
+        <legend>Account Type (required)</legend>
+        <label for="personal-account">
+          <input id="personal-account" type="radio" name="account-type" value="personal" class="inline" checked />
+          Personal
+        </label>
+        <label for="business-account">
+          <input id="business-account" type="radio" name="account-type" value="business" class="inline" />
+          Business
+        </label>
+      </fieldset>
+
+      <!-- Additional Information -->
+      <fieldset>
+        <legend>Additional Information</legend>
+        <label for="profile-picture">
+          Upload a Profile Picture:
+          <input id="profile-picture" type="file" name="file" aria-label="Profile picture upload" />
+        </label>
+        <label for="age">
+          Age:
+          <input id="age" type="number" name="age" min="13" max="120" />
+        </label>
+        <label for="referrer">
+          How did you hear about us?
+          <select id="referrer" name="referrer" aria-required="true">
+            <option value="">(Select one)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label for="bio">
+          Bio:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+        </label>
+      </fieldset>
+
+      <!-- Terms -->
+      <p>
+        <a href="https://www.freecodecamp.org/news/terms-of-service" target="_blank" rel="noopener noreferrer">Read our terms and conditions</a>
+      </p>
+      <label for="terms-and-conditions">
+        <input class="inline" name="terms" id="terms-and-conditions" type="checkbox" required aria-required="true" />
+        I accept the terms and conditions
+      </label>
+
+      <input type="submit" value="Submit" />
+    </form>
+  </main>
+
+	<!-- Footer -->
+  <footer 
+    data-include="./partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+
+  <script src="../ccjs/ccScript.js"></script>
+</body>
+</html>

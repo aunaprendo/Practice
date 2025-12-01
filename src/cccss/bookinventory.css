@@ -1,0 +1,81 @@
+
+span {
+  display: inline-block;
+}
+
+/* ========================================================================
+   Table Row Status Coloring
+   ======================================================================== */
+
+tr.to-read {
+  background-image: linear-gradient(#eb8dba, #641239);
+}
+
+tr.read {
+  background-image: linear-gradient(#8deb8f, #126413);
+}
+
+tr.in-progress {
+  background-image: linear-gradient(#8de9eb, #126264);
+}
+
+/* ========================================================================
+   Status Pill Styling
+   ======================================================================== */
+
+.status {
+  height: 80%;
+  width: 90%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-image: linear-gradient(#ffffff, #ffffff);
+}
+
+tr.to-read .status {
+  background-image: linear-gradient(#ffffff, #eb8dba);
+}
+
+tr.read .status {
+  background-image: linear-gradient(#ffffff, #8deb8f);
+}
+
+tr.in-progress .status {
+  background-image: linear-gradient(#ffffff, #8de9eb);
+}
+
+/* ========================================================================
+   Rating Dots
+   ======================================================================== */
+
+.rate {
+  height: 80%;
+  width: 90%;
+  padding: 10px;
+}
+
+/* Individual rating dots */
+.rate > span {
+  border: 1px dotted black;
+  border-radius: 100px;
+  margin: 5px;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+}
+
+/* ========================================================================
+   Rating Levels
+   ======================================================================== */
+
+.rate.three > span {
+  background-image: linear-gradient(#ffffff, #ebe88d);
+}
+
+.rate.two > span:nth-child(-n + 2) {
+  background-image: linear-gradient(#ffffff, #ebe88d);
+}
+
+.rate.one > span:first-of-type {
+  background-image: linear-gradient(#ffffff, #ebe88d);
+}

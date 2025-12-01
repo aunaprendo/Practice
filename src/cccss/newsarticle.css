@@ -1,0 +1,60 @@
+#news {
+  font-size: 24px; 
+}
+
+.newspaper {
+  font-size: 1rem; 
+  line-height: 1.6; 
+}
+
+/* Main newspaper title */
+.name {
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0.2em;
+}
+
+/* Published date */
+.date {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* Author name */
+.author {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+
+/* Main article headline */
+.headline {
+  font-size: 2em; 
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+
+/* Sub-headline */
+.sub-headline {
+  font-size: 1.5em;
+  font-weight: 300; 
+  font-style: italic;
+  margin-bottom: 1.2em;
+}
+
+/* Article Text Content */
+.text {
+  text-indent: 20px;
+  line-height: 2em;
+  margin-bottom: 1.2em;
+}
+
+/* Decorative drop-cap for first letter */
+.text::first-letter {
+  font-weight: bold;
+  font-size: 2em;
+  line-height: 1;
+}
+
