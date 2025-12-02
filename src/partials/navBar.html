@@ -1,6 +1,6 @@
 
 
-<nav class="navbar fixed-top navbar-expand-md bg-dark border-bottom border-body">
+<nav class="navbar fixed-top navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="./assets/logoSquirrel.svg" alt="White Squirrel Logo" height="50">
@@ -25,13 +25,13 @@
           </ul>
         </li>
 				<li class="nav-item">
-          <a class="nav-link link-opacity-50-hover" href="resume.html">RESUME</a>
+          <a class="nav-link" href="resume.html">RESUME</a>
         </li>
 				<li class="nav-item">
-          <a class="nav-link link-opacity-50-hover" href="contact.html">CONTACT</a>
+          <a class="nav-link" href="contact.html">CONTACT</a>
         </li>
 				<li class="nav-item">
-          <a class="nav-link active  text-light link-opacity-50-hover" aria-current="page" href="index.html">HOME</a>
+          <a class="nav-link active text-lighT" aria-current="page" href="index.html">HOME</a>
         </li>
       </ul>
     </div>
@@ -40,9 +40,9 @@
 
 <!-- Sidebar Setup -->
 <div class="offcanvas offcanvas-start" 
-     tabindex="-1" id="sidebar">
+     tabindex="-1" id="sidebar" >
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title text-success">
+        <h5 class="offcanvas-title text-dark fs-3">
             MENU
         </h5>
         <button type="button" 
@@ -51,23 +51,34 @@
                 aria-label="Close">
         </button>
     </div>
-    <div class="offcanvas-body bg-success">
+    <div class="offcanvas-body bg-dark">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link text-light" href="#">
-                    Home
+            <li class="nav-item fs-5">
+                <a class="nav-link active text-light" aria-current="page" href="index.html">
+                    HOME
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="#">
-                    About Us
+            <li class="nav-item fs-5">
+                <a class="nav-link text-light" href="contact.html">
+                    CONTACT
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="#">
-                    Contact Us
+            <li class="nav-item fs-5">
+                <a class="nav-link text-light" href="resume.html">
+                    RESUME
                 </a>
             </li>
+		        <li class="nav-item dropdown">
+			          <a class="nav-link text-light fs-5 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									PROJECTS
+			          </a>
+			          <ul class="dropdown-menu dropdown-menu-dark">
+			            <li><a class="dropdown-item text-light" href="#">Learning Path</a></li>
+			            <li><a class="dropdown-item text-light" href="#">freeCodeCamp Projecf</a></li>
+			            <li><a class="dropdown-item text-light" href="#">Game Project</a></li>
+				          </li>
+								</ul>
+		        </li>
         </ul>
     </div>
 </div>

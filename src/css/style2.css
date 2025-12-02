@@ -1,0 +1,31 @@
+/* ========================================
+   ROOT VARIABLES — WCAG AAA COMPLIANT
+========================================= */
+:root {
+  /* BRAND COLORS */
+  --accent-color-main: #7A4A00;   /* Dark Gold (AAA) */
+  --accent-color-alt: #A66200;    /* Warm Amber (AAA) */
+  --accent-color-bold: #004046;   /* Deep Teal (AAA) */
+  --accent-color-gray: #595959;   /* Medium Gray (AAA on white) */
+
+  /* TEXT */
+  --text-color-main: #0F0F0F;     /* Deep near-black (AAA) */
+  --text-color-alt: #FFFFFF;      /* White (AAA on dark) */
+
+  /* BACKGROUNDS */
+  --bg-color-main: #FFFFFF;
+  --bg-color-alt: #121212;        /* Deep charcoal */
+
+  /* FONT WEIGHTS */
+  --weight-small: 300;
+  --weight-semibold: 500;
+  --weight-bold: 700;
+}
+
+/* ========================================
+   RESET
+========================================= */
+
+a:hover {
+  color: var(--accent-color-main) !important;
+}
