@@ -162,7 +162,7 @@ main {
   font-size: 1rem;
 }
 
-/* First-level dropdown */
+/* Dropdown Menu */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -172,36 +172,13 @@ main {
 	border-radius: 15px;
 }
 
-.dropdown-content li a,
-.dropbtn-second {
+.dropdown-content li a {
   display: block;
   margin: 25px;
   color:  var(--text-color-alt);
 	font-weight: var(--weight-semibold);
   text-decoration: none;
   cursor: pointer;
-}
-
-/* Second-level submenu */
-.dropdown-second {
-  position: relative;
-}
-
-.dropbtn-second {
-  background: var(--bg-color-alt2);
-  border: none;
-  font-size: 1rem;
-	padding-left: 0;
-}
-
-.dropdown-content-second {
-  display: none;
-  position: absolute;
-  left: 14%;
-  top: 100%;
-  background: var(--bg-color-alt2);
-  min-width: 200px;
-	border-radius: 15px;
 }
 
 /* Hover interactions */
