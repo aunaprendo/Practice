@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* ========================================
    ROOT VARIABLES — WCAG AAA COMPLIANT
@@ -37,7 +37,6 @@ html, body {
   padding: 0;
   font-size: 1rem;
   scroll-behavior: smooth;
-	min-height: 100vh;
 }
 
 body {
@@ -48,7 +47,6 @@ body {
   padding-top: 75px;
   display: flex;
   flex-direction: column;
-	min-height: 100vh;
 }
 
 ul {
@@ -118,7 +116,7 @@ main {
   top: 0;
   left: 0;
   right: 0;
-  background: var(--bg-color-main);
+  background: var(--bg-color-alt);
   z-index: 1000;
 }
 
@@ -140,7 +138,7 @@ main {
 .nav-link {
   padding: 15px;
   font-weight: var(--weight-semibold);
-  color: var(--text-color-main);
+  color: var(--text-color-alt);
 }
 
 .nav-link:hover {
@@ -148,9 +146,8 @@ main {
 }
 
 #logo {
-  height: 175%;
-  padding-left: 0;
-	margin-left: 0;
+  height: 70%;
+  padding-left: 10px;
 }
 
 /* ========================================

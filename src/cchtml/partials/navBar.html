@@ -1,36 +1,43 @@
-<nav class="navbar navbar-expand-lg  bg-$r border-bottom border-body">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+<nav id="top-bar">
+  <div id="nav-bar">
+    <img id="logo" src="../assets/logoSquirrel.svg" alt="Squirrel Logo" />
+    <ul id="nav-links">
+			<li class="dropdown">
+      <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link" href="../allProjects.html">PROJECTS</a>
+      </button>
+			<ul class="dropdown-content" aria-label="Projects submenu">
+        <li><a href="#">Learning Path</a></li>
+        <li><a href="#">Squirrel Game</a></li>
+        <li><a href="#">Bootcamp</a></li>
+				<li class="dropdown-second">
+					<button class="dropbtn-second" aria-haspopup="true" aria-expanded="false">
+					  freeCodeCamp Projects
+					</button>
+					<ul class="dropdown-content-second" aria-label="freeCodeCamp submenu">
+					  <li><a href="../ccHTML.html">FCC HTML</a></li>
+					  <li><a href="../ccCSS.html">FCC CSS</a></li>
+					  <li><a href="../ccJS.html">FCC JS</a></li>
+					  <li><a href="../ccReact.html">FCC REACT</a></li>
+					  <li><a href="../ccPython.html">FCC PYTHON</a></li>
+					  <li><a href="../ccDB.html">FCC DB</a></li>
+					</ul>
+				</li>
+			</ul>
+			</li>
+			
+			
+      <li><a class="nav-link" href="../resume.html">RESUME</a></li>
+      <li><a class="nav-link" href="../contact.html">CONTACT</a></li>
+      <li><a class="nav-link" href="../index.html">HOME</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
     </div>
   </div>
 </nav>
+
+<div class="overlay" id="overlay"></div>
