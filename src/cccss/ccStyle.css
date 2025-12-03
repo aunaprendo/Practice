@@ -58,6 +58,7 @@ ul {
 a {
   text-decoration: none;
   color: var(--accent-color-bold);
+	font-weight: var(--weight-bold);
 }
 
 a:hover {
@@ -176,6 +177,7 @@ main {
   display: block;
   margin: 25px;
   color:  var(--text-color-alt);
+	font-weight: var(--weight-semibold);
   text-decoration: none;
   cursor: pointer;
 }
@@ -189,13 +191,14 @@ main {
   background: var(--bg-color-alt2);
   border: none;
   font-size: 1rem;
+	padding-left: 0;
 }
 
 .dropdown-content-second {
   display: none;
   position: absolute;
-  left: 100%;
-  top: 0;
+  left: 14%;
+  top: 100%;
   background: var(--bg-color-alt2);
   min-width: 200px;
 	border-radius: 15px;
