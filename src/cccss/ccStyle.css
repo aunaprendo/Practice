@@ -167,14 +167,14 @@ main {
   display: none;
   position: absolute;
   background: var(--bg-color-alt2);
-  min-width: 200px;
+  width: 350px;
   z-index: 10;
 	border-radius: 15px;
 }
 
 .dropdown-content li a {
   display: block;
-  margin: 25px;
+  margin: 5px;
   color:  var(--text-color-alt);
 	font-weight: var(--weight-semibold);
   text-decoration: none;
@@ -199,17 +199,25 @@ main {
 /* ========================================
    HAMBURGER BUTTON
 ========================================= */
+/* HAMBURGER — HIDDEN BY DEFAULT */
 .hamburger {
+  display: none;
   position: fixed;
   top: 25px;
   right: 20px;
   width: 35px;
   height: 30px;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
   z-index: 2000;
+}
+
+/* SHOW ONLY ON MOBILE */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
 }
 
 .hamburger span {
@@ -244,13 +252,13 @@ main {
 .side-menu {
   position: fixed;
   top: 0;
-  left: -275px;
-  width: 275px;
+  left: -400px;
+  width: 400px;
   height: 100%;
   background: var(--bg-color-alt);
   color: var(--text-color-alt);
   transition: 0.3s ease;
-  padding-top: 80px;
+  padding-top: 20px;
   padding-left: 12px;
   z-index: 1050;
   display: flex;
@@ -307,7 +315,7 @@ main {
 
 .dropdown-trigger {
   font-size: 1.4rem;
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-semibold);
   color: var(--text-color-alt);
   cursor: pointer;
   padding-top: 10px;
@@ -425,11 +433,11 @@ main {
 /* ========================================
    MOBILE BREAKPOINT
 ========================================= */
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   #nav-links {
-    display: none;
+    padding-right: 120px; /* shifted right */
   }
-
+}
   .side-menu {
     justify-content: center;
     padding-top: 0;
