@@ -5,19 +5,21 @@
 ========================================= */
 :root {
   /* BRAND COLORS */
-  --accent-color-main: #CC7A00;   /* Medium Gold (AA on black) */
-  --accent-color-alt: #804A00;    /* Dark Gold (AAA on white) */
-  --accent-color-bold: #005E66;   /* Deep Teal (AAA on white) */
-  --accent-color-gray: #595959;   /* Medium Gray (AAA on white) */
+  --accent-color-gold: #E0A500;   /* Dark Gold (AAA on black) */
+  --accent-color-brown: #705200;  /* Dark Brown (AAA on white) */
+  --accent-color-dteal: #004046;  /* Deep Teal (AAA on white) */
+	--accent-color-lteal: #00C4D6;	/* Light Teal (AAA on black) */
+  --accent-color-dgray: #595959;   /* Dark Gray (AAA on white) */
+	--accent-color-lgray: #B0B0B0;   /* Light Gray (AAA on black) */
 
   /* TEXT */
-  --text-color-main: #0F0F0F;     /* Deep near-black (AAA) */
-  --text-color-alt: #FFFFFF;      /* White (AAA on dark) */
+  --text-color-main: #242424;     /* Deep near-black (AAA on white) */
+  --text-color-alt: #FFFFFF;      /* White (AAA on near-black) */
 
   /* BACKGROUNDS */
-  --bg-color-main: #FFFFFF;
-  --bg-color-alt: #242424;        /* Deep charcoal */
-	--bg-color-alt2: #383838;       /* Light charcoal */
+  --bg-color-main: #FFFFFF;				/* White (AAA on Deep charcoal) */
+  --bg-color-alt: #242424;        /* Deep charcoal (AAA on white) */
+	--bg-color-lalt: #333333;       /* Light charcoal (AAA on white) */
 
   /* FONT WEIGHTS */
   --weight-small: 300;
@@ -57,20 +59,20 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--accent-color-bold);
+  color: var(--accent-color-dteal);
 	font-weight: var(--weight-bold);
 }
 
 a:hover {
-  color: var(--accent-color-main);
+  color: var(--accent-color-brown);
 }
 
 a:visited {
-  color: var(--accent-color-gray);
+  color: var(--accent-color-dgray);
 }
 
 a:focus-visible {
-  outline: 2px solid var(--accent-color-alt);
+  outline: 2px solid var(--accent-color-brown);
   outline-offset: 3px;
 }
 
@@ -144,7 +146,7 @@ main {
 }
 
 .nav-link:hover {
-  color: var(--accent-color-main);
+  color: var(--accent-color-gold);
 }
 
 #logo {
@@ -157,7 +159,7 @@ main {
   background: var(--bg-color-alt);
   color: var(--text-color-alt);
   border: none;
-  padding: 10px 5px;
+  margin-left: 5px;
   cursor: pointer;
   font-size: 1rem;
 }
@@ -166,15 +168,15 @@ main {
 .dropdown-content {
   display: none;
   position: absolute;
-  background: var(--bg-color-alt2);
-  width: 350px;
+  background: var(--bg-color-lalt);
+  width: 250px;
   z-index: 10;
 	border-radius: 15px;
 }
 
 .dropdown-content li a {
   display: block;
-  margin: 5px;
+  margin: 20px;
   color:  var(--text-color-alt);
 	font-weight: var(--weight-semibold);
   text-decoration: none;
@@ -183,10 +185,6 @@ main {
 
 /* Hover interactions */
 .dropdown:hover > .dropdown-content {
-  display: block;
-}
-
-.dropdown-second:hover > .dropdown-content-second {
   display: block;
 }
 
@@ -199,25 +197,17 @@ main {
 /* ========================================
    HAMBURGER BUTTON
 ========================================= */
-/* HAMBURGER — HIDDEN BY DEFAULT */
 .hamburger {
-  display: none;
   position: fixed;
   top: 25px;
   right: 20px;
   width: 35px;
   height: 30px;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
   z-index: 2000;
-}
-
-/* SHOW ONLY ON MOBILE */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
 }
 
 .hamburger span {
@@ -230,7 +220,7 @@ main {
 }
 
 .hamburger span:hover {
-  background: var(--accent-color-main);
+  background: var(--accent-color-gold);
 }
 
 /* X ANIMATION */
@@ -252,13 +242,13 @@ main {
 .side-menu {
   position: fixed;
   top: 0;
-  left: -400px;
-  width: 400px;
+  left: -350px;
+  width: 350px;
   height: 100%;
   background: var(--bg-color-alt);
   color: var(--text-color-alt);
   transition: 0.3s ease;
-  padding-top: 20px;
+  padding-top: 80px;
   padding-left: 12px;
   z-index: 1050;
   display: flex;
@@ -270,19 +260,9 @@ main {
 }
 
 .side-menu li {
-  margin: 20px 5px;
+  margin: 20px 55px;
 }
 
-.side-menu li a {
-  display: block;
-  padding: 10px 20px;
-  font-size: 1.125rem;
-  color: var(--text-color-alt);
-}
-
-.side-menu li a:hover {
-  color: var(--accent-color-main);
-}
 
 /* ========================================
    OVERLAY
@@ -315,18 +295,18 @@ main {
 
 .dropdown-trigger {
   font-size: 1.4rem;
-  font-weight: var(--weight-semibold);
+  font-weight: var(--weight-bold);
   color: var(--text-color-alt);
   cursor: pointer;
   padding-top: 10px;
 }
 
 .dropdown-trigger:hover {
-  color: var(--accent-color-main);
+  color: var(--accent-color-gold);
 }
 
 .dropdown-trigger:focus-visible {
-  outline: 2px solid var(--accent-color-alt);
+  outline: 2px solid var(--accent-color-gold);
   outline-offset: 3px;
 }
 
@@ -361,7 +341,7 @@ main {
 }
 
 .dropdown-menu a:hover {
-  color: var(--accent-color-main);
+  color: var(--accent-color-gold);
 }
 
 /* Desktop: always show */
@@ -389,6 +369,7 @@ main {
    FOOTER
 ========================================= */
 #footer {
+	bottom: 0;
   background: var(--bg-color-alt);
   margin-top: 50px;
 }
@@ -407,10 +388,11 @@ main {
   font-size: 0.8rem;
   margin-top: 7px;
   color: var(--text-color-alt);
+	font-weight: var(--weight-small);
 }
 
 #footer a:hover {
-  color: var(--accent-color-main);
+  color: var(--accent-color-gold);
 }
 
 #footer .social {
@@ -433,11 +415,11 @@ main {
 /* ========================================
    MOBILE BREAKPOINT
 ========================================= */
-@media (min-width: 769px) {
+@media (max-width: 768px) {
   #nav-links {
-    padding-right: 120px; /* shifted right */
+    display: none;
   }
-}
+
   .side-menu {
     justify-content: center;
     padding-top: 0;
@@ -461,7 +443,7 @@ main {
   }
 
   #mobile-nav-links a:hover {
-    color: var(--accent-color-main);
+    color: var(--accent-color-gold);
   }
 
   /* Dropdown only for mobile */
