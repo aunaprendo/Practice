@@ -146,8 +146,6 @@ function initSideMenu() {
   moveNavLinks();
   window.addEventListener("resize", moveNavLinks);
 
-  const dropdownTriggers = Array.from(document.querySelectorAll(".dropdown-trigger"));
-
   dropdownTriggers.forEach((trigger) => {
     let menu = trigger.nextElementSibling;
     if (!menu || !menu.classList.contains("dropdown-menu")) {

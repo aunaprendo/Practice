@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* ========================================
-   ROOT VARIABLES 
+   ROOT VARIABLES — WCAG AAA COMPLIANT
 ========================================= */
 :root {
-  /* ACCENT COLORS */
+  /* BRAND COLORS */
   --accent-color-gold: #E0A500;   /* Dark Gold (AAA on black) */
   --accent-color-brown: #705200;  /* Dark Brown (AAA on white) */
   --accent-color-dteal: #004046;  /* Deep Teal (AAA on white) */
@@ -43,8 +43,8 @@ html, body {
 }
 
 body {
-  background: var(--bg-color-main, #FFFFFF);
-  color: var(--text-color-main, #242424);
+  background: var(--bg-color-main);
+  color: var(--text-color-main);
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   padding-top: 75px;
@@ -59,20 +59,20 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--accent-color-dteal, #004046);
+  color: var(--accent-color-dteal);
 	font-weight: var(--weight-bold);
 }
 
 a:hover {
-  color: var(--accent-color-brown, #705200);
+  color: var(--accent-color-brown);
 }
 
 a:visited {
-  color: var(--accent-color-dgray, #595959);
+  color: var(--accent-color-dgray);
 }
 
 a:focus-visible {
-  outline: 2px solid var(--accent-color-brown, #705200);
+  outline: 2px solid var(--accent-color-brown);
   outline-offset: 3px;
 }
 
@@ -120,8 +120,8 @@ main {
   top: 0;
   left: 0;
   right: 0;
-  background: var(--bg-color-alt, #242424);
-  z-index: 1;
+  background: var(--bg-color-alt);
+  z-index: 1000;
 }
 
 #nav-bar {
@@ -142,11 +142,11 @@ main {
 .nav-link {
   padding: 15px;
   font-weight: var(--weight-semibold);
-  color: var(--text-color-alt, #FFFFFF);
+  color: var(--text-color-alt);
 }
 
 .nav-link:hover {
-  color: var(--accent-color-gold, #E0A500);
+  color: var(--accent-color-gold);
 }
 
 #logo {
@@ -156,8 +156,8 @@ main {
 
 /* Projects dropdown button */
 .dropbtn {
-  background: var(--bg-color-alt, #242424);
-  color: var(--text-color-alt, #FFFFFF);
+  background: var(--bg-color-alt);
+  color: var(--text-color-alt);
   border: none;
   margin-left: 5px;
   cursor: pointer;
@@ -168,17 +168,16 @@ main {
 .dropdown-content {
   display: none;
   position: absolute;
-	margin-top: 10px;
-  background: var(--bg-color-lalt, #333333);
+  background: var(--bg-color-lalt);
   width: 250px;
-  z-index: 2;
+  z-index: 10;
 	border-radius: 15px;
 }
 
 .dropdown-content li a {
   display: block;
   margin: 20px;
-  color:  var(--text-color-alt, #FFFFFF);
+  color:  var(--text-color-alt);
 	font-weight: var(--weight-semibold);
   text-decoration: none;
   cursor: pointer;
@@ -193,14 +192,6 @@ main {
 .dropdown-content li a:hover,
 .dropbtn-second:hover {
   background: #666;
-	border-radius: 5px;
-}
-
-/* Desktop: hide top links */
-@media (max-width: 768px) {
-  #nav-links {
-    display: none;
-  }
 }
 
 /* ========================================
@@ -216,20 +207,20 @@ main {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  z-index: 5;
+  z-index: 2000;
 }
 
 .hamburger span {
   display: block;
   height: 4px;
   width: 100%;
-  background: var(--bg-color-main, #FFFFFF);
+  background: var(--bg-color-main);
   border-radius: 2px;
   transition: 0.3s ease;
 }
 
 .hamburger span:hover {
-  background: var(--accent-color-gold, #E0A500);
+  background: var(--accent-color-gold);
 }
 
 /* X ANIMATION */
@@ -245,13 +236,6 @@ main {
   transform: translateY(-13px) rotate(-45deg);
 }
 
-/* Desktop: hide hamburger */
-@media (min-width: 769px) {
-  .hamburger {
-    display: none;
-  }
-}
-
 /* ========================================
    SIDE MENU
 ========================================= */
@@ -261,13 +245,12 @@ main {
   left: -350px;
   width: 350px;
   height: 100%;
-  background: var(--bg-color-alt, #242424);
-  color: var(--text-color-alt, #FFFFFF);
+  background: var(--bg-color-alt);
+  color: var(--text-color-alt);
   transition: 0.3s ease;
   padding-top: 80px;
-	padding-bottom: 50px;
-  padding-left: 5px;
-  z-index: 4;
+  padding-left: 12px;
+  z-index: 1050;
   display: flex;
   flex-direction: column;
 	justify-content: space-between;
@@ -278,48 +261,12 @@ main {
 }
 
 .side-menu li {
-	list-style: none;
-}
-
-.side-menu li a {
-  font-size: 1.4rem;
-  font-weight: var(--weight-bold);
-}
-
-#mobile-nav-links li,
-#mobile-nav-links a,
-#mobile-nav-links button {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-#mobile-nav-links a {
-  display: block;
-  width: 100%;
-  padding-top: 20px;
-	padding-left: 20px;
-  text-align: left;
-}
-
-#mobile-nav-links .dropdown ul {
-	margin-left: 20px;
-	margin-top: 0;
-}
-
-#mobile-nav-links .dropdown-content a {
-	display: block;
-	width: 100%;
-  margin: 0;
-	padding: 5px;
-	font-weight: var(--weight-semibold);
-  text-decoration: none;
-	font-size: 1.2rem;
-  cursor: pointer;
+  margin: 40px 10px;
 }
 
 #side-logo {
 	width: 75%;
-	opacity: 7%;
+	opacity: 10%;
 	margin-top: auto;
 }
 
@@ -336,7 +283,7 @@ main {
   opacity: 0;
   visibility: hidden;
   transition: 0.3s ease;
-  z-index: 3;
+  z-index: 1000;
 }
 
 .overlay.show {
@@ -345,11 +292,91 @@ main {
 }
 
 /* ========================================
+   DROPDOWN (INSIDE SIDE MENU)
+========================================= */
+.mobile-dropdown {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.dropdown-trigger {
+  font-size: 1.4rem;
+  font-weight: var(--weight-bold);
+  color: var(--text-color-alt);
+  cursor: pointer;
+  padding-top: 10px;
+}
+
+.dropdown-trigger:hover {
+  color: var(--accent-color-gold);
+}
+
+.dropdown-trigger:focus-visible {
+  outline: 2px solid var(--accent-color-gold);
+  outline-offset: 3px;
+}
+
+/* Mobile default: hidden */
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  padding-left: 20px;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+/* Show dropdown on toggle */
+.dropdown-menu.show {
+  display: flex;
+  max-height: 500px; /* sufficient for all items */
+  opacity: 1;
+}
+
+.dropdown-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu a {
+  padding: 2px 0;
+  font-size: 1.2rem;
+  color: var(--text-color-alt);
+  line-height: 1.4;
+}
+
+.dropdown-menu a:hover {
+  color: var(--accent-color-gold);
+}
+
+/* Desktop: always show */
+@media (min-width: 769px) {
+  .dropdown-menu {
+    display: flex !important;
+    flex-direction: row;
+    gap: 15px;
+    max-height: none;
+    opacity: 1;
+    padding-left: 0;
+  }
+
+  .dropdown-trigger {
+    cursor: default;
+    color: var(--textColorAlt);
+  }
+
+  .dropdown-trigger:hover {
+    color: var(--textColorAlt);
+  }
+}
+
+/* ========================================
    FOOTER
 ========================================= */
 #footer {
 	bottom: 0;
-  background: var(--bg-color-alt, #242424);
+  background: var(--bg-color-alt);
   margin-top: 50px;
 }
 
@@ -359,19 +386,19 @@ main {
   align-items: center;
   text-align: center;
   padding: 5px 0;
-  color: var(--text-color-alt, #FFFFFF);
+  color: var(--text-color-alt);
   width: 100%;
 }
 
 #footer a {
   font-size: 0.8rem;
   margin-top: 7px;
-  color: var(--text-color-alt, #FFFFFF);
+  color: var(--text-color-alt);
 	font-weight: var(--weight-small);
 }
 
 #footer a:hover {
-  color: var(--accent-color-gold, #E0A500);
+  color: var(--accent-color-gold);
 }
 
 #footer .social {
@@ -391,3 +418,75 @@ main {
   margin: 5px;
 }
 
+/* ========================================
+   MOBILE BREAKPOINT
+========================================= */
+@media (max-width: 768px) {
+  #nav-links {
+    display: none;
+  }
+
+  .side-menu {
+    justify-content: center;
+    padding-top: 0;
+    z-index: 1500;
+		margin: 0;
+  }
+
+  #mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+		list-style: none;
+		line-height: 1.4px;
+  }
+
+  #mobile-nav-links a {
+    font-size: 1.4rem;
+    font-weight: var(--weight-bold);
+    color: var(--text-color-alt);
+		display: block;
+	  width: 100%;
+	  padding: 12px 0;
+	  text-align: left;
+  }
+	
+	#mobile-nav-links li,
+	#mobile-nav-links a,
+	#mobile-nav-links button {
+	  margin: 0;
+	  padding: 0;
+	}
+	
+	#mobile-nav-links .dropdown,
+	#mobile-nav-links .dropbtn {
+	  display: block;
+	  width: 100%;
+	  padding: 0;
+	  text-align: left;
+	}
+
+  #mobile-nav-links a:hover {
+    color: var(--accent-color-gold);
+  }
+	
+  /* Dropdown only for mobile */
+  .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown-menu.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Desktop: hide hamburger */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
