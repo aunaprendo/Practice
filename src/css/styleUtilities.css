@@ -264,7 +264,7 @@ main {
   background: var(--bg-color-alt, #242424);
   color: var(--text-color-alt, #FFFFFF);
   transition: 0.3s ease;
-  padding-top: 80px;
+  padding-top: 15px;
 	padding-bottom: 0;
   padding-left: 5px;
   z-index: 4;

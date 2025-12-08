@@ -1,0 +1,16 @@
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.full-bleed img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content-text {
+  text-align: center;
+  margin: 1.5rem 0;
+}
