@@ -7,8 +7,8 @@
   /* ACCENT COLORS */
   --accent-color-gold: #E0A500;   /* Dark Gold (AAA on black) */
   --accent-color-brown: #705200;  /* Dark Brown (AAA on white) */
-  --accent-color-dteal: #004046;  /* Deep Teal (AAA on white) */
-	--accent-color-lteal: #00C4D6;	/* Light Teal (AAA on black) */
+  --accent-color-dteal: #005F70;  /* Deep Teal (AAA on white) */
+	--accent-color-lteal: #00BFE0;	/* Light Teal (AAA on black) */
   --accent-color-dgray: #595959;   /* Dark Gray (AAA on white) */
 	--accent-color-lgray: #B0B0B0;   /* Light Gray (AAA on black) */
 
@@ -25,6 +25,11 @@
   --weight-small: 300;
   --weight-semibold: 500;
   --weight-bold: 700;
+	
+	/* SHAPE SIZES */
+	--size-large: 45vw;
+	--size-med: 35vw;
+	--size-small: 25vw;
 }
 
 /* ========================================
@@ -380,7 +385,7 @@ main {
 }
 
 #footer a:hover {
-  color: var(--accent-color-gold, #E0A500);
+  color: var(--accent-color-lteal, #00BFE0);
 }
 
 #footer .social {

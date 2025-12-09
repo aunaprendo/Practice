@@ -1,16 +1,111 @@
-.full-bleed {
+/* ========================================
+   CIRCLE CLUSTER
+========================================= */	
+#circles {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+}
+
+.cluster {
+  position: relative;
   width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  height: 500px;
 }
 
-.full-bleed img {
-  width: 100%;
-  height: auto;
-  display: block;
+.cir {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.45));
+  animation: popIn 0.6s ease-out forwards;
 }
 
-.content-text {
+.cir.top {
+  width: var(--size-large);
+  height: var(--size-large);
+  background-image: url("https://image2url.com/images/1765240145191-1aa05709-198e-4f42-aa03-3216d05f8af2.jpeg"); 
+  background-size: cover;  
+  background-position: center;
+  background-repeat: no-repeat;
+  animation-delay: 0.1s;
+}
+
+.cir.middle {
+	width: var(--size-small);
+  height: var(--size-small);
+  background: var(--bg-color-alt);
+  animation-delay: 0.25s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cir.bottom {
+   width: var(--size-med);
+  height: var(--size-med);
+  background: var(--accent-color-dteal);
+  animation-delay: 0.4s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Pop into existence */
+@keyframes popIn {
+  0%   { transform: translate(-50%, -50%) scale(0) rotate(-20deg); opacity: 0; }
+  70%  { transform: translate(-50%, -50%) scale(1.05) rotate(3deg); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* Final positions after appearing */
+.top {
+  animation: popIn 0.6s ease-out forwards,
+             moveTop 0.6s ease-out forwards 0.6s;
+}
+.middle {
+  animation: popIn 0.6s ease-out forwards,
+             moveMiddle 0.6s ease-out forwards 0.75s;
+}
+.bottom {
+  animation: popIn 0.6s ease-out forwards,
+             moveBottom 0.6s ease-out forwards 0.9s;
+}
+
+/* Movement toward cluster positions */
+@keyframes moveTop {
+  from { transform: translate(-50%, -50%); }
+  to   { transform: translate(calc(-50% - 120px), calc(-50% - 70px)); }
+}
+
+@keyframes moveMiddle {
+  from { transform: translate(-50%, -50%); }
+  to   { transform: translate(calc(-50% + 130px), calc(-50% - 60px)); }
+}
+
+@keyframes moveBottom {
+  from { transform: translate(-50%, -50%); }
+  to   { transform: translate(calc(-50% + 20px), calc(-50% + 100px)); }
+}
+
+.center-text {
   text-align: center;
-  margin: 1.5rem 0;
+	color: var(--text-color-alt, #FFFFFF);
+	font-weight: var(--weight-semibold);
+	font-size: 1.5rem;
+  margin: 0;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+div .center-text-bold {
+  text-align: center;
+	color: var(--text-color-alt, #FFFFFF);
+	font-weight: var(--weight-bold);
+	font-size: 2rem;
+	line-height: 1.1;
+  margin: 0;
 }
