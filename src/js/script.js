@@ -35,6 +35,7 @@ async function loadPartials() {
   // Run init functions **after all partials are injected**
   if (document.getElementById("hamburger")) initNavbar();
   if (document.querySelector(".side-menu")) initSideMenu();
+	if (document.querySelector(".contact-card")) initContactCard();
 }
 
 /* ================================
@@ -205,6 +206,48 @@ function initSideMenu() {
 }
 
 /* ================================
+   CONTACT CARD — slide-in panel
+================================ */
+function initContactCard() {
+  const contactLink = document.querySelector(".side-card");
+  const contactCard = document.querySelector(".contact-card");
+  const overlay = document.getElementById("overlay");
+  const closeBtn = document.getElementById("contact-close");
+
+  if (!contactLink || !contactCard || !overlay) return;
+
+  const openContact = () => {
+    contactCard.classList.add("open");
+    overlay.classList.add("show");
+    openFocusTrap(contactCard);
+  };
+
+  const closeContact = () => {
+    contactCard.classList.remove("open");
+    overlay.classList.remove("show");
+    releaseFocusTrap();
+  };
+
+  // OPEN on contact click
+  contactLink.addEventListener("click", e => {
+    e.preventDefault();
+    closeMenu();
+    openContact();
+  });
+
+  // CLOSE with overlay
+  overlay.addEventListener("click", closeContact);
+
+  // CLOSE with X button
+  if (closeBtn) closeBtn.addEventListener("click", closeContact);
+
+  // CLOSE on Escape
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeContact();
+  });
+}
+
+/* ================================
    FOCUS TRAP
 ================================ */
 let _previouslyFocused = null;
@@ -248,6 +291,7 @@ function releaseFocusTrap() {
   _previouslyFocused = null;
   _trapContainer = null;
 }
+
 
 /* ================================
    DEBUG API
