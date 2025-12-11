@@ -1,7 +1,5 @@
 /* =========================================================================
    Accessible site JS — partials loader, navbar, side-menu, dropdowns
-   - 2-space indentation
-   - robust, defensive, and keyboard accessible
    ========================================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -14,28 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
 async function loadPartials() {
   const includes = document.querySelectorAll("[data-include]");
 
-  for (const el of includes) {
-    const file = el.getAttribute("data-include");
-    if (!file) continue;
-
-    try {
-      const resp = await fetch(file);
-      if (!resp.ok) {
-        console.warn(`Failed to fetch ${file}: ${resp.status}`);
-        continue;
+  await Promise.all(
+    Array.from(includes).map(async el => {
+      const file = el.getAttribute("data-include");
+      if (!file) return;
+      try {
+        const resp = await fetch(file);
+        el.innerHTML = await resp.text();
+      } catch (err) {
+        console.error("Error loading partial:", err);
       }
+    })
+  );
 
-      const html = await resp.text();
-      el.innerHTML = html;
-    } catch (err) {
-      console.error("Error loading partial:", err);
-    }
-  }
-
-  // Run init functions **after all partials are injected**
-  if (document.getElementById("hamburger")) initNavbar();
-  if (document.querySelector(".side-menu")) initSideMenu();
-	if (document.querySelector(".contact-card")) initContactCard();
+  initNavbar();
+  initSideMenu();
+  initContactCard();
 }
 
 /* ================================
@@ -72,7 +64,7 @@ function initNavbar() {
   hamburger.setAttribute("role", "button");
   hamburger.setAttribute("tabindex", "0");
   hamburger.setAttribute("aria-controls", "side-menu");
-  if (!hamburger.hasAttribute("aria-expanded")) hamburger.setAttribute("aria-expanded", "false");
+  hamburger.setAttribute("aria-expanded", "false");
 
   const onToggle = e => {
     if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") return;
@@ -83,14 +75,19 @@ function initNavbar() {
   hamburger.addEventListener("click", onToggle);
   hamburger.addEventListener("keydown", onToggle);
 
-  overlay.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", () => {
+    closeMenu();
+    closeContact();
+  });
 
   document.addEventListener("keydown", e => {
-    if (e.key === "Escape") closeMenu();
+    if (e.key === "Escape") {
+      closeMenu();
+      closeContact();
+    }
   });
 }
 
-/* Toggle side-menu */
 function toggleMenu() {
   const hamburger = document.getElementById("hamburger");
   const sideMenu = document.getElementById("side-menu");
@@ -123,46 +120,27 @@ function closeMenu() {
 }
 
 /* ================================
-   MOVE NAV LINKS → MOBILE
-================================ */
-function moveNavLinks() {
-  const navLinks = document.getElementById("nav-links");
-  const mobileNavLinks = document.getElementById("mobile-nav-links");
-
-  if (!navLinks || !mobileNavLinks) return;
-  if (window.innerWidth > 768) return;
-
-  if (mobileNavLinks.childElementCount === 0) {
-    const clone = navLinks.cloneNode(true);
-    clone.querySelectorAll("[id]").forEach(n => n.removeAttribute("id"));
-    const items = Array.from(clone.children).reverse();
-    mobileNavLinks.append(...items);
-  }
-}
-
-/* ================================
    SIDE MENU + DROPDOWNS
 ================================ */
 function initSideMenu() {
-  moveNavLinks();
-  window.addEventListener("resize", moveNavLinks);
+  const navRoot = document.getElementById("side-menu");
+  if (!navRoot) return;
 
-  dropdownTriggers.forEach((trigger) => {
-    let menu = trigger.nextElementSibling;
-    if (!menu || !menu.classList.contains("dropdown-menu")) {
-      const ctrl = trigger.getAttribute("aria-controls");
-      if (ctrl) menu = document.getElementById(ctrl);
-    }
+  const dropdownTriggers = navRoot.querySelectorAll(
+    "[aria-haspopup='true'], .dropdown-trigger, .has-dropdown"
+  );
+
+  dropdownTriggers.forEach(trigger => {
+    const menu = document.getElementById(trigger.getAttribute("aria-controls"));
     if (!menu) return;
 
     trigger.setAttribute("role", "button");
     trigger.setAttribute("tabindex", "0");
+    trigger.setAttribute("aria-expanded", "false");
     menu.setAttribute("role", "menu");
     menu.setAttribute("aria-hidden", "true");
-    trigger.setAttribute("aria-expanded", "false");
 
-    const toggle = (e) => {
-      // Mobile only
+    const toggle = e => {
       if (window.innerWidth > 768) return;
       if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") return;
 
@@ -170,38 +148,11 @@ function initSideMenu() {
       trigger.setAttribute("aria-expanded", isNowOpen ? "true" : "false");
       menu.setAttribute("aria-hidden", isNowOpen ? "false" : "true");
 
-      if (isNowOpen) {
-        const focusables = getFocusable(menu);
-        if (focusables.length) focusables[0].focus();
-      } else {
-        trigger.focus();
-      }
-      e && e.preventDefault();
+      e.preventDefault();
     };
 
     trigger.addEventListener("click", toggle);
     trigger.addEventListener("keydown", toggle);
-
-    // Click outside closes dropdown (mobile only)
-    document.addEventListener("click", (ev) => {
-      if (window.innerWidth > 768) return;
-      if (!menu.classList.contains("show")) return;
-      if (trigger.contains(ev.target) || menu.contains(ev.target)) return;
-      menu.classList.remove("show");
-      trigger.setAttribute("aria-expanded", "false");
-      menu.setAttribute("aria-hidden", "true");
-    });
-
-    // Escape closes
-    document.addEventListener("keydown", (ev) => {
-      if (ev.key !== "Escape") return;
-      if (menu.classList.contains("show")) {
-        menu.classList.remove("show");
-        trigger.setAttribute("aria-expanded", "false");
-        menu.setAttribute("aria-hidden", "true");
-        trigger.focus();
-      }
-    });
   });
 }
 
@@ -211,40 +162,47 @@ function initSideMenu() {
 function initContactCard() {
   const contactLink = document.querySelector(".side-card");
   const contactCard = document.querySelector(".contact-card");
-  const overlay = document.getElementById("overlay");
   const closeBtn = document.getElementById("contact-close");
+  const overlay = document.getElementById("overlay");
 
   if (!contactLink || !contactCard || !overlay) return;
 
-  const openContact = () => {
-    contactCard.classList.add("open");
-    overlay.classList.add("show");
-    openFocusTrap(contactCard);
-  };
-
-  const closeContact = () => {
-    contactCard.classList.remove("open");
-    overlay.classList.remove("show");
-    releaseFocusTrap();
-  };
-
-  // OPEN on contact click
   contactLink.addEventListener("click", e => {
     e.preventDefault();
     closeMenu();
     openContact();
   });
 
-  // CLOSE with overlay
   overlay.addEventListener("click", closeContact);
-
-  // CLOSE with X button
   if (closeBtn) closeBtn.addEventListener("click", closeContact);
 
-  // CLOSE on Escape
   document.addEventListener("keydown", e => {
     if (e.key === "Escape") closeContact();
   });
+}
+
+function openContact() {
+  const contactCard = document.querySelector(".contact-card");
+  const overlay = document.getElementById("overlay");
+  if (!contactCard) return;
+
+  contactCard.classList.add("open");
+  overlay.classList.add("show");
+  openFocusTrap(contactCard);
+}
+
+function closeContact() {
+  const contactCard = document.querySelector(".contact-card");
+  const overlay = document.getElementById("overlay");
+  if (!contactCard) return;
+
+  contactCard.classList.remove("open");
+
+  // Only hide overlay if menu also closed
+  const sideMenuOpen = document.getElementById("side-menu")?.classList.contains("open");
+  if (!sideMenuOpen) overlay.classList.remove("show");
+
+  releaseFocusTrap();
 }
 
 /* ================================
@@ -256,6 +214,7 @@ let _trapHandler = null;
 
 function openFocusTrap(container) {
   if (!container) return;
+
   _trapContainer = container;
   _previouslyFocused = document.activeElement;
 
@@ -266,7 +225,7 @@ function openFocusTrap(container) {
     if (e.key !== "Tab") return;
 
     const f = getFocusable(_trapContainer);
-    if (f.length === 0) { e.preventDefault(); return; }
+    if (!f.length) { e.preventDefault(); return; }
 
     const first = f[0];
     const last = f[f.length - 1];
@@ -274,7 +233,8 @@ function openFocusTrap(container) {
     if (!e.shiftKey && document.activeElement === last) {
       e.preventDefault();
       first.focus();
-    } else if (e.shiftKey && document.activeElement === first) {
+    }
+    if (e.shiftKey && document.activeElement === first) {
       e.preventDefault();
       last.focus();
     }
@@ -287,28 +247,7 @@ function releaseFocusTrap() {
   if (_trapHandler) document.removeEventListener("keydown", _trapHandler);
   _trapHandler = null;
 
-  if (_previouslyFocused && typeof _previouslyFocused.focus === "function") _previouslyFocused.focus();
+  if (_previouslyFocused) _previouslyFocused.focus();
   _previouslyFocused = null;
   _trapContainer = null;
 }
-
-
-/* ================================
-   DEBUG API
-================================ */
-window.__siteControls = {
-  openMenu: () => {
-    const sideMenu = document.getElementById("side-menu");
-    const overlay = document.getElementById("overlay");
-    const hamburger = document.getElementById("hamburger");
-    if (!sideMenu || !overlay || !hamburger) return;
-
-    sideMenu.classList.add("open");
-    overlay.classList.add("show");
-    hamburger.classList.add("active");
-    hamburger.setAttribute("aria-expanded", "true");
-    openFocusTrap(sideMenu);
-  },
-  closeMenu,
-  toggleMenu
-};
