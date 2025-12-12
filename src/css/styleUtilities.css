@@ -347,7 +347,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.9);
   opacity: 0;
   visibility: hidden;
   transition: 0.3s ease;
@@ -368,7 +368,6 @@ main {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: var(--bg-color-alt, #242424);
   color: var(--text-color-alt, #FFFFFF);
   transition: 0.3s ease;
   z-index: 6;
@@ -403,20 +402,55 @@ main {
 /* Business card container */
 .business-card {
   width: 300px;
-  background-color: teal;
-  padding: 20px;
-  margin: 100px auto;
+	height: auto;
+  background: var(--dteal, #005F70);
+	-webkit-mask: url('../assets/logoInitialsTransparent2.svg') no-repeat center / contain;
+          mask: url('../assets/logoInitialsTransparent2.svg') no-repeat center / contain;
+	color: var( --text-color-alt: #FFFFFF);
+  padding: 15px;
+  margin: 50% 50%;
   text-align: center;
   font-size: 1rem;
   border-radius: 8px; 
 }
 
-/* Profile image */
 .contact-card-image {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
-  border-radius: 50%; 
-  margin-bottom: 15px;
+  margin-bottom: 35px;
+}
+
+.first-name {
+  font-weight: var(--weight-bold);
+	font-size: 2rem;
+	line-height: .5;
+	margin: 0;
+}
+
+.end-name {
+  font-weight: var(--weight-bold);
+	font-size: 1.6rem;
+	line-height: 0;
+	margin-bottom: 50px;
+}
+
+.contact-link {
+  font-weight: var(--weight-semibold);
+  color: var( --text-color-alt, #FFFFFF);
+	font-size: .9rem;
+	line-height: .5;
+}
+
+.contact-link:hover  {
+  font-weight: var(--weight-bold);
+}
+
+.social-media {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+	padding: 15px;
 }
 
 /* ========================================
