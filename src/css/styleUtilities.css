@@ -402,10 +402,23 @@ main {
 /* Business card container */
 .business-card {
   width: 300px;
-	height: auto;
-  background: var(--dteal, #005F70);
-	-webkit-mask: url('../assets/logoInitialsTransparent2.svg') no-repeat center / contain;
-          mask: url('../assets/logoInitialsTransparent2.svg') no-repeat center / contain;
+  background: var(--accent-color-dteal);
+
+  -webkit-mask-image: url('../assets/gj-mask.svg');
+          mask-image: url('../assets/gj-mask.svg');
+
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+
+  -webkit-mask-position: center;
+          mask-position: center;
+
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+
+  -webkit-mask-type: luminance;
+          mask-type: luminance;
+	height: 600px;
 	color: var( --text-color-alt: #FFFFFF);
   padding: 15px;
   margin: 50% 50%;

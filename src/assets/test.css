@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Everything visible -->
+  <rect width="100%" height="100%" fill="white"/>
+
+  <!-- Hole (transparent area) -->
+  <path d="M200 150c0-40 60-80 120-80s120 40 120 80-60 80-120 80-120-40-120-80z"
+        fill="black"/>
+</svg>
+
+.section {
+  background: #0a74ff;
+  height: 60vh;
+
+  -webkit-mask-image: url("/images/cutout-mask.svg");
+          mask-image: url("/images/cutout-mask.svg");
+
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+
+  -webkit-mask-position: center;
+          mask-position: center;
+
+  -webkit-mask-size: contain;
+          mask-size: contain;
+}
