@@ -93,6 +93,50 @@ main {
   text-decoration: underline;
 }
 
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+@media (min-width: 1200px) {
+  h4, .h4 {
+    font-size: 1.5rem;
+  }
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
 .feature-photo {
   display: block;
   margin: 0 auto;
@@ -413,38 +457,31 @@ main {
   -webkit-mask-position: center;
           mask-position: center;
 
-  -webkit-mask-size: 100% 100%;
-          mask-size: 100% 100%;
+  -webkit-mask-size: contain;
+          mask-size: contain;
 
   -webkit-mask-type: luminance;
           mask-type: luminance;
-	height: 600px;
+	height: 450px;
 	color: var( --text-color-alt: #FFFFFF);
   padding: 15px;
   margin: 50% 50%;
   text-align: center;
-  font-size: 1rem;
   border-radius: 8px; 
-}
-
-.contact-card-image {
-  max-width: 90%;
-  height: auto;
-  margin-bottom: 35px;
 }
 
 .first-name {
   font-weight: var(--weight-bold);
 	font-size: 2rem;
 	line-height: .5;
-	margin: 0;
+	margin: 225px 0 0 0;
 }
 
 .end-name {
   font-weight: var(--weight-bold);
 	font-size: 1.6rem;
 	line-height: 0;
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 }
 
 .contact-link {
