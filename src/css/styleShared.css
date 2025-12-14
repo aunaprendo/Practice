@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* ========================================
-   ROOT VARIABLES 
+   ROOT VARIABLES  
 ========================================= */
 :root {
   /* ACCENT COLORS */
-  --accent-color-gold: #E0A500;   /* Dark Gold (AAA on black) */
+  --accent-color-gold: #D8B961;   /* Dark Gold (AAA on black) */
   --accent-color-brown: #705200;  /* Dark Brown (AAA on white) */
-  --accent-color-dteal: #004046;  /* Deep Teal (AAA on white) */
-	--accent-color-lteal: #00BFE0;	/* Light Teal (AAA on black) */
+  --accent-color-dteal: #065F6F;  /* Deep Teal (AAA on white) */
+	--accent-color-lteal: #95B6BB;	/* Light Teal (AAA on black) */
   --accent-color-dgray: #595959;   /* Dark Gray (AAA on white) */
 	--accent-color-lgray: #B0B0B0;   /* Light Gray (AAA on black) */
 
-  /* TEXT */
+  /* TEXT */ 
   --text-color-main: #242424;     /* Deep near-black (AAA on white) */
   --text-color-alt: #FFFFFF;      /* White (AAA on near-black) */
 
@@ -64,7 +64,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--accent-color-dteal, #004046);
+  color: var(--accent-color-dteal, #065F6F);
 	font-weight: var(--weight-bold);
 }
 
@@ -254,6 +254,7 @@ h6 {
   justify-content: space-between;
   cursor: pointer;
   z-index: 5;
+  transition: opacity 0.2s ease;
 }
 
 .hamburger span {
@@ -278,15 +279,17 @@ h6 {
   transform: translateY(-13px) rotate(-45deg);
 }
 
-.hamburger.active span {
-  background-color: #E0A500; /* gold when open */
-}
-
 /* Desktop: hide hamburger */
 @media (min-width: 769px) {
   .hamburger {
     display: none;
   }
+}
+
+/* Hide hamburger when contact card is open */
+.hamburger.contact-open {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* ========================================
@@ -306,6 +309,8 @@ h6 {
   display: flex;
   flex-direction: column;
 	justify-content: space-between;
+	padding-top: 80px;
+	padding-bottom: 0;
 }
 
 .side-menu.open {
@@ -416,6 +421,7 @@ h6 {
   color: white;
   border: none;
   cursor: pointer;
+	font-weight: var(--weight-bold);
 }
 
 /* Paragraph spacing */
@@ -429,7 +435,6 @@ h6 {
 /* Business card container */
 .business-card {
   width: 300px;
-  background: var(--accent-color-dteal);
 
   -webkit-mask-image: url('../assets/gj-mask.svg');
           mask-image: url('../assets/gj-mask.svg');
@@ -488,20 +493,14 @@ h6 {
   align-items: center;
   justify-content: center;
 	padding: 15px;
-	color: var(--text-color-alt, #FFFFFF);
 }
 
-.social-media img {
-  border-radius: 50%;
-  transition: box-shadow 0.2s ease;
-	width: 35px;
-  height: 35px;
-	
+.social-media a {
+	color: var( --text-color-alt, #FFFFFF);
 }
 
-.social-media img:hover,
-.social-media img:focus-visible {
-  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.9);
+.social-media a:hover {
+	color: var( --text-color-main, #242424);
 }
 
 /* ========================================
@@ -535,13 +534,6 @@ h6 {
   gap: 10px;
   align-items: center;
   justify-content: center;
-}
-
-#footer .social img {
-  width: 30px;
-  height: 30px;
-	border-radius: 50%;
-  transition: box-shadow 0.2s ease;
 }
 
 #footer p {

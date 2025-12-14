@@ -141,7 +141,7 @@ function initSideMenu() {
 }
 
 /* ================================
-   CONTACT CARD (BEST PRACTICE)
+   CONTACT CARD 
 ================================ */
 function initContactCard() {
   const overlay = document.getElementById("overlay");
@@ -170,25 +170,35 @@ function initContactCard() {
 function openContact() {
   const contactCard = document.querySelector(".contact-card");
   const overlay = document.getElementById("overlay");
+  const hamburger = document.getElementById("hamburger");
+
   if (!contactCard || !overlay) return;
 
   contactCard.classList.add("open");
   overlay.classList.add("show");
+
+  if (hamburger) hamburger.classList.add("contact-open");
+
   openFocusTrap(contactCard);
 }
 
 function closeContact() {
   const contactCard = document.querySelector(".contact-card");
   const overlay = document.getElementById("overlay");
+  const hamburger = document.getElementById("hamburger");
+
   if (!contactCard || !overlay) return;
 
   contactCard.classList.remove("open");
+
+  if (hamburger) hamburger.classList.remove("contact-open");
 
   const sideMenuOpen = document
     .getElementById("side-menu")
     ?.classList.contains("open");
 
   if (!sideMenuOpen) overlay.classList.remove("show");
+
   releaseFocusTrap();
 }
 

@@ -10,11 +10,11 @@
 }
 
 .nav-link:hover {
-  color: var(--accent-color-dteal, #004046);
+  color: var(--accent-color-dteal, #065F6F);
 }
 
 #logo {
-  height: 85%;
+  height: 95%;
   padding-left: 10px;
 }
 
@@ -32,33 +32,40 @@
 }
 
 .hamburger span:hover {
-  background: var(--accent-color-dteal, #004046);
+  background: var(--accent-color-dteal, #065F6F);
+}
+
+.hamburger.active span {
+  background: var(--accent-color-lteal, #95B6BB);
 }
 
 /* ========================================
    SIDE MENU
 ========================================= */
-.side-menu {
-  padding-top: 15px;
-	padding-bottom: 0;
-}
-
 #mobile-nav-links a:hover {
-	color: var(--accent-color-lteal, #00C4D6);
+	color: var(--accent-color-lteal, #95B6BB);
 }
 	
 #side-logo {
-	width: 70%;
+	width: 80%;
+}
+
+/* ========================================
+   Contact Card
+========================================= */
+/* Business card container */
+.business-card {
+  background: var(--accent-color-dteal, #065F6F);
 }
 
 /* ========================================
    FOOTER
 ========================================= */
 #footer a:hover {
-  color: var(--accent-color-lteal, #00BFE0);
+  color: var(--accent-color-lteal, #95B6BB);
 }
 
 .social img:hover,
 .social img:focus-visible {
-  box-shadow: 0 0 0 3px var(--accent-color-lteal, #00BFE0);
+  box-shadow: 0 0 0 3px var(--accent-color-lteal, #95B6BB);
 }
