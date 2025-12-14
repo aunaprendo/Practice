@@ -60,7 +60,7 @@ function initNavbar() {
   hamburger.setAttribute("role", "button");
   hamburger.setAttribute("tabindex", "0");
   hamburger.setAttribute("aria-controls", "side-menu");
-  if (!hamburger.hasAttribute("aria-expanded")) hamburger.setAttribute("aria-expanded", "false");
+  hamburger.setAttribute("aria-expanded", "false");
 
   const onToggle = e => {
     if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") return;
@@ -84,7 +84,6 @@ function initNavbar() {
   });
 }
 
-/* Toggle side-menu */
 function toggleMenu() {
   const hamburger = document.getElementById("hamburger");
   const sideMenu = document.getElementById("side-menu");
@@ -110,9 +109,9 @@ function closeMenu() {
 
   sideMenu.classList.remove("open");
   hamburger.classList.remove("active");
-  overlay.classList.remove("show");
   hamburger.setAttribute("aria-expanded", "false");
 
+  overlay.classList.remove("show");
   releaseFocusTrap();
 }
 
@@ -129,95 +128,39 @@ function moveNavLinks() {
   if (mobileNavLinks.childElementCount === 0) {
     const clone = navLinks.cloneNode(true);
     clone.querySelectorAll("[id]").forEach(n => n.removeAttribute("id"));
-    const items = Array.from(clone.children).reverse();
-    mobileNavLinks.append(...items);
+    mobileNavLinks.append(...Array.from(clone.children).reverse());
   }
 }
 
 /* ================================
-   SIDE MENU + DROPDOWNS
+   SIDE MENU
 ================================ */
 function initSideMenu() {
   moveNavLinks();
   window.addEventListener("resize", moveNavLinks);
-
-  dropdownTriggers.forEach((trigger) => {
-    let menu = trigger.nextElementSibling;
-    if (!menu || !menu.classList.contains("dropdown-menu")) {
-      const ctrl = trigger.getAttribute("aria-controls");
-      if (ctrl) menu = document.getElementById(ctrl);
-    }
-    if (!menu) return;
-
-    trigger.setAttribute("role", "button");
-    trigger.setAttribute("tabindex", "0");
-    menu.setAttribute("role", "menu");
-    menu.setAttribute("aria-hidden", "true");
-    trigger.setAttribute("aria-expanded", "false");
-
-    const toggle = (e) => {
-      // Mobile only
-      if (window.innerWidth > 768) return;
-      if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") return;
-
-      const isNowOpen = menu.classList.toggle("show");
-      trigger.setAttribute("aria-expanded", isNowOpen ? "true" : "false");
-      menu.setAttribute("aria-hidden", isNowOpen ? "false" : "true");
-
-      if (isNowOpen) {
-        const focusables = getFocusable(menu);
-        if (focusables.length) focusables[0].focus();
-      } else {
-        trigger.focus();
-      }
-      e && e.preventDefault();
-    };
-
-    trigger.addEventListener("click", toggle);
-    trigger.addEventListener("keydown", toggle);
-
-    // Click outside closes dropdown (mobile only)
-    document.addEventListener("click", (ev) => {
-      if (window.innerWidth > 768) return;
-      if (!menu.classList.contains("show")) return;
-      if (trigger.contains(ev.target) || menu.contains(ev.target)) return;
-      menu.classList.remove("show");
-      trigger.setAttribute("aria-expanded", "false");
-      menu.setAttribute("aria-hidden", "true");
-    });
-
-    // Escape closes
-    document.addEventListener("keydown", (ev) => {
-      if (ev.key !== "Escape") return;
-      if (menu.classList.contains("show")) {
-        menu.classList.remove("show");
-        trigger.setAttribute("aria-expanded", "false");
-        menu.setAttribute("aria-hidden", "true");
-        trigger.focus();
-      }
-    });
-  });
 }
 
 /* ================================
-   CONTACT CARD — slide-in panel
+   CONTACT CARD (BEST PRACTICE)
 ================================ */
 function initContactCard() {
-  const contactLink = document.querySelector(".side-card");
-  const contactCard = document.querySelector(".contact-card");
-  const closeBtn = document.getElementById("contact-close");
   const overlay = document.getElementById("overlay");
+  const closeBtn = document.getElementById("contact-close");
 
-  if (!contactLink || !contactCard || !overlay) return;
+  /* 🔹 EVENT DELEGATION 🔹
+     Any click on .side-card anywhere in the document
+     will open the contact card */
+  document.addEventListener("click", e => {
+    const link = e.target.closest(".side-card");
+    if (!link) return;
 
-  contactLink.addEventListener("click", e => {
     e.preventDefault();
     closeMenu();
     openContact();
   });
 
-  overlay.addEventListener("click", closeContact);
   if (closeBtn) closeBtn.addEventListener("click", closeContact);
+  if (overlay) overlay.addEventListener("click", closeContact);
 
   document.addEventListener("keydown", e => {
     if (e.key === "Escape") closeContact();
@@ -227,7 +170,7 @@ function initContactCard() {
 function openContact() {
   const contactCard = document.querySelector(".contact-card");
   const overlay = document.getElementById("overlay");
-  if (!contactCard) return;
+  if (!contactCard || !overlay) return;
 
   contactCard.classList.add("open");
   overlay.classList.add("show");
@@ -237,14 +180,15 @@ function openContact() {
 function closeContact() {
   const contactCard = document.querySelector(".contact-card");
   const overlay = document.getElementById("overlay");
-  if (!contactCard) return;
+  if (!contactCard || !overlay) return;
 
   contactCard.classList.remove("open");
 
-  // Only hide overlay if menu also closed
-  const sideMenuOpen = document.getElementById("side-menu")?.classList.contains("open");
-  if (!sideMenuOpen) overlay.classList.remove("show");
+  const sideMenuOpen = document
+    .getElementById("side-menu")
+    ?.classList.contains("open");
 
+  if (!sideMenuOpen) overlay.classList.remove("show");
   releaseFocusTrap();
 }
 
@@ -256,8 +200,6 @@ let _trapContainer = null;
 let _trapHandler = null;
 
 function openFocusTrap(container) {
-  if (!container) return;
-
   _trapContainer = container;
   _previouslyFocused = document.activeElement;
 
@@ -268,7 +210,10 @@ function openFocusTrap(container) {
     if (e.key !== "Tab") return;
 
     const f = getFocusable(_trapContainer);
-    if (!f.length) { e.preventDefault(); return; }
+    if (!f.length) {
+      e.preventDefault();
+      return;
+    }
 
     const first = f[0];
     const last = f[f.length - 1];
@@ -277,6 +222,7 @@ function openFocusTrap(container) {
       e.preventDefault();
       first.focus();
     }
+
     if (e.shiftKey && document.activeElement === first) {
       e.preventDefault();
       last.focus();
@@ -296,21 +242,10 @@ function releaseFocusTrap() {
 }
 
 /* ================================
-   DEBUG API
+   DEBUG (OPTIONAL)
 ================================ */
 window.__siteControls = {
-  openMenu: () => {
-    const sideMenu = document.getElementById("side-menu");
-    const overlay = document.getElementById("overlay");
-    const hamburger = document.getElementById("hamburger");
-    if (!sideMenu || !overlay || !hamburger) return;
-
-    sideMenu.classList.add("open");
-    overlay.classList.add("show");
-    hamburger.classList.add("active");
-    hamburger.setAttribute("aria-expanded", "true");
-    openFocusTrap(sideMenu);
-  },
-  closeMenu,
+  openContact,
+  closeContact,
   toggleMenu
 };

@@ -262,6 +262,7 @@ h6 {
   width: 100%;
   border-radius: 2px;
   transition: 0.3s ease;
+	z-index: 5;
 }
 
 /* X ANIMATION */
@@ -275,6 +276,10 @@ h6 {
 
 .hamburger.active span:nth-child(3) {
   transform: translateY(-13px) rotate(-45deg);
+}
+
+.hamburger.active span {
+  background-color: #E0A500; /* gold when open */
 }
 
 /* Desktop: hide hamburger */
@@ -483,6 +488,7 @@ h6 {
   align-items: center;
   justify-content: center;
 	padding: 15px;
+	color: var(--text-color-alt, #FFFFFF);
 }
 
 .social-media img {
@@ -490,6 +496,7 @@ h6 {
   transition: box-shadow 0.2s ease;
 	width: 35px;
   height: 35px;
+	
 }
 
 .social-media img:hover,
