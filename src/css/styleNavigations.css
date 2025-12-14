@@ -2,62 +2,63 @@
    NAVBAR
 ========================================= */
 #top-bar {
-  background: var(--bg-color-alt, #242424);
+	background: var(--bg-color-main, #FFFFFF);
 }
 
 .nav-link {
-  color: var(--text-color-alt, #FFFFFF);
+  color: var(--text-color-main, #242424);
 }
 
 .nav-link:hover {
-  color: var(--accent-color-gold, #E0A500);
+  color: var(--accent-color-dteal, #004046);
 }
 
 #logo {
-  height: 70%;
+  height: 85%;
   padding-left: 10px;
 }
 
 /* Projects dropdown button */
 .dropbtn {
-  background: var(--bg-color-alt, #242424);
-  color: var(--text-color-alt, #FFFFFF);
+  background: var(--bg-color-main, #FFFFFF);
+  color: var(--text-color-main, #242424);
 }
 
 /* ========================================
    HAMBURGER BUTTON
 ========================================= */
 .hamburger span {
-  background: var(--bg-color-main, #FFFFFF);
+  background: var(--bg-color-alt, #242424);
 }
 
 .hamburger span:hover {
-  background: var(--accent-color-gold, #E0A500);
+  background: var(--accent-color-dteal, #004046);
 }
 
 /* ========================================
    SIDE MENU
 ========================================= */
 .side-menu {
-  padding-top: 80px;
+  padding-top: 15px;
+	padding-bottom: 0;
 }
 
 #mobile-nav-links a:hover {
-	color: var(--accent-color-gold, #E0A500);
+	color: var(--accent-color-lteal, #00C4D6);
 }
 	
 #side-logo {
-	width: 75%;
+	width: 70%;
 }
 
 /* ========================================
    FOOTER
 ========================================= */
 #footer a:hover {
-  color: var(--accent-color-gold, #E0A500);
+  color: var(--accent-color-lteal, #00BFE0);
 }
 
 .social img:hover,
 .social img:focus-visible {
-  box-shadow: 0 0 0 3px var(--accent-color-gold, #E0A500);
+  box-shadow: 0 0 0 3px var(--accent-color-lteal, #00BFE0);
 }

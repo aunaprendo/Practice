@@ -7,7 +7,7 @@
   /* ACCENT COLORS */
   --accent-color-gold: #E0A500;   /* Dark Gold (AAA on black) */
   --accent-color-brown: #705200;  /* Dark Brown (AAA on white) */
-  --accent-color-dteal: #005F70;  /* Deep Teal (AAA on white) */
+  --accent-color-dteal: #004046;  /* Deep Teal (AAA on white) */
 	--accent-color-lteal: #00BFE0;	/* Light Teal (AAA on black) */
   --accent-color-dgray: #595959;   /* Dark Gray (AAA on white) */
 	--accent-color-lgray: #B0B0B0;   /* Light Gray (AAA on black) */
@@ -166,7 +166,6 @@ h6 {
 ========================================= */
 #top-bar {
   position: fixed;
-	background: var(--bg-color-main, #FFFFFF);
   top: 0;
   left: 0;
   right: 0;
@@ -191,23 +190,11 @@ h6 {
 .nav-link {
   padding: 15px;
   font-weight: var(--weight-semibold);
-  color: var(--text-color-main, #242424);
 	font-size: 1.2rem;
-}
-
-.nav-link:hover {
-  color: var(--accent-color-dteal, #004046);
-}
-
-#logo {
-  height: 85%;
-  padding-left: 10px;
 }
 
 /* Projects dropdown button */
 .dropbtn {
-  background: var(--bg-color-main, #FFFFFF);
-  color: var(--text-color-main, #242424);
   border: none;
   margin-left: 5px;
   cursor: pointer;
@@ -273,13 +260,8 @@ h6 {
   display: block;
   height: 4px;
   width: 100%;
-  background: var(--bg-color-alt, #242424);
   border-radius: 2px;
   transition: 0.3s ease;
-}
-
-.hamburger span:hover {
-  background: var(--accent-color-dteal, #004046);
 }
 
 /* X ANIMATION */
@@ -314,8 +296,6 @@ h6 {
   background: var(--bg-color-alt, #242424);
   color: var(--text-color-alt, #FFFFFF);
   transition: 0.3s ease;
-  padding-top: 15px;
-	padding-bottom: 0;
   padding-left: 5px;
   z-index: 4;
   display: flex;
@@ -334,7 +314,14 @@ h6 {
 .side-menu li a {
   font-size: 1.4rem;
   font-weight: var(--weight-bold);
+}
+
+.side-menu li a {
 	color: var(--text-color-alt, #FFFFFF);
+}
+
+#mobile-nav-links .dropbtn {
+	background: var(--bg-color-alt, #242424);
 }
 
 #mobile-nav-links li,
@@ -352,17 +339,9 @@ h6 {
   text-align: left;
 }
 
-#mobile-nav-links a:hover {
-	color: var(--accent-color-lteal, #00C4D6);
-}
-	
 #mobile-nav-links .dropdown ul {
 	margin-left: 20px;
 	margin-top: 0;
-}
-
-#mobile-nav-links .dropbtn {
-	background: var(--bg-color-alt, #242424);
 }
 
 #mobile-nav-links .dropdown-content a {
@@ -377,7 +356,6 @@ h6 {
 }
 
 #side-logo {
-	width: 70%;
 	opacity: 7%;
 	margin-top: auto;
 }
@@ -545,10 +523,6 @@ h6 {
 	font-weight: var(--weight-small);
 }
 
-#footer a:hover {
-  color: var(--accent-color-lteal, #00BFE0);
-}
-
 #footer .social {
   display: flex;
   gap: 10px;
@@ -561,11 +535,6 @@ h6 {
   height: 30px;
 	border-radius: 50%;
   transition: box-shadow 0.2s ease;
-}
-
-.social img:hover,
-.social img:focus-visible {
-  box-shadow: 0 0 0 3px var(--accent-color-lteal, #00BFE0);
 }
 
 #footer p {

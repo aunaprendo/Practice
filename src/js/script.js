@@ -1,7 +1,3 @@
-/* =========================================================================
-   Accessible site JS — partials loader, navbar, side-menu, dropdowns
-   ========================================================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
   loadPartials();
 });
@@ -64,7 +60,7 @@ function initNavbar() {
   hamburger.setAttribute("role", "button");
   hamburger.setAttribute("tabindex", "0");
   hamburger.setAttribute("aria-controls", "side-menu");
-  hamburger.setAttribute("aria-expanded", "false");
+  if (!hamburger.hasAttribute("aria-expanded")) hamburger.setAttribute("aria-expanded", "false");
 
   const onToggle = e => {
     if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") return;
@@ -88,6 +84,7 @@ function initNavbar() {
   });
 }
 
+/* Toggle side-menu */
 function toggleMenu() {
   const hamburger = document.getElementById("hamburger");
   const sideMenu = document.getElementById("side-menu");
@@ -120,27 +117,46 @@ function closeMenu() {
 }
 
 /* ================================
+   MOVE NAV LINKS → MOBILE
+================================ */
+function moveNavLinks() {
+  const navLinks = document.getElementById("nav-links");
+  const mobileNavLinks = document.getElementById("mobile-nav-links");
+
+  if (!navLinks || !mobileNavLinks) return;
+  if (window.innerWidth > 768) return;
+
+  if (mobileNavLinks.childElementCount === 0) {
+    const clone = navLinks.cloneNode(true);
+    clone.querySelectorAll("[id]").forEach(n => n.removeAttribute("id"));
+    const items = Array.from(clone.children).reverse();
+    mobileNavLinks.append(...items);
+  }
+}
+
+/* ================================
    SIDE MENU + DROPDOWNS
 ================================ */
 function initSideMenu() {
-  const navRoot = document.getElementById("side-menu");
-  if (!navRoot) return;
+  moveNavLinks();
+  window.addEventListener("resize", moveNavLinks);
 
-  const dropdownTriggers = navRoot.querySelectorAll(
-    "[aria-haspopup='true'], .dropdown-trigger, .has-dropdown"
-  );
-
-  dropdownTriggers.forEach(trigger => {
-    const menu = document.getElementById(trigger.getAttribute("aria-controls"));
+  dropdownTriggers.forEach((trigger) => {
+    let menu = trigger.nextElementSibling;
+    if (!menu || !menu.classList.contains("dropdown-menu")) {
+      const ctrl = trigger.getAttribute("aria-controls");
+      if (ctrl) menu = document.getElementById(ctrl);
+    }
     if (!menu) return;
 
     trigger.setAttribute("role", "button");
     trigger.setAttribute("tabindex", "0");
-    trigger.setAttribute("aria-expanded", "false");
     menu.setAttribute("role", "menu");
     menu.setAttribute("aria-hidden", "true");
+    trigger.setAttribute("aria-expanded", "false");
 
-    const toggle = e => {
+    const toggle = (e) => {
+      // Mobile only
       if (window.innerWidth > 768) return;
       if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") return;
 
@@ -148,11 +164,38 @@ function initSideMenu() {
       trigger.setAttribute("aria-expanded", isNowOpen ? "true" : "false");
       menu.setAttribute("aria-hidden", isNowOpen ? "false" : "true");
 
-      e.preventDefault();
+      if (isNowOpen) {
+        const focusables = getFocusable(menu);
+        if (focusables.length) focusables[0].focus();
+      } else {
+        trigger.focus();
+      }
+      e && e.preventDefault();
     };
 
     trigger.addEventListener("click", toggle);
     trigger.addEventListener("keydown", toggle);
+
+    // Click outside closes dropdown (mobile only)
+    document.addEventListener("click", (ev) => {
+      if (window.innerWidth > 768) return;
+      if (!menu.classList.contains("show")) return;
+      if (trigger.contains(ev.target) || menu.contains(ev.target)) return;
+      menu.classList.remove("show");
+      trigger.setAttribute("aria-expanded", "false");
+      menu.setAttribute("aria-hidden", "true");
+    });
+
+    // Escape closes
+    document.addEventListener("keydown", (ev) => {
+      if (ev.key !== "Escape") return;
+      if (menu.classList.contains("show")) {
+        menu.classList.remove("show");
+        trigger.setAttribute("aria-expanded", "false");
+        menu.setAttribute("aria-hidden", "true");
+        trigger.focus();
+      }
+    });
   });
 }
 
@@ -251,3 +294,23 @@ function releaseFocusTrap() {
   _previouslyFocused = null;
   _trapContainer = null;
 }
+
+/* ================================
+   DEBUG API
+================================ */
+window.__siteControls = {
+  openMenu: () => {
+    const sideMenu = document.getElementById("side-menu");
+    const overlay = document.getElementById("overlay");
+    const hamburger = document.getElementById("hamburger");
+    if (!sideMenu || !overlay || !hamburger) return;
+
+    sideMenu.classList.add("open");
+    overlay.classList.add("show");
+    hamburger.classList.add("active");
+    hamburger.setAttribute("aria-expanded", "true");
+    openFocusTrap(sideMenu);
+  },
+  closeMenu,
+  toggleMenu
+};
