@@ -1772,22 +1772,6 @@
 /* ========================================
 	STYLE
 ========================================= */	
-.text-center {
-  text-align: center !important;
-}
-
-.text-muted {
-  color: #6c757d !important;
-}
-
-.text-uppercase {
-  text-transform: uppercase !important;
-}
-
-.text-decoration-none {
-  text-decoration: none !important;
-}
-
 .display-1 {
   font-size: calc(1.625rem + 4.5vw);
   font-weight: 300;
@@ -1800,7 +1784,7 @@
 }
 
 .justify-content-center {
-  justify-content: center !important;
+  justify-content: center;
 }
 
 .d-flex {

@@ -137,6 +137,14 @@ h6 {
   font-size: 1rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-faded {
+	color: var(--accent-color-dgray, #595959);
+}
+
 .feature-photo {
   display: block;
   margin: 0 auto;
@@ -310,7 +318,7 @@ h6 {
   flex-direction: column;
 	justify-content: space-between;
 	padding-top: 80px;
-	padding-bottom: 0;
+	padding-bottom: 50px;
 }
 
 .side-menu.open {

@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
 	 <!-- Stylesheets -->
-	<link rel="stylesheet" href="css/styleUtilities.css" />
+	<link rel="stylesheet" href="css/styleShared.css" />
+	<link rel="stylesheet" href="css/styleNavigations.css" />
 	<link rel="stylesheet" href="css/styleDetails.css" />
 	<link rel="stylesheet" href="css/styleBootstrap.css" />
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -18,7 +19,7 @@
 </head>
 
 <body>
-	  <!-- Main navigation -->
+<!-- Main navigation -->
   <nav 
     data-include="partials/navBar.html" 
     role="navigation" 
@@ -32,69 +33,35 @@
     aria-label="Side menu">
   </aside>
 	
+	<!-- Contact menu -->
+  <aside 
+    data-include="partials/contactMenu.html" 
+    role="contact" 
+    aria-label="Contact Card">
+  </aside>
 	
     <main class="col-lg-10 offset-lg-2">
       <div class="container">
         <div class="justify-content-center p-1 m-1 p-md-5 m-md-5">
 
           <div class="row justify-content-center">
-
-            <div class="col-lg-6 mt-5 pt-5" data-aos="fade-up">
+            <div class="col-lg-6" data-aos="fade-up">
               <div class="text-center">
-                <span class="text-muted text-uppercase">freeCodeCamp Work</span>
+                <span class="text-faded">freeCodeCamp Work</span>
                 <h1 class="display-1">Aún Aprendo</h1>
                 <p>I invite you to explore my ongoing development journey. Through freeCodeCamp’s structured curriculum—spanning lessons, labs, workshops, and real-world projects—I’ve been building a strong foundation in programming and software engineering. Click through to see the work I’ve completed and the skills I continue to refine. </p>
               </div><!--section-header-->
             </div>
-
-            <div class="d-flex gap-4 justify-content-center py-5" data-aos="fade-up">
-              <a href="#" class="text-decoration-none text-uppercase" data-filter=".fashion">Fashion</a>
-              <a href="#" class="text-decoration-none text-uppercase" data-filter=".portrait">Portrait</a>
-              <a href="#" class="text-decoration-none text-uppercase" data-filter=".urban">Urban</a>
-              <a href="#" class="text-decoration-none text-uppercase" data-filter=".events">Events</a>
-            </div>
-
           </div>
 
           <div class="grid p-0 clearfix row row-cols-2 row-cols-lg-3 row-cols-xl-4" data-aos="fade-up">
-            <div class="col mb-4">
-              <a href="images/portfolio-large-1.jpg" class="image-link"
-                title="Sample Caption goes here for Portfolio Item 1."><img src="./assets/portraitCartoon.jpeg"
-                  class="img-fluid" alt="portfolio"></a>
-            </div>
-            <div class="col mb-4 portfolio-item fashion portrait events">
-              <a href="images/portfolio-large-2.jpg" class="image-link"
-                title="Sample Caption goes here for Portfolio Item 2."><img src="images/portfolio-thumbnail-2.jpg"
-                  class="img-fluid" alt="portfolio"></a>
-            </div>
-            <div class="col mb-4 portfolio-item portrait fashion">
-              <a href="images/portfolio-large-3.jpg" class="image-link"
-                title="Sample Caption goes here for Portfolio Item 3."><img src="images/portfolio-thumbnail-3.jpg"
-                  class="img-fluid" alt="portfolio"></a>
-            </div>
-            <div class="col mb-4 portfolio-item fashion">
-              <a href="images/portfolio-large-4.jpg" class="image-link"
-                title="Sample Caption goes here for Portfolio Item 4."><img src="images/portfolio-thumbnail-4.jpg"
-                  class="img-fluid" alt="portfolio"></a>
-            </div>
-            <div class="col mb-4 portfolio-item urban events">
-              <a href="images/portfolio-large-5.jpg" class="image-link"
-                title="Sample Caption goes here for Portfolio Item 5."><img src="images/portfolio-thumbnail-5.jpg"
-                  class="img-fluid" alt="portfolio"></a>
-            </div>
-            <div class="col mb-4 portfolio-item urban">
-              <a href="images/portfolio-large-6.jpg" class="image-link"
-                title="Sample Caption goes here for Portfolio Item 6."><img src="images/portfolio-thumbnail-6.jpg"
-                  class="img-fluid" alt="portfolio"></a>
-            </div>
           </div>
 
         </div>
       </div>
-    </main>
-		
-	
-	<div class="row">
+			
+			
+			<div class="row">
 	  <div class="col-sm-6">
 	    <div class="card">
 	      <div class="card-body">
@@ -115,13 +82,16 @@
 	  </div>
 	</div>
   <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="assets/HTML.svg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>   
+    </main>
+		
+
 
 	
 		<!-- Footer -->
