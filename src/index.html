@@ -8,7 +8,9 @@
 	 <!-- Stylesheets -->
 	<link rel="stylesheet" href="css/styleShared.css" />
 	<link rel="stylesheet" href="css/styleNavigations.css" />
+	<link rel="stylesheet" href="css/styleBootstrapGrid.css" />
 	<link rel="stylesheet" href="css/styleDetails.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	
   <!-- Primary Meta Tags -->
   <title>Georgia Jean - Portfolio</title>
@@ -39,21 +41,91 @@
   </aside>
 	
 	<main>
-		<section id="circles">
-			<div class="cluster">
-		    <div class="cir top"></div>
-				<div class="cir bottom"><h1 class="center-text">Building knowledge experience, code, and value.</h1></div>
-				<div class="cir middle"><h2 class="center-text-bold">Georgia Jean Metz</h2></div>
-  		</div>	
-			
+		<div class="container">
+      <div class="p-1 m-1 p-md-2 m-md-2">
+
+        <div class="row">
+					
+					<div class="col-md-6 mt-0 pt-1" data-aos="fade-up">
+						<section id="circles justify-content-start">
+							<div class="cluster">
+						    <div class="cir top"></div>
+								<div class="cir bottom"><h1 class="center-text">Building knowledge, experience, code, and value.</h1></div>
+				  		</div>	
+						</section>
+				  </div>
+					
+          <div class="col-md-6 mt-0 pt-1" data-aos="fade-up">
+						<h1 class="justify-content-start display-1">HI, I'M GEORGIA JEAN METZ</h1>
+						<p class="justify-content-start">With a background in architectural design, I build scalable systems that prioritize clarity, documentation, and thoughtful problem-solving within real-world constraints.</p>
+				  </div>
+					
+
+        </div>
+				
+      </div>
+		</div>	
+		
+		<section class="carousel-section">
+
+		  <div class="carousel-container">
+		    <button class="carousel-btn prev" aria-label="Previous projects">←</button>
+		    <button class="carousel-btn next" aria-label="Next projects">→</button>
+			  <div class="carousel-bleed">
+			    <div class="carousel-viewport">
+			      <ul class="carousel-track">
+			        <li>
+								<div class="project-card">
+									<img src="assets/squirrelLearn.jpeg" class="project-card-img-top" alt="Squirrel Coding">
+								  <div class="project-card-body">
+								    <h5 class="project-card-title">PROJECT ONE</h5>
+										<a href="#" class="btn btn-primary">Learn More</a>
+								  </div>
+								</div>
+							</li>
+			        <li>
+								<div class="project-card">
+									<img src="assets/squirrelBuild.jpeg" class="project-card-img-top" alt="Squirrel Coding">
+								  <div class="project-card-body">
+								    <h5 class="project-card-title">PROJECT TWO</h5>
+										<a href="#" class="btn btn-primary">Learn More</a>
+								  </div>
+								</div>
+							</li>
+							<li>
+								<div class="project-card">
+									<img src="assets/squirrelResearch.jpeg" class="project-card-img-top" alt="Squirrel Coding">
+								  <div class="project-card-body">
+								    <h5 class="project-card-title">PROJECT THREE</h5>
+										<a href="#" class="btn btn-primary">Learn More</a>
+								  </div>
+								</div>
+							</li>
+			        <li>
+								<div class="project-card">
+									<img src="assets/squirrelGame.jpeg" class="project-card-img-top" alt="Squirrel Coding">
+								  <div class="project-card-body">
+								    <h5 class="project-card-title">PROJECT FOUR</h5>
+										<a href="#" class="btn btn-primary">Learn More</a>
+								  </div>
+								</div>
+							</li>
+							<li>
+								<div class="project-card">
+									<img src="assets/squirrelTech.jpeg" class="project-card-img-top" alt="Squirrel Coding">
+								  <div class="project-card-body">
+								    <h5 class="project-card-title">PROJECT FIVE</h5>
+										<a href="#" class="btn btn-primary">Learn More</a>
+								  </div>
+								</div>
+							</li>
+			      </ul>
+			    </div>
+			  </div>
+			</div>
 		</section>
-		
-		
-          <p>
-            A lifelong learner and autodidact with experience in
-            architectual and interior design with a love for problem solving.
-          </p>
-       
+    <p>I am an analytical, self-driven developer with a strong focus on building efficient, maintainable systems. As a lifelong learner, I’ve earned multiple accreditations through self-directed study and demonstrated deep technical discipline by obtaining an architectural license without a formal architecture degree. I excel at recognizing patterns, structuring data and workflows, and managing tasks efficiently to deliver reliable results—an approach recognized through multiple performance awards. My experience in architectural design and as a Peace Corps volunteer strengthened my adaptability, problem-solving within constraints, and ability to collaborate across disciplines, translate non-technical requirements into technical solutions, and produce clear, well-documented systems that avoid redundancy, conflicts, and long-term maintenance issues.
+				    </p>   
 	</main>
 	
 		<!-- Footer -->
@@ -63,8 +135,11 @@
     aria-label="Footer">
   </footer>
 	
-   <script src="js/script.js"></script>
-
+  <script src="js/script.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script
 </body>
 </html>
 

@@ -252,10 +252,71 @@ function releaseFocusTrap() {
 }
 
 /* ================================
-   DEBUG (OPTIONAL)
+   DEBUG
 ================================ */
 window.__siteControls = {
   openContact,
   closeContact,
   toggleMenu
 };
+
+/* ================================
+   CAROUSEL
+================================ */
+const track = document.querySelector('.carousel-track');
+const cards = Array.from(track.children);
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+
+let cardWidth;
+let index = 1;
+
+/* Clone first & last */
+const firstClone = cards[0].cloneNode(true);
+const lastClone = cards[cards.length - 1].cloneNode(true);
+
+firstClone.id = 'first-clone';
+lastClone.id = 'last-clone';
+
+track.append(firstClone);
+track.prepend(lastClone);
+
+const allCards = Array.from(track.children);
+
+function setCardWidth() {
+  cardWidth = allCards[index].getBoundingClientRect().width;
+  track.style.transform = `translateX(-${cardWidth * index}px)`;
+}
+
+window.addEventListener('resize', setCardWidth);
+setCardWidth();
+
+/* Buttons */
+nextBtn.addEventListener('click', () => {
+  if (index >= allCards.length - 1) return;
+  index++;
+  track.style.transition = 'transform 0.4s ease';
+  track.style.transform = `translateX(-${cardWidth * index}px)`;
+});
+
+prevBtn.addEventListener('click', () => {
+  if (index <= 0) return;
+  index--;
+  track.style.transition = 'transform 0.4s ease';
+  track.style.transform = `translateX(-${cardWidth * index}px)`;
+});
+
+/* Loop Fix */
+track.addEventListener('transitionend', () => {
+  if (allCards[index].id === 'first-clone') {
+    track.style.transition = 'none';
+    index = 1;
+    track.style.transform = `translateX(-${cardWidth * index}px)`;
+  }
+
+  if (allCards[index].id === 'last-clone') {
+    track.style.transition = 'none';
+    index = allCards.length - 2;
+    track.style.transform = `translateX(-${cardWidth * index}px)`;
+  }
+});
