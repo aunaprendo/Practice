@@ -26,12 +26,6 @@
   --weight-semibold: 500;
   --weight-bold: 700;
 	
-	/* SHAPE SIZES */
-	--size-large: 45vw;
-	--size-med: 35vw;
-	--size-small: 25vw;
-}
-
 /* ========================================
    RESET
 ========================================= */
@@ -89,10 +83,6 @@ main {
   margin: 15px;
 }
 
-.underline {
-  text-decoration: underline;
-}
-
 h1 {
   font-size: calc(1.375rem + 1.5vw);
 }
@@ -137,14 +127,6 @@ h6 {
   font-size: 1rem;
 }
 
-.text-center {
-  text-align: center;
-}
-
-.text-faded {
-	color: var(--accent-color-dgray, #595959);
-}
-
 .display-1 {
   font-size: calc(1.525rem + 4.5vw);
   font-weight: 300;
@@ -154,6 +136,38 @@ h6 {
   .display-1 {
     font-size: 5rem;
   }
+}
+
+.display-2 {
+  font-size: calc(1rem + 1.3vw);
+  font-weight: 300;
+  line-height: 1.2;
+}
+@media (max-width: 768px) {
+  .display-2 {
+  font-size: calc(1rem + 1.5vw);
+  }
+}
+@media (min-width: 1200px) {
+  .display-2 {
+    font-size: 2.5rem;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-faded {
+	color: var(--accent-color-dgray, #595959);
+}
+
+.text-white {
+	color: var(--text-color-alt, #FFFFFF);
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .feature-photo {

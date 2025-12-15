@@ -1,25 +1,18 @@
 /* ========================================
    CIRCLE CLUSTER
 ========================================= */	
-#circles {
-	display: flex;
-}
-
 .cluster {
   position: relative;
-  height: auto;
+	width: 100%;
 }
 
 .cir {
-  position: absolute;
   border-radius: 50%;
+  aspect-ratio: 1 / 1; 
 }
 
 .cir.top {
-  top: 50%;
-  left: 50%;
-	width: var(--size-large);
-  height: var(--size-large);
+	width: 90%;
   background-image: url("https://image2url.com/images/1765240145191-1aa05709-198e-4f42-aa03-3216d05f8af2.jpeg"); 
   background-size: cover;  
   background-position: center;
@@ -27,31 +20,14 @@
 }
 
 .cir.bottom {
-  width: var(--size-med);
-  height: var(--size-med);
+  width: 65%;
   background: var(--accent-color-dteal, #065F6F);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-.center-text {
-  text-align: center;
-	color: var(--text-color-alt, #FFFFFF);
-	font-weight: var(--weight-semibold);
-	font-size: 1.5rem;
-  margin: 0;
-	padding-left: 25px;
-	padding-right: 25px;
-}
-
-div .center-text-bold {
-  text-align: center;
-	color: var(--text-color-alt, #FFFFFF);
-	font-weight: var(--weight-bold);
-	font-size: 2rem;
-	line-height: 1.1;
-  margin: 0;
+  position: absolute;
+  bottom: -30%;
+  right: 3%;
 }
 
 /* ========================================
