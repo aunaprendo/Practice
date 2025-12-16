@@ -56,17 +56,13 @@ ul {
   padding: 0;
 }
 
-a {
+a:not(.btn) {
   text-decoration: none;
   color: var(--accent-color-dteal, #065F6F);
 	font-weight: var(--weight-bold);
 }
 
-a:hover {
-  color: var(--accent-color-brown, #705200);
-}
-
-a:visited {
+a:not(.btn):visited {
   color: var(--accent-color-dgray, #595959);
 }
 

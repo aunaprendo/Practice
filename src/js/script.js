@@ -170,14 +170,13 @@ function initContactCard() {
 function openContact() {
   const contactCard = document.querySelector(".contact-card");
   const overlay = document.getElementById("overlay");
-  const hamburger = document.getElementById("hamburger");
 
   if (!contactCard || !overlay) return;
 
   contactCard.classList.add("open");
   overlay.classList.add("show");
 
-  if (hamburger) hamburger.classList.add("contact-open");
+  document.body.classList.add("contact-open");
 
   openFocusTrap(contactCard);
 }
@@ -185,17 +184,14 @@ function openContact() {
 function closeContact() {
   const contactCard = document.querySelector(".contact-card");
   const overlay = document.getElementById("overlay");
-  const hamburger = document.getElementById("hamburger");
 
   if (!contactCard || !overlay) return;
 
   contactCard.classList.remove("open");
+  document.body.classList.remove("contact-open");
 
-  if (hamburger) hamburger.classList.remove("contact-open");
-
-  const sideMenuOpen = document
-    .getElementById("side-menu")
-    ?.classList.contains("open");
+  const sideMenuOpen =
+    document.getElementById("side-menu")?.classList.contains("open");
 
   if (!sideMenuOpen) overlay.classList.remove("show");
 
