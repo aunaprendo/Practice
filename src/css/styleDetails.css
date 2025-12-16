@@ -4,30 +4,36 @@
 .cluster {
   position: relative;
 	width: 100%;
+	display: grid;
+  place-items: center;
+	aspect-ratio: 1 / 1; 
 }
 
 .cir {
   border-radius: 50%;
   aspect-ratio: 1 / 1; 
+	position: absolute;
 }
 
 .cir.top {
 	width: 90%;
+	transform: translate(-5%, -25%);
   background-image: url("https://image2url.com/images/1765240145191-1aa05709-198e-4f42-aa03-3216d05f8af2.jpeg"); 
   background-size: cover;  
   background-position: center;
-  background-repeat: no-repeat;
 }
 
 .cir.bottom {
   width: 65%;
+  transform: translate(25%, 45%);
   background: var(--accent-color-dteal, #065F6F);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-  position: absolute;
-  bottom: -30%;
-  right: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  padding-top: clamp(4rem, 6vh, 6rem);
 }
 
 /* ========================================
@@ -58,8 +64,7 @@
 
 .project-card {
   flex: 0 0 100%;
-	max-width: 20rem;
-	height: 22rem;
+	width: 40vw;
 	display: flex;
 	flex-direction: column;
   background: var(--bg-color-main, #FFFFFF);
@@ -133,7 +138,7 @@
 	border-radius: 50%;
   font-size: 3rem;
   cursor: pointer;
-  z-index: 10;
+  z-index: 1;
 	pointer-events: auto;
 }
 
@@ -163,6 +168,7 @@ BIG BUTTONS
   font-size: 1rem;
   border-radius: 0.25rem;
 	margin-top: 5px;
+	color: var(--text-color-alt, #FFFFFF);
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
