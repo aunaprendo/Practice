@@ -56,13 +56,17 @@ ul {
   padding: 0;
 }
 
-a:not(.btn) {
+a {
+  text-decoration: none;
+}
+
+.gen-link {
   text-decoration: none;
   color: var(--accent-color-dteal, #065F6F);
 	font-weight: var(--weight-bold);
 }
 
-a:not(.btn):visited {
+.gen-link {
   color: var(--accent-color-dgray, #595959);
 }
 
@@ -328,7 +332,7 @@ h6 {
 }
 
 /* Hide hamburger when contact card is open */
-.hamburger.contact-open {
+body.contact-open .hamburger {
   opacity: 0;
   pointer-events: none;
 }
@@ -522,8 +526,15 @@ h6 {
 	font-size: .9rem;
 	line-height: .5;
 }
+	
+.contact-link a {
+  font-weight: var(--weight-semibold);
+  color: var( --text-color-alt, #FFFFFF);
+	font-size: .9rem;
+	line-height: .5;
+}
 
-.contact-link:hover  {
+.contact-link a:hover  {
   text-decoration: underline;
 	color: var( --text-color-alt, #FFFFFF);
 }

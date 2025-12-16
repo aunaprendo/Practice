@@ -95,7 +95,8 @@ function toggleMenu() {
   hamburger.classList.toggle("active", isOpen);
   overlay.classList.toggle("show", isOpen);
   hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
-
+ document.body.classList.toggle("menu-open", isOpen);
+	
   if (isOpen) openFocusTrap(sideMenu);
   else releaseFocusTrap();
 }
@@ -112,6 +113,9 @@ function closeMenu() {
   hamburger.setAttribute("aria-expanded", "false");
 
   overlay.classList.remove("show");
+	
+	 document.body.classList.remove("menu-open");
+	 
   releaseFocusTrap();
 }
 
