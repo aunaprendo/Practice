@@ -49,6 +49,7 @@ body {
   padding-top: 75px;
   display: flex;
   flex-direction: column;
+	min-height: 100vh;
 }
 
 ul {
@@ -66,7 +67,11 @@ a {
 	font-weight: var(--weight-bold);
 }
 
-.gen-link {
+.gen-link:hover {
+  color: var(--text-color-main, #242424);
+}
+
+.gen-link:visited {
   color: var(--accent-color-dgray, #595959);
 }
 
@@ -84,26 +89,38 @@ main {
 }
 
 h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(1.525rem + 4.5vw);
+  font-weight: var(--weight-small);
+  line-height: 1.2;
 }
 @media (min-width: 1200px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 5rem;
   }
 }
 
 h2 {
-  font-size: calc(1.325rem + 0.9vw);
+  font-size: calc(1rem + 1.3vw);
+  font-weight: var(--weight-small);
+  line-height: 1.2;
+}
+@media (max-width: 768px) {
+  h2 {
+  font-size: calc(1rem + 2vw);
+  }
 }
 @media (min-width: 1200px) {
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 
 h3 {
-  font-size: calc(1.3rem + 0.6vw);
+  font-size: calc(1rem + .3vw);
+  font-weight: var(--weight-small);
+  line-height: 1.2;
 }
+
 @media (min-width: 1200px) {
   h3 {
     font-size: 1.75rem;
@@ -111,10 +128,13 @@ h3 {
 }
 
 h4 {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(1rem + .2vw);
+  font-weight: var(--weight-small);
+  line-height: 1.2;
 }
+
 @media (min-width: 1200px) {
-  h4, .h4 {
+  h4 {
     font-size: 1.5rem;
   }
 }
@@ -127,57 +147,6 @@ h6 {
   font-size: 1rem;
 }
 
-.display-1 {
-  font-size: calc(1.525rem + 4.5vw);
-  font-weight: var(--weight-small);
-  line-height: 1.2;
-}
-@media (min-width: 1200px) {
-  .display-1 {
-    font-size: 5rem;
-  }
-}
-
-.display-2 {
-  font-size: calc(1rem + 1.3vw);
-  font-weight: var(--weight-semibold);
-  line-height: 1.2;
-}
-@media (max-width: 768px) {
-  .display-2 {
-  font-size: calc(1rem + 2vw);
-  }
-}
-@media (min-width: 1200px) {
-  .display-2 {
-    font-size: 2.5rem;
-  }
-}
-
-.display-3 {
-  font-size: calc(1rem + .3vw);
-  font-weight: var(--weight-small);
-  line-height: 1.2;
-}
-
-@media (min-width: 1200px) {
-  .display-3 {
-    font-size: 1.5rem;
-  }
-}
-
-.display-4 {
-  font-size: calc(1rem + .2vw);
-  font-weight: var(--weight-small);
-  line-height: 1.2;
-}
-
-@media (min-width: 1200px) {
-  .display-4 {
-    font-size: 1.5rem;
-  }
-}
-
 .text-center {
   text-align: center;
 }
@@ -188,6 +157,10 @@ h6 {
 
 .text-white {
 	color: var(--text-color-alt, #FFFFFF);
+}
+
+.text-thick {
+	font-weight: var(--weight-semibold);
 }
 
 .underline {

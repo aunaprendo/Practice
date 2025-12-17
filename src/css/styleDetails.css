@@ -13,6 +13,7 @@
   border-radius: 50%;
   aspect-ratio: 1 / 1; 
 	position: absolute;
+	filter: drop-shadow(0 8px 16px rgba(0,0,0,0.45));
 }
 
 .cir.top {
@@ -91,7 +92,7 @@ PROJECT CARDS SHARED
   word-wrap: break-word;
   background-color: var(--bg-color-main, #FFFFFF);
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 2px dotted rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
 
@@ -129,14 +130,6 @@ PROJECT CARDS SHARED
 	.card-body {
   padding: .5rem .5rem;
 	}
-}
-
-/* ========================================
-CC PROJECT CARDS
-========================================= */
-.card-body-small {
-  flex: 1 1 auto;
-  padding: .5rem .5rem;
 }
 
 /* ========================================
@@ -223,4 +216,38 @@ body.contact-open .carousel-btn {
 body.menu-open .carousel-btn {
   opacity: 0;
   pointer-events: none;
+}
+
+/* ========================================
+RESUME
+========================================= */
+.resume-highlights {
+	background-color: var(--accent-color-lteal, #95B6BB);
+	border: 1px solid var(--accent-color-lteal, #95B6BB);
+	border-radius: 5%;
+	height: 100vh
+}
+
+.resume-details {
+	border-right: 1px dotted #999;
+}
+
+.resume-photo {
+	width: 80%;
+	border-radius: 50%;
+  aspect-ratio: 1 / 1;
+	filter: drop-shadow(0 8px 16px rgba(0,0,0,0.45));
+	margin-bottom: 5%;
+}
+
+.resume-name {
+  font-size: calc(1.525rem + 2vw);
+  font-weight: var(--weight-small);
+  line-height: 1.5;
+}
+
+.resume-title {
+  font-size: calc(1rem + 1vw);
+  font-weight: var(--weight-small);
+  line-height: 1.5;
 }
