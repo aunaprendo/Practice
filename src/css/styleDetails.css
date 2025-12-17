@@ -222,14 +222,16 @@ body.menu-open .carousel-btn {
 RESUME
 ========================================= */
 .resume-highlights {
-	background-color: var(--accent-color-lteal, #95B6BB);
-	border: 1px solid var(--accent-color-lteal, #95B6BB);
-	border-radius: 5%;
+	background-color: var(--accent-color-dteal, #065F6F);
+	border: 1px solid var(--accent-color-dteal, #065F6F);
+	color: var(--text-color-alt: #FFFFFF);
+	border-radius: 0.25rem;
 	height: 100vh
 }
 
 .resume-details {
 	border-right: 1px dotted #999;
+	border-radius: 0.25rem;
 }
 
 .resume-photo {
@@ -250,4 +252,26 @@ RESUME
   font-size: calc(1rem + 1vw);
   font-weight: var(--weight-small);
   line-height: 1.5;
+}
+
+.resume-sections {
+	font-size: calc(1rem + .5vw);
+	font-weight: var(--weight-bold);
+}
+
+.resume-link {
+  font-weight: var(--weight-small);
+  color: var( --text-color-alt, #FFFFFF);
+	font-size: .85rem;
+	line-height: 2.5;
+}
+
+.resume-link a:hover  {
+  text-decoration: underline;
+	color: var( --text-color-alt, #FFFFFF);
+}
+
+.resume-list {
+	list-style-type: disc;
+	list-style-position: outside;
 }
