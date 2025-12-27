@@ -226,7 +226,6 @@ RESUME
 	border: 1px solid var(--accent-color-dteal, #065F6F);
 	color: var(--text-color-alt: #FFFFFF);
 	border-radius: 0.25rem;
-	height: 100vh;
 }
 
 .resume-details {
@@ -235,11 +234,11 @@ RESUME
 }
 
 .resume-photo {
-	width: 80%;
+	width: 85%;
 	border-radius: 50%;
   aspect-ratio: 1 / 1;
 	filter: drop-shadow(0 8px 16px rgba(0,0,0,0.45));
-	margin-bottom: 5%;
+	margin-top: 15%;
 }
 
 .resume-name {
@@ -283,6 +282,14 @@ RESUME
 	color: var( --text-color-alt, #FFFFFF);
 }
 
+.resume-contact li a:hover {
+	text-decoration: underline;
+}
+
+.resume-contact li a:visited {
+  color: var(--accent-color-lgray, #B0B0B0);
+}
+
 .resume-list {
 	list-style-type: disc;
 	list-style-position: outside;
@@ -302,24 +309,15 @@ hr {
 
 #awards li a {
 	text-decoration: none;
-  color: var(--text-color-main, #242424);
+  color: var( --text-color-alt, #FFFFFF);
 }
 
 #awards li a:hover {
-  color: var(--accent-color-dteal, #065F6F);
 	text-decoration: underline;
 }
 
 #awards li a:visited {
   color: var(--accent-color-dgray, #595959);
-}
-
-.resume-contact li a:hover {
-	text-decoration: underline;
-}
-
-.resume-contact li a:visited {
-  color: var(--accent-color-lgray, #B0B0B0);
 }
 
 /* Skills bars */
@@ -328,7 +326,7 @@ hr {
   height: 1rem;
   overflow: hidden;
   background-color:  var(--bg-color-alt, #242424);
-	border-radius: 0.1rem;
+	border-radius: 1rem;
 }
 
 .progress-bar {
@@ -340,7 +338,7 @@ hr {
   white-space: nowrap;
   background-color: var(--bg-color-main, #FFFFFF);
   transition: width 0.6s ease;
-	border-radius: 0.1rem;
+	border-radius: 1rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -356,15 +354,11 @@ hr {
   font-weight: var(--weight-semibold);
   line-height: 1;
   color: var(--accent-color-dteal, #065F6F);
-  background: var(--accent-color-lteal, #95B6BB);
+  background: rgba(149, 182, 187, 50%);
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 1rem;
-}
-
-.badge:empty {
-  display: none;
 }
 
 .list-inline {
@@ -378,6 +372,7 @@ hr {
 
 .list-inline-item:not(:last-child) {
   margin-right: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 
