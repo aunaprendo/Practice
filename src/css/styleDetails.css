@@ -226,7 +226,7 @@ RESUME
 	border: 1px solid var(--accent-color-dteal, #065F6F);
 	color: var(--text-color-alt: #FFFFFF);
 	border-radius: 0.25rem;
-	height: 100vh
+	height: 100vh;
 }
 
 .resume-details {
@@ -259,6 +259,18 @@ RESUME
 	font-weight: var(--weight-bold);
 }
 
+.resume-item {
+	font-size: calc(.9rem + .2vw);
+	font-weight: var(--weight-bold);
+	line-height: 1;
+}
+
+.resume-info {
+	font-size: calc(.9rem + .2vw);
+	font-weight: var(--weight-semibold);
+	line-height: 1;
+}
+
 .resume-link {
   font-weight: var(--weight-small);
   color: var( --text-color-alt, #FFFFFF);
@@ -274,4 +286,98 @@ RESUME
 .resume-list {
 	list-style-type: disc;
 	list-style-position: outside;
+	margin-left: 5%;
 }
+.resume-list-blank {
+	list-style-type: none;
+	list-style-position: outside;
+	margin-left: 5%;
+	margin-top: 1%;
+	line-height: 1.5;
+}
+
+hr {
+	margin-bottom: 5%;
+}
+
+#awards li a {
+	text-decoration: none;
+  color: var(--text-color-main, #242424);
+}
+
+#awards li a:hover {
+  color: var(--accent-color-dteal, #065F6F);
+	text-decoration: underline;
+}
+
+#awards li a:visited {
+  color: var(--accent-color-dgray, #595959);
+}
+
+.resume-contact li a:hover {
+	text-decoration: underline;
+}
+
+.resume-contact li a:visited {
+  color: var(--accent-color-lgray, #B0B0B0);
+}
+
+/* Skills bars */
+.progress {
+  display: flex;
+  height: 1rem;
+  overflow: hidden;
+  background-color:  var(--bg-color-alt, #242424);
+	border-radius: 0.1rem;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  background-color: var(--bg-color-main, #FFFFFF);
+  transition: width 0.6s ease;
+	border-radius: 0.1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar {
+    transition: none;
+  }
+}
+
+/* Skills badges */
+.badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-weight: var(--weight-semibold);
+  line-height: 1;
+  color: var(--accent-color-dteal, #065F6F);
+  background: var(--accent-color-lteal, #95B6BB);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 1rem;
+}
+
+.badge:empty {
+  display: none;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline-item {
+  display: inline-block;
+}
+
+.list-inline-item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+

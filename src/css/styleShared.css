@@ -163,6 +163,10 @@ h6 {
 	font-weight: var(--weight-semibold);
 }
 
+.text-bold {
+	font-weight: var(--weight-bold);
+}
+
 .underline {
   text-decoration: underline;
 }
