@@ -376,3 +376,38 @@ hr {
 }
 
 
+
+
+/* Small screens only: photo + contact side by side */
+@media (max-width: 767.98px) {
+  .resume-highlights {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .resume-photo {
+    width: 45%;
+    margin-top: 0;
+  }
+
+  .resume-contact {
+    width: 55%;
+    margin-top: 0;
+  }
+
+  /* Force everything else to full width below */
+  .skills-section,
+  #licenses,
+  #awards {
+    width: 100%;
+  }
+}
+
+/* Medium and up: normal stacked layout */
+@media (min-width: 768px) {
+  .resume-highlights {
+    flex-direction: column;
+  }
+}
