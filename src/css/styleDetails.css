@@ -234,13 +234,13 @@ RESUME
 }
 
 .resume-photo {
-	width: 85%;
-	border-radius: 50%;
+  max-width: 95%;
+  border-radius: 50%;
   aspect-ratio: 1 / 1;
-	filter: drop-shadow(0 8px 16px rgba(0,0,0,0.45));
-	margin-top: 15%;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.45));
 }
 
+/* Title section */
 .resume-name {
   font-size: calc(1.525rem + 2vw);
   font-weight: var(--weight-small);
@@ -253,41 +253,24 @@ RESUME
   line-height: 1.5;
 }
 
+/* Other sections */
 .resume-sections {
 	font-size: calc(1rem + .5vw);
 	font-weight: var(--weight-bold);
 }
 
+/* Primary info */
 .resume-item {
 	font-size: calc(.9rem + .2vw);
 	font-weight: var(--weight-bold);
 	line-height: 1;
 }
 
+/* Secondary info */
 .resume-info {
 	font-size: calc(.9rem + .2vw);
 	font-weight: var(--weight-semibold);
 	line-height: 1;
-}
-
-.resume-link {
-  font-weight: var(--weight-small);
-  color: var( --text-color-alt, #FFFFFF);
-	font-size: .85rem;
-	line-height: 2.5;
-}
-
-.resume-link a:hover  {
-  text-decoration: underline;
-	color: var( --text-color-alt, #FFFFFF);
-}
-
-.resume-contact li a:hover {
-	text-decoration: underline;
-}
-
-.resume-contact li a:visited {
-  color: var(--accent-color-lgray, #B0B0B0);
 }
 
 .resume-list {
@@ -307,9 +290,26 @@ hr {
 	margin-bottom: 5%;
 }
 
+/* Contact section */
+.resume-link {
+  font-weight: var(--weight-small);
+  color: var( --text-color-alt, #FFFFFF);
+	font-size: .85rem;
+	line-height: 2.5;
+}
+
+.resume-contact li a:hover {
+	text-decoration: underline;
+}
+
+.resume-contact li a:visited {
+  color: var(--accent-color-lgray, #B0B0B0);
+}
+
+/* Awards section */
 #awards li a {
 	text-decoration: none;
-  color: var( --text-color-alt, #FFFFFF);
+  color: var( --text-color-main, #242424);
 }
 
 #awards li a:hover {
@@ -375,39 +375,3 @@ hr {
 	margin-bottom: 0.5rem;
 }
 
-
-
-
-/* Small screens only: photo + contact side by side */
-@media (max-width: 767.98px) {
-  .resume-highlights {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
-  .resume-photo {
-    width: 45%;
-    margin-top: 0;
-  }
-
-  .resume-contact {
-    width: 55%;
-    margin-top: 0;
-  }
-
-  /* Force everything else to full width below */
-  .skills-section,
-  #licenses,
-  #awards {
-    width: 100%;
-  }
-}
-
-/* Medium and up: normal stacked layout */
-@media (min-width: 768px) {
-  .resume-highlights {
-    flex-direction: column;
-  }
-}
