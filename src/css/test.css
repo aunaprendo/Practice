@@ -1,0 +1,42 @@
+/*
+Source - https://stackoverflow.com/q
+Posted by aniskhan001, modified by community. See post 'Timeline' for change history
+Retrieved 2025-12-27, License - CC BY-SA 3.0
+*/
+
+.says{
+  width: 200px;
+  padding: 20px;
+  margin-right: 20px;
+  background: #BF7EF2;
+  color: #fff;
+  box-shadow: -3px 3px 5px #C1B9C8;
+  position: relative;
+  border-radius: 5px;
+}
+
+.says:before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 14px;
+  right: -18px;
+  height: 20px;
+  border-right: 20px solid #BF7EF2;
+  border-bottom-right-radius: 25px 20px;
+  transform: translate(0, -4px);
+  box-shadow: -3px 3px 5px #C1B9C8;
+}
+
+.says:after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 7px;
+  right: -18px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-bottom-left-radius: 40px 35px;
+  transform: translate(0px, -20px);
+}

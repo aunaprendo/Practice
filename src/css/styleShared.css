@@ -9,6 +9,7 @@
   --accent-color-brown: #705200;  /* Dark Brown (AAA on white) */
   --accent-color-dteal: #065F6F;  /* Deep Teal (AAA on white) */
 	--accent-color-lteal: #95B6BB;	/* Light Teal (AAA on black) */
+	--accent-color-ateal: #cadadd;
   --accent-color-dgray: #595959;   /* Dark Gray (AAA on white) */
 	--accent-color-lgray: #B0B0B0;   /* Light Gray (AAA on black) */
 
@@ -42,8 +43,8 @@ html, body {
 }
 
 body {
-  background: var(--bg-color-main, #FFFFFF);
-  color: var(--text-color-main, #242424);
+  background: var(--bg-color-main);
+  color: var(--text-color-main);
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   padding-top: 75px;
@@ -63,20 +64,20 @@ a {
 
 .gen-link {
   text-decoration: none;
-  color: var(--accent-color-dteal, #065F6F);
+  color: var(--accent-color-dteal);
 	font-weight: var(--weight-bold);
 }
 
 .gen-link:hover {
-  color: var(--text-color-main, #242424);
+  color: var(--text-color-main);
 }
 
 .gen-link:visited {
-  color: var(--accent-color-dgray, #595959);
+  color: var(--accent-color-dgray);
 }
 
 a:focus-visible {
-  outline: 2px solid var(--accent-color-brown, #705200);
+  outline: 2px solid var(--accent-color-brown);
   outline-offset: 3px;
 }
 
@@ -152,11 +153,11 @@ h6 {
 }
 
 .text-faded {
-	color: var(--accent-color-dgray, #595959);
+	color: var(--accent-color-dgray);
 }
 
 .text-white {
-	color: var(--text-color-alt, #FFFFFF);
+	color: var(--text-color-alt);
 }
 
 .text-thick {
@@ -240,7 +241,7 @@ h6 {
   display: none;
   position: absolute;
 	margin-top: 10px;
-  background: var(--bg-color-lalt, #333333);
+  background: var(--bg-color-lalt);
   width: 250px;
   z-index: 2;
 	border-radius: 15px;
@@ -249,7 +250,7 @@ h6 {
 .dropdown-content li a {
   display: block;
   margin: 20px;
-  color:  var(--text-color-alt, #FFFFFF);
+  color:  var(--text-color-alt);
 	font-weight: var(--weight-semibold);
   text-decoration: none;
   cursor: pointer;
@@ -335,8 +336,8 @@ body.contact-open .hamburger {
   left: -300px;
   width: 300px;
   height: 100%;
-  background: var(--bg-color-alt, #242424);
-  color: var(--text-color-alt, #FFFFFF);
+  background: var(--bg-color-alt);
+  color: var(--text-color-alt);
   transition: 0.3s ease;
   padding-left: 5px;
   z-index: 4;
@@ -361,11 +362,11 @@ body.contact-open .hamburger {
 }
 
 .side-menu li a {
-	color: var(--text-color-alt, #FFFFFF);
+	color: var(--text-color-alt);
 }
 
 #mobile-nav-links .dropbtn {
-	background: var(--bg-color-alt, #242424);
+	background: var(--bg-color-alt);
 }
 
 #mobile-nav-links li,
@@ -434,7 +435,7 @@ body.contact-open .hamburger {
   left: -100%;
   width: 100%;
   height: 100%;
-  color: var(--text-color-alt, #FFFFFF);
+  color: var(--text-color-alt);
   transition: 0.3s ease;
   z-index: 6;
   display: flex;
@@ -488,7 +489,7 @@ body.contact-open .hamburger {
 	position: relative;
 	top: calc(50% - 225px);
 	left: calc(50vw - 150px);
-	color: var( --text-color-alt: #FFFFFF);
+	color: var( --text-color-alt);
   padding: 15px;
   margin: 0;
   text-align: center;
@@ -511,21 +512,21 @@ body.contact-open .hamburger {
 
 .contact-link {
   font-weight: var(--weight-semibold);
-  color: var( --text-color-alt, #FFFFFF);
+  color: var( --text-color-alt);
 	font-size: .9rem;
 	line-height: .5;
 }
 	
 .contact-link a {
   font-weight: var(--weight-semibold);
-  color: var( --text-color-alt, #FFFFFF);
+  color: var( --text-color-alt);
 	font-size: .9rem;
 	line-height: .5;
 }
 
 .contact-link a:hover  {
   text-decoration: underline;
-	color: var( --text-color-alt, #FFFFFF);
+	color: var( --text-color-alt);
 }
 
 .social-media {
@@ -537,11 +538,11 @@ body.contact-open .hamburger {
 }
 
 .social-media a {
-	color: var( --text-color-alt, #FFFFFF);
+	color: var( --text-color-alt);
 }
 
 .social-media a:hover {
-	color: var( --text-color-main, #242424);
+	color: var( --text-color-main);
 }
 
 /* ========================================
@@ -549,7 +550,7 @@ body.contact-open .hamburger {
 ========================================= */
 #footer {
 	bottom: 0;
-  background: var(--bg-color-alt, #242424);
+  background: var(--bg-color-alt);
   margin-top: 50px;
 }
 
@@ -559,14 +560,14 @@ body.contact-open .hamburger {
   align-items: center;
   text-align: center;
   padding: 5px 0;
-  color: var(--text-color-alt, #FFFFFF);
+  color: var(--text-color-alt);
   width: 100%;
 }
 
 #footer a {
   font-size: 0.8rem;
   margin-top: 7px;
-  color: var(--text-color-alt, #FFFFFF);
+  color: var(--text-color-alt);
 	font-weight: var(--weight-small);
 }
 

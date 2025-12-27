@@ -2,15 +2,15 @@
    NAVBAR
 ========================================= */
 #top-bar {
-  background: var(--bg-color-alt, #242424);
+  background: var(--bg-color-alt);
 }
 
 .nav-link {
-  color: var(--text-color-alt, #FFFFFF);
+  color: var(--text-color-alt);
 }
 
 .nav-link:hover {
-  color: var(--accent-color-gold, #D8B961);
+  color: var(--accent-color-gold);
 }
 
 #logo {
@@ -20,30 +20,30 @@
 
 /* Projects dropdown button */
 .dropbtn {
-  background: var(--bg-color-alt, #242424);
-  color: var(--text-color-alt, #FFFFFF);
+  background: var(--bg-color-alt);
+  color: var(--text-color-alt);
 }
 
 /* ========================================
    HAMBURGER BUTTON
 ========================================= */
 .hamburger span {
-  background: var(--bg-color-main, #FFFFFF);
+  background: var(--bg-color-main);
 }
 
 .hamburger span:hover {
-  background: var(--accent-color-gold, #D8B961);
+  background: var(--accent-color-gold);
 }
 
 .hamburger.active span {
-  background: var(--accent-color-gold, #D8B961);
+  background: var(--accent-color-gold);
 }
 
 /* ========================================
    SIDE MENU
 ========================================= */
 #mobile-nav-links a:hover {
-	color: var(--accent-color-gold, #D8B961);
+	color: var(--accent-color-gold);
 }
 	
 #side-logo {
@@ -55,17 +55,17 @@
 ========================================= */
 /* Business card container */
 .business-card {
-  background: var(--accent-color-brown, #705200);
+  background: var(--accent-color-brown);
 }
 
 /* ========================================
    FOOTER
 ========================================= */
 #footer a:hover {
-  color: var(--accent-color-gold, #D8B961);
+  color: var(--accent-color-gold);
 }
 
 .social img:hover,
 .social img:focus-visible {
-  box-shadow: 0 0 0 3px var(--accent-color-gold, #D8B961);
+  box-shadow: 0 0 0 3px var(--accent-color-gold);
 }
