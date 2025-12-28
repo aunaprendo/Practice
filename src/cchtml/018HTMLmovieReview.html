@@ -4,32 +4,51 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+	
+	 <!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/styleShared.css" />
+	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+	<link rel="stylesheet" href="../css/styleDetails.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	
+  <!-- Primary Meta Tags -->
   <title>Movie Review</title>
+  <meta name="title" content="Portfolio" />
+  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
 
 <body>
-  <!-- Main navigation -->
+	<!-- Main navigation -->
   <nav 
-    data-include="./partials/navBar.html" 
+    data-include="../partials/ccNavBar.html" 
     role="navigation" 
     aria-label="Primary navigation">
   </nav>
-
-  <!-- Side menu -->
+	
+	<!-- Side menu -->
   <aside 
-    data-include="./partials/sideMenu.html" 
+    data-include="../partials/ccSideMenu.html" 
     role="navigation" 
     aria-label="Side menu">
   </aside>
-
+	
+	<!-- Contact menu -->
+  <aside 
+    data-include="../partials/contactMenu.html" 
+    role="contact" 
+    aria-label="Contact Card">
+  </aside>
+	
   <main>
     <h1>The Nut Job</h1>
 
     <figure>
       <img
-        src="https://cdn.freecodecamp.org/curriculum/labs/rise-beyond-2.png"
+        class="feature-photo"
+				src="https://i.postimg.cc/PxpvhgcC/IMG-1616.jpg"
         alt="A squirrel holding a guitar, looking out a window." />
+				<p class="attribution">"<a rel="noopener noreferrer" href="https://www.flickr.com/photos/93336655@N00/198111881">Over The Hedge</a>" by <a rel="noopener noreferrer" href="https://www.flickr.com/photos/93336655@N00">webmove</a> is licensed under <a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by/2.0/?ref=openverse">CC BY 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /></a>.</p>
       <figcaption>
         Promotional artwork featuring the main squirrel character.
       </figcaption>
@@ -66,15 +85,20 @@
         <li><strong>Liam Neeson</strong> as Norvirus Raccoon</li>
       </ul>
     </section>
-  </main>
-
-	<!-- Footer -->
-  <footer 
-    data-include="./partials/footer.html" 
-    role="contentinfo" 
-    aria-label="Footer">
-  </footer>
-
-  <script src="../ccjs/ccScript.js"></script>
-</body>
-</html>
+	</main>
+		
+			<!-- Footer -->
+	  <footer
+	    data-include="../partials/footer.html" 
+	    role="contentinfo" 
+	    aria-label="Footer">
+	  </footer>
+		
+	  <script src="../js/script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script
+	</body>
+	</html>
+	

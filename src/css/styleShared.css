@@ -172,6 +172,20 @@ h6 {
   text-decoration: underline;
 }
 
+.attribution {
+	color: var(--accent-color-lgray);
+	font-weight: var(--weight-small);
+	font-size: .5em;
+}
+
+.attribution a {
+	color: var(--accent-color-lgray);
+}
+
+.attribution img {
+	opacity: 25%;
+}
+
 .feature-photo {
   display: block;
   margin: 0 auto;

@@ -4,27 +4,45 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+	
+	 <!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/styleShared.css" />
+	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+	<link rel="stylesheet" href="../css/styleDetails.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	
+  <!-- Primary Meta Tags -->
   <title>Survey Form</title>
+  <meta name="title" content="Portfolio" />
+  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
+
 <body>
-  <!-- Main navigation -->
+	<!-- Main navigation -->
   <nav 
-    data-include="./partials/navBar.html" 
+    data-include="../partials/ccNavBar.html" 
     role="navigation" 
     aria-label="Primary navigation">
   </nav>
-
-  <!-- Side menu -->
+	
+	<!-- Side menu -->
   <aside 
-    data-include="./partials/sideMenu.html" 
+    data-include="../partials/ccSideMenu.html" 
     role="navigation" 
     aria-label="Side menu">
   </aside>
-
+	
+	<!-- Contact menu -->
+  <aside 
+    data-include="../partials/contactMenu.html" 
+    role="contact" 
+    aria-label="Contact Card">
+  </aside>
+	
   <main>
     <h1 id="title">Squirrel Survey</h1>
-    <p id="description">Tell us about your squirrel encounter:</p>
+    <h2 id="description">Tell us about your squirrel encounter:</h2>
 
     <form
       id="survey-form"
@@ -33,132 +51,121 @@
       aria-describedby="title description"
     >
       <!-- Name -->
-      <div class="form-group">
-        <label for="name" id="name-label">Name of Squirrel:</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          placeholder="Peanut Metz"
-          required
-          aria-required="true"
-        />
-      </div>
-
+			<div class="form-group input-group mb-3">
+			  <span class="input-group-text" id="name-label">Name of Squirrel:</span>
+			  <input type="text" id="name" class="form-control" placeholder="Peanut Metz" aria-label="Name" required aria-required="true">
+			</div>
+			
       <!-- Email -->
-      <div class="form-group">
-        <label for="email" id="email-label">Email of Squirrel:</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          placeholder="pecansforever@nuts.com"
-          required
-          aria-required="true"
-        />
-      </div>
-
+			<div class="form-group input-group mb-3">
+			  <span class="input-group-text" id="email-label">Email of Squirrel:</span>
+			  <input type="email" id="email" class="form-control" placeholder="pecansforever@nuts.com" aria-label="email" required aria-required="true">
+			</div>
+			
       <!-- Age -->
-      <div class="form-group">
-        <label for="number" id="number-label">Age of Squirrel:</label>
-        <input
-          id="number"
-          type="number"
-          name="age"
-          min="5"
-          max="555"
-          placeholder="Age in weeks"
-        />
-      </div>
+			<div class="form-group input-group mb-3">
+			  <span class="input-group-text" id="number-label">Age of Squirrel:</span>
+			  <input type="number" id="number" class="form-control" placeholder="Age in weeks" aria-label="age" required aria-required="true" min="5"
+          max="555">
+			</div>
+			
 
       <!-- Attitude -->
-      <div class="form-group">
+      <div class="form-group mb-3">
         <label for="dropdown">Attitude of Squirrel:</label>
-        <select id="dropdown" name="attitude">
-          <option value="happy">Happy</option>
+        <select id="dropdown" class="form-select form-select-sm" name="attitude">
+          <option selected>Open this select menu</option>
+					<option value="happy">Happy</option>
           <option value="sad">Sad</option>
           <option value="nutty">Nutty</option>
         </select>
       </div>
-
+			
+			
       <!-- Radio group -->
-      <fieldset>
+      <fieldset class="mb-3">
         <legend>Did your squirrel accept your nuts?</legend>
 
-        <div class="option">
-          <input type="radio" name="answer" id="yes" value="yes" />
+        <div class="option form-check">
+          <input class="form-check-input" type="radio" name="answer" id="yes" value="yes" />
           <label for="yes">Yes</label>
         </div>
 
-        <div class="option">
-          <input type="radio" name="answer" id="no" value="no" />
+        <div class="option form-check">
+          <input class="form-check-input" type="radio" name="answer" id="no" value="no" />
           <label for="no">No</label>
         </div>
       </fieldset>
 
       <!-- Checkboxes -->
-      <fieldset>
+      <fieldset class="mb-3">
         <legend>Qualities of Squirrel</legend>
 
-        <div class="option">
-          <input type="checkbox" id="fast" name="fast" value="Fast" />
+        <div class="option form-check">
+          <input class="form-check-input" type="checkbox" id="fast" name="fast" value="Fast" />
           <label for="fast">Fast</label>
         </div>
 
-        <div class="option">
-          <input type="checkbox" id="fluffy" name="fluffy" value="Fluffy" />
+        <div class="option form-check">
+          <input class="form-check-input" type="checkbox" id="fluffy" name="fluffy" value="Fluffy" />
           <label for="fluffy">Fluffy</label>
         </div>
 
-        <div class="option">
+        <div class="option form-check">
           <input
             type="checkbox"
             id="white-tummy"
             name="whiteTummy"
             value="White Tummy"
+						class="form-check-input"
           />
           <label for="white-tummy">White Tummy</label>
         </div>
 
-        <div class="option">
-          <input type="checkbox" id="brown" name="brown" value="Brown" />
+        <div class="option form-check">
+          <input class="form-check-input" type="checkbox" id="brown" name="brown" value="Brown" />
           <label for="brown">Brown</label>
         </div>
 
-        <div class="option">
-          <input type="checkbox" id="red" name="red" value="Red" />
+        <div class="option form-check">
+          <input class="form-check-input" type="checkbox" id="red" name="red" value="Red" />
           <label for="red">Red</label>
         </div>
 
-        <div class="option">
-          <input type="checkbox" id="gray" name="gray" value="Gray" />
+        <div class="option form-check">
+          <input class="form-check-input" type="checkbox" id="gray" name="gray" value="Gray" />
           <label for="gray">Gray</label>
         </div>
       </fieldset>
 
       <!-- Comments -->
-      <div class="form-group">
-        <label for="comments">Additional Comments:</label>
+      <div class="form-group mb-4">
+        <label class="form-label" for="comments">Additional Comments:</label>
         <textarea
           id="comments"
+					class="form-control"
           name="comments"
-          rows="10"
-          cols="55"
+          rows="3"
         ></textarea>
       </div>
-
+			
       <!-- Submit -->
-      <button id="submit" name="submit" value="Submit">Submit</button>
+      <button id="submit" class="btn btn-secondary"name="submit" value="Submit">Submit</button>
     </form>
-  </main>
-
-	<!-- Footer -->
-  <footer 
-    data-include="./partials/footer.html" 
-    role="contentinfo" 
-    aria-label="Footer">
-  </footer>
-
-  <script src="../ccjs/ccScript.js"></script>
-</body>
-</html>
+	</main>
+		
+			<!-- Footer -->
+	  <footer
+	    data-include="../partials/footer.html" 
+	    role="contentinfo" 
+	    aria-label="Footer">
+	  </footer>
+		
+	  <script src="../js/script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script
+	</body>
+	</html>
+	

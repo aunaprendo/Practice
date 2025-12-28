@@ -4,33 +4,52 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+	
+	 <!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/styleShared.css" />
+	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+	<link rel="stylesheet" href="../css/styleDetails.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	
+  <!-- Primary Meta Tags -->
   <title>Checkout Page</title>
+  <meta name="title" content="Portfolio" />
+  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
 
 <body>
-  <!-- Main navigation -->
+	<!-- Main navigation -->
   <nav 
-    data-include="./partials/navBar.html" 
+    data-include="../partials/ccNavBar.html" 
     role="navigation" 
     aria-label="Primary navigation">
   </nav>
-
-  <!-- Side menu -->
+	
+	<!-- Side menu -->
   <aside 
-    data-include="./partials/sideMenu.html" 
+    data-include="../partials/ccSideMenu.html" 
     role="navigation" 
     aria-label="Side menu">
   </aside>
-
+	
+	<!-- Contact menu -->
+  <aside 
+    data-include="../partials/contactMenu.html" 
+    role="contact" 
+    aria-label="Contact Card">
+  </aside>
+	
   <main>
+		
     <h1>Checkout</h1>
 
     <section aria-labelledby="cart-heading">
       <h2 id="cart-heading">Your Cart</h2>
       <img
-        src="https://image2url.com/images/1763907924395-ad0efbf2-9b19-4aac-8450-0f922da3f4f5.jpeg"
-        alt="Colorful watercolor painting of a squirrel perched on a log." width="80%"/>
+        src="https://i.postimg.cc/fL0BVgF7/IMG-1614.jpg"
+        alt="sculpture of a squirrel perched on a seat." class="feature-photo" />
+        <p class="attribution">"<a rel="noopener noreferrer" href="https://commons.wikimedia.org/w/index.php?curid=166487979">Red squirrels sculpture, Gortin Glens Forest Park - geograph.org.uk - 7761638</a>" by <a rel="noopener noreferrer" href="https://www.geograph.org.uk/profile/2282">Kenneth Allen</a> is licensed under <a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/2.0/?ref=openverse">CC BY-SA 2.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /></a>.</p>
     </section>
 
     <section aria-labelledby="payment-heading">
@@ -40,18 +59,19 @@
         <fieldset>
           <legend>Card Details</legend>
 
-          <div class="form-group">
-            <label for="card-name">Name on Card:</label>
+          <div class="form-group input-group mb-3">
+             <span class="input-group-text" for="card-name">Name on Card:</span>
             <input
               id="card-name"
               name="card-name"
               type="text"
               autocomplete="cc-name"
+							class="form-control"
               required />
           </div>
-
-          <div class="form-group">
-            <label for="card-number">Card Number:</label>
+					
+          <div class="form-group input-group mb-3">
+            <span class="input-group-text" for="card-number">Card Number:</span>
             <input
               id="card-number"
               name="card-number"
@@ -59,35 +79,45 @@
               inputmode="numeric"
               autocomplete="cc-number"
               pattern="[0-9]{13,19}"
+							class="form-control"
               aria-describedby="card-number-note"
               required />
-            <small id="card-number-note">Numbers only, no spaces or dashes.</small>
+            <small class="ms-3" id="card-number-note">Numbers only, no spaces or dashes.</small>
           </div>
 
-          <div class="form-group">
-            <label for="expiration">Expiration Date (MM/YY):</label>
+          <div class="form-group input-group mb-3">
+             <span class="input-group-text" for="expiration">Expiration Date (MM/YY):</span>
             <input
               id="expiration"
               name="expiration"
               type="text"
               autocomplete="cc-exp"
               placeholder="MM/YY"
+							class="form-control"
               pattern="(0[1-9]|1[0-2])\/\d{2}"
               aria-describedby="expiration-format" />
-            <small id="expiration-format">Format: month/year</small>
+							<small class="ms-3" id="expiration-format">Format: month/year</small>
           </div>
         </fieldset>
       </form>
+			<!-- Submit -->
+      <button id="submit" class="btn btn-secondary"name="submit" value="Submit">Submit</button>
+ 
     </section>
-  </main>
 
-	<!-- Footer -->
-  <footer 
-    data-include="./partials/footer.html" 
-    role="contentinfo" 
-    aria-label="Footer">
-  </footer>
-
-  <script src="../ccjs/ccScript.js"></script>
-</body>
-</html>
+	</main>
+			<!-- Footer -->
+	  <footer
+	    data-include="../partials/footer.html" 
+	    role="contentinfo" 
+	    aria-label="Footer">
+	  </footer>
+		
+	  <script src="../js/script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script
+	</body>
+	</html>
+	
