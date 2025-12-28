@@ -170,6 +170,16 @@ PROJECT CARDS SHARED
 	filter: grayscale(50%);
 }
 
+.card-img-top-cc {
+	height: 10rem;
+	object-fit: scale-down;
+	object-position: center;
+	border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+	display: block;
+	filter: grayscale(50%);
+}
+
 .card-body {
   flex: 1 1 auto;
   padding: .8rem .8rem;
