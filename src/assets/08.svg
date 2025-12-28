@@ -1,0 +1,28 @@
+<svg
+  class="thought-bubble"
+  viewBox="0 0 200 120"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  <!-- Main cloud -->
+  <path
+    d="
+      M40 60
+      C20 60, 20 30, 45 30
+      C50 10, 80 10, 90 25
+      C110 10, 150 20, 145 45
+      C170 50, 165 80, 135 80
+      C125 100, 80 100, 70 85
+      C50 95, 30 80, 35 65
+      Z
+    "
+    fill="black"
+    stroke="white"
+    stroke-width="5"
+  />
+
+  <!-- Thought dots -->
+  <circle cx="55" cy="100" r="4" fill="black" stroke="white" />
+  <circle cx="45" cy="108" r="3" fill="black" stroke="white" />
+  <circle cx="36" cy="114" r="2" fill="black" stroke="white" />
+</svg>

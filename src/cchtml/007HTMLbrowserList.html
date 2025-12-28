@@ -4,68 +4,85 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+	
+	 <!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/styleShared.css" />
+	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+	<link rel="stylesheet" href="../css/styleDetails.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	
+  <!-- Primary Meta Tags -->
   <title>List of Browsers and Descriptions</title>
+  <meta name="title" content="Portfolio" />
+  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
 
 <body>
-  <!-- Main navigation -->
+	<!-- Main navigation -->
   <nav 
-    data-include="./partials/navBar.html" 
+    data-include="../partials/ccNavBar.html" 
     role="navigation" 
     aria-label="Primary navigation">
   </nav>
-
-  <!-- Side menu -->
+	
+	<!-- Side menu -->
   <aside 
-    data-include="./partials/sideMenu.html" 
+    data-include="../partials/ccSideMenu.html" 
     role="navigation" 
     aria-label="Side menu">
   </aside>
 	
-    <main>
-      <h1>List of Major Web Browsers</h1>
+	<!-- Contact menu -->
+  <aside 
+    data-include="../partials/contactMenu.html" 
+    role="contact" 
+    aria-label="Contact Card">
+  </aside>
+	
+  <main class="container">
+      <h1>List of Squirrel Sites</h1>
 
-      <dl>
-        <dt>Google Chrome</dt>
-        <dd>
-          Google Chrome is a free web browser developed by Google and first
-          released in 2008.
+      <dl class="row">
+        <dt class="col-sm-3"><a  class="gen-link" href="https://www.fontsquirrel.com">Font Squirrel</a></dt>
+        <dd class="col-sm-9 mb-3">
+          FontSquirrel is a long-established website that curates and offers a large library of high-quality fonts that are free to download and licensed for commercial use, helping designers and developers find and use typefaces safely and easily.
         </dd>
 
-        <dt>Firefox</dt>
-        <dd>
-          Firefox is a free web browser developed by the Mozilla Corporation
-          and first released in 2004.
+        <dt class="col-sm-3"><a  class="gen-link" href="https://www.neuralframes.com/tools/ai-cartoon-generator">Neural Frames</a></dt>
+        <dd class="col-sm-9 mb-3">
+          The NeuralFrames AI Cartoon Generator page is a free online tool that lets you upload a photo and instantly transform it into a stylized cartoon-like image in various artistic styles using AI, with no login required.  ￼
         </dd>
-
-        <dt>Safari</dt>
-        <dd>
-          Safari is a web browser developed by Apple and is the default browser
-          for iPhone, iPad, and Mac devices.
+			
+        <dt class="col-sm-3"><a  class="gen-link" href="https://www.squirrelbrand.com">Squirrel Brand</a></dt>
+        <dd class="col-sm-9 mb-3">
+          The official ecommerce site for Squirrel Brand, a heritage American gourmet nut company offering premium roasted nuts and nut-based snacks with a focus on quality ingredients and artisan flavors.   ￼
         </dd>
-
-        <dt>Brave</dt>
-        <dd>
-          Brave is a free web browser first released in 2016 that is based on
-          the Chromium web browser.
+			
+        <dt class="col-sm-3"><a  class="gen-link" href="https://www.rospa.com/about-us/history/tufty">ROSPA</a></dt>
+        <dd class="col-sm-9 mb-3">
+          The Royal Society for the Prevention of Accidents’ (RoSPA) website that tells the history of Tufty Fluffytail, RoSPA’s iconic red squirrel mascot used since the 1950s to teach young children important road safety lessons through engaging stories and the Tufty Club initiative.￼
         </dd>
-
-        <dt>Arc</dt>
-        <dd>
-          Arc is a free Chromium-based web browser first released in 2023 by The
-          Browser Company.
+				
+        <dt class="col-sm-3"><a  class="gen-link" href="https://dev.to/integerman/f-genetic-algorithm-defining-squirrel-genes-3564">Dev Genetic Algorithm</a></dt>
+        <dd class="col-sm-9 mb-3">
+          Developer blog post on the DEV Community that’s part of a tutorial series showing how to implement the beginnings of a genetic algorithm in F# by defining “genes” for a simulated squirrel’s decision-making logic in a simple game environment.   ￼
         </dd>
       </dl>
-  </main>
-
-	<!-- Footer -->
-  <footer 
-    data-include="./partials/footer.html" 
-    role="contentinfo" 
-    aria-label="Footer">
-  </footer>
-
-  <script src="../ccjs/ccScript.js"></script>
-</body>
-</html>
+	</main>
+		
+			<!-- Footer -->
+	  <footer
+	    data-include="../partials/footer.html" 
+	    role="contentinfo" 
+	    aria-label="Footer">
+	  </footer>
+		
+	  <script src="../js/script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script
+	</body>
+	</html>
+	

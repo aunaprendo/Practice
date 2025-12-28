@@ -57,13 +57,8 @@ blockquote {
   margin-top: -1rem;
   margin-bottom: 1rem;
   font-size: 0.875em;
-  color: #6c757d;
+  color:  var(--accent-color-dgray);
 }
-
-.blockquote-footer a {
-  color: #6c757d;
-}
-
 
 .blockquote-footer::before {
   content: "— ";
@@ -71,11 +66,6 @@ blockquote {
 
 .figure {
   display: inline-block;
-}
-
-.figure-caption {
-  font-size: 0.875em;
-  color: #6c757d;
 }
 
 .text-end {
@@ -88,7 +78,7 @@ blockquote {
 /* Bubble styling */
 .bubble {
   display: inline-block;
-  background: var(--accent-color-ateal);
+  background: var(--accent-color-lteal);
   color: var(--text-color-main);
   padding: .25rem 2rem;
   border-radius: 1.5rem;

@@ -6,30 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
 	 <!-- Stylesheets -->
-  <link rel="stylesheet" href="../css/styleShared.css" />
-	<link rel="stylesheet" href="../css/ccStyleNavigations.css"	/>
+	<link rel="stylesheet" href="../css/styleShared.css" />
+	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+	<link rel="stylesheet" href="../css/styleDetails.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	
   <!-- Primary Meta Tags -->
   <title>Squirrel Scoops Recipe</title>
-	<meta name="Squirrel Scoops Recipe" content="Recipe" />
-  <meta name="description" content="A crunchy, nut-packed treat bursting with forest flavors!" />
+  <meta name="title" content="Portfolio" />
+  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
 
 <body>
-  <!-- Main navigation -->
+	<!-- Main navigation -->
   <nav 
     data-include="../partials/ccNavBar.html" 
     role="navigation" 
     aria-label="Primary navigation">
   </nav>
-
-  <!-- Side menu -->
+	
+	<!-- Side menu -->
   <aside 
     data-include="../partials/ccSideMenu.html" 
     role="navigation" 
     aria-label="Side menu">
   </aside>
-
+	
 	<!-- Contact menu -->
   <aside 
     data-include="../partials/contactMenu.html" 
@@ -50,7 +53,7 @@
     <img class="feature-photo" src="../assets/recipie.jpeg" alt="Nut Cluster Treats" width="80%">
 
     <h2>Ingredients</h2>
-    <ul class="custom-bullets">
+    <ul class="custom-bullets ms-3">
       <li><em>1/4 cup</em> crushed acorns (leached to remove tannins)</li>
       <li><em>1/4 cup</em> roasted hazelnuts, chopped</li>
       <li><em>2 tbsp</em> crushed walnuts</li>
@@ -74,16 +77,20 @@
       <li><span class="underline">Let Set:</span> Refrigerate 30–60 minutes to firm up.</li>
     </ol>
 		
-  </main>
-
-	<!-- Footer -->
-  <footer 
-    data-include="../partials/footer.html" 
-    role="contentinfo" 
-    aria-label="Footer">
-  </footer>
+	</main>
+		
+			<!-- Footer -->
+	  <footer
+	    data-include="../partials/footer.html" 
+	    role="contentinfo" 
+	    aria-label="Footer">
+	  </footer>
+		
+	  <script src="../js/script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script
+	</body>
+	</html>
 	
-  <script src="../js/script.js"></script>
-	
-</body>
-</html>
