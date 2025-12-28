@@ -4,29 +4,42 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../cccss/ccStyle.css" rel="stylesheet" />
-  <title>Hotel Feedback Form</title>
+	
+	 <!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/styleShared.css" />
+	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+	<link rel="stylesheet" href="../css/styleDetails.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	
+  <!-- Primary Meta Tags -->
+  <title>Drey Feedback Form</title>
+  <meta name="title" content="Portfolio" />
+  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
+
 <body>
-  <!-- Main navigation -->
+	<!-- Main navigation -->
   <nav 
-    data-include="./partials/navBar.html" 
+    data-include="../partials/ccNavBar.html" 
     role="navigation" 
     aria-label="Primary navigation">
   </nav>
-
-  <!-- Side menu -->
+	
+	<!-- Side menu -->
   <aside 
-    data-include="./partials/sideMenu.html" 
+    data-include="../partials/ccSideMenu.html" 
     role="navigation" 
     aria-label="Side menu">
   </aside>
-
-  <header>
-    <h1>Hotel Feedback Form</h1>
-    <p>Thank you for staying with us. Please provide feedback on your recent stay.</p>
-  </header>
-
+	
+	<!-- Contact menu -->
+  <aside 
+    data-include="../partials/contactMenu.html" 
+    role="contact" 
+    aria-label="Contact Card">
+  </aside>
+	
   <main>
     <form method="POST" action="https://hotel-feedback.freecodecamp.org">
       <!-- PERSONAL INFORMATION -->
@@ -71,7 +84,7 @@
 
       <!-- FIRST TIME? -->
       <fieldset>
-        <legend>Was this your first time at our hotel?</legend>
+        <legend>Was this your first time in our drey?</legend>
 
         <div class="option">
           <input type="radio" id="yes-option" name="hotel-stay" value="yes" />
@@ -86,31 +99,31 @@
 
       <!-- REASONS FOR STAY -->
       <fieldset>
-        <legend>Why did you choose to stay at our hotel? <span>(check all that apply)</span></legend>
+        <legend>Why did you choose to stay at our drey? <span>(check all that apply)</span></legend>
 
         <div class="option">
           <input type="checkbox" id="ads" name="reason" value="ads" />
-          <label for="ads">Social Media Ads</label>
+          <label for="ads">Abundance of Nuts</label>
         </div>
 
         <div class="option">
           <input type="checkbox" id="recommendation" name="reason" value="recommendation" />
-          <label for="recommendation">Personal Recommendation</label>
+          <label for="recommendation">Squirrel Recommendation</label>
         </div>
 
         <div class="option">
           <input type="checkbox" id="location" name="reason" value="location" />
-          <label for="location">Location</label>
+          <label for="location">Forest Adjacency</label>
         </div>
 
         <div class="option">
           <input type="checkbox" id="reputation" name="reason" value="reputation" checked />
-          <label for="reputation">Reputation</label>
+          <label for="reputation">Mushroom Jerky Availability</label>
         </div>
 
         <div class="option">
           <input type="checkbox" id="price" name="reason" value="price" />
-          <label for="price">Price</label>
+          <label for="price">Leaf Count</label>
         </div>
       </fieldset>
 
@@ -130,7 +143,7 @@
         </div>
 
         <div class="form-group">
-          <label for="food">How was the food?</label>
+          <label for="food">How were the nuts?</label>
           <select id="food" name="food">
             <option value="poor">Poor</option>
             <option value="satisfactory">Satisfactory</option>
@@ -153,15 +166,20 @@
         <p id="comments-help" class="form-hint">Feel free to share any additional feedback.</p>
       </div>
     </form>
-  </main>
-
-	<!-- Footer -->
-  <footer 
-    data-include="./partials/footer.html" 
-    role="contentinfo" 
-    aria-label="Footer">
-  </footer>
-
-  <script src="../ccjs/ccScript.js"></script>
-</body>
-</html>
+	</main>
+		
+			<!-- Footer -->
+	  <footer
+	    data-include="../partials/footer.html" 
+	    role="contentinfo" 
+	    aria-label="Footer">
+	  </footer>
+		
+	  <script src="../js/script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script
+	</body>
+	</html>
+	

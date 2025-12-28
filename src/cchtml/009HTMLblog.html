@@ -5,37 +5,63 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="../cccss/ccStyle.css" rel="stylesheet" />
-  <title>Mr. Whiskers' Blog</title>
+  <title>Mr. Peanut' Blog</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	 <!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/styleShared.css" />
+	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+	<link rel="stylesheet" href="../css/styleDetails.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	
+  <!-- Primary Meta Tags -->
+  <title>Peanut & Pixels Blog</title>
+  <meta name="title" content="Portfolio" />
+  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
+
 <body>
-  <!-- Main navigation -->
+	<!-- Main navigation -->
   <nav 
-    data-include="./partials/navBar.html" 
+    data-include="../partials/ccNavBar.html" 
     role="navigation" 
     aria-label="Primary navigation">
   </nav>
-
-  <!-- Side menu -->
+	
+	<!-- Side menu -->
   <aside 
-    data-include="./partials/sideMenu.html" 
+    data-include="../partials/ccSideMenu.html" 
     role="navigation" 
     aria-label="Side menu">
   </aside>
-
-    <main>
+	
+	<!-- Contact menu -->
+  <aside 
+    data-include="../partials/contactMenu.html" 
+    role="contact" 
+    aria-label="Contact Card">
+  </aside>
+	
+  <main>
       <header>
-        <h1>Welcome to Mr. Whiskers' Blog Page!</h1>
+        <h1>Peanut & Pixels Blog</h1>
         <figure>
           <img
-            src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg"
-            alt="Mr. Whiskers in the garden"
+            src="https://image2url.com/r2/default/images/1766936825072-ba7e7607-3b7d-4c05-81a6-570cd13cbe4d.jpeg"
+            alt="Mr. Peanut find a nut" width="90%"
           />
-          <figcaption>Mr. Whiskers in the Garden</figcaption>
+          <figcaption>Mr. Peanut Choosing a Nut</figcaption>
         </figure>
         <nav>
           <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#posts">Posts</a></li>
+            <li><a class="gen-link" href="#about">About</a></li>
+            <li><a class="gen-link" href="#posts">Posts</a></li>
           </ul>
         </nav>
       </header>
@@ -43,12 +69,10 @@
       <section id="about">
         <h2>About</h2>
         <p>
-          Hi there! I'm Jane Doe, a passionate writer who finds endless
-          inspiration in the antics of my beloved cat, Mr. Whiskers.
+          Peanut & Pixels is a cozy, whimsical blog that finds small lessons in the everyday lives of squirrels—curiosity, patience, creativity, and thoughtful leaps of faith—blending gentle observation with reflective insights for makers, thinkers, and anyone who appreciates life’s quiet moments.
         </p>
         <p>
-          His playful nature and boundless energy keep me on my toes. I love him
-          so much.
+          Pull up a branch, grab an Peanut, and enjoy Peanut & Pixels—a quiet place to slow down, observe, and find meaning in the small, thoughtful moments
         </p>
       </section>
 
@@ -56,62 +80,48 @@
         <h2>Posts</h2>
 
         <article>
-          <h3>Mr. Whiskers' First Day Home</h3>
+          <h3> Morning Code, Afternoon Nuts</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
-            quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
-            quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+						This morning I watched a squirrel pause mid-branch, clearly debating whether the Peanut was worth the jump. That tiny moment of focus felt familiar—sometimes you just need to stop, think, and commit before leaping into a new idea.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
-            quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
-            quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+						By afternoon, the same squirrel was back, happily burying snacks with zero hesitation. A good reminder that after doing the hard thinking, it’s okay to relax, enjoy small wins, and trust you’ll remember where you put the good stuff.
           </p>
         </article>
 
         <article>
-          <h3>Mr. Whiskers' First Bath</h3>
+          <h3>The Art of the Strategic Pause</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
-            quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
-            quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+            A squirrel on the fence line froze today, tail flicking like a loading spinner. Cars passed, leaves rustled, and still it waited—patient, alert, unbothered by the rush around it.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
-            quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
-            quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+						When it finally moved, it was swift and certain. A quiet lesson in timing: pausing isn’t hesitation, it’s preparation.
           </p>
         </article>
 
         <article>
-          <h3>Mr. Whiskers' First Birthday Party</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
-            quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
-            quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+          <h3>Cached for Later</h3>
+          <p>I saw a squirrel dig three separate holes for the same Peanut, clearly undecided. Each spot was tested, rejected, and reconsidered like drafts of a half-finished idea.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
-            quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
-            quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+            Eventually, it picked one and scampered off, satisfied. Creativity works the same way—sometimes you have to try a few hiding places before the idea feels safe enough to keep.
           </p>
         </article>
       </section>
-  </main>
-
-	<!-- Footer -->
-  <footer 
-    data-include="./partials/footer.html" 
-    role="contentinfo" 
-    aria-label="Footer">
-  </footer>
-
-  <script src="../ccjs/ccScript.js"></script>
-</body>
-</html>
+	</main>
+		
+			<!-- Footer -->
+	  <footer
+	    data-include="../partials/footer.html" 
+	    role="contentinfo" 
+	    aria-label="Footer">
+	  </footer>
+		
+	  <script src="../js/script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script
+	</body>
+	</html>
+	

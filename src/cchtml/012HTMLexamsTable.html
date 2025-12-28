@@ -4,85 +4,111 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../cccss/ccStyle.css" rel="stylesheet" />
+	
+	 <!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/styleShared.css" />
+	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+	<link rel="stylesheet" href="../css/styleDetails.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	
+  <!-- Primary Meta Tags -->
   <title>Calculus Final Exams Table</title>
+  <meta name="title" content="Portfolio" />
+  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
+
 <body>
-  <!-- Main navigation -->
+	<!-- Main navigation -->
   <nav 
-    data-include="./partials/navBar.html" 
+    data-include="../partials/ccNavBar.html" 
     role="navigation" 
     aria-label="Primary navigation">
   </nav>
-
-  <!-- Side menu -->
+	
+	<!-- Side menu -->
   <aside 
-    data-include="./partials/sideMenu.html" 
+    data-include="../partials/ccSideMenu.html" 
     role="navigation" 
     aria-label="Side menu">
   </aside>
-
+	
+	<!-- Contact menu -->
+  <aside 
+    data-include="../partials/contactMenu.html" 
+    role="contact" 
+    aria-label="Contact Card">
+  </aside>
+	
   <main>
-    <table aria-describedby="grades-description">
-      <caption>Calculus Final Exam Grades</caption>
-
-      <p id="grades-description" class="visually-hidden">
-        This table lists student names and their final exam grades,
-        along with the class average.
-      </p>
-
-      <thead>
-        <tr>
-          <th scope="col">Last Name</th>
-          <th scope="col">First Name</th>
-          <th scope="col">Grade</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <th scope="row">Davis</th>
-          <td>Alex</td>
-          <td>54</td>
-        </tr>
-        <tr>
-          <th scope="row">Doe</th>
-          <td>Samantha</td>
-          <td>92</td>
-        </tr>
-        <tr>
-          <th scope="row">Rodriguez</th>
-          <td>Marcus</td>
-          <td>88</td>
-        </tr>
-        <tr>
-          <th scope="row">Thompson</th>
-          <td>Jane</td>
-          <td>77</td>
-        </tr>
-        <tr>
-          <th scope="row">Williams</th>
-          <td>Natalie</td>
-          <td>83</td>
-        </tr>
-      </tbody>
-
-      <tfoot>
-        <tr>
-          <th scope="row">Average Grade</th>
-          <td colspan="2">78.8</td>
-        </tr>
-      </tfoot>
-    </table>
-  </main>
-
-	<!-- Footer -->
-  <footer 
-    data-include="./partials/footer.html" 
-    role="contentinfo" 
-    aria-label="Footer">
-  </footer>
-
-  <script src="../ccjs/ccScript.js"></script>
-</body>
-</html>
+    <div class="table-responsive">
+			
+			<table aria-describedby="grades-description" class="table-sm align-middle table table-striped table-hover">
+	      <caption>Calculus Final Exam Grades</caption>
+	
+	      <p id="grades-description" class="visually-hidden">
+	        This table lists student names and their final exam grades,
+	        along with the class average.
+	      </p>
+	
+	      <thead>
+	        <tr>
+	          <th scope="col">Last Name</th>
+	          <th scope="col">First Name</th>
+	          <th scope="col">Grade</th>
+	        </tr>
+	      </thead>
+	
+	      <tbody>
+	        <tr>
+	          <th scope="row">Davis</th>
+	          <td>Alex</td>
+	          <td>54</td>
+	        </tr>
+	        <tr>
+	          <th scope="row">Doe</th>
+	          <td>Samantha</td>
+	          <td>92</td>
+	        </tr>
+	        <tr>
+	          <th scope="row">Rodriguez</th>
+	          <td>Marcus</td>
+	          <td>88</td>
+	        </tr>
+	        <tr>
+	          <th scope="row">Thompson</th>
+	          <td>Jane</td>
+	          <td>77</td>
+	        </tr>
+	        <tr>
+	          <th scope="row">Williams</th>
+	          <td>Natalie</td>
+	          <td>83</td>
+	        </tr>
+	      </tbody>
+	
+	      <tfoot>
+	        <tr>
+	          <th scope="row">Average Grade</th>
+	          <td colspan="2">78.8</td>
+	        </tr>
+	      </tfoot>
+	    </table>
+		</div>
+	</main>
+		
+			<!-- Footer -->
+	  <footer
+	    data-include="../partials/footer.html" 
+	    role="contentinfo" 
+	    aria-label="Footer">
+	  </footer>
+		
+	  <script src="../js/script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script
+	</body>
+	</html>
+	
