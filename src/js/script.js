@@ -284,8 +284,15 @@ track.prepend(lastClone);
 const allCards = Array.from(track.children);
 
 function setCardWidth() {
+  const containerWidth = track.parentElement.getBoundingClientRect().width;
   cardWidth = allCards[index].getBoundingClientRect().width;
-  track.style.transform = `translateX(-${cardWidth * index}px)`;
+
+  const offset =
+    cardWidth * index -
+    (containerWidth / 2 - cardWidth / 2);
+
+  track.style.transition = 'none';
+  track.style.transform = `translateX(-${offset}px)`;
 }
 
 window.addEventListener('resize', setCardWidth);
@@ -320,3 +327,4 @@ track.addEventListener('transitionend', () => {
     track.style.transform = `translateX(-${cardWidth * index}px)`;
   }
 });
+
