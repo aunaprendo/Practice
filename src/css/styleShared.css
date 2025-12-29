@@ -100,6 +100,12 @@ h1 {
   }
 }
 
+@media (max-width: 475px) {
+  h1 {
+    font-size: calc(1.525rem + 4vw);
+  }
+}
+
 h2 {
   font-size: calc(1rem + 1.3vw);
   font-weight: var(--weight-small);

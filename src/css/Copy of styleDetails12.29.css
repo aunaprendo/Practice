@@ -186,9 +186,6 @@ blockquote {
   pointer-events: none;
 }
 
-/* ========================================
-CAROUSEL CARDS 
-========================================= */	
 .project-card {
   flex: 0 0 100%;
 	width: 300px;
@@ -203,56 +200,8 @@ CAROUSEL CARDS
   .project-card { flex-basis: 33.3333%; }
 }
 
-.card-i {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: var(--bg-color-main);
-  background-clip: border-box;
-  border: 2px dotted rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-}
-
-.card-title {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-	font-size: 1.2rem;
-	font-weight: var(--weight-bold) ;
-}
-
-.card-body-i {
-  flex: 1 1 auto;
-  padding: 1rem .8rem;
-}
-
-.card-img-top-i {
-	height: 10rem;
-	object-fit: cover;
-	object-position: center;
-	border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
-	display: block;
-	filter: grayscale(25%);
-}
-
-@media (max-width: 768px) {
-  .card-title {
-    font-size: 1rem;
-  }
-	.card-body-i a{
-		font-size: .9rem;
-	}
-	.card-body-i {
-  padding: .5rem .5rem;
-	}
-}
-
 /* ========================================
-CC CARDS 
+PROJECT CARDS SHARED
 ========================================= */	
 .card {
   position: relative;
@@ -266,49 +215,40 @@ CC CARDS
   border-radius: 0.25rem;
 }
 
-@media (max-width: 767.98px) {
-  .card {
-    aspect-ratio: 3 / 4;
-  }
-	.card-body {
-  padding: .5rem .5rem;
-	}
-}
-
-@media (max-width: 575px) {
-  .card {
-    aspect-ratio: 4 / 5;
-  }
-}
-
-@media (max-width: 450px) {
-	.card-body .gen-link {
-		font-size: .7rem;
-	}
-}
-
 .card-img-top {
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
+	height: 10rem;
+	object-fit: cover;
 	object-position: center;
 	border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 	display: block;
+	filter: grayscale(25%);
 }
 
 .card-body {
   flex: 1 1 auto;
   padding: 1rem .8rem;
-  margin-top: auto;
-  text-align: center;
 }
 
-.card-body a {
+.card-title {
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+	font-size: 1.2rem;
+	font-weight: var(--weight-bold) ;
+}
+
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1rem;
+  }
+	.card-body a{
+		font-size: .9rem;
+	}
+	.card-body {
+  padding: .5rem .5rem;
+	}
 }
 
 /* ========================================
