@@ -283,7 +283,7 @@ CC CARDS
 
 @media (max-width: 450px) {
 	.card-body .gen-link {
-		font-size: .7rem;
+		font-size: .9rem;
 	}
 }
 
@@ -885,4 +885,24 @@ fieldset {
 
 small, .small {
   font-size: 0.875em;
+}
+
+/* ========================================
+test
+========================================= */
+
+.a{
+  background-color: red;
+}
+.b{
+  background-color: green;
+}
+.c{
+  background-color: purple;
+}
+.d{
+  background-color: orange;
+}
+.e{
+  background-color: yellow;
 }
