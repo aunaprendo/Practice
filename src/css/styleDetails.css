@@ -327,6 +327,19 @@ BOOK CAROUSEL
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
+	scroll-behavior: auto; 
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .carousel {
+    scroll-behavior: auto;
+  }
+}
+.carousel-track-books {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
 }
 
 .carousel-item {
@@ -375,10 +388,56 @@ BOOK CAROUSEL
   right: 0;
 }
 
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .carousel {
-    scroll-behavior: auto;
+/* Hide book carousel arrows when contact card is open */
+body.contact-open .carousel-arrow {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Hide book carousel arrows when side menu is open */
+body.menu-open .carousel-arrow {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* ==========================
+   BOOK CAROUSEL EDGE FADE
+========================== */
+
+#bookCarousel {
+  position: relative;
+
+  --fade-size: 25px;
+
+  /* Safari + Chrome */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black var(--fade-size),
+    black calc(100% - var(--fade-size)),
+    transparent
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black var(--fade-size),
+    black calc(100% - var(--fade-size)),
+    transparent
+  );
+}
+
+@media (min-width: 900px) {
+  #bookCarousel {
+    --fade-size: 45px;
+  }
+}
+
+@media (max-width: 600px) {
+  #bookCarousel {
+    --fade-size: 5px;
   }
 }
 

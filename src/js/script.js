@@ -24,6 +24,7 @@ async function loadPartials() {
   initNavbar();
   initSideMenu();
   initContactCard();
+	initBookCarousel();
 }
 
 /* ================================
@@ -263,143 +264,155 @@ window.__siteControls = {
 /* ================================
    PROJECT CAROUSEL
 ================================ */
-const track = document.querySelector('.carousel-track');
-const cards = Array.from(track.children);
-const nextBtn = document.querySelector('.next');
-const prevBtn = document.querySelector('.prev');
+(() => {
+  const track = document.querySelector('.carousel-track');
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
 
-let cardWidth;
-let index = 1;
+  // Exit safely if this carousel is not on the page
+  if (!track || !nextBtn || !prevBtn) return;
 
-/* Clone first & last */
-const firstClone = cards[0].cloneNode(true);
-const lastClone = cards[cards.length - 1].cloneNode(true);
+  const cards = Array.from(track.children);
+  let cardWidth;
+  let index = 1;
 
-firstClone.id = 'first-clone';
-lastClone.id = 'last-clone';
+  /* Clone first & last */
+  const firstClone = cards[0].cloneNode(true);
+  const lastClone = cards[cards.length - 1].cloneNode(true);
 
-track.append(firstClone);
-track.prepend(lastClone);
+  firstClone.id = 'first-clone';
+  lastClone.id = 'last-clone';
 
-const allCards = Array.from(track.children);
+  track.append(firstClone);
+  track.prepend(lastClone);
 
-function setCardWidth() {
-  const containerWidth = track.parentElement.getBoundingClientRect().width;
-  cardWidth = allCards[index].getBoundingClientRect().width;
+  const allCards = Array.from(track.children);
 
-  const offset =
-    cardWidth * index -
-    (containerWidth / 2 - cardWidth / 2);
+  function setCardWidth() {
+    const containerWidth = track.parentElement.getBoundingClientRect().width;
+    cardWidth = allCards[index].getBoundingClientRect().width;
 
-  track.style.transition = 'none';
-  track.style.transform = `translateX(-${offset}px)`;
-}
+    const offset =
+      cardWidth * index -
+      (containerWidth / 2 - cardWidth / 2);
 
-window.addEventListener('resize', setCardWidth);
-setCardWidth();
-
-/* Buttons */
-nextBtn.addEventListener('click', () => {
-  if (index >= allCards.length - 1) return;
-  index++;
-  track.style.transition = 'transform 0.4s ease';
-  track.style.transform = `translateX(-${cardWidth * index}px)`;
-});
-
-prevBtn.addEventListener('click', () => {
-  if (index <= 0) return;
-  index--;
-  track.style.transition = 'transform 0.4s ease';
-  track.style.transform = `translateX(-${cardWidth * index}px)`;
-});
-
-/* Loop Fix */
-track.addEventListener('transitionend', () => {
-  if (allCards[index].id === 'first-clone') {
     track.style.transition = 'none';
-    index = 1;
-    track.style.transform = `translateX(-${cardWidth * index}px)`;
+    track.style.transform = `translateX(-${offset}px)`;
   }
 
-  if (allCards[index].id === 'last-clone') {
-    track.style.transition = 'none';
-    index = allCards.length - 2;
+  window.addEventListener('resize', setCardWidth);
+  setCardWidth();
+
+  nextBtn.addEventListener('click', () => {
+    if (index >= allCards.length - 1) return;
+    index++;
+    track.style.transition = 'transform 0.4s ease';
     track.style.transform = `translateX(-${cardWidth * index}px)`;
-  }
-});
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (index <= 0) return;
+    index--;
+    track.style.transition = 'transform 0.4s ease';
+    track.style.transform = `translateX(-${cardWidth * index}px)`;
+  });
+
+  track.addEventListener('transitionend', () => {
+    if (allCards[index].id === 'first-clone') {
+      track.style.transition = 'none';
+      index = 1;
+      track.style.transform = `translateX(-${cardWidth * index}px)`;
+    }
+
+    if (allCards[index].id === 'last-clone') {
+      track.style.transition = 'none';
+      index = allCards.length - 2;
+      track.style.transform = `translateX(-${cardWidth * index}px)`;
+    }
+  });
+})();
 
 /* ================================
    BOOK CAROUSEL
 ================================ */
+function initBookCarousel() {
   const carousel = document.getElementById("bookCarousel");
+  const track = carousel?.querySelector(".carousel-track-books");
   const leftArrow = document.querySelector(".carousel-arrow.left");
   const rightArrow = document.querySelector(".carousel-arrow.right");
 
-  let autoScroll = null;
-  let isPaused = false;
+  if (!carousel || !track || !leftArrow || !rightArrow) return;
 
-  const scrollAmount = 220;
-  const intervalTime = 2500;
+  const SPEED = 0.4; // pixels per frame (slow & smooth)
 
-  function startAutoScroll() {
-    if (autoScroll || isPaused) return;
+  let paused = false;
+  let rafId = null;
 
-    autoScroll = setInterval(() => {
-      carousel.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth"
-      });
+  /* -----------------------------
+     Clone items for infinite loop
+  ----------------------------- */
+  const originals = Array.from(track.children);
+  originals.forEach(item => track.append(item.cloneNode(true)));
 
-      // Loop back to start
-      if (
-        carousel.scrollLeft + carousel.clientWidth >=
-        carousel.scrollWidth - 5
-      ) {
-        carousel.scrollTo({ left: 0, behavior: "smooth" });
-      }
-    }, intervalTime);
+  const loopWidth = () => track.scrollWidth / 2;
+
+	let scrollPos = 1;
+	carousel.scrollLeft = 1;
+	
+	function animate() {
+	  if (!paused) {
+	    scrollPos += SPEED;
+	
+	    if (scrollPos >= loopWidth()) {
+	      scrollPos -= loopWidth();
+	    }
+	
+	    carousel.scrollLeft = Math.floor(scrollPos);
+	  }
+	  rafId = requestAnimationFrame(animate);
+	}
+
+  function start() {
+    if (!rafId) animate();
   }
 
-  function stopAutoScroll() {
-    clearInterval(autoScroll);
-    autoScroll = null;
+  function stop() {
+    cancelAnimationFrame(rafId);
+    rafId = null;
   }
 
-  /* Desktop hover pause */
-  carousel.addEventListener("mouseenter", () => {
-    isPaused = true;
-    stopAutoScroll();
-  });
+  /* -----------------------------
+     Pause on hover (desktop)
+  ----------------------------- */
+  carousel.addEventListener("mouseenter", () => paused = true);
+  carousel.addEventListener("mouseleave", () => paused = false);
 
-  carousel.addEventListener("mouseleave", () => {
-    isPaused = false;
-    startAutoScroll();
-  });
-
-  /* Touch pause (tap carousel) */
-  carousel.addEventListener("pointerdown", () => {
-    isPaused = true;
-    stopAutoScroll();
-  });
-
-  /* Resume when tapping outside */
-  document.addEventListener("pointerdown", (e) => {
-    if (!carousel.contains(e.target)) {
-      isPaused = false;
-      startAutoScroll();
-    }
-  });
-
-  /* Arrow controls */
+  /* -----------------------------
+     Arrow controls
+  ----------------------------- */
   leftArrow.addEventListener("click", () => {
-    stopAutoScroll();
-    carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    paused = true;
+    carousel.scrollBy({ left: -300, behavior: "smooth" });
   });
 
   rightArrow.addEventListener("click", () => {
-    stopAutoScroll();
-    carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    paused = true;
+    carousel.scrollBy({ left: 300, behavior: "smooth" });
   });
 
-  /* Start AFTER layout is ready */
-  window.addEventListener("load", startAutoScroll);
+  /* -----------------------------
+     Start after images load
+  ----------------------------- */
+  const images = carousel.querySelectorAll("img");
+  let loaded = 0;
+
+  images.forEach(img => {
+    if (img.complete) loaded++;
+    else img.onload = () => {
+      loaded++;
+      if (loaded === images.length) start();
+    };
+  });
+
+  if (loaded === images.length) start();
+}
