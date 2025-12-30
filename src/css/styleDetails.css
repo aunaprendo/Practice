@@ -33,6 +33,15 @@
   justify-content: center;
 }
 
+@media (min-width: 992px) {
+  .cir.top {
+	width: 80%;
+	}
+	.cir.bottom {
+	  width: 55%;
+	}
+}
+
 .hero {
   padding-top: clamp(4rem, 6vh, 6rem);
 }
@@ -352,7 +361,7 @@ BOOK CAROUSEL
   height: 100%;
   width: auto;
   object-fit: cover;
-	border: 1px solid var(--bg-color-main);
+	border: 1px solid #FFF;
   border-radius: 6px;
   display: block;
 	filter: grayscale(50%);
