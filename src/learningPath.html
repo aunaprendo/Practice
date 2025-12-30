@@ -48,52 +48,139 @@
 	    <div class="row justify-content-center">
 	      <div class="col-12">
 					
-			    <div class="container">
-			      <div class="justify-content-center p-1 p-md-5">
-			
-							<!-- header row start -->
-			        <div class="row justify-content-center">
-			          <div class="mt-0 pt-1" data-aos="fade-up">
-			            <div class="text-center">
-			              <span class="text-faded">My Journey Thus Far...</span>
-			              <h1>Aún Aprendo</h1>
-			              <p>I invite you to explore the resources I use as I transition into a developer role. Discover the books I’ve read, online courses I’ve completed, audiobooks I’ve listened to, podcasts I’ve followed, and videos I’ve watched. Driven by a passion for continuous learning, I strive to absorb knowledge and apply it through practice. With plans to pursue a related master’s degree in the future, my ultimate goal is to keep learning — <em>aún aprendo.</em></p>
-			            </div> <!-- text area -->
-			          </div> <!-- fade up section -->
-			        </div> <!-- header row end -->
-			
-							<!--  books row start -->
-			        <h2>Books Read</h2>
-							<div class="grid p-0 mt-5 clearfix row justify-content-center row-cols-3 row-cols-md-6 row-cols-lg-8" data-aos="fade-up">
-								
-								<!-- project card start -->
-								<div class="col mb-4">
-									<div class="card">
-									  <img src="assets/book1.jpeg" class="card-img-top" alt="Photo Icon">
-									  <div class="card-body m-1 p-1">
-									    <a href="https://a.co/d/188q554" class="gen-link">Grokking Algorithms</a>
-									  </div>
-									</div>  
-							  </div>
-								<!-- project card end -->
-								
-							</div><!--  books row end -->
-							
-						</div> <!-- content center --> 
-					</div> <!-- secondary container -->
+					<!-- header row start -->
+	        <div class="row text-center p-1 p-md-5"">
+	          <div class="mt-0 pt-1">
+              <h1>Aún Aprendo</h1>
+              <p>I invite you to explore the resources I use as I transition into a developer role. Discover the books I’ve read, online courses I’ve completed, audiobooks I’ve listened to, podcasts I’ve followed, and videos I’ve watched. Driven by a passion for continuous learning, I strive to absorb knowledge and apply it through practice. With plans to pursue a related master’s degree in the future, my ultimate goal is to keep learning — <em>aún aprendo.</em></p>
+	          </div> <!-- fade up section -->
+	        </div> <!-- header row end -->
 					
+					<h2 class="text-thick mt-2 mb-0">Books Read</h2>
+					<p class="text-faded mt-0">Click a book for more infomation</p>
+					<section class="carousel-wrapper" aria-label="Book carousel">
+					  <button class="carousel-arrow left" aria-label="Previous">
+					    ←
+					  </button>
+					
+					  <div class="carousel m-0" id="bookCarousel">
+					    <a href="https://www.amazon.com/dp/B09781V6F7?ref_=cm_sw_r_ffobk_cp_ud_dp_1GWZG6NYFTW46NBQMV08" class="carousel-item">
+					      <img src="https://i.postimg.cc/D0Q4j8Rd/IMG-1630.jpg" alt="Grokking Algorithms: An illustrated guide for programmers and other curious people cover">
+					    </a>
+					    <a href="https://a.co/d/i2Gp0XX" class="carousel-item">
+					      <img src="https://i.postimg.cc/vTkML7t3/IMG-1631.jpg" alt="Coding All-in-One For Dummies cover">
+					    </a>
+					    <a href="https://www.amazon.com/CompTIA-Fundamentals-Guide-Second-FC0-U61-ebook/dp/B07L8R6554/ref=tmm_kin_swatch_0" class="carousel-item">
+					      <img src="https://i.postimg.cc/CxT538W3/IMG-1633.jpg" alt="ITF+ CompTIA IT Fundamentals All-in-One Exam Guide, Second Edition cover">
+					    </a>
+							<a href="https://www.amazon.com/Practical-Programming-Introduction-Computer-Science/dp/1680502689" class="carousel-item">
+					      <img src="https://i.postimg.cc/Cx20ypBR/IMG-1634.jpg" alt="Practical Programming: An Introduction to SPuter Science Using Python 3.6 3rd Edition">
+					    </a>
+					    <a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0135398576" class="carousel-item">
+					      <img src="https://i.postimg.cc/vTYkg0xy/IMG-1637.jpg" alt="Clean Code: A Handbook of Agile Software Craftsmanship">
+					    </a>
+					    <a href="https://www.amazon.com/Self-Taught-Programmer-Definitive-Programming-Professionally/dp/0999685902/ref=pd_bxgy_thbs_d_sccl_1/130-5704389-6449402?pd_rd_w=ksian&content-id=amzn1.sym.dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_p=dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_r=0480BW7G4NG7BS4CF21A&pd_rd_wg=P1lbV&pd_rd_r=f99034fb-84a6-4ee0-b828-beb32b1b7187&pd_rd_i=0999685902&psc=1" class="carousel-item">
+					      <img src="https://i.postimg.cc/QMgfQp3J/IMG-1636.jpg" alt="The Self-Taught Programmer: The Definitive Guide to Programming Professionally">
+					    </a>
+					  </div>
+					
+					  <button class="carousel-arrow right" aria-label="Next">
+					    →
+					  </button>
+					</section><!-- carousel end -->
+					
+					<div class="table-responsive mt-5">
+				    <h2 class="text-thick">Courses Taken</h2>
+				
+				    <table aria-describedby="schedule-caption" class="align-middle table table-striped table-hover">
+				      <caption id="schedule-caption" aria-live="polite">
+				        Courses Taken Between 10/25 - 10/26
+				      </caption>
+				
+				      <thead>
+				        <tr>
+				          <th scope="col">Provider</th>
+				          <th scope="col">Course</th>
+				          <th scope="col">Information</th>
+				        </tr>
+				      </thead>
+				
+				      <tbody>
+				        <tr>
+				          <th scope="row">freeCodeCamp</th>
+				          <td>Python for Everyone by Dr. Charles Severance</td>
+				          <td><a class="gen-link" href="https://www.freecodecamp.org/learn/python-for-everybody/python-for-everybody/">Course Details</a></td>
+				        </tr>
+				
+				        <tr>
+				          <th scope="row">freeCodeCamp</th>
+				          <td>Responsive Web Design Certification</td>
+				          <td><a class="gen-link" href="https://www.freecodecamp.org/learn/responsive-web-design-v9/">Course Details</a></td>
+				        </tr>		
+				
+				        <tr>
+				          <th scope="row">freeCodeCamp</th>
+				          <td>JavaScript Certification</td>
+				          <td><a class="gen-link" href="https://www.freecodecamp.org/learn/javascript-v9/">Course Details</a></td>
+				        </tr>
+				
+				        <tr>
+				          <th scope="row">freeCodeCamp</th>
+				          <td>Front End Development Libraries Certification</td>
+				          <td><a class="gen-link" href="https://www.freecodecamp.org/learn/front-end-development-libraries-v9/">Course Details</a></td>
+				        </tr>
+								
+								<tr>
+				          <th scope="row">freeCodeCamp</th>
+				          <td>Python Certification</td>
+				          <td><a class="gen-link" href="https://www.freecodecamp.org/learn/python-v9/">Course Details</a></td>
+				        </tr>
+								
+								<tr>
+				          <th scope="row">freeCodeCamp</th>
+				          <td>Relational Databases Certification</td>
+				          <td><a class="gen-link" href="https://www.freecodecamp.org/learn/relational-databases-v9/">Course Details</a></td>
+				        </tr>
+								
+								<tr>
+				          <th scope="row">Khan Academy</th>
+				          <td>Computers and the Internet</td>
+				          <td><a class="gen-link" href="https://www.khanacademy.org/computing/computers-and-internet">Course Details</a></td>
+				        </tr>
+								
+								<tr>
+				          <th scope="row">Khan Academy</th>
+				          <td>Computer Science Theory</td>
+				          <td><a class="gen-link" href="https://www.khanacademy.org/computing/computer-science">Course Details</a></td>
+				        </tr>
+								
+								<tr>
+				          <th scope="row">Khan Academy</th>
+				          <td> AP®︎/College Computer Science Principals</td>
+				          <td><a class="gen-link" href="https://www.khanacademy.org/computing/ap-computer-science-principles">Course Details</a></td>
+				        </tr>
+				      </tbody>
+				    </table>
+					</div><!-- table end -->
+
 				</div> <!-- main col -->
 			</div> <!-- main row -->
 		</div> <!-- main container -->
-  </main>
-
-  <!-- Footer -->
+		
+	</main>
+	
+		<!-- Footer -->
   <footer
-    data-include="partials/footer.html"
-    role="contentinfo"
+    data-include="partials/footer.html" 
+    role="contentinfo" 
     aria-label="Footer">
   </footer>
-
+	
   <script src="js/script.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script
 </body>
 </html>
+

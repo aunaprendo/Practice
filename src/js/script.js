@@ -261,7 +261,7 @@ window.__siteControls = {
 };
 
 /* ================================
-   CAROUSEL
+   PROJECT CAROUSEL
 ================================ */
 const track = document.querySelector('.carousel-track');
 const cards = Array.from(track.children);
@@ -328,3 +328,78 @@ track.addEventListener('transitionend', () => {
   }
 });
 
+/* ================================
+   BOOK CAROUSEL
+================================ */
+  const carousel = document.getElementById("bookCarousel");
+  const leftArrow = document.querySelector(".carousel-arrow.left");
+  const rightArrow = document.querySelector(".carousel-arrow.right");
+
+  let autoScroll = null;
+  let isPaused = false;
+
+  const scrollAmount = 220;
+  const intervalTime = 2500;
+
+  function startAutoScroll() {
+    if (autoScroll || isPaused) return;
+
+    autoScroll = setInterval(() => {
+      carousel.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+      });
+
+      // Loop back to start
+      if (
+        carousel.scrollLeft + carousel.clientWidth >=
+        carousel.scrollWidth - 5
+      ) {
+        carousel.scrollTo({ left: 0, behavior: "smooth" });
+      }
+    }, intervalTime);
+  }
+
+  function stopAutoScroll() {
+    clearInterval(autoScroll);
+    autoScroll = null;
+  }
+
+  /* Desktop hover pause */
+  carousel.addEventListener("mouseenter", () => {
+    isPaused = true;
+    stopAutoScroll();
+  });
+
+  carousel.addEventListener("mouseleave", () => {
+    isPaused = false;
+    startAutoScroll();
+  });
+
+  /* Touch pause (tap carousel) */
+  carousel.addEventListener("pointerdown", () => {
+    isPaused = true;
+    stopAutoScroll();
+  });
+
+  /* Resume when tapping outside */
+  document.addEventListener("pointerdown", (e) => {
+    if (!carousel.contains(e.target)) {
+      isPaused = false;
+      startAutoScroll();
+    }
+  });
+
+  /* Arrow controls */
+  leftArrow.addEventListener("click", () => {
+    stopAutoScroll();
+    carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  });
+
+  rightArrow.addEventListener("click", () => {
+    stopAutoScroll();
+    carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  });
+
+  /* Start AFTER layout is ready */
+  window.addEventListener("load", startAutoScroll);
