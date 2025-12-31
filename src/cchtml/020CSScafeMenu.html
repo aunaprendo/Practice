@@ -4,90 +4,119 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="../cccss/ccStyle.css" rel="stylesheet" />
-  <link href="../cccss/cafemenu.css" rel="stylesheet" />
-  <title>Cafe Menu</title>
+	
+	 <!-- Stylesheets -->
+	<link rel="stylesheet" href="../css/styleShared.css" />
+	<link rel="stylesheet" href="../css/ccStyleNavigations.css" />
+	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
+	<link rel="stylesheet" href="../css/styleDetails.css" />
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link href="../cccss/cafemenu.css" rel="stylesheet" />
+	
+  <!-- Primary Meta Tags -->
+  <title>Georgia Jean - freeCodeCamp Cafe Menu</title>
+  <meta name="title" content="Portfolio" />
+  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
 
 <body id="coffee-background">
-  <!-- Main navigation -->
+	<!-- Main navigation -->
   <nav 
-    data-include="./partials/navBar.html" 
+    data-include="../partials/ccNavBar.html" 
     role="navigation" 
     aria-label="Primary navigation">
   </nav>
-
-  <!-- Side menu -->
+	
+	<!-- Side menu -->
   <aside 
-    data-include="./partials/sideMenu.html" 
+    data-include="../partials/ccSideMenu.html" 
     role="navigation" 
     aria-label="Side menu">
   </aside>
-
+	
+	<!-- Contact menu -->
+  <aside 
+    data-include="../partials/contactMenu.html" 
+    role="contact" 
+    aria-label="Contact Card">
+  </aside>
+	<nav class="mb-1 me-3"style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+	  <ol class="breadcrumb justify-content-end">
+	    <li class="breadcrumb-item"><a class="gen-link-cc" href="../index.html">Home</a></li> 
+			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccProjects.html">freeCodeCamp Work</a></li>			
+			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccCSS.html">freeCodeCamp CSS</a></li>
+	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
+	  </ol>
+	</nav>	
   <main>
 	<div class="menu">
     <header>
-      <h1>CAMPER CAFE</h1>
-      <p class="established">Est. 2020</p>
-      <hr />
+      <h1 id="h1">CAMPER CAFE</h1>
+      <p class="established p">Est. 2020</p>
+      <hr class="hr"/>
     </header>
 
     <section aria-labelledby="coffee-heading">
-      <h2 id="coffee-heading">Coffee</h2>
+      <h2 class="h2"id="coffee-heading">Coffee</h2>
       <figure>
         <img
           src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg"
-          alt="Coffee cup icon" />
+          alt="Coffee cup icon" class="img"/>
         <figcaption>Delicious coffee options</figcaption>
       </figure>
       <article class="item">
-        <p class="flavor">French Vanilla</p><p class="price">$3.00</p>
+        <p class="flavor p">French Vanilla</p><p class="price">$3.00</p>
       </article>
       <article class="item">
-        <p class="flavor">Caramel Macchiato</p><p class="price">$3.75</p>
+        <p class="flavor p">Caramel Macchiato</p><p class="price">$3.75</p>
       </article>
       <article class="item">
-        <p class="flavor">Pumpkin Spice</p><p class="price">$3.50</p>
+        <p class="flavor p">Pumpkin Spice</p><p class="price">$3.50</p>
       </article>
       <article class="item">
-        <p class="flavor">Hazelnut</p><p class="price">$4.00</p>
+        <p class="flavor p">Hazelnut</p><p class="price">$4.00</p>
       </article>
       <article class="item">
-        <p class="flavor">Mocha</p><p class="price">$4.50</p>
+        <p class="flavor p">Mocha</p><p class="price">$4.50</p>
       </article>
     </section>
 
     <section aria-labelledby="desserts-heading">
-      <h2 id="desserts-heading">Desserts</h2>
+      <h2 class="h2" id="desserts-heading">Desserts</h2>
       <figure>
         <img
           src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg"
-          alt="Pie icon" />
+          alt="Pie icon" class="img"/>
         <figcaption>Sweet treats for dessert lovers</figcaption>
       </figure>
       <article class="item">
-        <p class="dessert">Donut</p><p class="price">$1.50</p>
+        <p class="dessert p">Donut</p><p class="price">$1.50</p>
       </article>
       <article class="item">
-        <p class="dessert">Cherry Pie</p><p class="price">$2.75</p>
+        <p class="dessert p">Cherry Pie</p><p class="price">$2.75</p>
       </article>
       <article class="item">
-        <p class="dessert">Cheesecake</p><p class="price">$3.00</p>
+        <p class="dessert p">Cheesecake</p><p class="price">$3.00</p>
       </article>
       <article class="item">
-        <p class="dessert">Cinnamon Roll</p><p class="price">$2.50</p>
+        <p class="dessert p">Cinnamon Roll</p><p class="price">$2.50</p>
       </article>
     </section>
 	</div>
-  </main>
-
-	<!-- Footer -->
-  <footer 
-    data-include="./partials/footer.html" 
-    role="contentinfo" 
-    aria-label="Footer">
-  </footer>
-
-  <script src="../ccjs/ccScript.js"></script>
-</body>
-</html>
+	</main>
+		
+			<!-- Footer -->
+	  <footer
+	    data-include="../partials/footer.html" 
+	    role="contentinfo" 
+	    aria-label="Footer">
+	  </footer>
+		
+	  <script src="../js/script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script
+	</body>
+	</html>
+	

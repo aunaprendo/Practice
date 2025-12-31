@@ -1,22 +1,24 @@
 /* Coffee background */
 #coffee-background {
-  background-image: url("https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg");
+  background:
+    linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+    url("https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg");
   background-size: cover;
   background-position: center;
 }
 
 /* Headings */
-h1, h2 {
+#h1, .h2 {
   text-align: center;
   margin-top: 0;
   margin-bottom: 15px;
 }
 
-h1 {
+#h1 {
   font-size: 40px;
 }
 
-h2 {
+.h2 {
   font-size: 30px;
 }
 
@@ -26,7 +28,7 @@ h2 {
 }
 
 /* Paragraphs */
-p {
+.p {
   text-align: center;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -45,7 +47,7 @@ p {
 }
 
 /* Images */
-img {
+.img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
@@ -53,7 +55,7 @@ img {
 }
 
 /* Horizontal rule */
-hr {
+.hr {
   height: 2px;
   background-color: brown;
   border: none;

@@ -11,6 +11,10 @@
 /* Post Image */
 .post-img {
   width: 100%;
+	aspect-ratio: 1 / 1;
+  background-image: url("https://image2url.com/r2/default/images/1767143466790-cbe5a539-c117-4571-93a2-e50b062f0d11.jpeg"); 
+  background-size: cover;  
+  background-position: center;
   border-bottom: 3px dotted gray;
   height: auto; 
   border-top-left-radius: 10px;
@@ -41,7 +45,8 @@
 /* Read More Link */
 .read-more {
   color: #000080; /* navy */
-  background-color: #ffd700; /* gold */
+  background-color: var(--accent-color-brown);
+	color: var(--text-color-alt);
   margin: 10px;
   padding: 10px 15px;
   border-radius: 15px;

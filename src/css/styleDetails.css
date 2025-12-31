@@ -414,7 +414,6 @@ body.menu-open .carousel-arrow {
 /* ==========================
    BOOK CAROUSEL EDGE FADE
 ========================== */
-
 #bookCarousel {
   position: relative;
 
@@ -1026,4 +1025,48 @@ small, .small {
   font-size: 0.875em;
 }
 
+/* ========================================
+INPUT FORMS
+========================================= */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0;
+  margin-bottom: 1rem;
+  list-style: none;
+		font-size: .9rem;
+}
 
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.5rem;
+}
+
+@media (max-width: 575px) {
+  .breadcrumb {
+  font-size: .6rem;
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: 0.5rem;
+  color: var(--text-color-main);
+  content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
+}
+.breadcrumb-item.active {
+  color: var(--bg-color-alt);
+}
+
+.gen-link-cc {
+  text-decoration: none;
+  color: var(--accent-color-brown);
+	font-weight: var(--weight-bold);
+}
+
+.gen-link-cc:hover {
+  color: var(--text-color-main);
+}
+
+.gen-link-cc:visited {
+  color: var(--accent-color-dgray);
+}

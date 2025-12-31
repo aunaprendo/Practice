@@ -76,11 +76,6 @@ a {
   color: var(--accent-color-dgray);
 }
 
-a:focus-visible {
-  outline: 2px solid var(--accent-color-brown);
-  outline-offset: 3px;
-}
-
 /* ========================================
    MAIN CONTENT
 ========================================= */

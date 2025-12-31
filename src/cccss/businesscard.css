@@ -1,11 +1,11 @@
 /* Page background */
-body {
-  background-color: rosybrown;
+#body {
+  background-color: var(--accent-color-lgray);
   margin: 0;
 }
 
 /* Paragraph spacing */
-p {
+.p {
   margin-top: 5px;
   margin-bottom: 5px;
   line-height: 1.5;
@@ -13,15 +13,15 @@ p {
 }
 
 /* Links */
-a {
+.a {
   text-decoration: none;
   color: #fff; 
 }
 
 /* Business card container */
-.business-card {
+.business-cardcc {
   width: 300px;
-  background-color: teal;
+  background-color: var(--accent-color-brown);
   padding: 20px;
   margin: 100px auto 0 auto; /* top margin + horizontal centering */
   text-align: center;
@@ -30,9 +30,9 @@ a {
 }
 
 /* Profile image */
-.profile-image {
-  max-width: 100%;
-  height: auto;
+.profile-imagecc {
+  width: 80%;
+	aspect-ratio: 1 / 1;
   border-radius: 50%; 
   margin-bottom: 15px;
 }
