@@ -1,59 +1,66 @@
-h1 {
+.h1 {
   text-align: center;
 }
 
 /* Form labels */
-label {
+/*label {
   font-weight: bold;
-}
+}*/
 
 /* Input, textarea focus styles for accessibility */
-input:focus,
+/*input:focus,
 textarea:focus,
 select:focus {
   border-color: #008B8B;
-  outline: 2px solid #008B8B; 
+  outline: 2px solid #008B8B;disabled selected
   outline-offset: 2px;
-}
+}*/
 
 /* Validation styling */
 input:invalid,
 select:invalid,
 textarea:invalid {
   border-color: red;
+	color: #dc3545;
 }
 
+select:valid {
+  color: inherit;
+}
 input:valid,
 select:valid,
 textarea:valid {
-  border-color: green;
+  border-color: var(--accent-color-dteal);
+	color: inherit;
 }
 
+
+
 /* Button hover effect */
-button:hover,
+/*button:hover,
 button:focus {
   background-color: #00008B;
   color: #fff;
   cursor: pointer;
   outline: 2px solid #FFD700; 
   outline-offset: 2px;
-}
+}*/
 
 /* Radio button checked state */
-.radio-group input[type="radio"]:checked {
+/*.radio-group input[type="radio"]:checked {
   border: 5px solid purple;
   background-color: yellow;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-}
+}*/
 
 /* Radio label styling when checked */
-.radio-group input[type="radio"]:checked + label {
+/*.radio-group input[type="radio"]:checked + label {
   color: red;
 }
 
 /* First input element styling */
-input:first-of-type {
+/*input:first-of-type {
   border-radius: 10px;
   border-style: dotted;
-}
+}*/
 

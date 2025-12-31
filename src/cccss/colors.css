@@ -16,28 +16,28 @@
 
 /* Individual colors */
 .color1 {
-  background-color: #882399; /* Purple */
+  background-color: var(--accent-color-dteal); 
 }
 
 .color2 {
-  background-color: #01630f; /* Dark Green */
+  background-color: var(--accent-color-lteal); 
 }
 
 .color3 {
-  background-color: #00ffff; /* Cyan */
+  background-color: var( --accent-color-brown); 
 }
 
 .color4 {
-  background-color: hsl(1, 50%, 50%); /* Reddish tone */
+  background-color: var(--accent-color-gold); 
 }
 
 .color5 {
-  background-color: #016199; /* Blue */
+  background-color: var(--accent-color-lgray); 
 }
 
 /* Accessibility improvements */
 .color-box:focus {
-  outline: 3px solid #ff0; /* Yellow outline for keyboard users */
+  outline: 3px solid var(--accent-color-dgray);
 }
 
 .color-box:hover {

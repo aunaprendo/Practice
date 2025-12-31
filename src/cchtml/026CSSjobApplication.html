@@ -50,46 +50,72 @@
 	</nav>	
   <main>
     <div class="container">
-      <h1 id="form-title">Squirrel Application Form</h1>
+      <h1 class="h1" id="form-title">Squirrel Application</h1>
       
       <form aria-labelledby="form-title">
-        <!-- Name -->
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-required="true" /><br><br>
-
-        <!-- Email -->
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="example@example.com" required aria-required="true" /><br><br>
-
-        <!-- Position -->
-        <label for="position">Position:</label>
-        <select id="position" name="position" required aria-required="true">
-          <option value="" disabled selected>Select a Position</option>
-          <option value="nut-hider">Nut Hider</option>
+        
+      <!-- Name -->
+			<div class="form-group input-group mb-3">
+			  <span class="input-group-text" id="name-label">Full Name:</span>
+			  <input type="text" id="name" class="form-control" placeholder="Peanut Metz" aria-label="Name" required aria-required="true">
+			</div>				
+				
+      <!-- Email -->
+			<div class="form-group input-group mb-3">
+			  <span class="input-group-text" id="email-label">Email:</span>
+			  <input type="email" id="email" class="form-control" placeholder="pecansforever@nuts.com" aria-label="email" required aria-required="true">
+			</div>		
+			
+      <!-- Position -->
+      <div class="form-group mb-3">
+        <label for="dropdown">Position:</label>
+        <select
+				  id="dropdown"
+				  class="form-select form-select-sm"
+				  name="attitude"
+				  required
+				  aria-required="true">
+				  <option value="" disabled selected>
+				    Open this select menu
+				  </option>
+					<option value="nut-hider">Nut Hider</option>
           <option value="nut-finder">Nut Finder</option>
           <option value="drey-builder">Drey Builder</option>
           <option value="mushroom-jerky-maker">Mushroom Jerky Maker</option>
           <option value="pup-rearer">Pup Rearer</option>
-        </select><br><br>
-
-        <!-- Availability -->
-        <fieldset>
-          <legend>Availability:</legend>
-          <input type="radio" id="morning" name="availability" value="Mornings" required />
+        </select>
+      </div>
+						
+      <!-- Availability -->
+      <fieldset class="mb-3">
+        <legend>Availability:</legend>
+				
+				
+        <div class="option form-check">
+          <input class="form-check-input" type="radio" id="morning" name="availability" value="Mornings" required />
           <label for="morning">Mornings</label><br>
 
-          <input type="radio" id="afternoon" name="availability" value="Afternoons" />
+          <input class="form-check-input" type="radio" id="afternoon" name="availability" value="Afternoons" />
           <label for="afternoon">Afternoons</label><br>
 
-          <input type="radio" id="evening" name="availability" value="Evenings" />
+          <input class="form-check-input" type="radio" id="evening" name="availability" value="Evenings" />
           <label for="evening">Evenings</label><br>
-        </fieldset><br>
+        </div>
+      </fieldset>
+			
+      <!-- Why -->
+      <div class="form-group mb-4">
+        <label class="form-label" for="comments">Why do you want to be a squirrel?</label>
+        <textarea
+          id="comments"
+					class="form-control"
+          name="comments"
+          rows="3"
+					placeholder="Type your reason here"
+					required aria-required="true"></textarea>
+      </div>
 
-        <!-- Why -->
-        <label for="message">Why do you want to be a squirrel?</label><br>
-        <textarea id="message" name="message" placeholder="Type your reason here" rows="15" cols="55" required aria-required="true"></textarea><br><br>
-
-        <button type="submit">Submit Application</button>
+        <button class="btn btn-secondary" type="submit">Submit Application</button>
       </form>
     </div>
 	</main>

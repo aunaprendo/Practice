@@ -2,7 +2,7 @@
 .blog-post-card {
   background-color: #ffffff;
   border-radius: 10px;
-  width: 500px;
+  width: 75%;
   text-align: center;
   margin: 20px auto;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
@@ -19,6 +19,7 @@
   height: auto; 
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 /* Post Content */

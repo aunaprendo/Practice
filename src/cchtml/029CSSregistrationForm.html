@@ -19,7 +19,7 @@
   <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
 
-<body>
+<body id="registration">
 	<!-- Main navigation -->
   <nav 
     data-include="../partials/ccNavBar.html" 
@@ -49,58 +49,58 @@
 	  </ol>
 	</nav>	
   <main>
-    <h1>Registration Form</h1>
-    <p>Please fill out this form with the required information.</p>
+    <h1 class="h1">Registration Form</h1>
+    <p class="p">Please fill out this form with the required information.</p>
 
-    <form method="post" action="https://register-demo.freecodecamp.org" aria-label="User Registration Form">
+    <form class="ccform"method="post" action="https://register-demo.freecodecamp.org" aria-label="User Registration Form">
       <!-- Personal Information -->
-      <fieldset>
+      <fieldset class="ccfieldset">
         <legend>Personal Information</legend>
-        <label for="first-name">
+        <label class="cclabel" for="first-name">
           First Name:
-          <input id="first-name" name="first-name" type="text" required aria-required="true" />
+          <input class="ccinput"id="first-name" name="first-name" type="text" required aria-required="true" />
         </label>
-        <label for="last-name">
+        <label class="cclabel" for="last-name">
           Last Name:
-          <input id="last-name" name="last-name" type="text" required aria-required="true" />
+          <input class="ccinput" id="last-name" name="last-name" type="text" required aria-required="true" />
         </label>
-        <label for="email">
+        <label class="cclabel" for="email">
           Email:
-          <input id="email" name="email" type="email" required aria-required="true" />
+          <input class="ccinput" id="email" name="email" type="email" required aria-required="true" />
         </label>
-        <label for="new-password">
+        <label class="cclabel" for="new-password">
           Create a Password:
-          <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required aria-required="true" />
+          <input class="ccinput" id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required aria-required="true" />
         </label>
       </fieldset>
 
       <!-- Account Type -->
-      <fieldset>
+      <fieldset class="ccfieldset">
         <legend>Account Type (required)</legend>
-        <label for="personal-account">
-          <input id="personal-account" type="radio" name="account-type" value="personal" class="inline" checked />
+        <label class="cclabel" for="personal-account">
+          <input class="ccinput" id="personal-account" type="radio" name="account-type" value="personal" class="ccinline" checked />
           Personal
         </label>
-        <label for="business-account">
-          <input id="business-account" type="radio" name="account-type" value="business" class="inline" />
+        <label class="cclabel" for="business-account">
+          <input class="ccinput" id="business-account" type="radio" name="account-type" value="business" class="ccinline" />
           Business
         </label>
       </fieldset>
 
       <!-- Additional Information -->
-      <fieldset>
+      <fieldset class="ccfieldset">
         <legend>Additional Information</legend>
-        <label for="profile-picture">
+        <label class="cclabel" for="profile-picture">
           Upload a Profile Picture:
-          <input id="profile-picture" type="file" name="file" aria-label="Profile picture upload" />
+          <input class="ccinput" id="profile-picture" type="file" name="file" aria-label="Profile picture upload" />
         </label>
-        <label for="age">
+        <label class="cclabel" for="age">
           Age:
-          <input id="age" type="number" name="age" min="13" max="120" />
+          <input class="ccinput" id="age" type="number" name="age" min="13" max="120" />
         </label>
-        <label for="referrer">
+        <label class="cclabel" for="referrer">
           How did you hear about us?
-          <select id="referrer" name="referrer" aria-required="true">
+          <select class="ccselect" id="referrer" name="referrer" aria-required="true">
             <option value="">(Select one)</option>
             <option value="1">freeCodeCamp News</option>
             <option value="2">freeCodeCamp YouTube Channel</option>
@@ -108,22 +108,22 @@
             <option value="4">Other</option>
           </select>
         </label>
-        <label for="bio">
+        <label class="cclabel" for="bio">
           Bio:
-          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+          <textarea class="cctextarea" id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
         </label>
       </fieldset>
 
       <!-- Terms -->
-      <p>
+      <p class="p">
         <a href="https://www.freecodecamp.org/news/terms-of-service" target="_blank" rel="noopener noreferrer">Read our terms and conditions</a>
       </p>
-      <label for="terms-and-conditions">
-        <input class="inline" name="terms" id="terms-and-conditions" type="checkbox" required aria-required="true" />
+      <label class="cclabel" for="terms-and-conditions">
+        <input class="ccinput" class="ccinline" name="terms" id="terms-and-conditions" type="checkbox" required aria-required="true" />
         I accept the terms and conditions
       </label>
 
-      <input type="submit" value="Submit" />
+      <input class="ccinput" type="submit" value="Submit" />
     </form>
 	</main>
 		

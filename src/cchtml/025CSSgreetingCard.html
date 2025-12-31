@@ -19,7 +19,7 @@
   <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
 
-<body>
+<body id="greeting-background">
 	<!-- Main navigation -->
   <nav 
     data-include="../partials/ccNavBar.html" 
@@ -48,26 +48,26 @@
 	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
 	  </ol>
 	</nav>	
-  <main>
-    <div class="card" id="greeting-card" role="region" aria-labelledby="card-title">
-      <h1 id="card-title">Happy Birthday!</h1>
+  <main class="greeting-card">
+    <div class="bday-card" id="greeting-card" role="region" aria-labelledby="card-title">
+      <h1 class="h1" id="card-title">Happy Birthday!</h1>
 
       <p class="message">
         Wishing you all the happiness and joy on your special day!
       </p>
 
-      <div class="card-links">
+      <div class="bday-card-links">
         <a href="#send" class="send-link">Send Card</a>
         <a href="#share" class="share-link">Share on Social Media</a>
       </div>
     </div>
 
-    <section id="send" role="region" aria-labelledby="send-title">
+    <section class="bday-section" id="send" role="region" aria-labelledby="send-title">
       <h2 id="send-title">Sending your card...</h2>
       <p>Card successfully sent to your recipient!</p>
     </section>
 
-    <section id="share" role="region" aria-labelledby="share-title">
+    <section class="bday-section" id="share" role="region" aria-labelledby="share-title">
       <h2 id="share-title">Sharing your card...</h2>
       <p>Your card was shared on social media!</p>
     </section>

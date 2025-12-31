@@ -1,10 +1,10 @@
 /* Center headings */
-h1 {
+.h1 {
   text-align: center;
 }
 
 /* Container for markers */
-.container {
+.marker-container {
   background-color: #ffffff; 
   padding: 10px 0;
 }

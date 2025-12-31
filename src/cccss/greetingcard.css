@@ -1,13 +1,19 @@
 /* General Body Styling */
+#greeting-background {
+  background-image: linear-gradient(rgba(165, 42, 42, .15), brown);
+	background-size: cover;
+  background-position: center;
+}
+
+/* General Styling rgba(165, 42, 42, .25)*/
 .greeting-card {
   text-align: center;
-  background-color: brown;
   box-sizing: border-box;
   color: #333;
 }
 
 /* Card Styling */
-.card {
+.bday-card {
   background-color: white;
   max-width: 400px;
   padding: 40px;
@@ -17,17 +23,17 @@
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.card:hover {
+.bday-card:hover {
   background-color: khaki;
   transform: scale(1.05);
 }
 
 /* Decorative Icons for H1 */
-h1::before {
+.h1::before {
   content: "🥳 ";
 }
 
-h1::after {
+.h1::after {
   content: " 🥳";
 }
 
@@ -40,7 +46,7 @@ h1::after {
 }
 
 /* Card Links Styling */
-.card-links {
+.bday-card-links {
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
@@ -48,7 +54,7 @@ h1::after {
   gap: 10px;
 }
 
-.card-links a {
+.bday-card-links a {
   text-decoration: none;
   font-size: 1em;
   padding: 10px 20px;
@@ -59,25 +65,25 @@ h1::after {
   cursor: pointer;
 }
 
-.card-links a:hover {
+.bday-card-links a:hover {
   background-color: orangered;
 }
 
-.card-links a:active {
+.bday-card-links a:active {
   background-color: midnightblue;
 }
 
-.card-links a:focus {
+.bday-card-links a:focus {
   outline: 2px solid yellow;
   outline-offset: 2px;
 }
 
-.card-links a:visited {
+.bday-card-links a:visited {
   color: crimson;
 }
 
 /* Section Styling */
-section {
+.bday-section {
   margin: 20px auto;
   max-width: 600px;
   background-color: whitesmoke;
@@ -87,10 +93,10 @@ section {
   display: none;
 }
 
-section:hover {
+.bday-section:hover {
   transform: skewX(10deg);
 }
 
-section:target {
+.bday-section:target {
   display: block;
 }
