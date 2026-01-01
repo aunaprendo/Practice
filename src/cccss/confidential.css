@@ -1,11 +1,19 @@
-/* Main email container */
+/* Viewport centering container */
 #email {
-  padding: 50px;
-  margin-top: 50px;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  background: none;
+  border: none;
+}
+
+/* Actual letter styling */
+.email-letter {
   width: 500px;
-  box-sizing: border-box; 
-  background-color: gold;
-  border: 2px solid black; 
+  padding: 50px;
+  background-color: var(--accent-color-gold);
+  border: 2px solid black;
+  box-sizing: border-box;
 }
 
 /* Labels for confidential/top-secret messages */

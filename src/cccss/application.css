@@ -20,8 +20,7 @@ select:focus {
 input:invalid,
 select:invalid,
 textarea:invalid {
-  border-color: red;
-	color: #dc3545;
+  border-color: var(--accent-color-gold);
 }
 
 select:valid {
@@ -31,7 +30,8 @@ input:valid,
 select:valid,
 textarea:valid {
   border-color: var(--accent-color-dteal);
-	color: inherit;
+
+	
 }
 
 

@@ -1,10 +1,16 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+}
+
 /* Wheel container */
 .wheel {
   border: 2px solid black;
   border-radius: 50%;
-  margin-left: 150px;
-	margin-top: 125px;
-  position: absolute;
+	position: relative; 
+  margin: 0;
   height: 55vw;
   width: 55vw;
   max-height: 500px;
@@ -48,6 +54,43 @@
 .cabin:nth-of-type(4) { left: -8.5%; top: 50%; }
 .cabin:nth-of-type(5) { left: 17%; top: 7%; }
 .cabin:nth-of-type(6) { right: 17%; top: 7%; }
+
+.cabin:nth-of-type(1)::after {
+  content: "";
+  position: absolute;
+  inset: 8%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'>\
+  <!-- Tail (fluffy base) -->\
+  <path d='M85 72 C118 40 112 105 68 100' fill='none' stroke='%23a5662b' stroke-width='16' stroke-linecap='round'/>\
+  \
+  <!-- Tail (top highlight) -->\
+  <path d='M85 70 C115 42 108 95 70 95' fill='none' stroke='%23c68642' stroke-width='10' stroke-linecap='round'/>\
+  \
+  <!-- Body -->\
+  <ellipse cx='55' cy='65' rx='22' ry='20' fill='%23c68642'/>\
+  \
+  <!-- Head -->\
+  <circle cx='55' cy='40' r='18' fill='%23d19a66'/>\
+  \
+  <!-- Ears -->\
+  <circle cx='40' cy='26' r='6' fill='%23b87333'/>\
+  <circle cx='70' cy='26' r='6' fill='%23b87333'/>\
+  \
+  <!-- Eyes -->\
+  <circle cx='50' cy='40' r='4' fill='black'/>\
+  <circle cx='60' cy='40' r='4' fill='black'/>\
+  <circle cx='51' cy='39' r='1.5' fill='white'/>\
+  <circle cx='61' cy='39' r='1.5' fill='white'/>\
+  \
+  <!-- Nose -->\
+  <circle cx='55' cy='46' r='2.5' fill='%23553322'/>\
+</svg>");
+}
 
 /* =========================================================================
    Animations

@@ -5,19 +5,13 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  background-color: #f5f6f7;
-  font-family: Arial, sans-serif;
-}
-
 .header {
   text-align: center;
   text-transform: uppercase;
   padding: 32px;
-  background-color: #0a0a23;
+  background-color: var(--accent-color-lteal);
   color: #ffffff;
-  border-bottom: 4px solid #fdb347;
+  border-bottom: 4px solid var(--accent-color-brown);
 }
 
 /* Gallery Container */

@@ -1,5 +1,5 @@
 .form-container {
-  background-color: #20b2aa;
+  background-color: var(--accent-color-dteal);
   border-radius: 25px;
   padding: 15px;
   width: 100%;
@@ -7,15 +7,15 @@
   margin: 75px auto 0 auto;   
 }
 
-label {
+.cclabel {
   display: block;   /* ensures labels stack above inputs */
   margin: 5px 0;
   color: #ffffff;
   font-weight: bold;
 }
 
-input,
-textarea {
+.ccinput,
+.cctextarea {
   width: 100%;      
   padding: 8px;
   margin: 5px 0 15px 0;
@@ -24,13 +24,13 @@ textarea {
   font-size: 1rem;
 }
 
-input:focus,
-textarea:focus {
-  outline: 3px solid #ffeb3b; 
-  border-color: #008b8b;
+.ccinput:focus,
+.cctextarea:focus {
+  outline: 3px solid var(--accent-color-brown); 
+  border-color: var(--accent-color-brown);
 }
 
-button {
+.ccbutton {
   background-color: #cccccc;
   color: black;
   font-size: 1.25rem;
@@ -41,8 +41,8 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover,
-button:focus {
-  background-color: #d6eeee;
-  outline: 3px solid #ffeb3b; 
+.ccbutton:hover,
+.ccbutton:focus {
+  background-color: var(--accent-color-gold);
+  outline: 3px solid var(--accent-color-brown); 
 }

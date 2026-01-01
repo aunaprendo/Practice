@@ -1,64 +1,62 @@
-main {
-  display: flex;               
-  justify-content: center;     
-  align-items: center;         
-  height: 100vh;              
-  margin: 0;                  
+/* General Body Styling */
+#space {
+  background-color: black;
+	background-size: cover;
+  background-position: center;
 }
 
-.space {
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;   /* reduces overlap with nav/footer */
+  padding: 1rem;      /* small padding so content doesn’t touch edges */
+}
+
+.system {
+  width: 90vw;           /* use viewport width */
+  max-width: 700px;      /* limit max size */
+  height: auto;
+  aspect-ratio: 1/1;     /* keep square */
   position: relative;
-  width: 100vh;
-  height: 100vh;
-  background-color: black;     
-  border-radius: 0;            
 }
 
+/* Moon orbit container fills system */
+.orbit {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  animation: orbit 5s linear infinite;
+}
+
+/* Earth centered inside system */
 .earth {
   position: absolute;
-  width: 100px;
-  height: 100px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: blue;
-  border-radius: 50%;          
+  width: 15%;      /* relative to system size */
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-image: radial-gradient(var(--accent-color-dteal) 45%, blue);
 }
 
-/* Moon orbit container */
-.orbit {
+/* Moon size relative to system */
+.moon {
   position: absolute;
-  width: 200px;
-  height: 200px;
-  top: 40%;
-  left: 40%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;          
-  animation: orbit 5s linear infinite;
+  top: -2%;        /* relative positioning */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4%;
+  aspect-ratio: 1/1;
+  background-color: grey;
+  border-radius: 50%;
+  box-shadow: 0 4px 7px var(--accent-color-brown);
 }
 
 /* Orbit rotation animation */
 @keyframes orbit {
-  0% {
-    transform: rotate(0deg) translate(-50%, -50%);
+  to {
+    transform: rotate(360deg);
   }
-  100% {
-    transform: rotate(360deg) translate(-50%, -50%);
-  }
-}
-
-/* Moon */
-.moon {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 0;                      /* Start at top of orbit */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: grey;
-  border-radius: 50%;        
-}
-
-#footer {
-	margin-top: 0;
 }

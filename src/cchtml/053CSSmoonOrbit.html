@@ -19,7 +19,7 @@
   <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
 
-<body>
+<body id="space">
 	<!-- Main navigation -->
   <nav 
     data-include="../partials/ccNavBar.html" 
@@ -36,7 +36,7 @@
 	
 	<!-- Contact menu -->
   <aside 
-    data-include="../partials/contactMenu.html" 
+    data-include="../partials/contactMenu.html"
     role="contact" 
     aria-label="Contact Card">
   </aside>
@@ -47,19 +47,19 @@
 			<li class="breadcrumb-item"><a class="gen-link-cc" href="../ccCSS.html">freeCodeCamp CSS</a></li>
 	    <li class="breadcrumb-item active" aria-current="page">Lesson Work</li>
 	  </ol>
-	</nav>	
-  <main>
-    <!-- Space scene with Earth and Moon orbit -->
-    <section class="space" aria-label="Space scene with Earth and Moon orbit" role="img">
-      <div class="earth" aria-label="Earth"></div>
-
-      <!-- Moon orbit container -->
-      <div class="orbit" aria-hidden="true">
-        <div class="moon" aria-label="Moon"></div>
-      </div>
-    </section>
-	</main>
-		
+	</nav>
+	
+		<main>
+		  <div class="main" aria-label="Space scene with Earth and Moon orbit" role="img">
+		    <div class="system">
+		      <div class="earth" aria-label="Earth"></div>
+		      <div class="orbit" aria-hidden="true">
+		        <div class="moon" aria-label="Moon"></div>
+		      </div>
+		    </div>
+		  </div>
+		</main>
+	
 			<!-- Footer -->
 	  <footer
 	    data-include="../partials/footer.html" 

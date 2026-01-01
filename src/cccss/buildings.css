@@ -12,20 +12,11 @@
   --window-color4: #8cb3d9;
 }
 
-/* ============================================================
-   Global box-sizing & body reset
-   ============================================================ */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* eliminate left white strip */
+  overflow-x: hidden;
 }
 
 /* ============================================================
@@ -228,7 +219,7 @@ footer {
 }
 
 /* ============================================================
-   Media query for smaller screens
+   night view for smaller screens
    ============================================================ */
 @media (max-width: 1000px) {
   :root {

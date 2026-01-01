@@ -1,7 +1,3 @@
-/* ============================================
-   Screen-reader–only text 
-   (WCAG-compliant visually hidden utility class)
-   ============================================ */
 span.sr-only {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
@@ -15,64 +11,57 @@ span.sr-only {
   margin: -1px !important;
 }
 
-/* ============================================
-   Core Document Styling
-   ============================================ */
 html {
   box-sizing: border-box;
-}
-
-body {
-  color: #0a0a23;
 }
 
 /* ============================================
    Page Title Area
    ============================================ */
-h1 {
+.h1 {
   max-width: 37.25rem;
   margin: 0 auto;
   padding: 1.5rem 1.25rem;
 }
 
-h1 .flex {
+.h1 .flex {
   display: flex;
   flex-direction: column-reverse;
   gap: 1rem;
 }
 
 /* Smaller company name */
-h1 .flex span:first-of-type {
+.h1 .flex span:first-of-type {
   font-size: 0.7em;
 }
 
 /* Larger title text */
-h1 .flex span:last-of-type {
+.h1 .flex span:last-of-type {
   font-size: 1.2em;
 }
 
 /* ============================================
    Layout Section Container
    ============================================ */
-section {
+.section {
   max-width: 40rem;
   margin: 0 auto;
-  border: 2px solid #d0d0d5;
+  border: 2px solid var(--bg-color-alt);
 }
 
 /* ============================================
-   Sticky Year Labels (visual only)
+   Year Labels 
    ============================================ */
 #years {
   display: flex;
   justify-content: flex-end;
-  position: sticky;
-  z-index: 999;
+  position: relative;
+  z-index: 0;
   top: 0;
-  background: #0a0a23; /* strong contrast for accessibility */
-  color: #fff;
+  background: var(--accent-color-brown); 
+  color: var(--text-color-alt);
   padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
-  margin: 0 -2px; /* compensates border width */
+  margin: 0 -2px;
 }
 
 #years span.year {
@@ -101,7 +90,7 @@ table {
 
 /* Table captions positioned above */
 table caption {
-  color: #356eaf;
+  color: var(--accent-color-brown);
   font-size: 1.3em;
   font-weight: normal;
   position: absolute;
@@ -124,7 +113,7 @@ tbody th {
    Total Row Styling
    ============================================ */
 tr.total {
-  border-bottom: 4px double #0a0a23;
+  border-bottom: 4px double var(--bg-color-alt);
   font-weight: bold;
 }
 
@@ -144,10 +133,10 @@ tr.total td:last-of-type {
 
 /* Hover highlight for total row */
 tr.total:hover {
-  background-color: #99c9ff; /* good contrast on hover */
+  background-color: var(--accent-color-gold);
 }
 
-/* Current-year column italicized */
+/* Current-year column */
 td.current {
   font-style: italic;
 }
@@ -170,8 +159,9 @@ tr.data th .description {
   display: block;
   font-weight: normal;
   font-style: italic;
+	font-size: .8rem;
   padding: 1rem 0 0.75rem;
-  margin-right: -13.5rem; /* aligns under description */
+  margin-right: -13.5rem; 
 }
 
 tr.data td {

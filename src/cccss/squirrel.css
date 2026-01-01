@@ -1,11 +1,6 @@
-/* ==========================================================================
-   CSS Squirrel — Full body with fluffy tail + blinking eyes
-   2-space indentation, accessible, prefers-reduced-motion aware
-   ========================================================================== */
-
-/* -- Theme variables (easy to tweak) -------------------------------------- */
-:root {
-  --squirrel-width: 320px; /* overall scale — change this to resize */
+* {
+  box-sizing: border-box;
+	--squirrel-width: 320px; /* overall scale — change this to resize */
   --color-fur-1: #8b5a2b; /* main fur */
   --color-fur-2: #6a4322; /* darker accents */
   --color-belly: #f3dcb2; /* belly/inner-ear */
@@ -16,33 +11,16 @@
   --animation-speed: 3000ms;
 }
 
-/* -- Reset / base -------------------------------------------------------- */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+#body {
+  background-image: linear-gradient(white 35%, var(--accent-color-dteal));
 }
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial;
-  background: linear-gradient(180deg, var(--bg), #e0dff9 60%);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* -- Layout -------------------------------------------------------------- */
 main {
-  min-height: 100vh;
   display: grid;
   place-items: center;
   padding: 2rem;
 }
 
-/* -- Accessibility helper (off-screen visually hidden text) ------------- */
 .visually-hidden {
   position: absolute !important;
   height: 1px;
@@ -52,7 +30,6 @@ main {
   white-space: nowrap;
 }
 
-/* -- Squirrel scene size + responsive scaling --------------------------- */
 .squirrel-scene {
   width: var(--squirrel-width);
   max-width: 95vw;
@@ -65,16 +42,11 @@ main {
   display: block;
   margin: 0 auto;
   transform-origin: center bottom;
-  /* strong outline for keyboard focus */
   outline: none;
+	z-index: 0;
+	pointer-events: none;
 }
 
-.squirrel:focus {
-  box-shadow: 0 0 0 4px rgba(107, 90, 36, 0.25);
-  border-radius: 12px;
-}
-
-/* -- Base measurements (scale everything to container width) ------------- */
 .squirrel,
 .body,
 .head,
@@ -98,11 +70,10 @@ main {
   height: 72%;
   display: block;
   transform: rotate(20deg);
-  z-index: 1; /* behind body later we'll push body above */
+  z-index: 1;
   filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.15));
 }
 
-/* multiple overlapping fluff layers for a voluminous tail */
 .tail-fluff {
   position: absolute;
   right: 0;
@@ -111,7 +82,6 @@ main {
   box-shadow: inset -6px -8px 12px rgba(0, 0, 0, 0.12);
 }
 
-/* place each fluff layer with slightly different sizes & offsets */
 .tail-fluff-1 {
   width: 72%;
   height: 72%;
@@ -145,7 +115,6 @@ main {
   opacity: 0.94;
 }
 
-/* tail core to blend into body */
 .tail-core {
   position: absolute;
   right: 34%;
@@ -157,7 +126,6 @@ main {
   box-shadow: inset -4px -6px 8px rgba(0, 0, 0, 0.12);
 }
 
-/* -- Body --------------------------------------------------------------- */
 .body {
   position: absolute;
   left: 10%;
@@ -170,7 +138,6 @@ main {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* belly patch */
 .belly {
   position: absolute;
   left: 22%;
@@ -182,7 +149,6 @@ main {
   box-shadow: inset 0 -6px 8px rgba(0, 0, 0, 0.06);
 }
 
-/* -- Arms and paws ----------------------------------------------------- */
 .arm {
   position: absolute;
   top: 42%;
@@ -194,7 +160,6 @@ main {
   transform-origin: top center;
 }
 
-/* left & right positions */
 .arm-left {
   left: 6%;
   transform: rotate(-8deg);
@@ -215,7 +180,6 @@ main {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
 }
 
-/* -- Head --------------------------------------------------------------- */
 .head {
   position: absolute;
   width: 58%;
@@ -226,7 +190,6 @@ main {
   transform-origin: center bottom;
 }
 
-/* ears */
 .ear {
   position: absolute;
   top: -14%;
@@ -248,7 +211,6 @@ main {
   transform: rotate(10deg);
 }
 
-/* inner ear */
 .ear-inner {
   position: absolute;
   top: 18%;
@@ -259,7 +221,6 @@ main {
   border-radius: 40% 40% 30% 30%;
 }
 
-/* face area */
 .face {
   position: absolute;
   left: 6%;
@@ -271,7 +232,6 @@ main {
   box-shadow: inset -6px -8px 12px rgba(0, 0, 0, 0.06);
 }
 
-/* cheeks (fluff) */
 .cheek {
   position: absolute;
   top: 40%;
@@ -292,7 +252,6 @@ main {
   transform: rotate(8deg);
 }
 
-/* -- Eyes (with blinking animation) ----------------------------------- */
 .eye {
   position: absolute;
   top: 26%;
@@ -305,7 +264,6 @@ main {
   z-index: 7;
 }
 
-/* positions */
 .eye-left {
   left: 28%;
   transform: translateX(-10%);
@@ -316,7 +274,6 @@ main {
   transform: translateX(10%);
 }
 
-/* pupil is smaller dark circle for depth (optional) */
 .pupil {
   position: absolute;
   left: 28%;
@@ -341,7 +298,6 @@ main {
   z-index: 9;
 }
 
-/* blinking animation — scale the eye's Y to 0 briefly */
 @keyframes blink {
   0%,
   5%,
@@ -353,7 +309,6 @@ main {
   }
 }
 
-/* apply animation with a slight offset between eyes for natural effect */
 .eye-left {
   animation: blink var(--animation-speed) infinite;
   animation-delay: 0s;
@@ -364,7 +319,6 @@ main {
   animation-delay: calc(var(--animation-speed) / 6);
 }
 
-/* prefers-reduced-motion disables the blinking animation */
 @media (prefers-reduced-motion: reduce) {
   .eye-left,
   .eye-right {
@@ -372,7 +326,6 @@ main {
   }
 }
 
-/* -- Nose & Mouth ------------------------------------------------------ */
 .nose {
   position: absolute;
   left: 50%;
@@ -396,7 +349,6 @@ main {
   z-index: 9;
 }
 
-/* little smiling arcs */
 .smile-left,
 .smile-right {
   position: absolute;
@@ -418,7 +370,6 @@ main {
   transform: rotate(-12deg);
 }
 
-/* -- Legs & feet ------------------------------------------------------ */
 .leg {
   position: absolute;
   bottom: -2%;
@@ -450,16 +401,16 @@ main {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.12);
 }
 
-/* -- Small responsive tweaks ------------------------------------------ */
+
 @media (max-width: 420px) {
-  :root {
+  * {
     --squirrel-width: 260px;
     --eye-size: 22px;
   }
 }
 
 @media (max-width: 360px) {
-  :root {
+  * {
     --squirrel-width: 220px;
     --eye-size: 18px;
   }

@@ -20,6 +20,7 @@
 </head>
 
 <body id="registration">
+
 	<!-- Main navigation -->
   <nav 
     data-include="../partials/ccNavBar.html" 
@@ -49,8 +50,10 @@
 	  </ol>
 	</nav>	
   <main>
+	
     <h1 class="h1">Registration Form</h1>
     <p class="p">Please fill out this form with the required information.</p>
+		<br />
 
     <form class="ccform"method="post" action="https://register-demo.freecodecamp.org" aria-label="User Registration Form">
       <!-- Personal Information -->
@@ -75,14 +78,14 @@
       </fieldset>
 
       <!-- Account Type -->
-      <fieldset class="ccfieldset">
+      <fieldset class="ccfieldset option form-check">   
         <legend>Account Type (required)</legend>
-        <label class="cclabel" for="personal-account">
-          <input class="ccinput" id="personal-account" type="radio" name="account-type" value="personal" class="ccinline" checked />
+        <label class="ms-5 cclabel" for="personal-account">
+          <input class="form-check-input " id="personal-account" type="radio" name="account-type" value="personal" class="ccinline" checked />
           Personal
         </label>
-        <label class="cclabel" for="business-account">
-          <input class="ccinput" id="business-account" type="radio" name="account-type" value="business" class="ccinline" />
+        <label class="ms-5 cclabel" for="business-account">
+          <input class="form-check-input " id="business-account" type="radio" name="account-type" value="business" class="ccinline" />
           Business
         </label>
       </fieldset>
@@ -90,9 +93,9 @@
       <!-- Additional Information -->
       <fieldset class="ccfieldset">
         <legend>Additional Information</legend>
-        <label class="cclabel" for="profile-picture">
+        <label class="cclabel form control" for="profile-picture">
           Upload a Profile Picture:
-          <input class="ccinput" id="profile-picture" type="file" name="file" aria-label="Profile picture upload" />
+          <input class="file-selector-button ccinput" id="profile-picture" type="file" name="file" aria-label="Profile picture upload" />
         </label>
         <label class="cclabel" for="age">
           Age:
@@ -114,19 +117,41 @@
         </label>
       </fieldset>
 
-      <!-- Terms -->
-      <p class="p">
-        <a href="https://www.freecodecamp.org/news/terms-of-service" target="_blank" rel="noopener noreferrer">Read our terms and conditions</a>
-      </p>
-      <label class="cclabel" for="terms-and-conditions">
-        <input class="ccinput" class="ccinline" name="terms" id="terms-and-conditions" type="checkbox" required aria-required="true" />
-        I accept the terms and conditions
-      </label>
+			<!-- Terms (Vertically & Horizontally Centered) -->
+			<div class="container min-vh-100 d-flex justify-content-center align-items-center">
+			  <div class="d-flex flex-column align-items-center text-center">
+			
+			    <p class="mb-3">
+			      <a
+			        href="https://www.freecodecamp.org/news/terms-of-service"
+			        target="_blank"
+			        class="gen-link-cc"
+			        rel="noopener noreferrer">
+			        Read our terms and conditions
+			      </a>
+			    </p>
+			
+			    <div class="form-check d-flex align-items-center">
+			      <input
+			        class="form-check-input"
+			        name="terms"
+			        id="terms-and-conditions"
+			        type="checkbox"
+			        required
+			        aria-required="true" />
+			      <label
+			        class="form-check-label ms-2 text-nowrap cclabel"
+			        for="terms-and-conditions">
+			        I accept the terms and conditions
+			      </label>
+			    </div>
+					<input class="btn btn-secondary" type="submit" value="Submit" />
+				</div>
+				</div>
 
-      <input class="ccinput" type="submit" value="Submit" />
     </form>
-	</main>
-		
+  </main>
+					
 			<!-- Footer -->
 	  <footer
 	    data-include="../partials/footer.html" 
