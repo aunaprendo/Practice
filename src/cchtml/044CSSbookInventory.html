@@ -52,10 +52,20 @@
     <h1>Book Inventory</h1>
 
     <!-- Book Inventory Table -->
-    <table aria-label="Book inventory list">
+    <div class="table-scroll">
+		  <table aria-label="Book inventory list" class="inventory-table">
+	
+			  <colgroup>
+			    <col class="col-title">
+			    <col class="col-author">
+			    <col class="col-category">
+			    <col class="col-status">
+			    <col class="col-rating">
+			  </colgroup>
+						
       <thead>
         <tr>
-          <!-- All table headers use scope="col" for screen readers -->
+          <!-- All table heaers use scope="col" for screen readers -->
           <th scope="col">Title</th>
           <th scope="col">Author</th>
           <th scope="col">Category</th>
@@ -86,7 +96,7 @@
 
         <!-- Read -->
         <tr class="read">
-          <th scope="row">The Squirrels' Busy Year: A First Science Storybook</th>
+          <th class="pe-2" scope="row">The Squirrels' Busy Year: A First Science Storybook</th>
           <td>Martin Jenkins and Richard Jones</td>
           <td>Picture Book</td>
           <td><span class="status">Read</span></td>
@@ -105,7 +115,7 @@
 
         <!-- To Read -->
         <tr class="to-read">
-          <th scope="row">Jamel Learns About Calling Squirrels</th>
+          <th class="pe-2" scope="row">Jamel Learns About Calling Squirrels</th>
           <td>Sue Roddy</td>
           <td>Fiction</td>
           <td><span class="status">To Read</span></td>
@@ -122,8 +132,9 @@
           </td>
         </tr>
       </tbody>
-    </table>
-	</main>
+	  </table>
+	</div>
+</main>
 		
 			<!-- Footer -->
 	  <footer

@@ -3,20 +3,64 @@ span {
   display: inline-block;
 }
 
+.inventory-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Column widths */
+.col-title   { width: 36%; }
+.col-author  { width: 22%; }
+.col-category{ width: 16%; }
+.col-status  { width: 12%; }
+.col-rating  { width: 14%; }
+
+th {
+	font-weight: var(--weight-semibold);
+}
+
+table th,
+table td {
+  padding: 18px 3px;   
+}
+
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+	position: relative;
+}
+
+.inventory-table {
+  min-width: 750px; 
+  border-collapse: collapse;
+}
+
+@media (max-width: 750px) {
+	.table-scroll::after {
+	  content: "← swipe →";
+	  position: sticky;
+	  right: 10px;
+	  bottom: 6px;
+	  font-size: 0.75rem;
+	  opacity: 0.6;
+	  pointer-events: none;
+	}
+}
 /* ========================================================================
    Table Row Status Coloring
    ======================================================================== */
 
 tr.to-read {
-  background-image: linear-gradient(#eb8dba, #641239);
+  background-color: var(--accent-color-dteal);
 }
 
 tr.read {
-  background-image: linear-gradient(#8deb8f, #126413);
+  background-color: var(--accent-color-lteal);
 }
 
 tr.in-progress {
-  background-image: linear-gradient(#8de9eb, #126264);
+  background-color: var(--accent-color-ateal);
 }
 
 /* ========================================================================
@@ -24,24 +68,23 @@ tr.in-progress {
    ======================================================================== */
 
 .status {
-  height: 80%;
-  width: 90%;
-  padding: 10px;
-  border: 2px solid black;
+  width: 95%;
+  padding: 2px;
+  border: 1px dotted black;
   border-radius: 10px;
-  background-image: linear-gradient(#ffffff, #ffffff);
+	font-size: .8rem;
 }
 
 tr.to-read .status {
-  background-image: linear-gradient(#ffffff, #eb8dba);
+  background-image: linear-gradient(white, var(--accent-color-dteal));
 }
 
 tr.read .status {
-  background-image: linear-gradient(#ffffff, #8deb8f);
+  background-image: linear-gradient(white, var(--accent-color-lteal));
 }
 
 tr.in-progress .status {
-  background-image: linear-gradient(#ffffff, #8de9eb);
+  background-image: linear-gradient(white, var(--accent-color-ateal));
 }
 
 /* ========================================================================
@@ -52,16 +95,21 @@ tr.in-progress .status {
   height: 80%;
   width: 90%;
   padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* Individual rating dots */
 .rate > span {
-  border: 1px dotted black;
-  border-radius: 100px;
-  margin: 5px;
-  height: 25px;
-  width: 25px;
-  background-color: white;
+  font-size: 1.4rem;
+  color: white;
+  line-height: 1;
+}
+
+/* star shape */
+.rate > span::before {
+  content: "★";
 }
 
 /* ========================================================================
@@ -69,13 +117,10 @@ tr.in-progress .status {
    ======================================================================== */
 
 .rate.three > span {
-  background-image: linear-gradient(#ffffff, #ebe88d);
+  color: var(--accent-color-gold);
 }
 
-.rate.two > span:nth-child(-n + 2) {
-  background-image: linear-gradient(#ffffff, #ebe88d);
-}
-
-.rate.one > span:first-of-type {
-  background-image: linear-gradient(#ffffff, #ebe88d);
+.rate.two > span:nth-child(-n + 2),
+.rate.one > span:first-child {
+  color: var(--accent-color-gold);
 }

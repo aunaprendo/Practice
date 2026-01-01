@@ -13,7 +13,7 @@
     height: 100%;
     padding-top: 75px;
     padding-left: 20px;
-    background-color: var(--accent-color-dteal);
+    background-color: var(--accent-color-gold);
     border-right: 1px solid #ddd;
     overflow-y: auto;
     z-index: 0;
@@ -42,11 +42,11 @@ h3{
   font-weight: var(--weight-thin);
 	font-size: 1.2rem;
 	line-height: 4rem;
-  color: var(--text-color-alt);
+  color: var(--text-color-main);
 }
 
 .tech-link:hover {
-  color: var(--accent-color-gold);
+  color: var(--accent-color-brown);
 }
 
 footer {

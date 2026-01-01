@@ -1,29 +1,14 @@
-@media (prefers-reduced-motion: no-preference) {
-  * {
-    scroll-behavior: smooth;
-  }
-}
-
-body {
-  background: #f5f6f7;
-  color: #1b1b32;
-  margin: 0;
-  line-height: 1.5;
-}
-
-header {
+.header {
   width: 100%;
   height: 50px;
-  background-color: #1b1b32;
+  background-color: var(--accent-color-brown);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 /* Page title */
-h1 {
-  color: #f1be32;
-  font-size: min(5vw, 1.2em);
+.h1 {
   text-align: center;
   margin: 0;
 }
@@ -47,35 +32,33 @@ h1 {
 }
 
 .quiz-items {
-  color: #dfdfe2;
+  color: var(--text-color-alt);;
   padding: 0.2rem;
   margin: 0 0.2rem;
   list-style: none;
 }
 
-nav > ul > li:hover {
-  background-color: #dfdfe2;
-  color: #1b1b32;
+.nav > ul > li:hover {
+  background-color: var(--bg-color-main);
+	border-radius: 7%;
+  color: var(--text-color-main);
   cursor: pointer;
+	font-weight: 700;
 }
 
-li > a {
+.li > a {
   text-decoration: none;
   color: inherit;
 }
 
-main {
-  padding-top: 50px; 
-}
-
-section {
+.section {
   width: 80%;
   max-width: 600px;
   margin: 0 auto 10px auto;
 }
 
 /* Section headings */
-h2 {
+.h2 {
   border-bottom: 4px solid #dfdfe2;
   margin-top: 0;
   padding-top: 60px;
@@ -91,9 +74,9 @@ h2 {
   padding: 0 15px;
 }
 
-input,
-select,
-textarea {
+.input,
+.select,
+.textarea {
   font-size: 1rem;
 }
 
@@ -123,13 +106,13 @@ textarea {
 }
 
 /* Question number headings */
-h3 {
+.h3 {
   margin-top: 5px;
   padding-left: 15px;
   font-size: 1.375rem;
 }
 
-h3::before {
+.h3::before {
   content: "Question #";
 }
 
@@ -146,7 +129,7 @@ h3::before {
   margin: 0;
 }
 
-button {
+.quiz-button {
   display: block;
   width: 40%;
   margin: 40px auto;
@@ -156,9 +139,12 @@ button {
   border: 3px solid #3b3b4f;
 }
 
+.quiz-button:hover {
+  background: var(--accent-color-brown);
+}
+
 /* =========================================================================
    SCREEN READER UTILITY CLASS
-   - Use this for text needed for assistive tech but hidden from sight
    ========================================================================= */
 .sr-only {
   position: absolute;

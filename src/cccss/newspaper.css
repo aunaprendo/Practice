@@ -1,17 +1,58 @@
 .title{grid-area:title;
-	background-color: #566878;}
+	background-color: var(--accent-color-brown);
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5)
+}
 
 .feature-article{grid-area:feature-article;
-	}
+}
 
 .secondary-article{grid-area:secondary-article;
 }
 
-.cover-image{grid-area:cover-image;
-	}
-	.cover-image>img{
+article {
+  margin: 0;
+  padding: 0.75rem 1rem;
+}
+
+.h1 {
+	font-family: 'Baskervville', serif;
+	color: white;
+}
+
+article h2,
+article h3 {
+  margin: 0 0 0.25rem;
+}
+
+article p {
+  margin: 0 0 0.75rem;
+}
+
+.author {
+  margin: 0 0 0.5rem;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.feature-article {
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 1rem;
+}
+
+.cover-image { 
+	grid-area:cover-image;
+	align-self: start;
+}
+	
+.cover-image>img{
 	max-width: 100%;
-	}
+	border-radius: 50%;
+}
+
+figcaption{
+	font-size: .8rem;
+	text-align: center;
+}
 
 .small-article1{grid-area:small-article1;}
 
@@ -19,13 +60,42 @@
 
 .small-article3{grid-area:small-article3;}
 
-.newspaper-layout{display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: auto 1fr 1fr 1fr;
-	grid-gap: 0;
-	grid-template-areas:
-	"title title title"
-	"feature-article feature-article cover-image"
-	"secondary-article secondary-article cover-image"
-	"small-article1 small-article2 small-article3";}
-	
+.newspaper-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "title title title"
+    "feature-article feature-article cover-image"
+    "secondary-article secondary-article cover-image"
+    "small-article1 small-article2 small-article3";
+}
+
+.classifieds {
+  border-top: 1px dotted #ccc;
+  padding-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.classifieds h3 {
+  margin: 0 0 0.5rem;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+.ad {
+  margin-bottom: 2rem;
+	margin-top: 2rem;
+}
+
+.ad h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: bold;
+	margin-bottom: .5rem;
+}
+
+.ad p {
+  margin: 0;
+  line-height: 1.4;
+}

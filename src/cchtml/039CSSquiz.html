@@ -50,7 +50,8 @@
 	</nav>	
   <main>
     <!-- Page header with internal navigation -->
-    <header>
+
+		<header class="header">
       <img
         id="logo"
         src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
@@ -60,26 +61,25 @@
         role="img"
       />
 
-      <h1>HTML/CSS Quiz</h1>
-
       <!-- Secondary page navigation -->
-      <nav aria-label="Quiz section navigation" id="quiz-nav">
+      <nav class="nav"aria-label="Quiz section navigation" id="quiz-nav">
         <ul id="quiz-list">
-          <li class="quiz-items"><a href="#student-info">Info</a></li>
-          <li class="quiz-items"><a href="#html-questions">HTML</a></li>
-          <li class="quiz-items"><a href="#css-questions">CSS</a></li>
+          <li class="li quiz-items"><a href="#student-info">Info</a></li>
+          <li class="li quiz-items"><a href="#html-questions">HTML</a></li>
+          <li class="li quiz-items"><a href="#css-questions">CSS</a></li>
         </ul>
       </nav>
     </header>
-
+    <h1 class="h1 mt-5">HTML/CSS Quiz</h1>
+		
     <!-- Form begins -->
     <form 
       method="post"
       action="https://freecodecamp.org/practice-project/accessibility-quiz">
 
       <!-- Student info section -->
-      <section aria-labelledby="student-info">
-        <h2 id="student-info">Student Information</h2>
+      <section class="section" aria-labelledby="student-info">
+        <h2 class="h2" id="student-info">Student Information</h2>
 
         <div class="info">
           <label for="student-name">Name:</label>
@@ -88,6 +88,7 @@
             name="student-name"
             id="student-name"
             autocomplete="name"
+						class="input"
           />
         </div>
 
@@ -98,6 +99,7 @@
             name="student-email"
             id="student-email"
             autocomplete="email"
+						class="input"
           />
         </div>
 
@@ -107,17 +109,18 @@
             type="date"
             name="birth-date"
             id="birth-date"
+						class="input"
           />
         </div>
       </section>
 
       <!-- HTML questions -->
-      <section aria-labelledby="html-questions">
-        <h2 id="html-questions">HTML Questions</h2>
+      <section class="section" aria-labelledby="html-questions">
+        <h2 class="h2" id="html-questions">HTML Questions</h2>
 
         <!-- Question 1 -->
         <div class="question-block">
-          <h3><span class="sr-only">Question </span>1</h3>
+          <h3 class="h3"><span class="sr-only">Question </span>1</h3>
 
           <fieldset class="question">
             <legend>
@@ -128,13 +131,13 @@
             <ul class="answers-list">
               <li>
                 <label for="q1-a1">
-                  <input type="radio" id="q1-a1" name="q1" value="true" />
+                  <input class="input" type="radio" id="q1-a1" name="q1" value="true" />
                   True
                 </label>
               </li>
               <li>
                 <label for="q1-a2">
-                  <input type="radio" id="q1-a2" name="q1" value="false" />
+                  <input class="input" type="radio" id="q1-a2" name="q1" value="false" />
                   False
                 </label>
               </li>
@@ -144,7 +147,7 @@
 
         <!-- Question 2 -->
         <div class="question-block">
-          <h3><span class="sr-only">Question </span>2</h3>
+          <h3 class="h3"><span class="sr-only">Question </span>2</h3>
 
           <fieldset class="question">
             <legend>
@@ -155,13 +158,13 @@
             <ul class="answers-list">
               <li>
                 <label for="q2-a1">
-                  <input type="radio" id="q2-a1" name="q2" value="true" />
+                  <input class="input" type="radio" id="q2-a1" name="q2" value="true" />
                   True
                 </label>
               </li>
               <li>
                 <label for="q2-a2">
-                  <input type="radio" id="q2-a2" name="q2" value="false" />
+                  <input class="input" type="radio" id="q2-a2" name="q2" value="false" />
                   False
                 </label>
               </li>
@@ -171,8 +174,8 @@
       </section>
 
       <!-- CSS questions -->
-      <section aria-labelledby="css-questions">
-        <h2 id="css-questions">CSS Questions</h2>
+      <section class="section" aria-labelledby="css-questions">
+        <h2 class="h2" id="css-questions">CSS Questions</h2>
 
         <div class="formrow">
           <div class="question-block">
@@ -182,7 +185,7 @@
           </div>
 
           <div class="answer">
-            <select name="selector" id="selector" required>
+            <select class="select" name="selector" id="selector" required>
               <option value="">Select an option</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -201,12 +204,13 @@
               name="css-questions"
               rows="5"
               cols="24"
+							class="textarea"
             ></textarea>
           </div>
         </div>
       </section>
 
-      <button type="submit">Send</button>
+      <button class="quiz-button"  type="submit">Send</button>
     </form>
 		
 	</main>
