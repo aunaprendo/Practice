@@ -89,22 +89,22 @@
     <!-- REVIEWS Section -->
     <section id="REVIEWS" tabindex="-1" aria-labelledby="reviews-heading">
       <h2 class="mt-5 text-center"id="reviews-heading"><em>100 Five-Star Ratings</em></h2>
-			<p class="text-center mb-5">⭐️⭐️⭐️⭐️⭐️</p>
+			<p class="text-center mb-4">⭐️⭐️⭐️⭐️⭐️</p>
 			
 			<div class="container mb-5">
 			  <blockquote class="blockquote">
-			    <p class="mb-0">"My squirrel is now a ninja on the treetops!"</p>
-			    <footer class="blockquote-footer">Chipper Squirrel, <cite title="Source Title">Forest Friends Weekly</cite></footer>
+			    <p class="mb-3 text-center">"My squirrel is now a ninja on the treetops!"</p>
+			    <p class="blockquote-footer text-center">Chipper Squirrel, <cite title="Source Title">Forest Friends Weekly</cite></p>
 			  </blockquote>
 			
 			  <blockquote class="blockquote">
-			    <p class="mb-0">"A fun and challenging course that keeps our squirrels active and happy."</p>
-			    <footer class="blockquote-footer">Nutty McNutterson, <cite title="Source Title">Acorn Times</cite></footer>
+			    <p class="mb-3 text-center">"A fun and challenging course that keeps our squirrels active and happy."</p>
+			    <p class="blockquote-footer text-center">Nutty McNutterson, <cite title="Source Title">Acorn Times</cite></p>
 			  </blockquote>
 			
 			  <blockquote class="blockquote">
-			    <p class="mb-0">"We saw dramatic improvements in agility and cleverness after just one week!"</p>
-			    <footer class="blockquote-footer">Sammie Tail, <cite title="Source Title">The Squirrel Gazette</cite></footer>
+			    <p class="mb-3 text-center">"We saw dramatic improvements in agility and cleverness after just one week!"</p>
+			    <p class="blockquote-footer text-center">Sammie Tail, <cite title="Source Title">The Squirrel Gazette</cite></p>
 			  </blockquote>
 			</div>
 			
@@ -116,57 +116,42 @@
 
       <form
         id="form"
-        method="post"
-        action="https://www.freecodecamp.org/email-submit"
+        method="get"
+        action="0SubmissionRecieved.html"
         aria-describedby="form-instructions">
 
         <p id="form-instructions">
           Fill out the form below to apply for our squirrel training program.
         </p>
 
-        <!-- Name -->
-        <div class="form-group">
-          <label for="name">Full Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your full name"
-            required
-            aria-required="true"
-          />
-        </div>
-
-        <!-- Email -->
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="example@example.com"
-            required
-            aria-required="true"
-          />
-        </div>
-
-        <!-- Course -->
-        <div class="form-group">
-          <label for="course">Course:</label>
-          <select id="course" name="course" required aria-required="true">
-            <option disabled selected>Select a course</option>
-            <option>Nut Hiding</option>
-            <option>Nut Finding</option>
-            <option>Drey Building</option>
-            <option>Mushroom Jerky Making</option>
+      <!-- Name -->
+			<div class="form-group input-group mb-3">
+			  <span class="input-group-text" id="name-label">Name of Squirrel:</span>
+			  <input type="text" id="name" class="form-control" placeholder="Peanut Metz" aria-label="Name" required aria-required="true">
+			</div>
+			
+      <!-- Email -->
+			<div class="form-group input-group mb-3">
+			  <span class="input-group-text" id="email-label">Email of Squirrel:</span>
+			  <input type="email" id="email" class="form-control" placeholder="pecansforever@nuts.com" aria-label="email" required aria-required="true">
+			</div>
+			
+			<!-- Course -->
+      <div class="form-group mb-3">
+        <label for="dropdown">Course Selection:</label>
+        <select id="dropdown" class="form-select form-select-sm" name="attitude">
+          <option disabled selected>Select a course</option>
+            <option>Nut Scavenger Hunt</option>
+            <option>Roadside Risk Analysis</option>
+            <option>Bird Feeder Agility Test</option>
+            <option>Treetop Spatial Awareness Training</option>
             <option>Obstacle Course Tactics</option>
-          </select>
-        </div>
-
-        <!-- Submit -->
-        <button id="submit" type="submit">
-          Submit Application
-        </button>
+        </select>
+      </div>
+			
+      <!-- Submit -->
+      <button id="submit" class="btn btn-secondary" name="submit" value="Submit">Submit</button>
+			
       </form>
 	  </section>
 		</div>
@@ -183,7 +168,7 @@
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>
 	  AOS.init();
-	</script
+	</script>
 </body>
 </html>
 	

@@ -19,6 +19,7 @@
   height: auto;
   aspect-ratio: 1/1;     /* keep square */
   position: relative;
+	margin-top: 5%;
 }
 
 /* Moon orbit container fills system */

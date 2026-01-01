@@ -52,10 +52,14 @@
   <main>
 	
     <h1 class="h1">Registration Form</h1>
-    <p class="p">Please fill out this form with the required information.</p>
+    <p class="p"><em>Please fill out this form with the required information.</em></p>
 		<br />
 
-    <form class="ccform"method="post" action="https://register-demo.freecodecamp.org" aria-label="User Registration Form">
+     <form class="ccform"
+        id="form"
+        method="get"
+        action="0SubmissionRecieved.html"
+        aria-describedby="form-instructions">
       <!-- Personal Information -->
       <fieldset class="ccfieldset">
         <legend>Personal Information</legend>
@@ -71,10 +75,23 @@
           Email:
           <input class="ccinput" id="email" name="email" type="email" required aria-required="true" />
         </label>
-        <label class="cclabel" for="new-password">
-          Create a Password:
-          <input class="ccinput" id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required aria-required="true" />
-        </label>
+				<label class="cclabel" for="new-password">
+				  Create a Password:
+				  <input
+				    class="ccinput"
+				    id="new-password"
+				    name="new-password"
+				    type="password"
+				    pattern="[a-z0-5]{8,}"
+				    required
+				    aria-required="true"
+				    aria-describedby="password-hint"
+				  />			
+				  <span id="password-hint" class="password-hint" role="tooltip">
+				    Password must be at least 8 characters and contain only lowercase letters (a–z) and numbers (0–5).
+				  </span>
+				</label>
+
       </fieldset>
 
       <!-- Account Type -->
@@ -161,9 +178,11 @@
 		
 	  <script src="../js/script.js"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		
 	<script>
 	  AOS.init();
-	</script
+	</script>
+	
 	</body>
 	</html>
 	

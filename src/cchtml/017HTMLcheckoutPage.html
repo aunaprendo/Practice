@@ -61,7 +61,12 @@
     <section aria-labelledby="payment-heading">
       <h2 id="payment-heading">Payment Information</h2>
 
-      <form>
+      <form
+        id="form"
+        method="get"
+        action="0SubmissionRecieved.html"
+        aria-describedby="form-instructions">
+				
         <fieldset>
           <legend>Card Details</legend>
 
@@ -105,10 +110,11 @@
 							<small class="ms-3" id="expiration-format">Format: month/year</small>
           </div>
         </fieldset>
-      </form>
+      
 			<!-- Submit -->
       <button id="submit" class="btn btn-secondary"name="submit" value="Submit">Submit</button>
- 
+ 			</form>		
+			
     </section>
 
 	</main>
@@ -123,7 +129,7 @@
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>
 	  AOS.init();
-	</script
+	</script>
 	</body>
 	</html>
 	

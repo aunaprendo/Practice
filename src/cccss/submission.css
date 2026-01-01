@@ -1,0 +1,26 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Let main take remaining space */
+main {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;   /* bottom */
+  justify-content: center; /* horizontal center */
+  padding-bottom: 2rem;    /* space above footer */
+}
+
+#submission-good {
+	background:
+	linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
+    url(https://image2url.com/r2/default/images/1767294530082-b16655c5-f67c-4dc6-9535-c6f037698fbf.jpeg);
+  background-size: cover;
+  background-position: center;
+}	
