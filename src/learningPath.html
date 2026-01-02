@@ -56,8 +56,12 @@
 	          </div> <!-- fade up section -->
 	        </div> <!-- header row end -->
 					
-					<h2 class="text-thick mt-2 mb-0">Books Read</h2>
-					<p class="text-faded mt-0">Click a book for more infomation</p>
+					<div class="d-flex align-items-center mt-2">
+					  <img class="mb-0 me-2" src="assets/100eye.svg" alt="" width="28" height="28" />
+					  <h2 class="text-thick mb-0 mt-0">Books Read</h2>
+					</div>
+					
+					<p class="text-faded mt-0">Click a book for more information</p>
 					
 					<section class="carousel-wrapper" aria-label="Book carousel">
 					  <button class="carousel-arrow left" aria-label="Previous">
@@ -93,7 +97,10 @@
 					</section><!-- carousel end -->
 					
 					<div class="table-responsive mt-5">
-						<h2 class="text-thick mt-3 mb-0">Courses Taken</h2>
+						<div class="d-flex align-items-center mt-3">
+						  <img class="mb-0 me-2" src="assets/100hand.svg" alt="" width="28" height="28" />
+						  <h2 class="text-thick mb-0 mt-0">Courses Taken</h2>
+						</div>
 						<p class="text-faded mt-0">Completed between 07/25 - 10/26</p>
 				
 				    <table aria-describedby="schedule-caption" class="align-middle table table-striped table-hover">
@@ -164,16 +171,20 @@
 				    </table>
 					</div><!-- table end -->
 
-					<h2 class="text-thick mt-5 mb-0">Audiobooks Heard</h2>
+					<!-- audio carousel start -->
+					<div class="d-flex align-items-center mt-5">
+					  <img class="mb-0 me-2" src="assets/100ear.svg" alt="" width="28" height="28" />
+					  <h2 class="text-thick mb-0 mt-0">Audiobooks Heard</h2>
+					</div>
 					<p class="text-faded mt-0">Click a book for more infomation</p>
 					
-					<section class="carousel-wrapper" aria-label="Book carousel">
+					<section class="carousel-wrapper" aria-label="Audiobook carousel">
 					  <button class="carousel-arrow left" aria-label="Previous">
 					    ←
 					  </button>
 					
-					  <div class="carousel m-0" id="bookCarousel">
-						  <div class="carousel-track-books">
+					  <div class="carousel m-0" id="audioCarousel">
+						  <div class="carousel-track-audio">
 						    <a href="https://www.amazon.com/Pragmatic-Programmer-Anniversary-Journey-Mastery/dp/B0833FBNHV/ref=tmm_aud_swatch_0" class="carousel-item">
 						      <img src="https://image2url.com/r2/default/images/1767107731793-14e9a4a8-28a0-4bec-a5d9-6dbc879d31e2.jpeg" alt="The Pragmatic Programmer: 20th Anniversary Edition, 2nd Edition">
 						    </a>
@@ -198,8 +209,76 @@
 					  <button class="carousel-arrow right" aria-label="Next">
 					    →
 					  </button>
-					</section><!-- carousel end -->
-										
+					</section>
+					<!-- audio carousel end -->
+							
+					<div class="table-responsive mt-5">
+						<div class="d-flex align-items-center mt-2">
+						  <img class="mb-0 me-2" src="assets/100mind.svg" alt="" width="28" height="28" />
+						  <h2 class="text-thick mb-0 mt-0">Additional Resources Used</h2>
+						</div>						
+						<p class="text-faded mt-0">Podcasts and Video Lessons</p>
+				
+				    <table aria-describedby="schedule-caption" class="align-middle table table-striped table-hover">
+				
+				      <thead>
+				        <tr>
+				          <th scope="col">Type</th>
+				          <th scope="col">Subject</th>
+				          <th scope="col">Details</th>
+									<th scope="col">Information</th>
+				        </tr>
+				      </thead>
+				
+				      <tbody>
+				        <tr>
+				          <th scope="row">Video</th>
+				          <td>Bootstrap CSS Framework</td>
+									<td>Full Course for Beginners</td>
+				          <td><a class="gen-link" href="https://www.youtube.com/watch?v=-qfEOE4vtxE">Course Details</a></td>
+				        </tr>
+				
+				        <tr>
+				          <th scope="row">Video</th>
+				          <td>GitHub for Beginners</td>
+									<td>Eight Video Series</td>
+				          <td><a class="gen-link" href="https://www.youtube.com/watch?v=r8jQ9hVA2qs&list=PL0lo9MOBetEFcp4SCWinBdpml9B2U25-f">Course Details</a></td>
+				        </tr>		
+				
+				        <tr>
+				          <th scope="row">Podcast</th>
+				          <td>Introduction to Programming by Swinburne University of Technology</td>
+									<td>Custom types, Programs and compilers, Program creation, Procedure declaration, Storing and using data</td>
+				          <td><a class="gen-link" href="https://podbay.fm/p/swinburne-codecasts-programming-tutorials">Course Details</a></td>
+				        </tr>
+				
+				        <tr>
+				          <th scope="row">Podcast</th>
+				          <td>Python Podcast - The DDSRY Show</td>
+									<td>Episodes 1-14</td>
+				          <td><a class="gen-link" href="https://www.iheart.com/podcast/269-the-ddsry-show-python-podc-73538096/">Course Details</a></td>
+				        </tr>
+								
+								<tr>
+				          <th scope="row">Podcast</th>
+				          <td>Comp Sci: Just the Useful Bits</td>
+									<td>Episode 1: With Jason Swett: when data structures, big-O notation and algorithms were completely useless...</td>
+				          <td><a class="gen-link" href="https://justtheusefulbits.com">Course Details</a></td>
+				        </tr>
+						
+				      </tbody>
+				    </table>
+					</div><!-- table end -->
+					
+	        <figure class="mt-5">
+	          <figcaption class="text-center"><code>Always Learning</code></figcaption>
+						<img
+	            src="assets/learning.svg"
+	            alt="brain computer" 
+							class="soft-image"
+	          />
+	        </figure>
+					
 				</div> <!-- main col -->
 			</div> <!-- main row -->
 		</div> <!-- main container -->

@@ -24,7 +24,7 @@ async function loadPartials() {
   initNavbar();
   initSideMenu();
   initContactCard();
-	initBookCarousel();
+	document.querySelectorAll(".carousel-wrapper").forEach(initAutoCarousel);
 }
 
 /* ================================
@@ -383,61 +383,47 @@ window.__siteControls = {
 /* ================================
    BOOK CAROUSEL
 ================================ */
-function initBookCarousel() {
-  const carousel = document.getElementById("bookCarousel");
-  const track = carousel?.querySelector(".carousel-track-books");
-  const leftArrow = document.querySelector(".carousel-arrow.left");
-  const rightArrow = document.querySelector(".carousel-arrow.right");
+function initAutoCarousel(wrapper) {
+  const carousel = wrapper.querySelector(".carousel");
+  const track = wrapper.querySelector(".carousel-track-books, .carousel-track-audio");
+  const leftArrow = wrapper.querySelector(".carousel-arrow.left");
+  const rightArrow = wrapper.querySelector(".carousel-arrow.right");
 
   if (!carousel || !track || !leftArrow || !rightArrow) return;
 
-  const SPEED = 0.4; // pixels per frame (slow & smooth)
-
+  const SPEED = 0.4;
   let paused = false;
   let rafId = null;
 
-  /* -----------------------------
-     Clone items for infinite loop
-  ----------------------------- */
+  /* Clone items for infinite loop */
   const originals = Array.from(track.children);
   originals.forEach(item => track.append(item.cloneNode(true)));
 
   const loopWidth = () => track.scrollWidth / 2;
 
-	let scrollPos = 1;
-	carousel.scrollLeft = 1;
-	
-	function animate() {
-	  if (!paused) {
-	    scrollPos += SPEED;
-	
-	    if (scrollPos >= loopWidth()) {
-	      scrollPos -= loopWidth();
-	    }
-	
-	    carousel.scrollLeft = Math.floor(scrollPos);
-	  }
-	  rafId = requestAnimationFrame(animate);
-	}
+  let scrollPos = 1;
+  carousel.scrollLeft = 1;
+
+  function animate() {
+    if (!paused) {
+      scrollPos += SPEED;
+      if (scrollPos >= loopWidth()) {
+        scrollPos -= loopWidth();
+      }
+      carousel.scrollLeft = Math.floor(scrollPos);
+    }
+    rafId = requestAnimationFrame(animate);
+  }
 
   function start() {
     if (!rafId) animate();
   }
 
-  function stop() {
-    cancelAnimationFrame(rafId);
-    rafId = null;
-  }
-
-  /* -----------------------------
-     Pause on hover (desktop)
-  ----------------------------- */
+  /* Pause on hover */
   carousel.addEventListener("mouseenter", () => paused = true);
   carousel.addEventListener("mouseleave", () => paused = false);
 
-  /* -----------------------------
-     Arrow controls
-  ----------------------------- */
+  /* Arrow controls */
   leftArrow.addEventListener("click", () => {
     paused = true;
     carousel.scrollBy({ left: -300, behavior: "smooth" });
@@ -448,9 +434,7 @@ function initBookCarousel() {
     carousel.scrollBy({ left: 300, behavior: "smooth" });
   });
 
-  /* -----------------------------
-     Start after images load
-  ----------------------------- */
+  /* Start after images load */
   const images = carousel.querySelectorAll("img");
   let loaded = 0;
 

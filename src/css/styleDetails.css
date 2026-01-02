@@ -345,7 +345,8 @@ BOOK CAROUSEL
     scroll-behavior: auto;
   }
 }
-.carousel-track-books {
+.carousel-track-books,
+.carousel-track-audio {
   display: flex;
   gap: 1rem;
   width: max-content;
@@ -414,7 +415,8 @@ body.menu-open .carousel-arrow {
 /* ==========================
    BOOK CAROUSEL EDGE FADE
 ========================== */
-#bookCarousel {
+#bookCarousel,
+#audioCarousel {
   position: relative;
 
   --fade-size: 25px;
@@ -438,13 +440,15 @@ body.menu-open .carousel-arrow {
 }
 
 @media (min-width: 900px) {
-  #bookCarousel {
+  #bookCarousel,
+	#audioCarousel {
     --fade-size: 45px;
   }
 }
 
 @media (max-width: 600px) {
-  #bookCarousel {
+  #bookCarousel,
+	#audioCarousel	{
     --fade-size: 5px;
   }
 }
@@ -1057,6 +1061,9 @@ INPUT FORMS
   color: var(--bg-color-alt);
 }
 
+/* ========================================
+GENERAL DETAILS
+========================================= */
 .gen-link-cc {
   text-decoration: none;
   color: var(--accent-color-brown);
@@ -1071,3 +1078,9 @@ INPUT FORMS
   color: var(--accent-color-dgray);
 }
 
+.soft-image {
+	width: 100%;
+	filter: grayscale(75%);
+	border-radius: 5%;
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.9);	
+}
