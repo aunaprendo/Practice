@@ -330,6 +330,54 @@ window.__siteControls = {
       track.style.transform = `translateX(-${cardWidth * index}px)`;
     }
   });
+	  /* ================================
+     TOUCH / SWIPE SUPPORT
+  ================================ */
+  const viewport = track.closest('.carousel-viewport');
+
+  let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
+
+  const SWIPE_THRESHOLD = 50; // px required to trigger slide
+
+  viewport.style.touchAction = 'pan-y'; // allow vertical scrolling
+
+  viewport.addEventListener('pointerdown', e => {
+    isDragging = true;
+    startX = e.clientX;
+    currentX = startX;
+    track.style.transition = 'none';
+    viewport.setPointerCapture(e.pointerId);
+  });
+
+  viewport.addEventListener('pointermove', e => {
+    if (!isDragging) return;
+    currentX = e.clientX;
+    const delta = startX - currentX;
+    track.style.transform = `translateX(-${cardWidth * index + delta}px)`;
+  });
+
+  viewport.addEventListener('pointerup', finishSwipe);
+  viewport.addEventListener('pointercancel', finishSwipe);
+
+  function finishSwipe(e) {
+    if (!isDragging) return;
+    isDragging = false;
+
+    const delta = startX - currentX;
+
+    if (Math.abs(delta) > SWIPE_THRESHOLD) {
+      if (delta > 0 && index < allCards.length - 1) {
+        index++;
+      } else if (delta < 0 && index > 0) {
+        index--;
+      }
+    }
+
+    track.style.transition = 'transform 0.4s ease';
+    track.style.transform = `translateX(-${cardWidth * index}px)`;
+  }
 })();
 
 /* ================================
