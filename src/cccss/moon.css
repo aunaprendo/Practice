@@ -24,8 +24,8 @@
 
 /* Moon orbit container fills system */
 .orbit {
-  position: absolute;
-  inset: 0;
+  position: fixed;
+  inset: 20%;
   border-radius: 50%;
   animation: orbit 5s linear infinite;
 }
@@ -60,4 +60,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Tiny squirrel peeking over Earth */
+.earth::after {
+  content: "🐿️";
+  position: absolute;
+  top: -17%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;        
+  line-height: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.6));
 }

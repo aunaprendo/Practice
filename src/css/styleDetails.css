@@ -1080,7 +1080,90 @@ GENERAL DETAILS
 
 .soft-image {
 	width: 100%;
-	filter: grayscale(75%);
+	filter: grayscale(55%)
+	contrast(100%);
 	border-radius: 5%;
 	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.9);	
+}
+
+.gap-0 {
+  gap: 0 !important;
+}
+
+.gap-1 {
+  gap: 0.25rem !important;
+}
+
+.gap-2 {
+  gap: 0.5rem !important;
+}
+
+.gap-3 {
+  gap: 1rem !important;
+}
+
+.gap-4 {
+  gap: 1.5rem !important;
+}
+
+.gap-5 {
+  gap: 3rem !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.top-0 {
+  top: 0 !important;
+}
+
+.start-100 {
+  left: 100% !important;
+}
+
+.translate-middle {
+  transform: translate(-50%, -50%) !important;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35em 0.65em;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}
+.badge:empty {
+  display: none;
+}
+
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
+.bg-danger {
+  background-color: var(--accent-color-dteal);
+}
+
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }

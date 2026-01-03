@@ -33,24 +33,34 @@
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.5);
   border-left: 10px double rgba(0, 0, 0, 0.75);
+	position: relative;
 }
 
-/* Red marker styling */
-.red {
-  background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
-  box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
+/* Teal marker styling */
+.teal {
+ background: linear-gradient(
+  #043f4b, 
+  #065F6F, 
+  #087b88);
+  box-shadow: 0 0 20px 0 rgba(6, 95, 111, 0.8);
 }
 
-/* Green marker styling */
-.green {
-  background: linear-gradient(#55680D, #71F53E, #116C31);
-  box-shadow: 0 0 20px 0 #3B7E20CC;
+/* Brown marker styling */
+.brown {
+  background: linear-gradient(
+  #4a3600,  
+  #705200, 
+  #a87a1f);
+  box-shadow: 0 0 20px 0 #705200;
 }
 
-/* Blue marker styling */
-.blue {
-  background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%));
-  box-shadow: 0 0 20px 0 hsla(223, 59%, 31%, 0.8);
+/* Gold marker styling */
+.gold {
+  background: linear-gradient(
+  #bfa33e,  
+  #D8B961,
+  #f0d980);
+  box-shadow: 0 0 20px 0 hsla(44, 55%, 62%, 0.8);
 }
 
 /* Accessibility enhancements for color indicators (for screen readers) */
@@ -58,4 +68,14 @@
   content: attr(aria-label); /* Use aria-label to describe color */
   position: absolute;
   left: -9999px; /* Hide visually but readable by screen readers */
+}
+
+.acorn-icon {
+  position: relative;
+  left: 70%;           
+	top: 5%;
+  transform: rotate(270deg); /* Rotate 90 degrees */
+  width: 15px;         /* Adjust size */
+  height: 15px;
+	opacity: 70%;
 }

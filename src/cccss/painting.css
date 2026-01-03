@@ -9,14 +9,29 @@
 }
 
 .frame {
+  position: relative; /* establishes positioning context */
   border: 50px solid black;
   width: 500px;
-  padding: 10px; 
+  padding: 10px;
   margin: 20px auto;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Acorn positioning */
+.acorn-icon {
+  position: absolute;
+  top: 0;                 /* top edge of the frame */
+  left: 50%;              /* horizontal center */
+  transform: translate(-50%, -120%);
+  width: 35px;
+  height: 35px;
+  pointer-events: none;
+  filter:
+    drop-shadow(0 1px 1px rgba(255, 255, 255, 0.25)) /* highlight edge */
+    drop-shadow(0 -1px 1px rgba(0, 0, 0, 0.35));     /* recessed shadow */
 }
 
 /* Shared styles for top and middle color blocks */
@@ -62,3 +77,4 @@
   filter: blur(2px);
   aria-hidden: true;
 }
+

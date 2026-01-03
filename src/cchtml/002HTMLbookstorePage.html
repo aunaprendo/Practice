@@ -49,32 +49,48 @@
 	</nav>
   <main>
       <h1>Mr. Squirrel's Bookstore</h1>
-      <p>Browse our collection of nutty books!</p>
+      <p class="text-bold">Browse our collection of nutty books!</p>
 
-      <div class="card-container">
+      <div class="card-container mb-5">
         <div class="card mb-sm-0" id="Acorn-Almanac">
           <h2>The Acorn Almanac: A Squirrel’s Guide to the Seasons</h2>
           <p>
             A beautifully illustrated, paws-on guide that helps squirrels navigate the year—when to forage, where to stash, and how to remember all their secret hiding spots. Includes weather wisdom, tree-to-tree travel tips, and seasonal snack recommendations approved by elder squirrels.
           </p>
-          <button class="btn btn-secondary">Buy Now</button>
+          <button class="btn btn-secondary">Buy Now
+						<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">
+						  +1
+						  <span class="visually-hidden">nuts added</span>
+						</span>
+					</button>
         </div>
 				<br />
-        <div class="card" id="Zen-Art-Nut-Hoarding">
+        <div class="card mb-5" id="Zen-Art-Nut-Hoarding">
           <h2>Zen and the Art of Nut Hoarding</h2>
           <p>
             A calm, philosophical handbook for the modern squirrel learning to balance ambition with inner peace. Through gentle lessons, cozy woodland scenes, and mindful tail-flick exercises, squirrels discover how to hoard wisely, let go of lost acorns, and live fully in the present branch.
           </p>
-          <button class="btn btn-secondary">Buy Now</button>
+          <button class="btn btn-secondary">Buy Now
+						<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">
+						  +1
+						  <span class="visually-hidden">nuts added</span>
+						</span>
+					</button>
         </div>
       </div>
 
-      <p>Review your selections and continue to checkout.</p>
-
-      <div class="btn-container">
-        <button class="btn btn-secondary" id="view-cart-btn">View Cart</button>
-        <button class="btn btn-secondary" id="checkout-btn">Checkout</button>
-      </div>
+      <p class="text-center">Review your selections and continue to checkout.</p>
+			
+		<!-- Combined button row -->
+		<div class="d-flex justify-content-center gap-3 mt-4">
+		  <form method="get" action="0cart.html">
+		    <button class="btn btn-secondary" id="view-cart-btn">View Cart</button>
+		  </form>
+		
+		  <form method="get" action="0checkOut.html">
+		    <button class="btn btn-secondary" id="checkout-btn">Checkout</button>
+		  </form>
+		</div>
 			
 	</main>
 		
@@ -90,6 +106,29 @@
 	<script>
 	  AOS.init();
 	</script>
+	<script>
+  // Wait for the DOM to be ready
+  document.addEventListener("DOMContentLoaded", () => {
+    // Select all Buy Now buttons
+    const buyButtons = document.querySelectorAll(".card .btn-secondary");
+
+    buyButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Find the badge inside this button
+        const badge = button.querySelector(".badge");
+        if (!badge) return;
+
+        // Show the badge
+        badge.style.display = "inline-block";
+
+        // Hide the badge after 2 seconds
+        setTimeout(() => {
+          badge.style.display = "none";
+        }, 2000); // 2000 milliseconds = 2 seconds
+      });
+    });
+  });
+</script>
 	</body>
 	</html>
 	
