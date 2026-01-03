@@ -27,6 +27,10 @@
 .magimg {
   width: 100%;
   object-fit: cover;
+	filter: grayscale(25%)
+	contrast(100%);
+	border-radius: 1%;
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);	
 }
 
 .maghr {
@@ -58,13 +62,14 @@
 .hero-title {
   text-align: center;
   color: var(--accent-color-brown);
-  font-size: 8em;
 }
 
 .hero-subtitle {
   font-size: 2.4em;
   color: var(--accent-color-brown);
   text-align: center;
+	padding-left: 15%;
+	padding-right: 15%;
 }
 
 .magauthor {

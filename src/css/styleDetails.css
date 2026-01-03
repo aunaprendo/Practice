@@ -1086,6 +1086,14 @@ GENERAL DETAILS
 	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.9);	
 }
 
+.semi-soft-image {
+	width: 100%;
+	filter: grayscale(25%)
+	contrast(100%);
+	border-radius: 5%;
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.9);	
+}
+
 .gap-0 {
   gap: 0 !important;
 }
@@ -1126,7 +1134,7 @@ GENERAL DETAILS
   transform: translate(-50%, -50%) !important;
 }
 
-.badge {
+.cc-badge {
   display: inline-block;
   padding: 0.35em 0.65em;
   font-size: 0.75em;
@@ -1138,20 +1146,20 @@ GENERAL DETAILS
   vertical-align: baseline;
   border-radius: 0.25rem;
 }
-.badge:empty {
+.cc-badge:empty {
   display: none;
 }
 
-.btn .badge {
+.btn .cc-badge {
   position: relative;
   top: -1px;
 }
 
-.rounded-pill {
+.cc-rounded-pill {
   border-radius: 50rem !important;
 }
 
-.bg-danger {
+.bg-cart {
   background-color: var(--accent-color-dteal);
 }
 

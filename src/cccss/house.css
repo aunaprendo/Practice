@@ -6,12 +6,13 @@
   height: 400px;
   background-color: var(--accent-color-lteal);
   border: 3px solid black;
+	z-index: 0;
 }
 
 /* Shared styles for all house parts */
-#house > div {
+#house > div:not(.squirrel) {
+  border: 1px solid black;
   position: absolute;
-  border: 1px solid black; 
 }
 
 #roof {
@@ -34,8 +35,7 @@
   width: 40px;
   height: 100px;
   top: -100px;
-  background-color: var(--accent-color-brown);
-  z-index: -1;
+  background-color: #8D5524;
 }
 
 /* Window shared styling */
@@ -55,3 +55,37 @@
 #window-2 {
   left: 75%;
 }
+
+.squirrel {
+  position: absolute;
+  right: -45px;              
+  bottom: 10px;              /* starting climb position */
+  width: 60px;
+  height: 100px;
+
+background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 85' role='img'>\
+  <circle cx='42' cy='65' r='18' fill='%23C68642' stroke='%23000' stroke-width='1'/>\
+  <ellipse cx='28' cy='36' rx='12' ry='20' fill='%238D5524' stroke='%23000' stroke-width='1'/>\
+	<circle cx='49' cy='23' r='4' fill='%238D5524' stroke='%23000' stroke-width='1'/>\
+  <circle cx='40' cy='15' r='10' fill='%238D5524' stroke='%23000' stroke-width='1'/>\
+  <circle cx='43' cy='15' r='2' fill='%23000' stroke='%23000' stroke-width='1'/>\
+  <circle cx='40' cy='5' r='1.5' fill='%23000' stroke='%23000' stroke-width='1'/>\
+</svg>");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  z-index: 1;
+	
+  animation: squirrel-climb 6s ease-in-out forwards;
+}
+
+@keyframes squirrel-climb {
+  0% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  100% {
+    transform: translateY(-250px) rotate(-3deg);
+  }
+}
+

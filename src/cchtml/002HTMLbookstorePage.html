@@ -58,7 +58,7 @@
             A beautifully illustrated, paws-on guide that helps squirrels navigate the year—when to forage, where to stash, and how to remember all their secret hiding spots. Includes weather wisdom, tree-to-tree travel tips, and seasonal snack recommendations approved by elder squirrels.
           </p>
           <button class="btn btn-secondary">Buy Now
-						<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">
+						<span class="position-absolute top-0 start-100 translate-middle cc-badge cc-rounded-pill bg-cart" style="display: none;">
 						  +1
 						  <span class="visually-hidden">nuts added</span>
 						</span>
@@ -71,7 +71,7 @@
             A calm, philosophical handbook for the modern squirrel learning to balance ambition with inner peace. Through gentle lessons, cozy woodland scenes, and mindful tail-flick exercises, squirrels discover how to hoard wisely, let go of lost acorns, and live fully in the present branch.
           </p>
           <button class="btn btn-secondary">Buy Now
-						<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">
+						<span class="position-absolute top-0 start-100 translate-middle cc-badge cc-rounded-pill bg-cart" style="display: none;">
 						  +1
 						  <span class="visually-hidden">nuts added</span>
 						</span>
@@ -115,7 +115,7 @@
     buyButtons.forEach(button => {
       button.addEventListener("click", () => {
         // Find the badge inside this button
-        const badge = button.querySelector(".badge");
+        const badge = button.querySelector(".cc-badge");
         if (!badge) return;
 
         // Show the badge

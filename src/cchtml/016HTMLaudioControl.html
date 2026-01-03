@@ -50,13 +50,21 @@
 	</nav>	
   <main>
     <h1>Squirrel Controls</h1>
+		<audio id="squirrel-audio" preload="auto">
+		  <source src="../assets/squirrelTalk.mp3" type="audio/mpeg" />
+		  Your browser does not support the audio element.
+		</audio>
 
     <fieldset>
       <legend>Control your level of squirrels</legend>
-
-      <button class="mb-3 btn btn-secondary" type="button" aria-pressed="false">
-        Play Sounds
-      </button>
+		
+			<button 
+			  id="play-btn"
+			  class="mb-3 btn btn-secondary"
+			  type="button"
+			  aria-pressed="false">
+			  Play Sounds
+			</button>
 
       <div class="control-group">
         <label id="volume-label" for="volume-range">
@@ -68,17 +76,21 @@
         </small>
 
         <input
-          type="range"
-          id="volume-range"
-          min="0"
-          max="100"
-          value="50"
-          aria-describedby="volume-description" />
+				  type="range"
+				  id="volume-range"
+				  min="0"
+				  max="100"
+				  value="50"
+				  aria-describedby="volume-description" />
       </div>
+			
+			<button
+			  id="mute-btn"
+			  class="mt-3 btn btn-secondary"
+			  type="button">
+			  Mute Squirrels
+			</button>
 
-      <button class="mt-3 btn btn-secondary" type="button">
-        Mute Squirrels
-      </button>
     </fieldset>
 	</main>
 		
@@ -94,6 +106,43 @@
 	<script>
 	  AOS.init();
 	</script>
+	<script>
+  const audio = document.getElementById("squirrel-audio");
+  const playBtn = document.getElementById("play-btn");
+  const muteBtn = document.getElementById("mute-btn");
+  const volumeRange = document.getElementById("volume-range");
+
+  // Initialize volume from slider
+  audio.volume = volumeRange.value / 100;
+
+  // Play / Pause toggle
+  playBtn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      playBtn.textContent = "Pause Sounds";
+      playBtn.setAttribute("aria-pressed", "true");
+    } else {
+      audio.pause();
+      playBtn.textContent = "Play Sounds";
+      playBtn.setAttribute("aria-pressed", "false");
+    }
+  });
+
+  // Volume control
+  volumeRange.addEventListener("input", () => {
+    audio.muted = false;
+    audio.volume = volumeRange.value / 100;
+  });
+
+  // Mute toggle
+  muteBtn.addEventListener("click", () => {
+    audio.muted = !audio.muted;
+    muteBtn.textContent = audio.muted
+      ? "Unmute Squirrels"
+      : "Mute Squirrels";
+  });
+	
+</script>
 	</body>
 	</html>
 	

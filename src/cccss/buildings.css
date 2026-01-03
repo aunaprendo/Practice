@@ -171,6 +171,7 @@ body {
   border-radius: 50%;
   background-color: var(--window-color1);
   margin: 10%;
+	position: relative;
 }
 
 .fb5 {
@@ -242,4 +243,35 @@ footer {
       #223 100%
     );
   }
+	.fb4-window:nth-child(4)::after {		
+	filter: drop-shadow(0 0 3px rgba(255,255,200,0.8));
+	}
 }
+
+/* ============================================================
+   SQUIRREL
+   ============================================================ */
+/* Tiny squirrel in middle-right window of FB4 */
+.fb4-window:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  inset: 10%;
+  pointer-events: none;
+
+  background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='3 -4 64 64' role='img' aria-label='Squirrel icon'>\
+  <circle cx='42' cy='30' r='18' fill='%23C68642'/>\
+  <ellipse cx='28' cy='36' rx='12' ry='14' fill='%238D5524'/>\
+  <circle cx='24' cy='20' r='10' fill='%238D5524'/>\
+  <circle cx='27' cy='10' r='4' fill='%238D5524'/>\
+  <circle cx='22' cy='17' r='2' fill='%23000'/>\
+  <circle cx='16' cy='22' r='1.5' fill='%23000'/>\
+  <circle cx='20' cy='44' r='5' fill='%238D5524'/>\
+</svg>");
+
+  background-repeat: no-repeat;
+  background-position: center 125%;
+  background-size: contain;
+}
+
+

@@ -58,7 +58,10 @@
       action="/submit"
       aria-describedby="title description"
     >
-      <!-- Name -->
+      
+		<fieldset class="mb-3">
+      <legend>Squirrel Information</legend>
+			<!-- Name -->
 			<div class="form-group input-group mb-3">
 			  <span class="input-group-text" id="name-label">Name of Squirrel:</span>
 			  <input type="text" id="name" class="form-control" placeholder="Peanut Metz" aria-label="Name" required aria-required="true">
@@ -75,8 +78,8 @@
 			  <span class="input-group-text" id="number-label">Age of Squirrel:</span>
 			  <input type="number" id="number" class="form-control" placeholder="Age in weeks" aria-label="age" required aria-required="true" min="5"
           max="555">
-			</div>
-			
+			</div>				
+		</fieldset>
 
       <!-- Attitude -->
       <div class="form-group mb-3">
@@ -92,7 +95,7 @@
 			
       <!-- Radio group -->
       <fieldset class="mb-3">
-        <legend>Did your squirrel accept your nuts?</legend>
+        <legend>Did the squirrel accept your nuts?</legend>
 
         <div class="option form-check">
           <input class="form-check-input" type="radio" name="answer" id="yes" value="yes" />
@@ -155,6 +158,7 @@
           name="comments"
           rows="3"
         ></textarea>
+				<p id="comments-help" class="form-hint"><em>Feel free to share any additional information about your experience.</em></p>
       </div>
 			
       <!-- Submit -->
