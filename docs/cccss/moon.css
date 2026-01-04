@@ -24,7 +24,7 @@
 
 /* Moon orbit container fills system */
 .orbit {
-  position: fixed;
+  position: absolute;
   inset: 20%;
   border-radius: 50%;
   animation: orbit 5s linear infinite;

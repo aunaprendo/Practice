@@ -1,19 +1,8 @@
 /* General Body Styling */
-#greeting-background {
-  background-image: linear-gradient(white 5%, var(--accent-color-lteal));
-	background-size: cover;
-  background-position: center;
-}
-
-#card-title {
-	font-size: 3rem;
-}
-
-/* General Styling rgba(165, 42, 42, .25)*/
-.greeting-card {
-  text-align: center;
+.greeting-card {  
+  background-color: var(--accent-color-lteal);
   box-sizing: border-box;
-  color: var(--text-color-main);
+  color: #333;
 }
 
 /* Card Styling */
@@ -25,6 +14,11 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px gray;
   transition: transform 0.3s ease, background-color 0.3s ease;
+	text-align: center;
+}
+
+#card-title {
+	font-size: 3rem;
 }
 
 .bday-card:hover {
@@ -33,7 +27,7 @@
 }
 
 /* Decorative Icons for H1 */
-.h1::after {
+h1::after {
   content: " 🌰";
 }
 
