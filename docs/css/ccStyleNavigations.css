@@ -59,6 +59,38 @@
 }
 
 /* ========================================
+   BREADCRUMBS
+========================================= */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0;
+  margin-bottom: 1rem;
+  list-style: none;
+		font-size: .9rem;
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.5rem;
+}
+
+@media (max-width: 575px) {
+  .breadcrumb {
+  font-size: .6rem;
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: 0.5rem;
+  color: var(--text-color-main);
+  content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
+}
+.breadcrumb-item.active {
+  color: var(--bg-color-alt);
+}
+
+/* ========================================
    FOOTER
 ========================================= */
 #footer a:hover {
@@ -69,3 +101,4 @@
 .social img:focus-visible {
   box-shadow: 0 0 0 3px var(--accent-color-gold);
 }
+

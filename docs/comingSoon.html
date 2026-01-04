@@ -21,7 +21,7 @@
   />
 </head>
 
-<body id="lost-nut">
+<body id="soon-nut">
   <!-- Main navigation -->
   <nav
     data-include="partials/navBar.html"
@@ -43,15 +43,21 @@
     aria-label="Contact card">
   </aside>
 
-	<main class="shadow-stack d-flex flex-column justify-content-start align-items-center">
+	<main class="shadow-stack d-flex flex-column justify-content-center align-items-start ps-5">
 		
-	  <h1 class="text-bold text-white">OH NO!</h1>
-		<h2 class="lost-nut text-bold text-white">I can't find my nut</h2>
-		<h2 class="lost-nut text-bold text-white">or this page link!</h2>
+	  <h1 class="text-bold text-white">WAIT</h1>
+		<h2 class="text-bold text-white">This page is</h2>
+		<h3 class="text-bold text-white">coming soon</h3>
 	  <form method="get" action="index.html">
-	    <button class="find-nut-btn" type="submit">← Help me look on my home page →</button>
+	    <button class="explore-btn" type="submit">← Until then, explore home</button>
 	  </form>
-			
+	  <button
+	    class="explore-btn"
+	    type="button"
+	    aria-label="Go back to previous page"
+	    onclick="goBack()">
+	    ← or back to previous page
+	  </button>
 	</main>
 	
 		<!-- Footer -->
