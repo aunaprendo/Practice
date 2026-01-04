@@ -1,15 +1,19 @@
 /* General Body Styling */
 #greeting-background {
-  background-image: linear-gradient(rgba(165, 42, 42, .15), brown);
+  background-image: linear-gradient(white 5%, var(--accent-color-lteal));
 	background-size: cover;
   background-position: center;
+}
+
+#card-title {
+	font-size: 3rem;
 }
 
 /* General Styling rgba(165, 42, 42, .25)*/
 .greeting-card {
   text-align: center;
   box-sizing: border-box;
-  color: #333;
+  color: var(--text-color-main);
 }
 
 /* Card Styling */
@@ -24,17 +28,13 @@
 }
 
 .bday-card:hover {
-  background-color: khaki;
+  background-color: var(--accent-color-gold);
   transform: scale(1.05);
 }
 
 /* Decorative Icons for H1 */
-.h1::before {
-  content: "🥳 ";
-}
-
 .h1::after {
-  content: " 🥳";
+  content: " 🌰";
 }
 
 /* Card Message Styling */
@@ -60,26 +60,26 @@
   padding: 10px 20px;
   border-radius: 5px;
   color: white;
-  background-color: midnightblue;
+  background-color: var(--accent-color-dteal);
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
 
 .bday-card-links a:hover {
-  background-color: orangered;
+  background-color: var(--accent-color-brown);
 }
 
 .bday-card-links a:active {
-  background-color: midnightblue;
+  background-color: var(--accent-color-dteal);
 }
 
 .bday-card-links a:focus {
-  outline: 2px solid yellow;
+  outline: 2px solid var(--accent-color-gold);
   outline-offset: 2px;
 }
 
 .bday-card-links a:visited {
-  color: crimson;
+  color: var(--accent-color-lteal);
 }
 
 /* Section Styling */
