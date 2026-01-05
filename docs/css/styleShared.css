@@ -736,6 +736,12 @@ body.contact-open .hamburger {
   margin: 5px;
 }
 
+@media (max-width: 475px) {
+#footer p {
+  font-size: 0.5rem;
+  margin: 5px;
+	}
+}
 /* ========================================
 404 & COMING SOON
 ========================================= */
