@@ -497,8 +497,8 @@ body.contact-open .hamburger {
   display: flex;
   flex-direction: column;
 	justify-content: space-between;
-	padding-top: 80px;
-	padding-bottom: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .side-menu.open {
