@@ -497,8 +497,8 @@ body.contact-open .hamburger {
   display: flex;
   flex-direction: column;
 	justify-content: space-between;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .side-menu.open {
@@ -523,7 +523,6 @@ body.contact-open .hamburger {
 }
 
 #mobile-nav-links li,
-#mobile-nav-links a,
 #mobile-nav-links button {
   margin-left: 0;
   padding-left: 0;
