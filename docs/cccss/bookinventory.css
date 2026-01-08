@@ -36,7 +36,7 @@ table td {
   border-collapse: collapse;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
 	.table-scroll::after {
 	  content: "← swipe →";
 	  position: sticky;

@@ -63,7 +63,7 @@
 	overflow: visible; 
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .bubble {
     max-width: 95%;
   }
@@ -207,7 +207,7 @@ body.menu-open .carousel-btn {
   .project-card { flex-basis: 50%; }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .project-card { flex-basis: 33.3333%; }
 }
 
@@ -291,7 +291,7 @@ body.menu-open .carousel-btn {
   text-align: center;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .card {
     aspect-ratio: 3 / 4;
   }
@@ -300,13 +300,10 @@ body.menu-open .carousel-btn {
 	}
 }
 
-@media (max-width: 575px) {
+@media (max-width: 576px) {
   .card {
     aspect-ratio: 4 / 5;
   }
-}
-
-@media (max-width: 450px) {
 	.card-body .gen-link {
 		font-size: .9rem;
 	}
@@ -401,13 +398,13 @@ body.menu-open .carousel-btn {
     transparent
   );
 }
-@media (min-width: 900px) {
+@media (min-width: 992px) {
   #bookCarousel,
 	#audioCarousel {
     --fade-size: 45px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 576px) {
   #bookCarousel,
 	#audioCarousel	{
     --fade-size: 5px;
@@ -679,32 +676,26 @@ th {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
   .table-responsive-sm {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .table-responsive-md {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 }
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
   .table-responsive-lg {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
 }
-@media (max-width: 1199.98px) {
+@media (max-width: 1200px) {
   .table-responsive-xl {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-@media (max-width: 1399.98px) {
-  .table-responsive-xxl {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }

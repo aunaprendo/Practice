@@ -162,20 +162,18 @@
   grid-column: 1 / -1;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 768px) {
   .mag-image-wrapper {
     grid-template-columns: 1fr;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
   .text-with-images {
     grid-template-columns: 1fr;
   }
-}
-
-@media only screen and (max-width: 550px) {
-  .hero-title {
+	
+	.hero-title {
     font-size: 6em;
   }
   
@@ -196,7 +194,3 @@
   } 
 }
 
-@media only screen and (max-width: 420px) {
-  .hero-title {
-    font-size: 4.5em;
-  }

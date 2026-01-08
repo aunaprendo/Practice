@@ -74,7 +74,7 @@
   padding-left: 0.5rem;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 576px) {
   .breadcrumb {
   font-size: .6rem;
   }

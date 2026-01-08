@@ -41,7 +41,7 @@
    ========================================================================= */
 
 /* Medium screens (tablet) */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .gallery img {
     max-width: 45%;  /* Two images per row */
     height: auto;
@@ -49,7 +49,7 @@
 }
 
 /* Small screens (mobile) */
-@media (max-width: 600px) {
+@media (max-width: 576px) {
   .gallery {
     padding: 10px 5px;
     gap: 10px;

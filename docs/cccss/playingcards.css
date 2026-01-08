@@ -87,7 +87,7 @@
    ========================================================================= */
 
 /* Tablet screens */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .card {
     width: 60px;
     height: 80px;
@@ -104,7 +104,7 @@
 }
 
 /* Mobile screens */
-@media (max-width: 600px) {
+@media (max-width: 576px) {
   #playing-cards {
     gap: 12px;
   }

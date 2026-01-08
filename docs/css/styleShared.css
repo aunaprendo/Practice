@@ -73,7 +73,7 @@ h1 {
   }
 }
 
-@media (max-width: 475px) {
+@media (max-width: 576px) {
   h1 {
     font-size: calc(1.525rem + 4vw);
   }
@@ -216,7 +216,7 @@ a {
   filter: drop-shadow(0 8px 16px rgba(0,0,0,0.45));
 }
 
-@media (min-width: 900px) {
+@media (min-width: 992px) {
 	.semi-soft-image {
 	width: 80%;
   }
@@ -468,7 +468,7 @@ BUTTONS
 }
 
 /* Desktop: hide hamburger */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .hamburger {
     display: none;
   }
@@ -735,7 +735,7 @@ body.contact-open .hamburger {
   margin: 5px;
 }
 
-@media (max-width: 475px) {
+@media (max-width: 576px) {
 #footer p {
   font-size: 0.5rem;
   margin: 5px;

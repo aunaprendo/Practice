@@ -402,16 +402,9 @@ main {
 }
 
 
-@media (max-width: 420px) {
+@media (max-width: 576px) {
   * {
     --squirrel-width: 260px;
     --eye-size: 22px;
-  }
-}
-
-@media (max-width: 360px) {
-  * {
-    --squirrel-width: 220px;
-    --eye-size: 18px;
   }
 }
