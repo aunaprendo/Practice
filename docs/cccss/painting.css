@@ -1,23 +1,17 @@
-.canvas {
-  width: 500px;
-  height: 600px;
-  background-color: var(--accent-color-brown);
-  overflow: hidden; /* Prevent overflow of child blocks */
-  filter: blur(2px);
-  margin: 0 auto;
-  box-sizing: border-box; /* Include padding/border in width/height */
-}
-
 .frame {
-  position: relative; /* establishes positioning context */
-  border: 50px solid black;
-  width: 500px;
-  padding: 10px;
-  margin: 20px auto;
-  box-sizing: border-box;
+  border: clamp(16px, 6vw, 50px) solid black;
+  width: clamp(280px, 90vw, 500px);
+  padding: clamp(6px, 2vw, 10px);
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.canvas {
+  width: 100%;
+  aspect-ratio: 5 / 6;
+  background-color: var(--accent-color-brown);
 }
 
 /* Shared styles for top and middle color blocks */
@@ -32,7 +26,7 @@
 .one {
   width: 90%; 
   max-width: 450px;
-  height: 150px;
+  height: 25%;
   background-color: var(--accent-color-dteal);
   box-shadow: 0 0 3px 3px var(--accent-color-dteal);
   border-radius: 9px;
@@ -44,7 +38,7 @@
 .two {
   width: 95%;
   max-width: 475px;
-  height: 200px;
+  height: 33%;
   background-color: var(--accent-color-lteal);
   box-shadow: 0 0 3px 3px var(--accent-color-lteal);
   border-radius: 8px 10px;

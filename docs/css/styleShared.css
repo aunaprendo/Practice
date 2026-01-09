@@ -623,8 +623,8 @@ body.contact-open .hamburger {
 .business-card {
   width: 300px;
 
-  -webkit-mask-image: url('../assets/gj-mask.svg');
-          mask-image: url('../assets/gj-mask.svg');
+  -webkit-mask-image: url('../assets/logoInitialsHole.svg');
+          mask-image: url('../assets/logoInitialsHole.svg');
 
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
@@ -736,9 +736,15 @@ body.contact-open .hamburger {
 }
 
 @media (max-width: 576px) {
-#footer p {
-  font-size: 0.5rem;
-  margin: 5px;
+	#footer p {
+	  font-size: 0.5rem;
+	  margin: 5px;
+	}
+	#footer a {
+  	font-size: 0.5rem;
+	}
+	#bottom-bar {
+	  padding: 2px 0;
 	}
 }
 /* ========================================
