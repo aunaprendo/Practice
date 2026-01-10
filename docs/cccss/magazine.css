@@ -192,5 +192,9 @@
   .magtext {
     font-size: 1.6em;
   } 
+	
+	.magauthor {
+    line-height: 1.3;
+  }
 }
 

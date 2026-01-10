@@ -45,6 +45,7 @@ main {
   outline: none;
 	z-index: 0;
 	pointer-events: none;
+	transform: translatex(-7%);
 }
 
 .squirrel,

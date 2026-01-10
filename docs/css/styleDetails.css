@@ -16,6 +16,11 @@
 	filter: drop-shadow(0 8px 16px rgba(0,0,0,0.45));
 }
 
+@media (max-width: 576px) {
+	.cir {
+		filter: drop-shadow(0 4px 8px rgba(0,0,0,0.45));
+	}
+}
 .cir.top {
 	width: 90%;
 	transform: translate(-5%, -25%);
@@ -709,6 +714,7 @@ th {
     top: 100%;
     transform: translateY(-100%);
     font-size: 1.25rem;
+		font-weight: var(--weight-bold);
     opacity: 0.6;
     pointer-events: none; 
     background: rgba(0, 0, 0, 0.4);

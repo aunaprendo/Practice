@@ -9,6 +9,17 @@
   line-height: 1.5;
 }
 
+@media (max-width: 576px) {
+  #event-title {
+    font-size: 3rem;
+  }
+	#activities-title,
+	#accommodations-title,
+	#accoutrements-title {
+		font-size: 1.3rem;
+	}
+}
+
 /* Horizontal Rule Styling */
 .hr {
   width: 75%;
