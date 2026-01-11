@@ -1,0 +1,74 @@
+Practice/
+├── docs/
+│   ├── index.html           
+│   ├── 404.html    
+│   ├── resume.html    
+│   ├── ccCSS.html    
+│   ├── ccHTML.html    
+│   ├── ccProjects.html    
+│   ├── comingSoon.html    
+│   ├── learningPath.html    
+│   ├── css/                
+│   │   ├── ccStyleNavigations.css
+│   │   ├── styleBootstrapGrid.css
+│   │   ├── styleDetails.css
+│   │   ├── styleNavigations.css
+│   │   └── styleShared.css
+│   ├── js/                  
+│   │   └── script.js
+│   ├── assets/              
+│   │   ├── acorn.svg
+│   │   ├── alwaysLearning.png
+│   │   ├── comingSoon.jpeg
+│   │   ├── logoInitialsBlack.svg
+│   │   ├── logoInitialsHole.svg
+│   │   ├── logoInitialsWhite.svg
+│   │   ├── logoSquirrel.svg
+│   │   ├── lostNut.jpeg
+│   │   ├── portraitReal.jpeg
+│   │   ├── ccAssets/              
+│   │   │		├── adSquirrelLife.jpeg
+│   │   │		└── ...
+│   │   ├── ccProjectIcons/              
+│   │   │		├── 00.svg
+│   │   │		└── ...
+│   │   ├── certificates/              
+│   │   │		├── EDAC.png
+│   │   │		└── ...
+│   │   ├── indexProjectCards/              
+│   │   │		├── projectCamp.png
+│   │   │		└── ...
+│   │   └── learnContent/              
+│   │   		├── algorithmsLife.jpeg
+│   │   		└── ...
+│   ├── cccss/              
+│   │   ├── 0generalPages.css
+│   │   ├── application.css
+│   │   └── ...
+│   ├─── cchtml/              
+│   │   ├── 0cart.html
+│   │   ├── 0checkOut.html
+│   │   ├── 000HTMLphotoApp.html
+│   │   ├── 0SubmissionRecieved.html
+│   │   ├── 001HTMLrecipie.html
+│   │   ├── 002HTMLbookstorePage.html
+│   │   ├── 003HTMLtravel.html
+│   │   ├── 004HTMLaudioVideoPlayer.html
+│   │   ├── 005HTMLheartIcon.html
+│   │   ├── 006HTMLvideoCompilation.html
+│   │   ├── 007HTMLbrowserList.html
+│   │   ├── 008HTMLtipsPage.html
+│   │   ├── 009HTMLblog.html
+│   │   └── ...
+│   ├─── ccjs/              
+│   │   ├── 000greetingBot.js
+│   │   ├── 001trivia.js
+│   │   └── 002sentenceMaker.js
+│   └──── partials/              
+│       ├── ccNavBar.html
+│       ├── ccSideMenu.html
+│       ├── contactMenu.html
+│       ├── footer.html
+│       ├── navBar.html
+│       └── sideMenu.html
+└── README.md               
