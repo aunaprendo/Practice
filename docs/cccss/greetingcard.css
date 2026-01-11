@@ -1,7 +1,6 @@
 /* General Body Styling */
-.greeting-card {  
-  background-color: var(--accent-color-lteal);
-  box-sizing: border-box;
+#greeting-card {  
+  background-color: var(--accent-color-lteal);  
   color: #333;
 }
 

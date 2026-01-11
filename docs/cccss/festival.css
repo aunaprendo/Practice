@@ -11,12 +11,16 @@
 
 @media (max-width: 576px) {
   #event-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 	#activities-title,
 	#accommodations-title,
 	#accoutrements-title {
-		font-size: 1.3rem;
+		font-size: 1.1rem;
+		font-weight: var(--weight-semibold);
+	}
+	#event-flyer {
+	  width: 75vw;
 	}
 }
 
