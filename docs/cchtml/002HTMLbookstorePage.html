@@ -54,30 +54,32 @@
       <p class="text-bold">Browse our collection of nutty books!</p>
 
       <div class="card-container">
-        <div class="card " id="Acorn-Almanac">
+        <div class="bscard mb-5" id="Acorn-Almanac">
           <h2>The Acorn Almanac: A Squirrel’s Guide to the Seasons</h2>
           <p>
             A beautifully illustrated, paws-on guide that helps squirrels navigate the year—when to forage, where to stash, and how to remember all their secret hiding spots. Includes weather wisdom, tree-to-tree travel tips, and seasonal snack recommendations approved by elder squirrels.
           </p>
-          <button class="btn btn-secondary">Buy Now
-						<span class="position-absolute top-0 start-100 translate-middle cc-badge cc-rounded-pill bg-cart" style="display: none;">
-						  +1
-						  <span class="visually-hidden">nuts added</span>
-						</span>
-					</button>
+				<button class="btn btn-secondary">
+				  Buy Now<span class="position-absolute top-0 start-100 translate-middle cc-badge cc-rounded-pill bg-cart" style="display: none;">
+				    +1
+				    <span class="visually-hidden">nuts added</span>
+				  </span>
+				</button>
         </div>
-				<br />
-        <div class="card" id="Zen-Art-Nut-Hoarding">
+				
+        <div class="bscard" id="Zen-Art-Nut-Hoarding">
           <h2>Zen and the Art of Nut Hoarding</h2>
           <p>
             A calm, philosophical handbook for the modern squirrel learning to balance ambition with inner peace. Through gentle lessons, cozy woodland scenes, and mindful tail-flick exercises, squirrels discover how to hoard wisely, let go of lost acorns, and live fully in the present branch.
           </p>
-          <button class="btn btn-secondary">Buy Now
-						<span class="position-absolute top-0 start-100 translate-middle cc-badge cc-rounded-pill bg-cart" style="display: none;">
-						  +1
-						  <span class="visually-hidden">nuts added</span>
-						</span>
+					
+					<button class="btn btn-secondary">
+					  Buy Now<span class="position-absolute top-0 start-100 translate-middle cc-badge cc-rounded-pill bg-cart" style="display: none;">
+					    +1
+					    <span class="visually-hidden">nuts added</span>
+					  </span>
 					</button>
+					
         </div>
       </div>
 
@@ -112,7 +114,7 @@
   // Wait for the DOM to be ready
   document.addEventListener("DOMContentLoaded", () => {
     // Select all Buy Now buttons
-    const buyButtons = document.querySelectorAll(".card .btn-secondary");
+    const buyButtons = document.querySelectorAll(".bscard .btn-secondary");
 
     buyButtons.forEach(button => {
       button.addEventListener("click", () => {

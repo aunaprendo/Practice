@@ -35,6 +35,16 @@
   white-space: nowrap !important;
   border: 0 !important;
 }
+.bscard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-color: var(--bg-color-main);
+  background-clip: border-box;
+  border: 2px dotted rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
 
 
 

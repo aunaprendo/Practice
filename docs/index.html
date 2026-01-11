@@ -19,6 +19,12 @@
 </head>
 
 <body>
+	<div id="loader">
+	  <div id="loader-content">
+	    <div id="loader-circle"></div>
+	    <div id="loader-percentage">0%</div>
+	  </div>
+	</div>
 	<!-- Main navigation -->
   <nav 
     data-include="partials/navBar.html" 
@@ -184,6 +190,27 @@
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById('loader');
+  const percent = document.getElementById('loader-percentage');
+  let counter = 0;
+
+  // Increment percentage up to 100
+  const interval = setInterval(() => {
+    counter++;
+    percent.textContent = counter + '%';
+    if (counter >= 100) {
+      clearInterval(interval);
+      // Wait a tiny bit, then fade out
+      loader.classList.add('fade-out');
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 500);
+    }
+  }, 20); // 20ms per 1% → ~2 seconds total
+});
 </script>
 </body>
 </html>

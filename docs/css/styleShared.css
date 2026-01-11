@@ -155,6 +155,11 @@ h6 {
   text-decoration: underline;
 }
 
+.pre-wrap {
+  white-space: pre-wrap;     
+  word-break: break-word; 
+}
+
 /* ========================================
    LINKS
 ========================================= */
