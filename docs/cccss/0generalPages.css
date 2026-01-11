@@ -19,7 +19,7 @@ main {
 #submission-good {
 	background:
 	linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
-    url(https://image2url.com/r2/default/images/1767294530082-b16655c5-f67c-4dc6-9535-c6f037698fbf.jpeg);
+    url(../assets/ccAssets/submissionGood.jpeg);
   background-size: cover;
   background-position: center;
 }	
@@ -27,7 +27,7 @@ main {
 #shopping-cart {
 	background:
 	linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
-    url(https://image2url.com/r2/default/images/1767382615218-4e4c2420-db9f-498b-854a-429672f627ff.jpeg);
+    url(../assets/ccAssets/shopBasket.jpeg);
   background-size: cover;
   background-position: center;
 }	
@@ -35,7 +35,7 @@ main {
 #check-out {
 	background:
 	linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.4)),
-    url(https://image2url.com/r2/default/images/1767383139784-3f9ee35c-3d46-407b-9466-4dba491d2f6a.jpeg);
+    url(../assets/ccAssets/checkOut.jpeg);
   background-size: cover;
   background-position: center;
 }	

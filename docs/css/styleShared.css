@@ -173,6 +173,12 @@ a {
 	font-weight: var(--weight-bold);
 }
 
+.gen-link-white {
+  text-decoration: none;
+  color: var(--text-color-alt);
+	font-weight: var(--weight-bold);
+}
+
 .gen-link-cc {
   text-decoration: none;
   color: var(--accent-color-brown);
@@ -180,12 +186,14 @@ a {
 }
 
 .gen-link:hover,
-.gen-link-cc:hover {
+.gen-link-cc:hover,
+.gen-link-white {
   color: var(--text-color-main);
 }
 
 .gen-link:visited,
-.gen-link-cc:visited {
+.gen-link-cc:visited,
+.gen-link-white {
   color: var(--accent-color-dgray);
 }
 
@@ -196,6 +204,19 @@ a {
   display: block;
   margin: 0 auto;
   max-width: 100%;
+	border-radius: 1%;
+}
+
+.medium-photo {
+  display: block;
+  max-width: 80%;
+	border-radius: 2%;
+}
+
+@media (max-width: 576px) {
+	.medium-photo {
+	  max-width: 100%;
+	}
 }
 
 .soft-image {
@@ -757,8 +778,8 @@ body.contact-open .hamburger {
 	  padding: 1px 0;
 	}
 	 .footer-icon {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
   .social {
     gap: 0.75rem;
@@ -770,8 +791,8 @@ body.contact-open .hamburger {
 ========================================= */
 #lost-nut {
 	background:
-	linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.4)),
-    url(https://image2url.com/r2/default/images/1767491685513-8b986582-f332-43ed-8ab5-36dd02088a6e.jpeg);
+	linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.2)),
+    url(../assets/lostNut.jpeg);
   background-size: cover;
   background-position: center;
 	height: 100%;
@@ -780,7 +801,7 @@ body.contact-open .hamburger {
 #soon-nut {
 	background:
 	linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.4)),
-    url(https://image2url.com/r2/default/images/1767535697533-9eb41b5b-e5f0-4aa2-8088-faab290b06a8.jpeg);
+    url(../assets/comingSoon.jpeg);
   background-size: cover;
   background-position: center;
 	height: 100%;

@@ -192,25 +192,42 @@
   AOS.init();
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const loader = document.getElementById('loader');
-  const percent = document.getElementById('loader-percentage');
-  let counter = 0;
+(() => {
+  const loader = document.getElementById("loader");
+  const percent = document.getElementById("loader-percentage");
 
-  // Increment percentage up to 100
-  const interval = setInterval(() => {
-    counter++;
-    percent.textContent = counter + '%';
-    if (counter >= 100) {
-      clearInterval(interval);
-      // Wait a tiny bit, then fade out
-      loader.classList.add('fade-out');
-      setTimeout(() => {
-        loader.style.display = 'none';
-      }, 500);
-    }
-  }, 20); // 20ms per 1% → ~2 seconds total
-});
+  let progress = 0;
+  let shown = false;
+
+  // Only show loader if page takes longer than 300ms
+  const showDelay = setTimeout(() => {
+    shown = true;
+    loader.classList.add("active");
+
+    // Fake progress ONLY while waiting
+    const progressInterval = setInterval(() => {
+      progress = Math.min(progress + Math.random() * 8, 90);
+      percent.textContent = Math.floor(progress) + "%";
+    }, 100);
+
+    loader._interval = progressInterval;
+  }, 300);
+
+  // When everything is ACTUALLY loaded
+  window.addEventListener("load", () => {
+    clearTimeout(showDelay);
+
+    if (!shown) return; // loader never shown → do nothing
+
+    clearInterval(loader._interval);
+    percent.textContent = "100%";
+
+    loader.classList.add("fade-out");
+    setTimeout(() => {
+      loader.remove();
+    }, 500);
+  });
+})();
 </script>
 </body>
 </html>

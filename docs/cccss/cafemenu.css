@@ -2,7 +2,7 @@
 #coffee-background {
   background:
     linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
-    url("https://image2url.com/r2/default/images/1767387142413-c1eea4ad-3ccf-4a90-818a-b93ecabe3881.jpeg");
+    url("../assets/ccAssets/cafeNuts.jpeg");
   background-size: cover;
   background-position: center;
 }

@@ -25,7 +25,7 @@
 .cir.top {
 	width: 90%;
 	transform: translate(-5%, -25%);
-  background-image: url("https://image2url.com/images/1765240145191-1aa05709-198e-4f42-aa03-3216d05f8af2.jpeg"); 
+  background-image: url("../assets/portraitReal.jpeg"); 
   background-size: cover;  
   background-position: center;
 }
@@ -72,6 +72,17 @@
 /* ========================================
    HOME PAGE: CIRCLE LOADER
 ========================================= */	
+#loader {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#loader.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 #loader-circle {
   width: 120px;
   height: 120px;
