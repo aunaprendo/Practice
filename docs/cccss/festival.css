@@ -1,17 +1,16 @@
 /* General Body Styling */
 #event-flyer {
-  padding: auto;
   margin: auto;
   min-height: calc(100vh - 100px);
   text-align: center;
-  width: 50vw;
+  width: 75%;
   box-sizing: border-box; 
   line-height: 1.5;
 }
 
 @media (max-width: 576px) {
   #event-title {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
   }
 	#activities-title,
 	#accommodations-title,
@@ -20,7 +19,7 @@
 		font-weight: var(--weight-semibold);
 	}
 	#event-flyer {
-	  width: 75vw;
+	  width: 95%;
 	}
 }
 
@@ -57,7 +56,7 @@
 .section2,
 .section3 {
   flex: 1;
-  padding: 20px;
+  padding: 10px;
   margin: 0;
   box-sizing: border-box;
   background-color: #f9f9f9; 

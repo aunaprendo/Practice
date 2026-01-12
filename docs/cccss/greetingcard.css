@@ -2,6 +2,7 @@
 #greeting-card {  
   background-color: var(--accent-color-lteal);  
   color: #333;
+	max-height: 100vh;
 }
 
 /* Card Styling */
