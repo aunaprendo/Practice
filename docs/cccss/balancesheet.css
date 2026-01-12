@@ -40,6 +40,12 @@ html {
   font-size: 1.2em;
 }
 
+thead th {
+  text-align: right;
+  font-weight: bold;
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
+}
+
 /* ============================================
    Layout Section Container
    ============================================ */
@@ -86,6 +92,7 @@ table {
   width: 100%;
   position: relative;
   margin-top: 3rem;
+  table-layout: fixed;
 }
 
 /* Table captions positioned above */
@@ -98,15 +105,16 @@ table caption {
   left: 0.5rem;
 }
 
-/* Column widths */
-tbody td {
-  white-space: nowrap;
-}
-
+thead th:first-child,
 tbody th {
-  width: calc(100% - 12rem);
+  width: 46%;
 }
 
+/* Year columns */
+thead th:not(:first-child),
+tbody td {
+  width: 18%;
+}
 /* ============================================
    Total Row Styling
    ============================================ */
