@@ -187,14 +187,29 @@ a {
 
 .gen-link:hover,
 .gen-link-cc:hover,
-.gen-link-white {
+.gen-link-white:hover {
   color: var(--text-color-main);
 }
 
 .gen-link:visited,
-.gen-link-cc:visited,
-.gen-link-white {
+.gen-link-cc:visited {
   color: var(--accent-color-dgray);
+}
+
+.gen-link-white:visited {
+  color: var(--accent-color-lgray);
+}
+
+#acknowledgments {
+  text-decoration: none;
+  color: var(--accent-color-lgray);
+	font-weight: var(--weight-small);
+	font-size: .8rem;
+	text-align: center;
+}
+
+#acknowledgments:hover {
+  text-decoration: underline;
 }
 
 /* ========================================

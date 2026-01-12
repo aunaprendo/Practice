@@ -2,14 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Acknowledgments | Georgia Metz</title>
-
-  <!-- Shared styles -->
-  <link rel="stylesheet" href="./css/styleShared.css" />
+	
+	 <!-- Stylesheets -->
+	<link rel="stylesheet" href="css/styleShared.css" />
+	<link rel="stylesheet" href="css/styleNavigations.css" />
+	<link rel="stylesheet" href="css/styleBootstrapGrid.css" />
+	<link rel="stylesheet" href="css/styleDetails.css" />
+	
+  <!-- Primary Meta Tags -->
+  <title>Georgia Jean - Acknowledgments</title>
+  <meta name="title" content="Portfolio" />
+  <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
 
 <body>
+	
+	<!-- Main navigation -->
+  <nav 
+    data-include="partials/navBar.html" 
+    role="navigation" 
+    aria-label="Primary navigation">
+  </nav>
+	
+	<!-- Side menu -->
+  <aside 
+    data-include="partials/sideMenu.html" 
+    role="navigation" 
+    aria-label="Side menu">
+  </aside>
+	
+	<!-- Contact menu -->
+  <aside 
+    data-include="partials/contactMenu.html" 
+    role="contact" 
+    aria-label="Contact Card">
+  </aside>
+	
   <main class="section">
     <header class="page-header">
       <h1>Acknowledgments</h1>
@@ -67,7 +97,7 @@
           <strong>Git & GitHub</strong> — Version control and deployment via GitHub Pages
         </li>
         <li>
-          <strong>Textastic & Working Copy</strong> — Development environment
+          <strong>Textastic & Working Copy</strong> — Development environments
         </li>
       </ul>
     </section>
@@ -117,7 +147,17 @@
         If you believe a credit is missing or would like clarification on a specific project,
         please feel free to contact me.
       </p>
-    </footer>
-  </main>
+
+	</main>
+	
+		<!-- Footer -->
+  <footer
+    data-include="partials/footer.html" 
+    role="contentinfo" 
+    aria-label="Footer">
+  </footer>
+	
+  <script src="js/script.js"></script>
+	
 </body>
 </html>
