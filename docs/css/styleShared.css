@@ -218,19 +218,19 @@ a {
 .feature-photo {
   display: block;
   margin: 0 auto;
-  max-width: 100%;
+  width: 100%;
 	border-radius: 1%;
 }
 
 .medium-photo {
   display: block;
-  max-width: 80%;
+  width: 80%;
 	border-radius: 2%;
 }
 
 @media (max-width: 576px) {
 	.medium-photo {
-	  max-width: 100%;
+	  width: 100%;
 	}
 }
 
