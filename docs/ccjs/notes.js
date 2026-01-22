@@ -1,19 +1,31 @@
 
 
 
-You should initialize the five variables fortune1, fortune2, fortune3, fortune4, and fortune5 with a string value of your choice. You can use the below options if you like:
+records - an object containing several individual albums
+id - a number representing a specific album in the records object
+prop - a string representing the name of the album’s property to update
+value - a string containing the information used to update the album’s property
+Objective: Fulfill the user stories below and get all the tests to pass to complete the lab.
 
-"Your cat will look very cuddly today."
-"The weather will be nice tomorrow."
-"Be cautious of your new neighbors."
-"You will find a new hobby soon."
-"It would be wise to avoid the color red today."
-You should select a random number between 1 and 5, inclusive, and assign it to the variable randomNumber.
-You should create a selectedFortune variable and assign the appropriate fortune based on these rules:
 
-If randomNumber is 1, assign the value of fortune1 to selectedFortune.
-If randomNumber is 2, assign the value of fortune2 to selectedFortune.
-If randomNumber is 3, assign the value of fortune3 to selectedFortune.
-If randomNumber is 4, assign the value of fortune4 to selectedFortune.
-If randomNumber is 5, assign the value of fortune5 to selectedFortune.
-You should log the selectedFortune to the console.
+
+Your function must always return the entire records object.
+If value is an empty string, delete the given prop property from the album.
+
+
+If prop isn't tracks and value isn't an empty string, assign the value to that album's prop.
+If prop is tracks and value isn't an empty string, but the album doesn't have a tracks property, create an empty array and add value to it.
+If prop is tracks and value isn't an empty string, add value to the end of the album's existing tracks array.
+function updateRecords(records, id, prop, value) {
+	if (value=="") {
+		delete prop;
+	} else if (prop != id.tracks && value != "") {
+		id.prop == value;
+	} else if (prop == id.tracks && value != "" && hasOwnProperty(id.tracks) == false) {
+		let id.tracks = [];
+	  id.tracks.push(item1, item2);
+	} else if (prop == id.tracks && value != "") {
+	  id.tracks.push(item1, item2)
+	}
+	return records
+}
