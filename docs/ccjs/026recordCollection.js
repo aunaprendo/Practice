@@ -20,11 +20,23 @@ const recordCollection = {
 
 
 function updateRecords(records, id, prop, value) {
-	if (value == null) {
-		delete records.id.prop; 
+	if (value === "") {
+		delete records[id][prop];
+	}
+	else if (prop !== "tracks") {
+		records[id][prop] = value;
+	}
+	else if (!records[id][prop]) {
+		records[id][prop] = [];
+		records[id][prop].push(value);
+	} 
+	else { 
+		records[id][prop].push(value);
 	}
 	return records;
 }
 
-let test = updateRecords(recordCollection, 2548, "artist", "");
+let test = updateRecords(recordCollection, 1245, "tracks", "squirrel");
 console.log(test);
+
+
