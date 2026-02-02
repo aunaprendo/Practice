@@ -59,10 +59,8 @@ main {
 .paw,
 .foot,
 .belly {
-  /* sizes use percentages of squirrel width where possible */
 }
 
-/* -- Tail (behind the body) --------------------------------------------- */
 .tail {
   position: absolute;
   right: -16%;
@@ -135,7 +133,7 @@ main {
   bottom: 6%;
   background: linear-gradient(180deg, var(--color-fur-1), var(--color-fur-2));
   border-radius: 48% 48% 42% 42% / 52% 52% 48% 48%;
-  z-index: 3; /* above tail */
+  z-index: 3;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -286,7 +284,6 @@ main {
   z-index: 8;
 }
 
-/* shine — small white highlight */
 .shine {
   position: absolute;
   left: 12%;
