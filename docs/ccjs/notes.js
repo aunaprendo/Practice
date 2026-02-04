@@ -1,13 +1,11 @@
-You should have a function named uniteUnique.
-The uniteUnique function should accept two or more arrays as arguments.
-The function should return a new array that contains unique values from the argument arrays, in the order they are first found in the arguments. For example, an input like [1, 2, 4], [2, 3, 5] would have an output of [1, 2, 4, 3, 5].
-• Function logArgs(...args) {
-  for (const arg of args) {
-    console.log(arg);
-  }
-}
-logArgs(1, 2, 3);
-// result:
-// 1
-// 2
-// 3
+
+
+
+
+
+
+
+
+Your function should return a string which represents a randomly generated password. You should use the following string and different Math methods to help you return a new string with random characters in it: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*().
+
+You should define a variable called password and assign it the result of calling the generatePassword function with a numeric argument that represents the desired password length.
