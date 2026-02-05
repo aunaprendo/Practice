@@ -4,8 +4,9 @@
 
 
 
+For example, for an array like [1, 1, 1, 2, 1, 1, 1] and a test function function(n) {return n === 2}, the first element that is acceptable for this is the one at index 3, so all the elements before that need to be discarded, and the output should be the remaining elements [2, 1, 1, 1].
 
-
-Your function should return a string which represents a randomly generated password. You should use the following string and different Math methods to help you return a new string with random characters in it: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*().
-
-You should define a variable called password and assign it the result of calling the generatePassword function with a numeric argument that represents the desired password length.
+You should have a dropElements function that accepts an array (arr) and a function (func) as arguments.
+The dropElements function should iterate through the array and remove elements starting from the first one until func returns true for an element.
+The dropElements function should return the remaining elements in the array if the condition is met.
+If the condition is never satisfied, it should return an empty array.
