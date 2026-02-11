@@ -1,6 +1,5 @@
-
-
-
-You should have a sumPrimes function that accepts a number as an argument.
-The sumPrimes function should return the sum of all prime numbers less than or equal to the provided number.
-If the input number is less than 2, the function should return 0.
+You should have a function named steamrollArray.
+The steamrollArray function should accept one argument: a nested array.
+The function should flatten the nested array, accounting for varying levels of nesting.
+Your solution should not use the Array.prototype.flat() or Array.prototype.flatMap() methods.
+Global variables should not be used.
