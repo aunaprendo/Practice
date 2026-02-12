@@ -1,5 +1,6 @@
-You should have a function named steamrollArray.
-The steamrollArray function should accept one argument: a nested array.
-The function should flatten the nested array, accounting for varying levels of nesting.
-Your solution should not use the Array.prototype.flat() or Array.prototype.flatMap() methods.
-Global variables should not be used.
+
+
+
+You should have a function named truthCheck.
+The truthCheck function takes two arguments: an array of objects and a string representing a property name found in those objects.
+The function should check if the property with the name equal to the second argument has a truthy value in all the objects of the array, and return true if it has, and false otherwise.
