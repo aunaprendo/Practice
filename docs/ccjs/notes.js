@@ -1,33 +1,10 @@
-const storyContainer = document.querySelector(".story-container");
+User Stories:
 
-const scaryStoryBtn = document.getElementById("scary-btn");
-const funnyStoryBtn = document.getElementById("funny-btn");
-const adventureStoryBtn = document.getElementById("adventure-btn");
-
-const resultParagraph = document.getElementById("result");
-
-const storyObj = {
-  scary: {
-    story: `In the dark woods, a group of friends stumbled upon an old, abandoned cabin. They enter the cabin and awaken something malevolent that had been dormant for centuries.`,
-    borderColor: "#ee4b2b",
-  },
-  funny: {
-    story: `During a camping trip, Mark decided to show off his culinary skills by cooking dinner over an open fire. However, his attempt caused him to burn the dinner as well as his eyebrows off.`,
-    borderColor: "#f1be32",
-  },
-  adventure: {
-    story: `Lost in the heart of the Amazon rain forest, Sarah and Jake stumbled upon an ancient temple. They braved deadly traps and encountered strange wildlife, all while deciphering cryptic clues left behind by a mysterious civilization.`,
-    borderColor: "#acd157"
-  },
-};
-
-function displayStory(genre) {
-	if (storyObj.hasOwnProperty(genre)) {
-		return storyObj[prop]["story"];
-	}
-}
-
-console.log(displayStory("scary"));
-
-hasOwnProperty() 
-
+You should have an unordered list with three items.
+The unordered list should have the class item-list.
+The three list items should contain the item name followed by a button element with the class favorite-icon.
+The button element should contain the code &#9825; initially to represent an empty heart.
+When a button element containing a heart is clicked, you should add a class named filled to the clicked button if it's not already present, and remove it, if it is.
+You should have a class selector that targets the filled class and sets some CSS properties.
+When a button element containing a heart is clicked, the heart symbol should toggle between &#9825; (empty heart) and &#10084; (filled heart), depending on its current state.
+Note: Be sure to link your JavaScript file in your HTML. (Ex. )

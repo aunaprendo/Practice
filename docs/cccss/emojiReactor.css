@@ -1,24 +1,7 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-:root {
-  --light-grey: #efefef;
-  --white: #ffffff;
-  --very-dark-blue: #0a0a23;
-  --light-purple: #a78bfa;
-  --very-light-purple: #c4b5fd;
-  --purple: #8b5cf6;
-}
-
-body {
-  background-color: var(--very-dark-blue);
-  color: var(--light-grey);
-  font-family: sans-serif;
+#body {
+  background-color: black;
+  color: var(--text-color-alt);
 }
 
 main {
@@ -26,28 +9,28 @@ main {
   padding: 10px;
 }
 
-.btn-container,
+.emoji-btn-container,
 button {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.btn-container {
+.emoji-btn-container {
   flex-direction: column;
 }
 
 .emoji-btn {
   width: 70%;
   cursor: pointer;
-  color: var(--white);
-  background-color: var(--light-purple);
+  color: var(--text-color-alt);
+  background-color: var(--accent-color-brown);
   background-image: linear-gradient(
     to bottom,
-    var(--very-light-purple),
-    var(--light-purple)
+    var(--accent-color-gold),
+    var(--accent-color-brown)
   );
-  border: 3px solid var(--purple);
+  border: 3px solid var(--accent-color-brown);
   border-radius: 8px;
   padding: 10px;
   font-size: 1.5rem;
@@ -62,7 +45,7 @@ button {
 }
 
 .emoji-btn:hover {
-  background-color: var(--purple);
+  background-color: var(--accent-color-gold);
   background-image: none;
 }
 
