@@ -1,27 +1,8 @@
 
 
 
+Within your new function, you need to filter the instruments depending on the selected category.
 
-When a button element containing a heart is clicked, you should add a class named filled to the clicked button if it's not already present, and remove it, if it is.
-You should have a class selector that targets the filled class and sets some CSS properties.
-When a button element containing a heart is clicked, the heart symbol should toggle between &#9825; (empty heart) and &#10084; (filled heart), depending on its current state.
-Note: Be sure to link your JavaScript file in your HTML. (Ex. )
+Filter out items from instrumentsArr and make your function return an array containing the instrument objects with the same category of instrumentCategory. If instrumentCategory is equal to all, return the whole instrumentsArr array.
 
-
-
-const btn = document.getElementById("test");
-
-btn.addEventListener("click", () => btn.classList.toggle("filled"));
-
-
-
-
-
-function check() {
-	if (btn.classList.contains("filled")) {
-	btn.classList.remove("filled")
-}
-btn.classList.add("filled")
-}
-
-btn.addEventListener("click", () => check());
+Then, remove the console.log from the callback of your event listener and log the result of calling instrumentCards with the selected option from the dropdown menu as argument so you can test your function selecting different category options.
