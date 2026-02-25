@@ -1,5 +1,5 @@
-body {
-  background-color: var(--accent-color-lgray);
+#body {
+  background-color: var(--accent-color-gold);
   text-align: center;
 }
 
@@ -34,7 +34,7 @@ body {
 }
 
 .player-card {
-  background-color: var(--accent-color-dgray);
+  background-color: var(--accent-color-brown);
 	color: var(--text-color-alt);
   padding: 1rem;
   margin: 1.2rem;

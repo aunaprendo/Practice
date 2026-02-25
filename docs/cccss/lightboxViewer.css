@@ -52,7 +52,7 @@
 
 /* Gallery Images */
 .gallery img {
-  width: 30%;              
+  width: 50%;              
   max-width: 350px;         
   height: auto;             
   object-fit: cover;        

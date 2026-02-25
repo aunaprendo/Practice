@@ -64,3 +64,4 @@ playersPosition.addEventListener("change", () => {
 });
 
 
+players.innerHTML = playerCards(playersPosition.value)

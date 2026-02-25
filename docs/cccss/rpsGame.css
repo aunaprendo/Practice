@@ -1,5 +1,5 @@
-body {
-  background-color: var(--accent-color-lgray);
+#body {
+  background-color: var(--accent-color-gold);
   text-align: center;
   color: var(--text-color-main);
 }
@@ -8,7 +8,7 @@ body {
   padding: 10px 0;
   margin: auto;
   border-radius: 15px;
-  border: 5px solid var(--accent-color-gold);
+  border: 5px solid var(--accent-color-brown);
   background-color: var(--text-color-alt);
   color: var(--text-color-main);
 }
