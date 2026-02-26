@@ -11,10 +11,10 @@
 	<link rel="stylesheet" href="../css/styleBootstrapGrid.css" />
 	<link rel="stylesheet" href="../css/styleDetails.css" />
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link rel="stylesheet" href="../cccss/planetTabs.css" />
+	<link rel="stylesheet" href="../cccss/noteApp.css" />
 	
   <!-- Primary Meta Tags -->
-  <title>Planets Facts</title>
+  <title>Note taking app</title>
   <meta name="title" content="Portfolio" />
   <meta name="description" content="Portfolio of a lifelong learner and analytical problem solver" />
 </head>
@@ -49,32 +49,19 @@
 	  </ol>
 	</nav>	
   <main id="main">
-	
-    <div class="tabs">
-      <h2 id="tabs-title">Squirrels</h2>
-      <div role="tablist" aria-labelledby="tabs-title">
-        <button role="tab" aria-controls="panel-earth" aria-selected="true" id="tab-earth">Eastern Gray Squirrel</button>
-        <button role="tab" aria-controls="panel-saturn" aria-selected="false" id="tab-saturn">Red Squirrel</button>
-        <button role="tab" aria-controls="panel-mars" aria-selected="false" id="tab-mars">Indian Giant Squirrel</button>
-      </div>
+		
+    <p class="helper-text">Click or tap on the card to edit your note.</p>
 
-      <div id="panel-earth" role="tabpanel" aria-labelledby="tab-earth">
-        <p>
-          The Eastern Gray Squirrel is a highly adaptable tree squirrel known for sharp vision, strong depth perception, and an excellent sense of smell that helps it relocate buried nuts months later. Its sensitive hearing and wide field of view make it very alert to predators.
-        </p>
-      </div>
-      <div id="panel-saturn" role="tabpanel" aria-labelledby="tab-saturn" hidden>
-        <p>
-          The Red Squirrel is smaller, territorial, and extremely vocal. It relies heavily on keen hearing to detect intruders, a strong sense of smell to manage food caches, and sensitive whiskers to navigate tight tree spaces.
-        </p>
-      </div>
-      <div id="panel-mars" role="tabpanel" aria-labelledby="tab-mars" hidden>
-        <p>
-          The Indian Giant Squirrel is a large, colorful forest squirrel with excellent vision and depth perception for high-canopy movement. It depends on strong balance for long leaps between trees and sharp hearing to detect aerial predators.
-        </p>
-      </div>
+    <div id="note" class="note" contenteditable="true" aria-label="Note editor">
+		The first light of morning spilled across the park, and three squirrels were already awake. They chased each other along the top of a wooden fence, tails flicking like little flags of mischief. One carried an acorn far too big for his mouth, determined to prove that ambition matters more than size.
+		
+		By midday, they had declared the tallest oak tree their kingdom. From that leafy tower, they studied the world below—dogs on leashes, joggers with headphones, children dropping crumbs without noticing. To everyone else it was an ordinary park. To the squirrels, it was a land of strategy, timing, and opportunity.
+		
+		As evening settled in, they buried their treasures beneath the cool earth, trusting their memory and a bit of luck. Curled together in a hollow branch, they listened to the wind move through the leaves. Tomorrow would bring new races, new risks, and probably another acorn that was just slightly too big—but that had never stopped them before.
     </div>
-	
+
+    <div id="status" aria-live="polite"></div>
+		
   </main>
 		
 	<!-- Footer -->
@@ -84,7 +71,7 @@
 	    aria-label="Footer">
 	  </footer>
 		
-		<script src="../ccjs/069planetTabs.js"></script>	
+		<script src="../ccjs/070noteApp.js"></script>
 	  <script src="../js/script.js"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script>

@@ -1,8 +1,14 @@
+const tabs = document.querySelectorAll('[role="tab"]');
+const panels = document.querySelectorAll('[role="tabpanel"]');
 
-let tabs = document.querySelectorAll()
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.setAttribute("aria-selected", "false"));
+    panels.forEach(p => p.hidden = true);
 
-Create a variable called tabs and assign it the result of querying for all elements with the role attribute set to tab.
-
-Then, create a variable called panels and assign it the result of querying for all elements with the role attribute set to tabpanel.
-
-Remember that you can use the querySelectorAll method to select multiple elements at once
+    tab.setAttribute("aria-selected", "true");
+    const associatedPanel = tab.getAttribute("aria-controls");
+    const panel = document.getElementById(associatedPanel);
+panel.hidden = false;
+  });
+});

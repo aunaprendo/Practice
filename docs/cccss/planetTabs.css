@@ -14,10 +14,14 @@
 
 [role="tab"][aria-selected="true"] {
   background: #fff;
-  border-bottom: 2px solid dodgerblue;
+  border-bottom: 2px solid var(--accent-color-brown);
 }
 
 [role="tabpanel"] {
   border: 1px solid #ccc;
   padding: 1rem;
+}
+
+button {
+	color: var(--accent-color-brown);
 }
