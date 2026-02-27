@@ -1,19 +1,20 @@
-body {
-  margin: 0;
-  font-family: sans-serif;
+#body {
   transition: background 0.3s, color 0.3s;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
+
+#message {
+  font-size: 3em;
 }
 
-li {
-  list-style-type: none;
+.theme-squirrels {
+	background: var(--accent-color-gold);
 }
 
-#status {
-  text-align: center;
-  min-height: 20px;
+.theme-dinosaurs {
+	background: var(--accent-color-dteal);
+}
+
+.theme-trees {
+	background: var(--accent-color-lteal);
 }
