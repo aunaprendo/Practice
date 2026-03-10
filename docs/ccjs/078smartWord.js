@@ -1,43 +1,35 @@
 function myReplace(string, wordremove, wordReplace) {
- const upperCase = /^[A-Z]/;
- const lowerCase = /^[a-z]/;
+ const upperCase = /^([A-Z])/;
+ const lowerCase = /^([a-z])/;
  
  if (
- (wordremove[0]===upperCase && wordReplace[0]===upperCase) |
- (wordremove[0]===lowerCase && wordReplace[0]===lowerCase)
+ (upperCase.test(wordremove[0]) && upperCase.test(wordReplace[0])) ||
+ (lowerCase.test(wordremove[0]) && lowerCase.test(wordReplace[0]))
  ){
 	 let updatedString = string.replace(wordremove, wordReplace);
 	 return updatedString;
  } else {
- 	return "no";
- };
+	let correctedReplace = wordReplace.replace(/(^[a-z])(\w*)|(^[A-Z])(\w*)/,
+    (_, firstLower, restLower, firstUpper, restUpper) =>
+      firstLower ? `${firstLower.toUpperCase()}${restLower}` : `${firstUpper.toLowerCase()}${restUpper}`
+  );
+	let updatedString = string.replace(wordremove, correctedReplace);
+	 return updatedString;
+ }
 };
 
-console.log(myReplace("This has a spellngi error", "spellngi", "spelling"));
+console.log(myReplace("This has a Spellngi error", "Spellngi", "spelling"));
  
- 
- 
- wordReplace.replace((/^([aeiou]\w*)|(^[^aeiou]+)(\w*)/i,
-    (_, vowelWord, consonants, rest) =>
-      vowelWord ? `${vowelWord}way` : `${rest}${consonants}ay`
-  );
- 
- 
- if (wordremove[0]===upperCase && wordReplace[0]===lowerCase &&) {
- 	wordReplaceCase = 
- }
- updatedString = string.replace(wordremove, wordReplace)
- return updatedString;
 
 
+function myReplace(string, wordremove, wordReplace) {
 
-
-
-function translatePigLatin(str) {
-  return str.replace(/^([aeiou]\w*)|(^[^aeiou]+)(\w*)/i,
-    (_, vowelWord, consonants, rest) =>
-      vowelWord ? `${vowelWord}way` : `${rest}${consonants}ay`
-  );
+  if (wordremove[0] === wordremove[0].toUpperCase()) {
+    wordReplace = wordReplace[0].toUpperCase() + wordReplace.slice(1);
+		return string.replace(wordremove, wordReplace);
+  }
+	wordReplace = wordReplace[0].toLowerCase() + wordReplace.slice(1);
+  return string.replace(wordremove, wordReplace);
 }
 
-console.log(translatePigLatin("glove")); 
+console.log(myReplace("This has a Spellngi error", "Spellngi", "spelling"));

@@ -1,10 +1,54 @@
-Note: Preserve the case of the first character in the original word when you are replacing it. For example if you mean to replace the word Book with the word dog, it should be replaced as Dog
+/* file: script.js */
+const mdInput = document.getElementById("markdown-input");
+const htmlOutput = document.getElementById("html-output");
+const preview = document.getElementById("preview");
 
+mdInput.addEventListener("input", () => {
+  htmlOutput.innerText = convertMarkdown();
+  preview.innerHTML = convertMarkdown();
+});
 
-The myReplace function should take three arguments: a string, a word to be replaced, and the word to replace it with.
-The myReplace function should return the new string with the replacement.
-You should preserve the case of the first character in the original word when you are replacing it.
+function convertMarkdown() {
+  const markdown = mdInput.value;
+  const headingRegex = /^(#{1,3})\s+(.*)/gm;
+  let html = markdown.replace(headingRegex, (_, level, content) => {
+    level = level.length;
+    return `<h${level}>${content}</h${level}>`;
+  });
 
-6. myReplace("This has a spellngi error", "spellngi", "spelling") should return the string This has a spelling error.
-Waiting: 7. myReplace("His name is Tom", "Tom", "john") should return the string His name is John.
-Waiting: 8. myReplace("Let us get back to more Coding", "Coding", "algorithms") should return the string Let us get back to more Algorithms.
+  const boldRegex = /\*\*(.+)\*\*/gm;
+  html = html.replace(boldRegex, (_, content) => {
+    return `<strong>${content}</strong>`;
+  });
+
+  const boldRegex2 = /__(.+)__/gm;
+  html = html.replace(boldRegex2, (_, content) => {
+    return `<strong>${content}</strong>`;
+  });
+
+  const italicsRegex1 = /\*(.+)\*/gm;
+  html = html.replace(italicsRegex1, (_, content) => {
+    return `<em>${content}</em>`;
+  });
+
+  const italicsRegex2 = /_(.+)_/gm;
+  html = html.replace(italicsRegex2, (_, content) => {
+    return `<em>${content}</em>`;
+  });
+
+  const imgRegex = /!\[(.+)\]\((.+)\)/gm;
+  html = html.replace(imgRegex, (_, alt, src) => {
+    return `<img alt=${`"${alt}"`} src=${`"${src}"`}>`;
+  });
+
+  const linkRegex = /\[(.+)\]\((.+)\)/gm;
+  html = html.replace(linkRegex, (_, text, href) => {
+    return `<a href=${`"${href}"`}>${text}</a>`;
+  });
+
+  const blockquoteRegex = /^>\s+(.+)/gm;
+  html = html.replace(blockquoteRegex, (_, content) => {
+    return `<blockquote>${content}</blockquote>`;
+  });
+  return html;
+}
