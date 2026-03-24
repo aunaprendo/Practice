@@ -1,19 +1,11 @@
 
-Failed: 18. When #other-complaint is checked and #complaint-description contains less than twenty characters, validateForm()["complaint-description"] should be false.
 
-Failed: 20. When #other-complaint is checked and the value of #complaint-description is changed to an invalid value, you should set its border color to red.
+For example, the current date Fri Sep 27 2024 16:04:43 GMT+0500 (Pakistan Standard Time) would be formatted in the following 2 ways:
 
-Failed: 26. When #other-solution is checked and #solution-description contains less than twenty characters, validateForm()["solution-description"] should be false.
-
-Failed: 28. When #other-solution is checked and the value of #solution-description is changed to an invalid value, you should set its border color to red.
-
-Failed: 30. Your isValid function should take the validateForm() as its argument and return true when all the form fields have been filled correctly.
-
-
-Failed: 31. Your isValid function should take the validateForm() as its argument and return false when not all the form fields have been filled correctly.
-Failed: 32. You should call isValid when you try to submit the form.
+(MM/DD/YYYY): 9/27/2024.
+(Month Day, Year): September 27, 2024.
 
 
 
-
-
+Your formatDateLong function should convert the current date to Month Day, Year format and return the string Formatted Date (Month Day, Year): [formatted date].
+Note: For the tests to pass, make sure that you use en-US for the locale when formatting the dates.

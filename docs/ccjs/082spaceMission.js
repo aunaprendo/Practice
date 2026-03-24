@@ -48,26 +48,58 @@ function swapCrewMembers(crew, fromIndex, toIndex) {
   }
 
   const updatedCrew = crew.slice();
+  updatedCrew[fromIndex] = updatedCrew.splice(toIndex, 1, updatedCrew[fromIndex])[0];
 
+  return updatedCrew; 
 }
 
+const updatedSquad = swapCrewMembers(squad, 2, 5);
 
+function sortByPriorityDescending(crew) {
+  for (let i = 0; i < crew.length - 1; i++) {
+    for (let j = 0; j < crew.length - 1 - i; j++) {
+      if (crew[j].priority < crew[j + 1].priority) {
+        const temp = crew[j];
+        crew[j] = crew[j + 1];
+        crew[j + 1] = temp;
+      }
+    }
+  }
+}
 
-// swap elements at i and j without mutating the original
-const copy = array.slice();
-copy[i] = copy.splice(j, 1, copy[i])[0];
-Here is an example:
+function getEVAReadyCrew(crew) {
+  const eligible = [];
+  for (const astronaut of crew) {
+    if (astronaut.isEVAEligible) eligible.push(astronaut);
+  }
+  sortByPriorityDescending(eligible); 
 
-Example Code
-const originalArray = [12, 97, 68, 55];
-const copyArray = originalArray.slice();
-copyArray[1] = copyArray.splice(3, 1, copyArray[1])[0];
-console.log(copyArray); // [12, 55, 68, 97]
-The technique, applied in the third line, works as follows:
+  return eligible;
+}
 
-splice(3, 1, copyArray[1]) removes the element at index 3 (55)
-It inserts the element from copyArray[1] (97) into index 3
-splice() returns [55], an array containing the removed element
-[0] extracts 55 from that array
-That value (55) is assigned back to copyArray[1], completing the swap
-Use this technique with the updatedCrew array to swap the astronauts at fromIndex and toIndex.
+const EVAReadySquad = getEVAReadyCrew(updatedSquad);
+function chunkCrew(crew, size) {
+  if (size < 1) {
+    console.log("Chunk size must be >= 1");
+    return;
+  }
+
+  const chunks = [];
+  for (let i = 0; i < crew.length; i += size) {
+    chunks.push(crew.slice(i, i + size));
+  }
+
+  return chunks;
+}
+
+const EVAChunks = chunkCrew(EVAReadySquad, 3);
+
+function printCrewSummary(crew) {
+  const sorted = crew.slice();
+  sortByPriorityDescending(sorted); 
+  for (const astronaut of sorted) {
+    console.log(astronaut.name);
+  }
+}
+
+printCrewSummary(updatedSquad);
