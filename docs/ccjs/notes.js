@@ -1,29 +1,9 @@
-const displayText = document.getElementById("display");
-
-function stopAllSounds() {
-  document.querySelectorAll(".clip").forEach((clip) => {
-    clip.pause();
-    clip.currentTime = 0;
-  });
-}
-
-document.querySelectorAll(".drum-pad").forEach((pad) => {
-  pad.addEventListener("click", function () {
-    const clip = this.querySelector("audio");
-    stopAllSounds();
-    clip.play();
-    displayText.innerText = this.id;
-  });
-});
-
-document.addEventListener("keydown", (e) => {
-  const clip = document.getElementById(e.key.toUpperCase());
-  if (clip) {
-    stopAllSounds();
-    clip.play();
-    displayText.innerText = clip.parentElement.id;
-  }
-});
 
 
 
+
+
+
+
+Failed: 17. When option Turkey gets two votes, option Morocco gets one vote, and option Spain doesn't get any vote, displayResults() should return "Poll Results:\nTurkey: 2 votes\nMorocco: 1 votes\nSpain: 0 votes".
+Failed: 18. displayResults() should return the results in the correct format.
