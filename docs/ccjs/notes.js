@@ -4,6 +4,4 @@
 
 
 
-
-Failed: 17. When option Turkey gets two votes, option Morocco gets one vote, and option Spain doesn't get any vote, displayResults() should return "Poll Results:\nTurkey: 2 votes\nMorocco: 1 votes\nSpain: 0 votes".
-Failed: 18. displayResults() should return the results in the correct format.
+When you click the #delete-bookmark-button, you should delete the bookmark corresponding to the selected radio button and appropriate category from the local storage and update the displayed bookmark list.
