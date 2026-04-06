@@ -5,21 +5,9 @@
   --golden-yellow: #feac32;
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-main {
+#main {
   display: flex;
   justify-content: center;
-}
-
-body {
-  background-color: var(--dark-grey);
 }
 
 .hidden {
@@ -30,15 +18,16 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+	background-color: var(--accent-color-lteal);
 }
 
-select,
-input,
-label {
+.select,
+.input,
+.label {
   margin-left: 10px;
 }
 
-div {
+.div {
   padding: 30px;
   display: flex;
   justify-content: center;
@@ -50,8 +39,8 @@ div {
   cursor: pointer;
 }
 
-h1, h2 {
-  margin-top: 20px;
+.h1, .h2 {
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -60,43 +49,16 @@ h1, h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: var(--light-grey);
+  background-color: var(--text-color-alt);
   align-self: center;
   width: 80%;
   margin-top: 15px;
   border-radius: 10px;
 }
 
-#category-list,
-h1,
-h2,
-label {
-  color: var(--light-grey);
-}
-
-#category-list p {
-  color: var(--dark-grey);
-}
-
-button {
-  cursor: pointer;
-  padding: 5px;
-  width: 100px;
-  margin: 10px;
-  color: var(--dark-grey);
-  background-color: var(--golden-yellow);
-  background-image: linear-gradient(#fecc4c, #ffac33);
-  border-color: var(--golden-yellow);
-  border-width: 3px;
-}
-
-button:hover {
-  background-image: linear-gradient(#ffcc4c, #f89808);
-}
-
 section {
   margin-top: 60px;
-  border: 2px solid var(--golden-yellow);
+  border: 2px solid var(--accent-color-dteal);
   width: fit-content;
   border-radius: 10px;
 }

@@ -10,11 +10,29 @@ const viewCategoryBtn = document.getElementById("view-category-button");
 const categoryName = document.querySelector(".category-name");
 const categoryOptions = document.getElementById("category-dropdown");
 const categoryList = document.getElementById("category-list");
-const name = document.getElementById("name");
-const link = document.getElementById("url");
+
+
 
 function getBookmarks() {
-	return JSON.parse(localStorage.getItem("bookmarks")) || [];
+  try {
+    const bookmarks = JSON.parse(localStorage.getItem("bookmarks"));
+
+    if (!Array.isArray(bookmarks)) return [];
+
+    const validBookmarks = bookmarks.filter(
+      bookmark =>
+        bookmark &&
+        typeof bookmark === "object" &&
+        "name" in bookmark &&
+        "category" in bookmark &&
+        "url" in bookmark
+    );
+
+    return validBookmarks;
+
+  } catch {
+    return [];
+  }
 }
 
 function saveBookmarks(bookmarks) {
@@ -31,9 +49,28 @@ function displayOrHideCategory() {
 	 bookmarkListSection.classList.toggle("hidden"); 
 }
 
-const reset = () => {
-  name.value = "";
-  link.value = "";
+function renderBookmarks(category) {
+  categoryName.innerText = category;
+  const bookmarks = getBookmarks();
+
+  const filteredBookmarks = bookmarks.filter(
+    bookmark => bookmark.category === category
+  );
+
+  if (filteredBookmarks.length > 0) {
+    categoryList.innerHTML = "";
+
+    filteredBookmarks.forEach(({ name, url }) => {
+      categoryList.innerHTML += `
+		<label for="${name}" style="display: flex; align-items: center; gap: 0.5em;">
+		  <input type="radio" id="${name}" value="${name}" name="savedBookmark">
+		  <a class="gen-link" href="${url}">${name}</a>
+		</label>
+      `;
+    });
+  } else {
+    categoryList.innerHTML = "<p>No Bookmarks Found</p>";
+  }
 }
 
 addBookmarkBtn.addEventListener("click", () => {
@@ -45,41 +82,34 @@ closeFormBtn.addEventListener("click", () => {
 	displayOrCloseForm();
 });
 
-addBookmarkFormBtn.addEventListener("click", () => {
-const bookmarks = getBookmarks();
-bookmarks.push({
-	name: name.value,
-	category: categoryOptions.value,
-	url: link.value
-});
-	saveBookmarks(bookmarks)
-	reset();
-	displayOrCloseForm();
-});
 
-viewCategoryBtn.addEventListener("click", () => {
-  categoryName.innerText = categoryOptions.value;
-	const bookmarks = getBookmarks();
+addBookmarkFormBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+	const name = document.getElementById("name");
+	const link = document.getElementById("url");
 	
-  const filteredBookmarks = bookmarks.filter(
-    bookmark => bookmark.category === categoryOptions.value
-  );
+	const nameVal = name.value.trim();
+  const urlVal = link.value.trim();
+  const categoryVal = categoryOptions.value;
 
-  if (filteredBookmarks.length > 0) {
-    categoryList.innerHTML = "";
+  if (!nameVal || !urlVal || !categoryVal) return; 
 
-    filteredBookmarks.forEach(({ name, category, url }) => {
-      categoryList.innerHTML += `
-        <label><a href="${url}">${name}</a>
-					<input type="radio" id="${name}" value="${name}" name="savedBookmark">
-        </label>				
-      `;
-    });
+  const bookmarks = getBookmarks();
+  bookmarks.push({
+    name: nameVal,
+    category: categoryVal,
+    url: urlVal
+  });
+  saveBookmarks(bookmarks);
+  name.value = "";
+  link.value = "";
+  displayOrCloseForm();
+});
 
-  } else {
-    categoryList.innerHTML = "<p>No Bookmarks Found</p>";
-  }
-
+let currentCategory = "";
+viewCategoryBtn.addEventListener("click", () => {
+  currentCategory = categoryOptions.value; 
+  renderBookmarks(currentCategory);
   displayOrHideCategory();
 });
 
@@ -87,6 +117,18 @@ closeListBtn.addEventListener("click", () => {
 	displayOrHideCategory();
 });	
 
+
 deleteBookmarkBtn.addEventListener("click", () => {
-	
+  const bookmarks = getBookmarks();
+  const checkedRadio = document.querySelector('input[type="radio"]:checked');
+
+  if (!checkedRadio) return;
+
+  const updatedBookmarks = bookmarks.filter(
+    bookmark =>
+      !(bookmark.name === checkedRadio.value && bookmark.category === currentCategory)
+  );
+
+  saveBookmarks(updatedBookmarks);
+  renderBookmarks(currentCategory); 
 });
