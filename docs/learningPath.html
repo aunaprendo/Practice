@@ -58,7 +58,7 @@
 	        <div class="row text-center p-1 p-md-5">
 	          <div class="mt-0 pt-1 ps-lg-5 pe-lg-5">
               <h1>Aún Aprendo</h1>
-              <p>I invite you to explore the resources I use as I transition into a developer role. Discover the books I’ve read, online courses I’ve completed, audiobooks I’ve listened to, podcasts I’ve followed, and videos I’ve watched. Driven by a passion for continuous learning, I strive to absorb knowledge and apply it through practice. With plans to pursue a related master’s degree in the future, my ultimate goal is to keep learning — <em>aún aprendo.</em></p>
+              <p>Explore the resources guiding my transition into a Security Analyst role — from books and online courses to audiobooks, podcasts, and videos. A strong commitment to continuous learning fuels the process of gaining knowledge and applying it through hands-on practice.With plans to pursue a related master’s degree in the future, the ultimate goal remains constant: keep learning — <em>aún aprendo.</em></p>
 	          </div> <!-- fade up section -->
 	        </div> <!-- header row end -->
 					
@@ -107,7 +107,7 @@
 						<div class="table-responsive mt-4">
 	
 							<h2 class="text-thick mb-0 mt-5">Courses Taken</h2>
-							<p class="text-faded mt-0">Completed between 07/25 - 10/26</p>
+							<p class="text-faded mt-0">Completed between 05/25 - 12/26</p>
 					
 					    <table aria-describedby="schedule-caption" class="align-middle table table-striped table-hover">
 					
@@ -123,7 +123,7 @@
 					        <tr>
 					          <th scope="row">freeCodeCamp</th>
 					          <td>Python for Everyone by Dr. Charles Severance</td>
-					          <td><a class="gen-link" target="_blank" rel="noopener noreferrer" aria-label="Visitlink (opens in a new tab)" href="https://www.freecodecamp.org/learn/python-for-everybody/python-for-everybody/">Course Details</a></td>
+					          <td><a class="gen-link" target="_blank" rel="noopener noreferrer" aria-label="Visitlink (opens in a new tab)" href="https://www.freecodecamp.org/news/python-for-everybody/">Course Details</a></td>
 					        </tr>
 					
 					        <tr>
@@ -170,9 +170,16 @@
 									
 									<tr class="in-progress-blur">
 					          <th scope="row">Khan Academy</th>
-					          <td> AP®︎/College Computer Science Principals</td>
+					          <td>AP®︎/College Computer Science Principals</td>
 					          <td><a class="gen-link" target="_blank" rel="noopener noreferrer" aria-label="Visitlink (opens in a new tab)" href="https://www.khanacademy.org/computing/ap-computer-science-principles">Course Details</a></td>
 					        </tr>
+									
+									<tr>
+					          <th scope="row">TryHackMe</th>
+					          <td>Linux Fundamentals Parts 1-3</td>
+					          <td><a class="gen-link" target="_blank" rel="noopener noreferrer" aria-label="Visitlink (opens in a new tab)" href="https://tryhackme.com/room/linuxfundamentalspart1">Course Details</a></td>
+					        </tr>
+									
 					      </tbody>
 					    </table>
 							<em><p class="scroll-hint-text d-md-none"> Scroll left and right to see more </p></em>
@@ -287,7 +294,7 @@
 					</div><!-- table end -->
 					
 					<h2 class="text-thick mb-0 mt-5">Additional Books Read</h2>
-					<p class="text-faded mt-0">Because teamwork is key</p>
+					<p class="text-faded mt-0">Because communication is key</p>
 					
 					<section class="carousel-wrapper" aria-label="Book carousel">
 					  <button class="carousel-arrow left" aria-label="Previous">
@@ -365,11 +372,11 @@
     loader._interval = progressInterval;
   }, 300);
 
-  // When everything is ACTUALLY loaded
+  // When everything is loaded
   window.addEventListener("load", () => {
     clearTimeout(showDelay);
 
-    if (!shown) return; // loader never shown → do nothing
+    if (!shown) return; 
 
     clearInterval(loader._interval);
     percent.textContent = "100%";
