@@ -450,12 +450,10 @@ BUTTONS
   cursor: pointer;
 }
 
-/* Hover interactions */
 .dropdown:hover > .dropdown-content {
   display: block;
 }
 
-/* Hover styles */
 .dropdown-content li a:hover,
 .dropbtn-second:hover {
   background: #666;

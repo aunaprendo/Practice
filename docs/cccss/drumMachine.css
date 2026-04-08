@@ -73,3 +73,13 @@ main {
 	border-radius: 10px;
 	padding: 10px;
 }
+
+@media (max-width: 576px) {
+	#drum-machine {	
+		width: 90%;
+		height: 90%;	
+	}
+	#clipName {
+	width: 95%;
+	}
+}

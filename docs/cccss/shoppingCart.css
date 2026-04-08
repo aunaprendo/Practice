@@ -75,3 +75,10 @@
     width: 300px;
   }
 }
+
+@media (max-width: 576px) {
+	#cart-btn {
+  top: 15%;
+}
+}
+
