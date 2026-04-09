@@ -1,45 +1,135 @@
-# Practice
+# Cybersecurity Portfolio
 
-> “Live as if you were to die tomorrow. Learn as if you were to live forever.”  
-> — Mahatma Gandhi
+## Overview
 
-## Acknowledgments
+Welcome to my portfolio. This repository documents my transition into cybersecurity, highlighting hands-on projects, technical learning, and practical exercises focused on security analysis, risk identification, and building resilient systems.
 
-I referenced multiple example projects for inspiration. Specifically:
+I am a methodical problem solver and knowledge seeker with a strong interest in security analysis, vulnerability assessment, and offensive security. My work reflects a structured, analytical approach shaped by experience assessing complex environments, working within constraints, and prioritizing risk-focused solutions.
 
-- **The CommunityPro portfolio**  
-  https://github.com/CommunityPro/portfolio-html?tab=MIT-1-ov-file
+---
 
-- **Template Jungle’s _Julia_ – Portfolio HTML Template**  
-  https://templatesjungle.com/downloads/julia-free-one-page-portfolio-html-template/
+## About Me
 
-- **Xiaoying Riley’s _Pillar_ – Bootstrap 5 Resume Template**  
-  https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap-resume-cv-template-for-developers-pillar/
+Analytical, self-driven learner with a strong focus on identifying risks, devising solutions, and prioritizing impact. Experienced in assessing complex environments, gathering and evaluating information, and developing clear, well-documented technical solutions.
 
-I used certain components and the grid system from **Bootstrap v5.0.2**:  
-https://getbootstrap.com/
+Core Strengths
+- Analytical Thinking  
+- Risk Identification  
+- Methodical Problem Solving  
+- Clear Documentation  
+- Continuous Learning  
+- Cross-disciplinary Collaboration  
 
-I included work and lessons completed through **freeCodeCamp**:  
-https://www.freecodecamp.org/learn
+My background in architectural design and Peace Corps service shaped how I approach problems: assess risk, gather and evaluate information, and build thoughtful, resilient solutions. Working across disciplines and adapting to new environments strengthened my ability to identify gaps, evaluate vulnerabilities, and develop structured, repeatable processes — skills directly aligned with security analysis and cybersecurity.
 
-I used **Git and GitHub** for version control and deployment via **GitHub Pages**.
+---
 
-I used **ChatGPT** to assist with troubleshooting and improving coding efficiency.
+## Career Transition: Architecture → Cybersecurity
 
-I used **Pixabay** and **Unsplash** to source images, videos, and audio:
+Prior experience in architecture and design required:
 
-- https://pixabay.com
-- https://unsplash.com
+- Risk assessment and mitigation  
+- Complex system analysis  
+- Regulatory and compliance considerations  
+- Documentation and technical communication  
+- Cross-functional collaboration  
+- Long-term resilience planning  
 
-I included links to multiple **YouTube** videos.
+These same skills translate naturally into cybersecurity, where identifying vulnerabilities, analyzing systems, and building resilient solutions are critical.
 
-I used icons from **Font Awesome** and **Bootstrap Icons**:
+---
 
-- https://fontawesome.com
-- https://icons.getbootstrap.com
+## Technical Skills (In Progress)
 
-I also used **Canva** for some image, icon, and logo creation.
+- HTML  
+- CSS  
+- JavaScript  
+- Python (Learning)  
+- SQL (Learning)  
+- Git / GitHub  
+- Bootstrap  
 
-Thank you to all of the above for supporting this learning process!
+---
 
-Media assets are either original or sourced from royalty-free libraries.
+## Professional Background
+
+### Peace Corps | Literacy Volunteer, Guyana  
+June 2024 – August 2026
+
+- Applied analytical problem-solving in a new environment to assess gaps and implement targeted solutions  
+- Conducted assessments and tracked progress using structured, data-driven methods  
+- Collaborated with stakeholders to identify needs and develop sustainable solutions  
+- Developed training materials and delivered technical guidance  
+
+Transferable Skills:  
+Risk assessment • Data analysis • Documentation • Collaboration • Adaptability
+
+---
+
+### GUIDE Architecture | Interior Designer  
+August 2022 – April 2024
+
+- Led complex project delivery across multidisciplinary teams  
+- Produced detailed technical documentation and specifications  
+- Conducted research and applied best practices to solutions  
+- Ensured compliance, constructability, and long-term performance  
+
+Transferable Skills:  
+Systems thinking • Risk management • Documentation • Process improvement
+
+---
+
+### Perkins & Will | Interior Designer  
+July 2015 – August 2022
+
+- Developed technical documentation and coordinated engineering systems  
+- Conducted compliance analysis and code review  
+- Managed project risk, scope, and technical accuracy  
+- Collaborated across disciplines to deliver resilient solutions  
+
+Transferable Skills:  
+Risk analysis • Technical documentation • Compliance • Complex systems
+
+---
+
+## Certifications & Professional Development
+
+Demonstrated commitment to continuous learning through multiple certifications and professional accreditations, including becoming a licensed architect through self-directed learning and structured study.
+
+This same disciplined approach now drives my cybersecurity education and hands-on learning.
+
+---
+
+## Learning Philosophy
+
+As a lifelong learner, I thrive on mastering complex systems. My approach emphasizes:
+
+- Methodical learning  
+- Hands-on practice  
+- Clear documentation  
+- Continuous improvement  
+- Real-world application  
+
+---
+
+## Career Goals
+
+Short-Term:
+- Security Analyst Role  
+- Build strong defensive security foundation  
+- Develop hands-on security experience  
+
+Long-Term:
+- Ethical Hacker / Penetration Tester  
+- Advanced Security Analysis  
+- Security Architecture & Risk Strategy  
+
+---
+
+## Connect
+
+This portfolio represents an ongoing learning journey into cybersecurity. Projects and documentation will continue to evolve as new skills and knowledge develop.
+
+---
+
+Methodical. Analytical. Always Learning.
