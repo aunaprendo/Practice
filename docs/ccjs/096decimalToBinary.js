@@ -2,31 +2,33 @@ const numberInput = document.getElementById("number-input");
 const convertBtn = document.getElementById("convert-btn");
 const result = document.getElementById("result");
 
+const countDownAndUp = (number) => {
+  console.log(number);
+
+  if (number === 0) {
+    console.log("Reached base case");
+    return;
+  } else {
+    countDownAndUp(number - 1);
+    console.log(number);
+  }
+};
+
+countDownAndUp(3);
+
 const decimalToBinary = (input) => {
-  const inputs = [];
-  const quotients = [];
-  const remainders = [];
+  let binary = "";
 
   if (input === 0) {
-    result.innerText = "0";
-    return;
+    binary = "0";
   }
 
   while (input > 0) {
-    const quotient = Math.floor(input / 2);
-    const remainder = input % 2;
-
-    inputs.push(input);
-    quotients.push(quotient);
-    remainders.push(remainder);
-    input = quotient;
+    binary = (input % 2) + binary;
+    input = Math.floor(input / 2);
   }
 
-  console.log("Inputs: ", inputs);
-  console.log("Quotients: ", quotients);
-  console.log("Remainders: ", remainders);
-
-  result.innerText = remainders.reverse().join("");
+  result.innerText = binary;
 };
 
 const checkUserInput = () => {
