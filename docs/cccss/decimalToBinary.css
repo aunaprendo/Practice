@@ -1,36 +1,25 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+#body {	
+  color: var(--text-color-main);
+  background-color: var(--accent-color-lgray);
 }
 
-:root {
-  --light-grey: #f5f6f7;
-  --dark-blue: #1b1b32;
-  --orange: #f1be32;
-}
-
-body {
+#main {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
     monospace;
-  font-size: 1.125rem;
-  color: var(--light-grey);
-  background-color: var(--dark-blue);
+  font-size: 1.125rem;	
   padding: 0 4px;
 }
 
-h1 {
+.h1 {
   font-size: 2.125rem;
   text-align: center;
   margin: 20px 0;
 }
 
-h2 {
+.h2 {
   font-size: 1.5rem;
   text-align: center;
   margin: 20px 0;
@@ -54,13 +43,18 @@ h2 {
 .convert-btn {
   font-size: inherit;
   font-family: inherit;
-  background-color: var(--orange);
+  background-color: var(--accent-color-brown);
+	color: var(--text-color-alt);
   width: 100%;
   height: 2rem;
   padding: 0 6px;
   border: none;
   border-radius: 2px;
   cursor: pointer;
+}
+
+.convert-btn:hover {
+  background-color: var(--text-color-main);
 }
 
 .number-input {
@@ -83,7 +77,7 @@ h2 {
   min-height: 80px;
   margin-block-start: 20px;
   padding: 15px;
-  border: 2px solid var(--orange);
+  border: 2px solid var(--accent-color-brown);
   border-radius: 2px;
 }
 
@@ -94,7 +88,7 @@ h2 {
   gap: 1rem;
   margin-block-end: 1rem;
   min-height: 40vh;
-  border: 2px dashed var(--orange);
+  border: 2px dashed var(--accent-color-brown);
   padding: 1rem;
 }
 
@@ -103,7 +97,7 @@ h2 {
     helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
     sans-serif;
   padding: 15px 10px;
-  border: 5px solid var(--orange);
+  border: 5px solid var(--accent-color-brown);
   font-size: 1.2rem;
   text-align: center;
 }

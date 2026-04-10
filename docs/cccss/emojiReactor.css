@@ -1,8 +1,4 @@
 
-#body {
-  background-color: black;
-  color: var(--text-color-alt);
-}
 
 main {
   text-align: center;
@@ -52,9 +48,10 @@ button {
 .title {
   margin-top: 15px;
   font-size: 2rem;
+	font-weight: var(--weight-bold);
 }
 
 .description {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: 20px 0;
 }
