@@ -308,36 +308,46 @@ window.__siteControls = {
     track.style.transform = `translateX(-${offset}px)`;
   }
 
-  window.addEventListener('resize', setCardWidth);
-  setCardWidth();
+	window.addEventListener('resize', setCardWidth);
+	setCardWidth();
 
   nextBtn.addEventListener('click', () => {
     if (index >= allCards.length - 1) return;
     index++;
-    track.style.transition = 'transform 0.4s ease';
-    track.style.transform = `translateX(-${cardWidth * index}px)`;
+    updatePosition();
   });
 
   prevBtn.addEventListener('click', () => {
     if (index <= 0) return;
     index--;
-    track.style.transition = 'transform 0.4s ease';
-    track.style.transform = `translateX(-${cardWidth * index}px)`;
+    updatePosition();
   });
 
-  track.addEventListener('transitionend', () => {
-    if (allCards[index].id === 'first-clone') {
-      track.style.transition = 'none';
-      index = 1;
-      track.style.transform = `translateX(-${cardWidth * index}px)`;
-    }
+	track.addEventListener('transitionend', () => {
+	  if (allCards[index].id === 'first-clone') {
+	    index = 1;
+	    updatePosition(false);
+	  }
+	
+	  if (allCards[index].id === 'last-clone') {
+	    index = allCards.length - 2;
+	    updatePosition(false);
+	  }
+	});
+	
+	function updatePosition(withTransition = true) {
+  const containerWidth = track.parentElement.getBoundingClientRect().width;
 
-    if (allCards[index].id === 'last-clone') {
-      track.style.transition = 'none';
-      index = allCards.length - 2;
-      track.style.transform = `translateX(-${cardWidth * index}px)`;
-    }
-  });
+  const offset =
+    cardWidth * index -
+    (containerWidth / 2 - cardWidth / 2);
+
+  track.style.transition = withTransition
+    ? 'transform 0.4s ease'
+    : 'none';
+
+  track.style.transform = `translateX(-${offset}px)`;
+}
 	  /* ================================
      TOUCH / SWIPE SUPPORT
   ================================ */
@@ -352,7 +362,8 @@ window.__siteControls = {
   viewport.style.touchAction = 'pan-y'; // allow vertical scrolling
 
   viewport.addEventListener('pointerdown', e => {
-    isDragging = true;
+    if (e.target.closest('a, button')) return;
+		isDragging = true;
     startX = e.clientX;
     currentX = startX;
     track.style.transition = 'none';
@@ -384,7 +395,7 @@ window.__siteControls = {
     }
 
     track.style.transition = 'transform 0.4s ease';
-    track.style.transform = `translateX(-${cardWidth * index}px)`;
+    updatePosition();
   }
 })();
 
