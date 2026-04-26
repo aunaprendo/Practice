@@ -1,0 +1,33 @@
+#surrounds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.h1 {
+  margin: 10px 0 15px;
+	font-size: calc(1.525rem + 2.5vw);
+	font-weight: var(--weight-semibold);
+}
+
+#container {
+  text-align: center;
+  background: var(--accent-color-lgray);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+input,
+select {
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px 0;
+  border: 1px solid var(--accent-color-brown);
+  border-radius: 4px;
+}
+
+
