@@ -1,7 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
 main {
     height: 100vh;
     display: flex;
@@ -32,7 +28,7 @@ main {
 }
 
 #starting-array {
-    border: 4px solid darkblue !important;
+    border: 4px solid var(--accent-color-brown) !important;
 }
 
 #btn-container {

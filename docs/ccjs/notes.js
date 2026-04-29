@@ -1,97 +1,25 @@
-function generateElement() {
-  return Math.floor(Math.random() * 100 + 1);
-}
-
-function generateArray() {
-  let arr = []
-  for (let i = 0; i < 5; i++) {
-    arr.push(generateElement())
-  }
-  return arr;
-}
-
-function generateContainer() {
-  return document.createElement("div");
-}
-
-function fillArrContainer(element, array) {
-
-  for (let i = 0; i < 5; i++) {
-      let span = element.appendChild(document.createElement("span"))
-      span.textContent = `${array[i]}`
-  }
-
-}
-
-function isOrdered(int1, int2) {
-  return int1 <= int2;
-}
-
-function swapElements(array, index) {
-  if (!isOrdered(array[index], array[index+1])){
-      array.splice(index, 0, array[index+1])
-      array.splice(index+2, 1)
-  }
-}
-
-function highlightCurrentEls(htmlElement, index){
- let child = htmlElement.children[index];
- let secondChild = child.nextElementSibling;
-
-for (const el of [child, secondChild]) {
-    el.style.border = '2px dashed red';
-}
-}
-
-const generateButton = document.getElementById("generate-btn");
-const sortButton = document.getElementById("sort-btn");
-const startingArray = document.getElementById("starting-array");
-const arrayContainer = document.getElementById("array-container");
-
-generateButton.addEventListener("click", () => {
-  const divs = arrayContainer.querySelectorAll("div")
-  divs.forEach((div) => {
-    if (div !== startingArray) {
-      div.remove()
-    }
-
-  })
-  sortButton.style.display = ""
-  startingArray.innerHTML = ''
-  let array = generateArray();
-  fillArrContainer(startingArray, array)
-})
-
-sortButton.addEventListener("click", () => {
 
 
-let nodeArray = Array.from(startingArray.querySelectorAll("span"))
-let array = nodeArray.map(node => node.textContent)
 
-let count = 0;                  //Used within the loop to count how many pairs are in order
 
-  do {                          //Execute at least once, in case a pre-sorted array is passed
-      count = 0;                
-      for (let i = 0; i < 4; i++) {
-        if (isOrdered(array[i], array[i+1])) {
-          count++               //Increment if a number pair is ordered
-        }
-        swapElements(array, i)              //Will swap two numbers if unordered
-        let bubbled = generateContainer(); 
-        fillArrContainer(bubbled, array);  
-        arrayContainer.appendChild(bubbled);
-      }
-     
-  } while (count < 4)           //If all elements are in order (count === 4), then conclude the loop
 
-  const divs = arrayContainer.querySelectorAll("div")
-  for (let i = 0; i < (divs.length/4)-1; i++) {
-      for (let e = 0; e < 4; e++) {
-        highlightCurrentEls(divs[(e + (4*i))], e)
-      }
-  } //Maybe a bad way of highlighting steps, but this implementation passes our tests
 
-  const last = arrayContainer.lastElementChild
-  last.style.border = "2px solid green"
-  sortButton.style.display = "none"
-})
+
+Y
+
+You should create a function named remixPlaylist that accepts an array of playlists and the maximum number of allowed occurrences per artist. The function should return the final broadcast schedule as an array of { slot, trackId } objects, by calling flattenPlaylists, scoreTracks, dedupeTracks, enforceArtistQuota, and buildSchedule in order.
+
+Waiting: 1. You should have a function named flattenPlaylists.
+Waiting: 2. You should return an empty array from flattenPlaylists when the input is not an array.
+Waiting: 3. Each track returned by flattenPlaylists should include a source field that is an array containing the playlist index and the track index.
+Waiting: 4. You should have a function named scoreTracks.
+Waiting: 5. Each track returned by scoreTracks should include a numeric score field.
+Waiting: 6. You should calculate score using a target BPM of 120 and this formula: votes * 10 - Math.abs(bpm - 120).
+Waiting: 7. You should have a function named dedupeTracks.
+Waiting: 8. When duplicate trackId values exist, dedupeTracks should keep only the first occurrence of the track.
+Waiting: 9. You should have a function named enforceArtistQuota.
+Waiting: 10. enforceArtistQuota should ensure no artist appears more than maxPerArtist times by removing extra tracks while keeping the earliest ones.
+Waiting: 11. You should have a function named buildSchedule.
+Waiting: 12. buildSchedule should return an array of objects with the shape { slot, trackId }, where slot starts at 1.
+Waiting: 13. You should have a function named remixPlaylist.
+Waiting: 14. remixPlaylist should call the helper functions in order to produce the final schedule

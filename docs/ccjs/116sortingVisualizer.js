@@ -41,8 +41,8 @@ function highlightCurrentEls(element, index) {
 	const b = element.children[index + 1];
 
 	if (a && b) {
-		a.style.border = "1px dashed red";
-		b.style.border = "1px dashed red";
+		a.style.border = "2px dotted var(--accent-color-gold)";
+		b.style.border = "2px dotted var(--accent-color-gold)";
 	}
 }
 
@@ -90,6 +90,6 @@ sortBtn.addEventListener("click", () => {
 		}
 	}
 	const result = arrayContainer.lastElementChild;
-  result.style.border = "2px solid green";
+  result.style.border = "4px solid var(--accent-color-dteal)";
   sortBtn.style.display = "none";
 });
