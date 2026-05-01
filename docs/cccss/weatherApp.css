@@ -26,6 +26,10 @@ body {
   line-height: 1.2;
 }
 
+#location {
+	color: var(--accent-color-brown);
+}
+
 .WAhidden {
   display: none;
 }
@@ -47,33 +51,11 @@ body {
   }
 }
 
-#nut-container {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px; 
-  height: 200px;
-  pointer-events: none;
-}
-
-.nut {
-  position: relative;
-  top: 0;
-  font-size: 20px;
-  animation: fall 1.5s linear forwards;
-  pointer-events: none;
-	z-index: 9999;
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(150px) translateX(30px) rotate(360deg);
-    opacity: 0;
+@media (max-width: 767.98px) {
+  .border-md-end {
+    border-right: none;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
   }
 }
-

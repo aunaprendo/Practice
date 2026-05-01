@@ -51,8 +51,7 @@ th {
 
 @media (max-width: 576px) {
 	th {
-	  font-size: .6rem;
-		color: red;
+	  font-size: .3rem;
 	}
 }
 

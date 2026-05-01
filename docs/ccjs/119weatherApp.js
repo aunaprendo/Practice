@@ -1,7 +1,6 @@
 const getWeatherBtn = document.getElementById('get-weather-btn');
 const citySelection = document.getElementById('city-select');
 const weatherContainer = document.getElementById('weather-container');
-const container = document.getElementById("nut-container");
 
 const icon = document.getElementById('weather-icon');
 const locationCity = document.getElementById('location');
@@ -25,29 +24,15 @@ getWeatherBtn.addEventListener("click", () => {
   if (cityName) {
     showWeather(cityName);
   }
-
-  for (let i = 0; i < 8; i++) {
-    const nut = document.createElement("div");
-    nut.classList.add("nut");
-    nut.textContent = "🌰";
-
-    nut.style.left = Math.random() * 100 + "%";
-
-    nut.style.animationDuration = (1 + Math.random()) + "s";
-
-    container.appendChild(nut);
-
-    setTimeout(() => nut.remove(), 1500);
-  }
 });
 
 
 function populateInfo(data) {
   const { weather, main, visibility, wind, name } = data;
 
-  mainTemp.innerText = main?.temp ?? "N/A";
-	feelsLike.innerText = main?.feels_like ?? "N/A";
-	humidityLevel.innerText = main?.humidity ?? "N/A";
+  mainTemp.innerText = `${main?.temp ?? "N/A"}° C`;
+	feelsLike.innerText = `${main?.feels_like ?? "N/A"}° C`;
+	humidityLevel.innerText = `${main?.humidity ?? "N/A"}%`;
 	
 	const iconUrl = weather?.[0]?.icon;
 	icon.src = iconUrl || "";
@@ -55,8 +40,8 @@ function populateInfo(data) {
 	
 	locationCity.innerText = name;
 	
-	windEl.innerText = wind?.speed ?? "N/A";
-	gust.innerText = wind?.gust ?? "N/A";
+	windEl.innerText = `${wind?.speed ?? "N/A"} m/s`;
+	gust.innerText = `${wind?.gust ?? "N/A"} m/s`;
 }
 
 async function getWeather(city) {
