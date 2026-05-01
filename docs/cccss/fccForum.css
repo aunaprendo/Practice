@@ -49,12 +49,6 @@ th {
   font-size: 1rem;
 }
 
-@media (max-width: 576px) {
-	th {
-	  font-size: .3rem;
-	}
-}
-
 td:not(:first-child) {
   text-align: center;
 }
@@ -122,16 +116,20 @@ td {
   display: flex;
   justify-content: center;
   gap: 10px;
-  flex-wrap: nowrap; /* key change */
+  flex-wrap: wrap; 
 }
 
 @media (max-width: 576px) {
   .avatar-container img:not(:first-child) {
     display: none;
+		flex-wrap: nowrap; /* key change */
   }
 	.post-title {
     font-size: .9rem;
   }
+	th {
+	  font-size: .3rem;
+	}
 }
 
 .avatar-container img {
