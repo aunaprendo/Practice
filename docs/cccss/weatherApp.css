@@ -1,0 +1,38 @@
+.title {
+  margin: 25px 0;
+  text-align: center;
+	font-size: calc(1.525rem + 2.5vw);
+}
+
+body {
+  background-color: var(--accent-color-lgray);
+}
+
+.weather-card {
+  max-width: 800px;        
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.WAhidden {
+  display: none;
+}
+
+#weather-icon {
+  width: 90%;
+  max-width: 200px;
+}
+
+#weather-container h2,
+#weather-container h3,
+#weather-container p {
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .border-md-end {
+    border-right: 1px dotted #ccc;
+  }
+}

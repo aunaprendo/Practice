@@ -1,5 +1,5 @@
 body {
-  background-color: var(--accent-color-lteal);
+  background-color: var(--accent-color-lgray);
 }
 
 .container {
@@ -22,14 +22,6 @@ legend {
   flex-direction: column;
 }
 
-.calButton {
-  cursor: pointer;
-  text-decoration: none;
-  background-color: var(--accent-color-gold);
-  border: 2px solid var(--accent-color-brown);
-}
-
-.calButton,
 input,
 select {
   min-height: 24px;
