@@ -52,6 +52,9 @@ body {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
+  width: 200px; 
+  height: 200px;
+  pointer-events: none;
 }
 
 .nut {
@@ -60,6 +63,7 @@ body {
   font-size: 20px;
   animation: fall 1.5s linear forwards;
   pointer-events: none;
+	z-index: 9999;
 }
 
 @keyframes fall {
