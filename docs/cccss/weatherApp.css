@@ -22,7 +22,7 @@ body {
 }
 
 .primary {
-  font-size: calc(1rem + .3vw);
+  font-size: calc(1.2rem + .3vw);
   line-height: 1.2;
 }
 
