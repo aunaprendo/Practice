@@ -52,6 +52,7 @@ th {
 @media (max-width: 576px) {
 	th {
 	  font-size: .6rem;
+		color: red;
 	}
 }
 
@@ -65,7 +66,7 @@ td {
 }
 
 .post-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-decoration: none;
 	color: var(--text-color-main);
 }
