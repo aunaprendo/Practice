@@ -25,24 +25,22 @@ getWeatherBtn.addEventListener("click", () => {
   if (cityName) {
     showWeather(cityName);
   }
-  const rect = btn.getBoundingClientRect();
 
   for (let i = 0; i < 8; i++) {
     const nut = document.createElement("div");
     nut.classList.add("nut");
     nut.textContent = "🌰";
 
-    nut.style.position = "fixed";
-    nut.style.left = rect.left + rect.width / 2 + "px";
-    nut.style.top = rect.bottom + "px";
+    nut.style.left = Math.random() * 100 + "%";
 
-		setTimeout(() => {
-		  document.body.appendChild(nut);
-		}, i * 100);
+    nut.style.animationDuration = (1 + Math.random()) + "s";
+
+    container.appendChild(nut);
 
     setTimeout(() => nut.remove(), 1500);
   }
 });
+
 
 function populateInfo(data) {
   const { weather, main, visibility, wind, name } = data;

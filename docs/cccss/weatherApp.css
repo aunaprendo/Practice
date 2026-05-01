@@ -26,12 +26,6 @@ body {
   line-height: 1.2;
 }
 
-@media (min-width: 1200px) {
-  .primary {
-    font-size: 1.75rem;
-  }
-}
-
 .WAhidden {
   display: none;
 }
@@ -55,6 +49,7 @@ body {
 
 #nut-container {
   position: absolute;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
 }
