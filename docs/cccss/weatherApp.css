@@ -16,17 +16,33 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+.secondary {
+  font-size: calc(1.2rem + .1vw);
+  line-height: 1.2;
+}
+
+.primary {
+  font-size: calc(1rem + .3vw);
+  line-height: 1.2;
+}
+
+@media (min-width: 1200px) {
+  .primary {
+    font-size: 1.75rem;
+  }
+}
+
 .WAhidden {
   display: none;
 }
 
 #weather-icon {
-  width: 90%;
+  width: 50%;
   max-width: 200px;
 }
 
 #weather-container h2,
-#weather-container h3,
+#weather-container .primary,
 #weather-container p {
   text-align: left;
 }
@@ -36,3 +52,29 @@ body {
     border-right: 1px dotted #ccc;
   }
 }
+
+#nut-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nut {
+  position: absolute;
+  top: 0;
+  font-size: 20px;
+  animation: fall 1.5s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(150px) translateX(30px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
