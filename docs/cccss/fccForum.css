@@ -49,6 +49,12 @@ th {
   font-size: 1rem;
 }
 
+@media (max-width: 576px) {
+	th {
+	  font-size: .8rem;
+	}
+}
+
 td:not(:first-child) {
   text-align: center;
 }
@@ -116,7 +122,16 @@ td {
   display: flex;
   justify-content: center;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* key change */
+}
+
+@media (max-width: 576px) {
+  .avatar-container img:not(:first-child) {
+    display: none;
+  }
+	.post-title {
+    font-size: .9rem;
+  }
 }
 
 .avatar-container img {
@@ -124,7 +139,7 @@ td {
   height: 30px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .table-wrapper {
     padding: 0 15px;
   }
