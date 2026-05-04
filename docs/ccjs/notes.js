@@ -1,74 +1,34 @@
 
 
+ou should export a Footer component.
+Your Footer component should return a footer element that contains all the other elements.
+Your footer element should have:
 
-23. If there is an error, your getWeather function should log the error to the console.
+At least three unordered lists, each with at least two list items.
+At least one paragraph element with a copyright © symbol.
+At least three links with the href value set to # and the link content set to an icon or text of your choice.
 
-const getWeatherBtn = document.getElementById('get-weather-btn');
-const citySelection = document.getElementById('city-select');
-const weatherContainer = document.getElementById('weather-container');
+	export default function Footer() {
+  return (
+      <footer>
+			<ul>
+	<li>Squirrels</li>
+	<li>Nuts</li>
+</ul>
 
-const icon = document.getElementById('weather-icon');
-const locationCity = document.getElementById('location');
-const mainTemp = document.getElementById('main-temperature');
-const feelsLike = document.getElementById('feels-like');
-const humidityLevel = document.getElementById('humidity');
-const windEl = document.getElementById('wind');
-const gust = document.getElementById('wind-gust');
-const weatherType = document.getElementById('weather-main');
-			
-let cityName = "";
+<ul>
+	<li>Dinosaurs</li>
+	<li>Triceratops</li>
+</ul>
 
-function selectCity() {
-	if (citySelection.value !== "") {
-		weatherContainer.classList.remove("WAhidden");
-		cityName = citySelection.value;
-	}
-}
-getWeatherBtn.addEventListener("click", () => {
-  selectCity();
-  if (cityName) {
-    showWeather(cityName);
-  }
-});
-
-function populateInfo(data) {
-  const { weather, main, visibility, wind, name } = data;
-
-  mainTemp.innerText = `Temperature: ${main?.temp ?? "N/A"}`;
-	feelsLike.innerText = `Feels Like: ${main?.feels_like ?? "N/A"}`;
-	humidityLevel.innerText = `Humidity: ${main?.humidity ?? "N/A"}`;
-	
-	const iconUrl = weather?.[0]?.icon;
-	icon.src = iconUrl || "";
-	weatherType.innerText = `Type: ${weather?.[0]?.main ?? "N/A"}`;
-	
-	locationCity.innerText = name;
-	
-	windEl.innerText = `Wind: ${wind?.speed ?? "N/A"}`;
-	gust.innerText = `Gust: ${wind?.gust ?? "N/A"}`;
-}
-
-async function getWeather(city) {
-  try {
-    const response = await fetch(`//weather-proxy.freecodecamp.rocks/api/city/${city}`);
-
-    if (!response.ok) {
-      throw new Error("Fetch failed");
-    }
-
-    return await response.json();
-
-  } catch (err) {
-    console.log(err);
-    throw err;
-  }
-}
-
-async function showWeather(city) {
-  try {
-    const data = await getWeather(city);
-    populateInfo(data);
-  } catch (err) {
-    alert("Something went wrong, please try again later");
-  }
+<ul>
+	<li>Bubbles</li>
+	<li>Rainbows</li>
+</ul>
+<p>GJ©</p>
+<a href="#">Click</a>
+<a href="#">Click</a> 
+<a href="#">Click</a>
+  </footer>
+  );
 }
