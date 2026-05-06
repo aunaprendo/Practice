@@ -15,13 +15,12 @@ export const OTPGenerator = () => {
   }
 
 useEffect(() => {
-  if (!isActive) return;
+  if (time === 0) return;
 
   intervalRef.current = setInterval(() => {
     setTime(prev => {
       if (prev <= 1) {
         clearInterval(intervalRef.current);
-        setIsActive(false);
         return 0;
       }
       return prev - 1;
@@ -29,7 +28,7 @@ useEffect(() => {
   }, 1000);
 
   return () => clearInterval(intervalRef.current);
-}, [isActive]);
+}, [time]);
 
   return (
     <div className="container">
